@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [I. Leonov](https://up.htmlacademy.ru/adaptive/22/user/1529187).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Карташов](https://htmlacademy.ru/profile/id77080).
 
 ---
 
