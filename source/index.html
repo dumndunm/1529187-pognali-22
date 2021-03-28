@@ -11,7 +11,10 @@
           <img class="logo__pic" src="#" alt="Логотип сервиса «Погнали?»" />
         </a>
 
-        <button class="visually-hidden header__button header__button_open">
+        <button
+          class="header__button header__button_open header__button_hidden"
+          type="button"
+        >
           <span class="visually-hidden">Открыть</span>
         </button>
 
@@ -31,14 +34,17 @@
 
         <ul class="client-menu header__client-menu">
           <li class="client-menu__item">
-            <ul class="contacts header__contacts">
+            <ul class="contacts client-menu__contacts">
               <li class="contacts__item">
                 <a class="button contacts__link" href="tel:88005558628">
                   8 800 555-86-28
                 </a>
               </li>
               <li class="contacts__item">
-                <a class="button contacts__link" href="#">
+                <a
+                  class="button contacts__link"
+                  href="mailto:mail@htmlacademy.ru"
+                >
                   mail@htmlacademy.ru
                 </a>
               </li>
@@ -46,7 +52,9 @@
           </li>
 
           <li class="client-menu__item">
-            <a class="button button_auth header__auth" href="#">Авторизация</a>
+            <a class="button button_auth client-menu__auth" href="#">
+              Авторизация
+            </a>
           </li>
         </ul>
 
@@ -69,7 +77,7 @@
 
           <ul class="client-menu promo__client-menu">
             <li class="client-menu__item">
-              <ul class="contacts promo__contacts">
+              <ul class="contacts client-menu__contacts">
                 <li class="contacts__item">
                   <a class="button contacts__link" href="tel:88005558628">
                     8 800 555-86-28
@@ -84,7 +92,9 @@
             </li>
 
             <li class="client-menu__item">
-              <a class="button button_auth promo__auth" href="#">Авторизация</a>
+              <a class="button button_auth client-menu__auth" href="#">
+                Авторизация
+              </a>
             </li>
           </ul>
 
@@ -96,24 +106,25 @@
             </cite>
           </p>
 
-          <ol class="actions">
-            <li class="actions__point">Выберите направление</li>
-            <li class="actions__point">Изучите идеи путешественников</li>
-            <li class="actions__point">Находите тех, кто похож на вас</li>
-            <li class="actions__point">Путешествуйте вместе!</li>
+          <ol class="motivation promo__motivation">
+            <!--??-->
+            <li class="motivation__point">Выберите направление</li>
+            <li class="motivation__point">Изучите идеи путешественников</li>
+            <li class="motivation__point">Находите тех, кто похож на вас</li>
+            <li class="motivation__point">Путешествуйте вместе!</li>
           </ol>
         </section>
 
-        <section class="desc">
-          <h2 class="title desc__title">О сервисе</h2>
+        <section class="description">
+          <h2 class="title description__title">О сервисе</h2>
 
-          <p class="paragraph desc__paragraph">
+          <p class="paragraph description__paragraph">
             Любое путешествие веселее с попутчиками, которые на одной волне с
             тобой! Делитесь своими идеями путешествий и черпайте вдохновение в
             чужих.
           </p>
 
-          <p class="sub-paragraph desc__sub-paragraph">
+          <p class="sub-paragraph description__sub-paragraph">
             А если найдете кого-то близкого по духу — скорее зовите в совместный
             трип!
           </p>
@@ -128,29 +139,29 @@
           </p>
 
           <ul class="countries__list">
-            <li class="region">
+            <li class="region countries__region">
               <img class="region__pic" src="#" alt="Тайланд" />
               <div class="region__wrapper">
                 <h3 class="region__name">Тайланд</h3>
-                <p class="region__title">Джунгли зовут!</p>
+                <p class="region__text">Джунгли зовут!</p>
                 <span class="region__counter">18321</span>
               </div>
             </li>
 
-            <li class="region">
+            <li class="region countries__region">
               <img class="region__pic" src="#" alt="Франция" />
               <div class="region__wrapper">
                 <h3 class="region__name">Франция</h3>
-                <p class="region__title">Тре бьен, Манифик!</p>
+                <p class="region__text">Тре бьен, Манифик!</p>
                 <span class="region__counter">12518</span>
               </div>
             </li>
 
-            <li class="region">
+            <li class="region countries__region">
               <img class="region__pic" src="#" alt="Чехия" />
               <div class="region__wrapper">
                 <h3 class="region__name">Чехия</h3>
-                <p class="region__title">Закоулки старой европы</p>
+                <p class="region__text">Закоулки старой европы</p>
                 <span class="region__counter">5326</span>
               </div>
             </li>
@@ -172,7 +183,7 @@
           </p>
 
           <ul class="users__list">
-            <li class="user">
+            <li class="user users__user">
               <img class="user__pic" src="#" alt="Таня Фирсова" />
 
               <div class="rate user__rate">
@@ -183,7 +194,7 @@
               <div class="user__wrapper">
                 <h3 class="user__name">Таня Фирсова</h3>
 
-                <ul class="favs user__favs">
+                <ul class="user__favs">
                   <li class="flag flag_sri">
                     <span class="visually-hidden">Шри-ланка</span>
                   </li>
@@ -196,16 +207,16 @@
                 </ul>
 
                 <ul class="user__hashtags">
-                  <li>#ЗОЖ</li>
-                  <li>#ПП</li>
-                  <li>#Фитнес</li>
-                  <li>#пляж</li>
-                  <li>#авокадо</li>
-                  <li>#смузи</li>
+                  <li class="user__hashtag">#ЗОЖ</li>
+                  <li class="user__hashtag">#ПП</li>
+                  <li class="user__hashtag">#Фитнес</li>
+                  <li class="user__hashtag">#пляж</li>
+                  <li class="user__hashtag">#авокадо</li>
+                  <li class="user__hashtag">#смузи</li>
                 </ul>
-
-                <ul class="user__icons">
-                  <li class="user-icon user-icon_prefer">
+                class="user__hashtag" class="user__hashtag"
+                <ul c class="user__hashtag" lass="user__icons">
+                  <li class="user__hashtag" class="user-icon user-icon_prefer">
                     <span class="visually-hidden">Самолетом</span>
                   </li>
                   <li class="user-icon">
@@ -221,7 +232,7 @@
               </div>
             </li>
 
-            <li class="user user_online">
+            <li class="user users__user user_online">
               <img class="user__pic" src="#" alt="Петя Демин" />
 
               <div class="rate user__rate">
@@ -232,7 +243,7 @@
               <div class="user__wrapper">
                 <h3 class="user__name">Петя Демин</h3>
 
-                <ul class="favs user__favs">
+                <ul class="user__favs">
                   <li class="flag flag_sri">
                     <span class="visually-hidden">Бельгия</span>
                   </li>
@@ -242,11 +253,11 @@
                 </ul>
 
                 <ul class="user__hashtags">
-                  <li>#бургер</li>
-                  <li>#бар</li>
-                  <li>#футбол</li>
-                  <li>#концерт</li>
-                  <li>#крафт</li>
+                  <li class="user__hashtag">#бургер</li>
+                  <li class="user__hashtag">#бар</li>
+                  <li class="user__hashtag">#футбол</li>
+                  <li class="user__hashtag">#концерт</li>
+                  <li class="user__hashtag">#крафт</li>
                 </ul>
 
                 <ul class="user__icons">
@@ -317,7 +328,7 @@
           <p class="paragraph feedback__paragraph">
             Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы?
             Тогда скорее
-            <a class="paragraph__link" href="./auth.html">авторизуйтесь</a>.
+            <a class="feedback__link" href="./auth.html">авторизуйтесь</a>.
           </p>
 
           <form class="feedback-form feedback__form" action="#" method="GET">
@@ -352,7 +363,7 @@
           <h2 class="visually-hidden">Контакты</h2>
 
           <div class="address__wrapper">
-            <p>ул. Большая Конюшенная, 19/8</p>
+            <p class="address__text">ул. Большая Конюшенная, 19/8</p>
             <a class="button button_special" href="#">Проложить маршрут</a>
           </div>
 
