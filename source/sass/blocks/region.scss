@@ -1,0 +1,59 @@
+.region__pic {
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--basic-blue-light);
+}
+
+.region__wrapper {
+  position: relative;
+  top: -11px;
+  width: 270px;
+  padding-top: 26px;
+  padding-right: var(--padding-wrap-content);
+  padding-left: var(--padding-wrap-content);
+  padding-bottom: 24px;
+  border-radius: 10px;
+  background-color: var(--basic-white);
+}
+
+.region__flag {
+  position: absolute;
+  top: -12px;
+}
+
+.region__name,
+.region__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.region__name {
+  margin-bottom: 2px;
+  color: #000000;
+}
+
+.region__text {
+  font-weight: 500;
+  color: var(--basic-grey);
+  opacity: 0.3;
+}
+
+.region__counter {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  font-weight: 500;
+  color: var(--special-blue);
+  opacity: 0.3;
+}
+
+.region__counter::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  background-image: url("../../img/icons/icon-user.svg");
+}

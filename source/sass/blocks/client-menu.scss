@@ -1,0 +1,30 @@
+.client-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  list-style: none;
+}
+
+.header .client-menu {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.header_collapse .client-menu,
+.header_scroll .client-menu {
+  display: none;
+}
+
+.client-menu__item_auth {
+  width: 190px;
+}
+
+.header__client-menu .client-menu__item_auth {
+  order: -1;
+  width: 100%;
+  margin-bottom: 51px;
+}

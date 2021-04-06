@@ -1,0 +1,53 @@
+.promo {
+  padding-top: 44px;
+  padding-right: var(--padding-wrap-blocks);
+  padding-bottom: 39px;
+  padding-left: var(--padding-wrap-blocks);
+  background-color: var(--basic-blue-dark);
+}
+
+.promo__head-title {
+  max-width: 270px;
+  margin: 0 auto;
+  margin-bottom: 245px;
+}
+
+.promo__client-menu {
+  position: relative;
+  flex-direction: row;
+  margin-bottom: 28px;
+  z-index: 1;
+}
+
+.promo__client-menu::before,
+.promo__client-menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.promo__client-menu::before {
+  width: 100vw;
+  height: 241px;
+  bottom: 20px;
+  right: -25px;
+  background-image: url("../../img/illustrations/moon.png");
+}
+
+.promo__client-menu::after {
+  width: 192px;
+  height: 255px;
+  bottom: 20px;
+  right: 23px;
+  background-image: url("../../img/illustrations/traveller.png");
+  background-size: contain;
+}
+
+.promo__citate {
+  width: 180px;
+  margin-bottom: 29px;
+  padding-left: var(--padding-wrap-content);
+}

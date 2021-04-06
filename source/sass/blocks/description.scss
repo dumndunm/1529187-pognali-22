@@ -1,0 +1,22 @@
+.description {
+  padding-top: 33px;
+  padding-right: var(--padding-wrap-blocks);
+  padding-bottom: 82px;
+  padding-left: var(--padding-wrap-blocks);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: var(--basic-blue-dark);
+  background-image: url("../../img/illustrations/mobiles.png");
+  background-repeat: no-repeat;
+  background-position: 20px bottom;
+}
+
+.description__title,
+.description__paragraph,
+.description__sub-paragraph {
+  padding-left: var(--padding-wrap-content);
+}
+
+.description__paragraph {
+  margin-bottom: 20px;
+}

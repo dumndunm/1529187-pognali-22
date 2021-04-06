@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Blogger Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: var(--basic-blue-light);
+}

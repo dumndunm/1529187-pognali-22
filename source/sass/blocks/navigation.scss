@@ -1,0 +1,23 @@
+.navigation {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.header_collapse .navigation,
+.header_scroll .navigation {
+  display: none;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation__link {
+  color: var(--basic-blue-dark);
+  text-decoration: none;
+}

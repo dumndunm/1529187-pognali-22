@@ -1,0 +1,74 @@
+.motivation {
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--basic-blue-dark);
+  counter-reset: numberIndent;
+}
+
+.motivation__point {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding-left: var(--padding-wrap-content);
+  border-radius: 10px;
+  list-style: none;
+}
+
+.motivation__point::before {
+  counter-increment: numberIndent;
+  content: counter(numberIndent);
+  position: absolute;
+  top: 22px;
+  right: 21px;
+  color: var(--basic-white);
+}
+
+.motivation__point::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.motivation__point:nth-child(1) {
+  background-color: var(--basic-orange);
+}
+
+.motivation__point:nth-child(1)::after {
+  background-color: var(--basic-orange);
+}
+
+.motivation__point:nth-child(2) {
+  background-color: var(--special-orange);
+  z-index: 10;
+}
+
+.motivation__point:nth-child(2)::after {
+  background-color: var(--special-orange);
+}
+
+.motivation__point:nth-child(3) {
+  background-color: var(--special-yellow);
+  z-index: 20;
+}
+
+.motivation__point:nth-child(3)::after {
+  background-color: var(--special-yellow);
+}
+
+.motivation__point:nth-child(4) {
+  background-color: var(--basic-yellow);
+  z-index: 30;
+}
+
+.motivation__text {
+  width: 160px;
+}

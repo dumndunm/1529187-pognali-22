@@ -1,0 +1,22 @@
+.logo {
+  display: block;
+  width: 96px;
+  height: 15px;
+}
+
+.logo__pic {
+  width: 100%;
+  height: 100%;
+}
+
+.logo__pic_light {
+  display: none;
+}
+
+.header_collapse .logo__pic_dark {
+  display: none;
+}
+
+.header_collapse .logo__pic_light {
+  display: block;
+}

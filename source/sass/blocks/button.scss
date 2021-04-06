@@ -1,0 +1,38 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--basic-blue);
+  background-color: var(--basic-yellow);
+}
+
+.header .button {
+  height: 50px;
+}
+
+.button_special {
+  justify-content: space-between;
+  height: 62px;
+  padding-left: 23px;
+  padding-right: 23px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.button_special::after {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-image: url("../../img/icons/arrow-blue.svg");
+  background-repeat: no-repeat;
+}
