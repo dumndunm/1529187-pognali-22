@@ -3,18 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header header_collapse">
         <a class="logo header__logo">
-          <img class="logo__pic" src="#" alt="Логотип сервиса «Погнали?»" />
+          <img
+            class="logo__pic logo__pic_dark"
+            src="./img/contents/site-logo-dark.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
+          <img
+            class="logo__pic logo__pic_light"
+            src="./img/contents/site-logo-light.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
         </a>
 
-        <button
-          class="header__button header__button_open header__button_hidden"
-          type="button"
-        >
+        <button class="header__toggle header__toggle_open" type="button">
           <span class="visually-hidden">Открыть</span>
         </button>
 
@@ -35,74 +43,75 @@
         <ul class="client-menu header__client-menu">
           <li class="client-menu__item">
             <ul class="contacts client-menu__contacts">
-              <li class="contacts__item">
-                <a class="button contacts__link" href="tel:88005558628">
-                  8 800 555-86-28
+              <li class="contacts__item contacts__item_phone">
+                <a class="contacts__link" href="tel:88005558628">
+                  <span class="contacts__link-text">8 800 555-86-28</span>
                 </a>
               </li>
-              <li class="contacts__item">
-                <a
-                  class="button contacts__link"
-                  href="mailto:mail@htmlacademy.ru"
-                >
-                  mail@htmlacademy.ru
+              <li class="contacts__item contacts__item_mail">
+                <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+                  <span class="contacts__link-text">mail@htmlacademy.ru</span>
                 </a>
               </li>
             </ul>
           </li>
 
-          <li class="client-menu__item">
-            <a class="button button_auth client-menu__auth" href="#">
-              Авторизация
-            </a>
+          <li class="client-menu__item client-menu__item_auth">
+            <a class="button" href="#">Авторизация</a>
           </li>
         </ul>
 
         <ul class="socials header__socials">
           <li class="socials__item">
-            <a class="button socials__link" href="#">Facebook</a>
+            <a class="socials__link socials__link_facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">VK</a>
+            <a class="socials__link socials__link_vk" href="#">
+              <span class="visually-hidden">VK</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">Instagram</a>
+            <a class="socials__link socials__link_instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
         </ul>
       </header>
 
-      <main class="content">
+      <main>
         <section class="promo">
-          <h1 class="head-title">В путешествие с крутыми попутчиками!</h1>
+          <h1 class="head-title promo__head-title">
+            В путешествие с крутыми попутчиками!
+          </h1>
 
           <ul class="client-menu promo__client-menu">
             <li class="client-menu__item">
               <ul class="contacts client-menu__contacts">
-                <li class="contacts__item">
-                  <a class="button contacts__link" href="tel:88005558628">
-                    8 800 555-86-28
+                <li class="contacts__item contacts__item_phone">
+                  <a class="contacts__link" href="tel:88005558628">
+                    <span class="contacts__link-text">8 800 555-86-28</span>
                   </a>
                 </li>
-                <li class="contacts__item">
-                  <a
-                    class="button contacts__link"
-                    href="mailto:mail@htmlacademy.ru"
-                  >
-                    mail@htmlacademy.ru
+                <li class="contacts__item contacts__item_mail">
+                  <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+                    <span class="contacts__link-text">mail@htmlacademy.ru</span>
                   </a>
                 </li>
               </ul>
             </li>
 
-            <li class="client-menu__item">
-              <a class="button button_auth client-menu__auth" href="#">
-                Авторизация
-              </a>
+            <li class="client-menu__item client-menu__item_auth">
+              <a class="button" href="#">Авторизация</a>
             </li>
           </ul>
 
           <p class="promo__citate">
-            <q class="paragraph">«Лучшее приложение, что я видел в жизни!»</q>
+            <q
+              class="paragraph"
+            >Лучшее приложение,<br />
+              что я видел в жизни!</q>
             <cite class="sub-paragraph">
               Мурат Эльтазин<br />
               главный редактор газеты «гаджетлайф»
@@ -110,10 +119,26 @@
           </p>
 
           <ol class="motivation promo__motivation">
-            <li class="motivation__point">Выберите направление</li>
-            <li class="motivation__point">Изучите идеи путешественников</li>
-            <li class="motivation__point">Находите тех, кто похож на вас</li>
-            <li class="motivation__point">Путешествуйте вместе!</li>
+            <li class="motivation__point">
+              <span class="motivation__text">
+                Выберите направление
+              </span>
+            </li>
+            <li class="motivation__point">
+              <span class="motivation__text">
+                Изучите идеи путешественников
+              </span>
+            </li>
+            <li class="motivation__point">
+              <span class="motivation__text">
+                Находите тех, кто похож на вас
+              </span>
+            </li>
+            <li class="motivation__point">
+              <span class="motivation__text">
+                Путешествуйте вместе!
+              </span>
+            </li>
           </ol>
         </section>
 
@@ -132,36 +157,57 @@
           </p>
         </section>
 
-        <section class="countries">
-          <h2 class="title countries__title">Направления</h2>
+        <section class="regions">
+          <h2 class="title regions__title">Направления</h2>
 
-          <p class="paragraph countries__paragraph">
+          <p class="paragraph regions__paragraph">
             Мы не продаем туры и ничего не рекламируем. Люди сами пишут о
             странах, куда хотели бы отправиться и чем можно там заняться.
           </p>
 
-          <ul class="countries__list">
-            <li class="region countries__region">
-              <img class="region__pic" src="#" alt="Тайланд" />
+          <ul class="regions__list">
+            <li class="region regions__region">
+              <img
+                class="region__pic"
+                src="./img/contents/regions/thailand-mobile.jpg"
+                alt="Тайланд"
+              />
               <div class="region__wrapper">
+                <div class="flag flag_tai region__flag">
+                  <span class="visually-hidden">Тайланд</span>
+                </div>
                 <h3 class="region__name">Тайланд</h3>
                 <p class="region__text">Джунгли зовут!</p>
                 <span class="region__counter">18321</span>
               </div>
             </li>
 
-            <li class="region countries__region">
-              <img class="region__pic" src="#" alt="Франция" />
+            <li class="region regions__region">
+              <img
+                class="region__pic"
+                src="./img/contents/regions/france-mobile.jpg"
+                alt="Франция"
+              />
               <div class="region__wrapper">
+                <div class="flag flag_france region__flag">
+                  <span class="visually-hidden">Франция</span>
+                </div>
                 <h3 class="region__name">Франция</h3>
-                <p class="region__text">Тре бьен, Манифик!</p>
+                <p class="region__text">Трэ бьен, Манифик!</p>
                 <span class="region__counter">12518</span>
               </div>
             </li>
 
-            <li class="region countries__region">
-              <img class="region__pic" src="#" alt="Чехия" />
+            <li class="region regions__region">
+              <img
+                class="region__pic"
+                src="./img/contents/regions/czech-mobile.jpg"
+                alt="Чехия"
+              />
               <div class="region__wrapper">
+                <div class="flag flag_czech region__flag">
+                  <span class="visually-hidden">Чехия</span>
+                </div>
                 <h3 class="region__name">Чехия</h3>
                 <p class="region__text">Закоулки старой европы</p>
                 <span class="region__counter">5326</span>
@@ -169,7 +215,9 @@
             </li>
           </ul>
 
-          <a class="button button_special" href="./form.html">Показать все</a>
+          <a class="button button_special regions__button" href="./form.html">
+            Показать все
+          </a>
         </section>
 
         <section class="users">
@@ -186,24 +234,28 @@
 
           <ul class="users__list">
             <li class="user users__user">
-              <img class="user__pic" src="#" alt="Таня Фирсова" />
+              <img
+                class="user__pic"
+                src="./img/users/tat-firsova.jpg"
+                alt="Таня Фирсова"
+              />
 
-              <div class="rate user__rate">
-                <span class="rate__count">99</span>
-                <span class="rate__text">level</span>
+              <div class="user-rating user__rating">
+                <span class="user-rating__count">99</span>
+                <span class="user-rating__text">level</span>
               </div>
 
               <div class="user__wrapper">
                 <h3 class="user__name">Таня Фирсова</h3>
 
                 <ul class="user__favs">
-                  <li class="flag flag_sri">
+                  <li class="flag flag_sri user__flag">
                     <span class="visually-hidden">Шри-ланка</span>
                   </li>
-                  <li class="flag flag_tai">
+                  <li class="flag flag_tai user__flag">
                     <span class="visually-hidden">Тайланд</span>
                   </li>
-                  <li class="flag flag_sei">
+                  <li class="flag flag_sei user__flag">
                     <span class="visually-hidden">Сейшелы</span>
                   </li>
                 </ul>
@@ -218,16 +270,16 @@
                 </ul>
 
                 <ul class="user__icons">
-                  <li class="user__icon" class="user-icon user-icon_prefer">
+                  <li class="user__icon user__icon_airplane user__icon_prefer">
                     <span class="visually-hidden">Самолетом</span>
                   </li>
-                  <li class="user-icon">
+                  <li class="user__icon user__icon_bus">
                     <span class="visually-hidden">На автобусе</span>
                   </li>
-                  <li class="user-icon">
+                  <li class="user__icon user__icon_bicycle">
                     <span class="visually-hidden">На велосипеде</span>
                   </li>
-                  <li class="user-icon">
+                  <li class="user__icon user__icon_walk">
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -235,21 +287,25 @@
             </li>
 
             <li class="user users__user user_online">
-              <img class="user__pic" src="#" alt="Петя Демин" />
+              <img
+                class="user__pic"
+                src="./img/users/petr-demin.jpg"
+                alt="Петя Демин"
+              />
 
-              <div class="rate user__rate">
-                <span class="rate__count">80</span>
-                <span class="rate__text">level</span>
+              <div class="user-rating user__rating">
+                <span class="user-rating__count">99</span>
+                <span class="user-rating__text">level</span>
               </div>
 
               <div class="user__wrapper">
                 <h3 class="user__name">Петя Демин</h3>
 
                 <ul class="user__favs">
-                  <li class="flag flag_sri">
+                  <li class="flag flag_belg user__flag">
                     <span class="visually-hidden">Бельгия</span>
                   </li>
-                  <li class="flag flag_tai">
+                  <li class="flag flag_czech user__flag">
                     <span class="visually-hidden">Чехия</span>
                   </li>
                 </ul>
@@ -263,16 +319,16 @@
                 </ul>
 
                 <ul class="user__icons">
-                  <li class="user-icon user-icon_prefer">
+                  <li class="user__icon user__icon_airplane user__icon_prefer">
                     <span class="visually-hidden">Самолетом</span>
                   </li>
-                  <li class="user-icon user-icon_prefer">
+                  <li class="user__icon user__icon_bus user__icon_prefer">
                     <span class="visually-hidden">На автобусе</span>
                   </li>
-                  <li class="user-icon">
+                  <li class="user__icon user__icon_bicycle">
                     <span class="visually-hidden">На велосипеде</span>
                   </li>
-                  <li class="user-icon user-icon_prefer">
+                  <li class="user__icon user__icon_walk user__icon_prefer">
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -280,13 +336,13 @@
             </li>
           </ul>
 
-          <a class="button button_special" href="./catalog.html">
+          <a class="button button_special users__button" href="./catalog.html">
             Показать всех
           </a>
         </section>
 
         <section class="profile">
-          <h2 class="title profile__title">Добавьте свой профиль</h2>
+          <h2 class="title profile__title">Добавьте<br />свой профиль</h2>
 
           <dl class="services profile__services">
             <dt class="services__title">Базовое размещение</dt>
@@ -330,17 +386,20 @@
           <p class="paragraph feedback__paragraph">
             Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы?
             Тогда скорее
-            <a class="feedback__link" href="./auth.html">авторизуйтесь</a>.
+            <a class="feedback__link" href="#">авторизуйтесь</a>.
           </p>
 
-          <form class="feedback-form feedback__form" action="#" method="GET">
+          <form class="feedback-form feedback__form" action="#" method="#">
             <input
               class="feedback-form__field"
               type="email"
               name="feedback-mail"
               id="feedback-mail"
             />
-            <button class="feedback-form__button" type="submit">
+            <button
+              class="button button_special feedback-form__button"
+              type="submit"
+            >
               <span class="visually-hidden">Отправить</span>
             </button>
           </form>
@@ -350,13 +409,15 @@
           </p>
 
           <ul class="contacts feedback__contacts">
-            <li class="contacts__item">
-              <a class="button contacts__link" href="tel:88005558628">
-                8 800 555-86-28
+            <li class="contacts__item contacts__item_phone">
+              <a class="contacts__link" href="tel:88005558628">
+                <span class="contacts__link-text">8 800 555-86-28</span>
               </a>
             </li>
-            <li class="contacts__item">
-              <a class="button contacts__link" href="#">mail@htmlacademy.ru</a>
+            <li class="contacts__item contacts__item_mail">
+              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+                <span class="contacts__link-text">mail@htmlacademy.ru</span>
+              </a>
             </li>
           </ul>
         </section>
@@ -366,7 +427,9 @@
 
           <div class="address__wrapper">
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
-            <a class="button button_special" href="#">Проложить маршрут</a>
+            <a class="button button_special address__button" href="#">
+              Проложить маршрут
+            </a>
           </div>
 
           <div class="address__map"></div>
@@ -375,25 +438,36 @@
 
       <footer class="footer">
         <a class="logo footer__logo">
-          <img class="logo__pic" src="#" alt="Логотип сервиса «Погнали?»" />
+          <img
+            class="logo__pic"
+            src="./img/contents/site-logo-dark.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
         </a>
 
         <ul class="socials footer__socials">
           <li class="socials__item">
-            <a class="button socials__link" href="#">Facebook</a>
+            <a class="socials__link socials__link_facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">VK</a>
+            <a class="socials__link socials__link_vk" href="#">
+              <span class="visually-hidden">VK</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">Instagram</a>
+            <a class="socials__link socials__link_instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
+        </ul>
         </ul>
 
         <section class="developed">
           <h2 class="developed__title">Разработано</h2>
           <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="#" alt="Логотип академии" />
+            <img src="./img/icons/logo-htmlacademy.svg" alt="Логотип академии" />
           </a>
         </section>
       </footer>

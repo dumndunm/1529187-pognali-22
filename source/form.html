@@ -3,18 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header header_collapse">
         <a class="logo header__logo" href="./index.html">
-          <img class="logo__pic" src="#" alt="Логотип сервиса «Погнали?»" />
+          <img
+            class="logo__pic logo__pic_dark"
+            src="./img/site-logo-dark.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
+          <img
+            class="logo__pic logo__pic_light"
+            src="./img/site-logo-light.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
         </a>
 
-        <button
-          class="header__button header__button_open header__button_hidden"
-          type="button"
-        >
+        <button class="header__toggle header__toggle_open" type="button">
           <span class="visually-hidden">Открыть</span>
         </button>
 
@@ -24,7 +32,7 @@
               <a class="navigation__link" href="#">О сервисе</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./form.html">Направления</a>
+              <a class="navigation__link">Направления</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="./catalog.html">Попутчики</a>
@@ -35,50 +43,51 @@
         <ul class="client-menu header__client-menu">
           <li class="client-menu__item">
             <ul class="contacts client-menu__contacts">
-              <li class="contacts__item">
-                <a class="button contacts__link" href="tel:88005558628">
-                  8 800 555-86-28
+              <li class="contacts__item contacts__item_phone">
+                <a class="contacts__link" href="tel:88005558628">
+                  <span class="contacts__link-text">8 800 555-86-28</span>
                 </a>
               </li>
-              <li class="contacts__item">
-                <a
-                  class="button contacts__link"
-                  href="mailto:mail@htmlacademy.ru"
-                >
-                  mail@htmlacademy.ru
+              <li class="contacts__item contacts__item_mail">
+                <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+                  <span class="contacts__link-text">mail@htmlacademy.ru</span>
                 </a>
               </li>
             </ul>
           </li>
 
-          <li class="client-menu__item">
-            <a class="button button_auth client-menu__auth" href="#">
-              Авторизация
-            </a>
+          <li class="client-menu__item client-menu__item_auth">
+            <a class="button" href="#">Авторизация</a>
           </li>
         </ul>
 
         <ul class="socials header__socials">
           <li class="socials__item">
-            <a class="button socials__link" href="#">Facebook</a>
+            <a class="socials__link socials__link_facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">VK</a>
+            <a class="socials__link socials__link_vk" href="#">
+              <span class="visually-hidden">VK</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">Instagram</a>
+            <a class="socials__link socials__link_instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
         </ul>
       </header>
 
-      <main class="content">
+      <main>
         <h1 class="head-title head-title_special">Направления</h1>
 
         <section class="profile-info">
           <h2 class="visually-hidden">Информация о профиле</h2>
-          <div class="rate profile-info__rate">
-            <span class="rate__count">80</span>
-            <span class="rate__text">level</span>
+          <div class="profile-rating profile-info__rating">
+            <span class="profile-rating__count">80</span>
+            <span class="profile-rating__text">level</span>
           </div>
 
           <img class="profile-info__pic" src="#" alt="Фотография профиля" />
@@ -523,7 +532,9 @@
                   </div>
                 </li>
               </ul>
-              <button class="trip-form__button-add" type="button">Добавить страну</button>
+              <button class="trip-form__button-add" type="button">
+                Добавить страну
+              </button>
 
               <a class="button trip-form__button" href="#trip-form-step-three">
                 Следующий шаг
@@ -599,25 +610,36 @@
 
       <footer class="footer">
         <a class="logo footer__logo">
-          <img class="logo__pic" src="#" alt="Логотип сервиса «Погнали?»" />
+          <img
+            class="logo__pic"
+            src="./img/site-logo-dark.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
         </a>
 
         <ul class="socials footer__socials">
           <li class="socials__item">
-            <a class="button socials__link" href="#">Facebook</a>
+            <a class="socials__link socials__link_facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">VK</a>
+            <a class="socials__link socials__link_vk" href="#">
+              <span class="visually-hidden">VK</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">Instagram</a>
+            <a class="socials__link socials__link_instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
+        </ul>
         </ul>
 
         <section class="developed">
           <h2 class="developed__title">Разработано</h2>
           <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="#" alt="Логотип академии" />
+            <img src="./img/icons/logo-htmlacademy.svg" alt="Логотип академии" />
           </a>
         </section>
       </footer>
