@@ -1,9 +1,18 @@
 .footer {
   position: relative;
-  padding-top: 7px;
-  padding-left: var(--padding-wrap-blocks);
-  padding-right: var(--padding-wrap-blocks);
+  padding-top: 10px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+
   background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
 }
 
 .footer::before {
@@ -11,19 +20,71 @@
   display: block;
   width: 100%;
   height: 30px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: var(--corner-radius-large);
+  border-top-right-radius: var(--corner-radius-large);
   position: absolute;
   top: -30px;
   left: 0;
+
   background-color: var(--basic-white);
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    height: 60px;
+    border-top-left-radius: var(--corner-radius-large);
+    border-top-right-radius: var(--corner-radius-large);
+    top: -60px;
+  }
 }
 
 .footer__logo {
   margin: 0 auto 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    position: relative;
+    top: -14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -20px;
+    z-index: 10;
+  }
 }
 
 .footer__socials {
-  margin-bottom: 37px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 44px;
+    position: relative;
+    top: -14px;
+    z-index: 10;
+  }
+}
+
+.footer__developed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -6px;
+    margin-bottom: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 10;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -8px;
+  }
 }

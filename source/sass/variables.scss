@@ -1,3 +1,6 @@
+$tablet-width: 688px;
+$desktop-width: 1320px;
+
 :root {
   --basic-white: #ffffff;
 
@@ -5,6 +8,7 @@
   --special-grey-light: #e1e3e9;
 
   --basic-grey: #444444;
+  --special-grey: #cccccc;
 
   --basic-blue-light: #edeff6;
   --special-blue-light: #dfe3f0;
@@ -15,6 +19,7 @@
 
   --basic-blue-dark: #192144;
   --special-blue-dark: #121936;
+  --extra-blue-dark: #182044;
 
   --basic-yellow: #ffd74b;
   --special-yellow: #ffbd30;
@@ -27,6 +32,22 @@
   --user-online-color: #81e31e;
   --user-offline-color: #f97676;
 
-  --padding-wrap-blocks: 25px;
-  --padding-wrap-content: 24px;
+  --page-padding-size: 25px;
+  --content-padding-size: 24px;
+
+  --corner-radius-small: 10px;
+  --corner-radius-large: 30px;
+
+  @media (min-width: $tablet-width) {
+    --page-padding-size: 40px;
+    --content-padding-size: 32px;
+
+    --corner-radius-small: 20px;
+    --corner-radius-large: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    --page-padding-size: 60px;
+    --content-padding-size: 34px;
+  }
 }

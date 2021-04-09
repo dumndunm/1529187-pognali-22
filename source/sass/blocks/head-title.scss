@@ -6,4 +6,13 @@
   line-height: 40px;
   text-align: center;
   color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
