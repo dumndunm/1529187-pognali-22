@@ -1,76 +1,215 @@
 .contacts {
   display: flex;
   padding-left: 0;
+
   list-style: none;
 }
 
-.header .contacts,
-.feedback .contacts {
+.header .contacts {
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
 }
 
-.contacts__item {
-  display: flex;
-  align-items: center;
-}
+.header_collapse .contacts,
+.header_scroll .contacts {
+  display: none;
 
-.contacts__item_phone::before,
-.contacts__item_mail::before {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.contacts__item_phone::before {
-  background-color: var(--basic-orange);
-  background-image: url("../../img/icons/icon-telephone-call.svg");
-}
-
-.contacts__item_mail::before {
-  background-color: var(--special-yellow);
-  background-image: url("../../img/icons/icon-mail.svg");
-}
-
-.header .contacts__item_phone::before,
-.header .contacts__item_mail::before,
-.feedback .contacts__item_phone::before,
-.feedback .contacts__item_mail::before {
-  width: 45px;
-  height: 45px;
-  margin-right: 16px;
-  background-color: var(--special-blue-dark);
-}
-
-.header .contacts__item_phone::before,
-.feedback .contacts__item_phone::before {
-  background-image: url("../../img/icons/icon-telephone-yellow.svg");
-}
-
-.header .contacts__item_mail::before,
-.feedback .contacts__item_mail::before {
-  background-image: url("../../img/icons/icon-mail-yellow.svg");
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .contacts__link {
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+
   text-decoration: none;
-  text-transform: uppercase;
-  color: var(--basic-blue-dark);
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+  }
 }
 
-.contacts__link-text {
+.contacts__link::after {
+  display: block;
+  margin-left: 16px;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--special-blue-dark);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 23px;
+    font-size: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 31px;
+  }
+}
+
+.header .contacts__link::after {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.promo__client-menu .contacts__link::after {
   display: none;
 }
 
-.header .contacts__link-text,
-.feedback .contacts__link-text {
-  display: block;
+.feedback__contacts .contacts__link::after {
+  color: var(--basic-yellow);
 }
 
-.feedback .contacts__link-text {
-  color: var(--basic-yellow);
+.contacts__link_telephone::after {
+  content: "8 800 555-86-28";
+}
+
+.contacts__link_email::after {
+  content: "mail@htmlacademy.ru";
+}
+
+.header .contacts__link_telephone {
+  display: flex;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.header .contacts__link_email {
+  display: flex;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.header .contacts__link_call {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.header .contacts__link_mail {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.contacts__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.header .contacts__icon-wrapper {
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.promo .contacts__icon-wrapper {
+  width: 40px;
+  height: 40px;
+}
+
+.contacts__link_telephone .contacts__icon-wrapper {
+  background-color: var(--special-blue-dark);
+}
+
+.contacts__link_email .contacts__icon-wrapper {
+  background-color: var(--special-blue-dark);
+}
+
+.contacts__link_call .contacts__icon-wrapper {
+  background-color: var(--basic-orange);
+}
+
+.contacts__link_mail .contacts__icon-wrapper {
+  background-color: var(--special-yellow);
+}
+
+.header .contacts__icon {
+  fill: var(--basic-yellow);
+
+  @media (min-width: $desktop-width) {
+    fill: var(--special-blue);
+  }
+}
+
+.promo .contacts__icon {
+  fill: var(--special-blue);
+}
+
+.feedback .contacts__icon {
+  fill: var(--basic-yellow);
+}
+
+.contacts__icon_telephone {
+  width: 18px;
+  height: 17px;
+
+  @media (min-width: $tablet-width) {
+    width: 27px;
+    height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 36px;
+    height: 34px;
+  }
+}
+
+.contacts__icon_email {
+  width: 18px;
+  height: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 37px;
+    height: 25px;
+  }
+}
+
+.contacts__icon_call {
+  width: 18px;
+  height: 18px;
+}
+
+.contacts__icon_mail {
+  width: 18px;
+  height: 16px;
 }

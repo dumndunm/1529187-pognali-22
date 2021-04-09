@@ -1,15 +1,26 @@
 .user {
   display: flex;
   flex-direction: column;
+  width: 270px;
+  min-height: 428px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    min-height: 483px;
+  }
 }
 
 .user:not(:last-child) {
   margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .user__pic {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: var(--corner-radius-small);
+  border-top-right-radius: var(--corner-radius-small);
 }
 
 .user__rating {
@@ -22,22 +33,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 27px;
+  padding-top: 25px;
   padding-bottom: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: var(--corner-radius-small);
+  border-bottom-right-radius: var(--corner-radius-small);
   background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 31px;
+  }
 }
 
 .user__name {
+  position: relative;
   display: flex;
   align-items: center;
   margin-top: 0;
   margin-bottom: 15px;
+
   font-weight: 700;
   font-size: 21px;
   color: var(--basic-blue);
-  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 68px;
+    margin-right: auto;
+    margin-bottom: 23px;
+
+    font-size: 24px;
+  }
 }
 
 .user__name::before {
@@ -45,9 +69,16 @@
   display: block;
   width: 6px;
   height: 6px;
-  margin-right: 10px;
+  position: absolute;
+  left: -16px;
   border-radius: 50%;
   background-color: var(--user-offline-color);
+
+  @media (min-width: $tablet-width) {
+    width: 8px;
+    height: 8px;
+    left: -20px;
+  }
 }
 
 .user_online .user__name::before {
@@ -67,6 +98,11 @@
   display: flex;
 }
 
+.user__flag {
+  width: 35px;
+  height: 25px;
+}
+
 .user__flag:not(:last-child) {
   margin-right: 20px;
 }
@@ -79,11 +115,21 @@
   width: 190px;
   margin-bottom: 14px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    margin-bottom: 20px;
+  }
 }
 
 .user__hashtag {
   line-height: 18px;
   color: var(--basic-grey);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .user__hashtag:not(:last-child) {
@@ -93,6 +139,10 @@
 .user__icons {
   display: flex;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
 }
 
 .user__icon {

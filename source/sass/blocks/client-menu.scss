@@ -1,30 +1,86 @@
 .client-menu {
-  position: relative;
   display: flex;
   justify-content: center;
+
   margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
+  // margin-bottom: 0; header__client-menu не переопределяет из-за порядка подключения
   padding-left: 0;
+
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
 }
 
-.header .client-menu {
-  margin-right: 0;
-  margin-left: 0;
+.client-menu__contacts {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 115px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
-.header_collapse .client-menu,
-.header_scroll .client-menu {
+.header .client-menu__item_auth {
+  --header-auth-button-order: -1;
+  --header-auth-button-position: static;
+  --header-auth-button-width: 100%;
+  --header-auth-button-margin-bottom: 51px;
+
+  --header-auth-button-font-weight: 700;
+  --header-auth-button-letter-spacing: 0;
+
+  @media (min-width: $tablet-width) {
+    --header-auth-button-position: absolute;
+    --header-auth-button-width: 188px;
+    --header-auth-button-margin-bottom: 0;
+
+    top: 40px;
+    right: var(--page-padding-size);
+
+    --header-auth-button-font-weight: 400;
+    --header-auth-button-letter-spacing: 0.03em;
+  }
+
+  @media (min-width: $desktop-width) {
+    --header-auth-button-order: 0;
+    --header-auth-button-position: static;
+
+    top: auto;
+    right: auto;
+
+    --header-auth-button-font-weight: 700;
+    --header-auth-button-letter-spacing: 0;
+  }
+
+  order: var(--header-auth-button-order);
+  position: var(--header-auth-button-position);
+  min-width: var(--header-auth-button-width);
+
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--header-auth-button-margin-bottom);
+
+  font-weight: var(--header-auth-button-font-weight);
+  letter-spacing: var(--header-auth-button-letter-spacing);
+}
+
+.header_collapse .client-menu__item_auth,
+.header_scroll .client-menu__item_auth {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    display: block;
+    min-width: 188px;
+    font-weight: 700;
+  }
 }
 
-.client-menu__item_auth {
-  width: 190px;
-}
-
-.header__client-menu .client-menu__item_auth {
-  order: -1;
-  width: 100%;
-  margin-bottom: 51px;
+.promo .client-menu__item_auth {
+  min-width: 188px;
+  font-weight: 700;
 }

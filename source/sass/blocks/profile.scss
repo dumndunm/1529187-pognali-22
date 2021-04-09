@@ -1,58 +1,129 @@
 .profile {
   position: relative;
-  padding-top: 83px;
-  padding-right: var(--padding-wrap-blocks);
-  padding-left: var(--padding-wrap-blocks);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 68px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 132px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 168px;
+    padding-left: 131px;
+    padding-bottom: 100px;
+  }
 }
 
 .profile::before {
   content: "";
   display: block;
   width: 100%;
-  height: 30px;
+  height: 36px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   position: absolute;
-  bottom: -30px;
+  bottom: -36px;
   left: 0;
+
   background-color: var(--basic-blue-light);
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    height: 60px;
+    border-bottom-left-radius: var(--corner-radius-large);
+    border-bottom-right-radius: var(--corner-radius-large);
+    bottom: -60px;
+  }
 }
 
-.profile__title,
 .profile__services {
-  padding-left: var(--padding-wrap-content);
+  margin-bottom: 30px;
+  padding-left: var(--content-padding-size);
+
+  @media (min-width: $desktop-width) {
+    align-self: start;
+  }
 }
 
 .profile__title {
   display: flex;
   align-items: center;
+  width: 270px;
   margin-bottom: 31px;
+  padding-left: var(--content-padding-size);
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    width: 482px;
+    margin-bottom: 71px;
+    padding-left: 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 67px;
+    margin-bottom: 130px;
+  }
 }
 
 .profile__title::after {
   content: "";
   display: block;
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  margin-left: 36px;
+
   background-image: url("../../img/icons/icon-profile-services.png");
   background-repeat: no-repeat;
   background-size: contain;
-}
 
-.profile-services {
-  margin-bottom: 31px;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .profile__button {
-  display: block;
-  margin-bottom: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
   font-weight: 700;
   text-decoration: none;
   text-align: center;
   color: var(--extra-blue);
-}
 
-.profile__modal {
-  display: none;
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    max-width: 688px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+
+    &::before {
+      content: url("../../img/icons/icon_businessman.svg");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 68px;
+      height: 68px;
+      margin-right: 21px;
+      border-radius: 50%;
+      color: var(--extra-blue);
+      fill: currentColor;
+      background-color: #e2e5f2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }

@@ -1,53 +1,122 @@
 .promo {
-  padding-top: 97px;
-  padding-right: var(--padding-wrap-blocks);
-  padding-bottom: 39px;
-  padding-left: var(--padding-wrap-blocks);
+  --promo-padding-top: 96px;
+  --promo-padding-bottom: 39px;
+
+  --bg-img-1: url("../../img/illustrations/traveller-mobile.png");
+  --img-1-size: 320px 320px;
+  --img-1-pos: center 156px;
+
+  --bg-img-2: url("../../img/illustrations/rect-bg-promo-mobile.png");
+  --img-2-size: 100vw 285px;
+  --img-2-pos: center 478px;
+
+  --bg-img-3: url("../../img/illustrations/moon-bg-mobile.png");
+  --img-3-size: 100% 424px;
+  --img-3-pos: center 53px;
+
+  @media (min-width: $tablet-width) {
+    --promo-padding-top: 162px;
+    --promo-padding-bottom: 96px;
+
+    --bg-img-1: url("../../img/illustrations/traveller-tablet.png");
+    --img-1-size: 768px 768px;
+    --img-1-pos: center 90px;
+
+    --bg-img-2: url("../../img/illustrations/rect-bg-promo-tablet.png");
+    --img-2-size: contain;
+    --img-2-pos: center 995px;
+
+    --bg-img-3: url("../../img/illustrations/moon-bg-tablet.png");
+    --img-3-size: 100% 612px;
+    --img-3-pos: center 383px;
+  }
+
+  @media (min-width: $desktop-width) {
+    --promo-padding-top: 209px;
+    --promo-padding-bottom: 123px;
+
+    --bg-img-1: url("../../img/illustrations/traveller-desktop.png");
+    --img-1-size: 1440px 750px;
+    --img-1-pos: center top;
+
+    --bg-img-3: url("../../img/illustrations/moon-bg-desktop.png");
+    --img-3-size: 100% 750px;
+    --img-3-pos: center top;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+
+  padding-top: var(--promo-padding-top);
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+  padding-bottom: var(--promo-padding-bottom);
+
   background-color: var(--basic-blue-dark);
+  background-image: var(--bg-img-1), var(--bg-img-2), var(--bg-img-3);
+  background-repeat: no-repeat;
+  background-size: var(--img-1-size), var(--img-2-size), var(--img-3-size);
+  background-position: var(--img-1-pos), var(--img-2-pos), var(--img-3-pos);
 }
 
 .promo__head-title {
   max-width: 270px;
   margin: 0 auto;
-  margin-bottom: 245px;
+  margin-bottom: 242px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 400px;
+    margin-bottom: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    max-width: 470px;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-left: 69px;
+  }
 }
 
 .promo__client-menu {
   position: relative;
-  flex-direction: row;
   margin-bottom: 28px;
-  z-index: 1;
-}
 
-.promo__client-menu::before,
-.promo__client-menu::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-}
-
-.promo__client-menu::before {
-  width: 100vw;
-  height: 241px;
-  bottom: 20px;
-  right: -25px;
-  background-image: url("../../img/illustrations/moon.png");
-}
-
-.promo__client-menu::after {
-  width: 192px;
-  height: 255px;
-  bottom: 20px;
-  right: 23px;
-  background-image: url("../../img/illustrations/traveller.png");
-  background-size: contain;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .promo__citate {
-  width: 180px;
+  width: 220px;
+  margin-top: 0;
   margin-bottom: 29px;
-  padding-left: var(--padding-wrap-content);
+  padding-left: var(--content-padding-size);
+  padding-right: var(--content-padding-size);
+
+  @media (min-width: $tablet-width) {
+    width: 340px;
+    margin-bottom: 211px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    left: 56px;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.promo__motivation {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
 }
