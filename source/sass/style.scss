@@ -1,7 +1,9 @@
+@import "./fonts.scss";
 @import "./variables.scss";
 @import "./global.scss";
 @import "./blocks/button.scss";
 @import "./blocks/header.scss";
+@import "./blocks/header-toggle.scss";
 @import "./blocks/navigation.scss";
 @import "./blocks/client-menu.scss";
 @import "./blocks/contacts.scss";
@@ -20,7 +22,9 @@
 @import "./blocks/users.scss";
 @import "./blocks/user.scss";
 @import "./blocks/profile.scss";
+@import "./blocks/profile-modal.scss";
 @import "./blocks/services.scss";
+@import "./blocks/business-services.scss";
 @import "./blocks/feedback.scss";
 @import "./blocks/feedback-form.scss";
 @import "./blocks/address.scss";
