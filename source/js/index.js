@@ -1,6 +1,10 @@
 const header = document.querySelector(".header");
 const headerToggle = document.querySelector(".header__toggle");
 
+const profileModal = document.querySelector(".profile-modal");
+const profileButton = document.querySelector(".profile__button");
+const profileModalButton = document.querySelector(".profile-modal__button");
+
 const HEADER_COLLAPSE_HEIGHT = 53;
 const HEADER_SCROLL_HEIGHT = 76;
 
@@ -8,7 +12,8 @@ const onPageLoad = (evt) => {
   evt.preventDefault();
   header.classList.remove("header_nojs");
   header.classList.add("header_collapse");
-  headerToggle.classList.add("header__toggle_open");
+
+  document.removeEventListener("DOMContentLoaded", onPageLoad);
 };
 
 const onHeaderToggleClick = (evt) => {
@@ -23,12 +28,10 @@ const onHeaderToggleClick = (evt) => {
 
   const expandHeader = () => {
     header.classList.remove("header_collapse");
-    headerToggle.classList.add("header__toggle_close");
   };
 
   const collapseHeader = () => {
     header.classList.add("header_collapse");
-    headerToggle.classList.remove("header__toggle_close");
   };
 
   if (headerStateIsDefault) {
@@ -59,6 +62,30 @@ const onPageScroll = (evt) => {
   }
 };
 
+const onProfileButtonClick = (evt) => {
+  evt.preventDefault();
+  profileModal.classList.remove("profile-modal_hidden");
+
+  const onProfileModalButtonClick = () => {
+    evt.preventDefault();
+    profileModal.classList.add("profile-modal_hidden");
+    profileModalButton.removeEventListener("click", onProfileModalButtonClick);
+  };
+
+  profileModalButton.addEventListener("click", onProfileModalButtonClick);
+};
+
 document.addEventListener("DOMContentLoaded", onPageLoad);
 window.addEventListener("scroll", onPageScroll);
 headerToggle.addEventListener("click", onHeaderToggleClick);
+profileButton.addEventListener("click", onProfileButtonClick);
+
+window.addEventListener("resize", (evt) => {
+  evt.preventDefault();
+  if (
+    !header.classList.contains("header_collapse") &&
+    window.innerWidth > 1320
+  ) {
+    header.classList.add("header_collapse");
+  }
+});
