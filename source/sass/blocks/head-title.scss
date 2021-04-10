@@ -16,3 +16,36 @@
     text-align: left;
   }
 }
+
+.page-form .head-title {
+  position: relative;
+  display: inline-block;
+  padding-top: 95px;
+  padding-left: var(--page-padding-size);
+  z-index: 1;
+}
+
+.head-title_special::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  margin-top: 8px;
+  background-color: var(--special-yellow);
+}
+
+.head-title_special::before {
+  content: "";
+  display: block;
+  min-width: 320px;
+  width: 100vw;
+  height: 143px;
+  border-radius: 20px;
+  margin-top: 8px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  background-color: var(--extra-blue-dark);
+  z-index: -1;
+}

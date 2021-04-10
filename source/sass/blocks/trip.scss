@@ -1,0 +1,61 @@
+.trip {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 154px;
+
+  margin-bottom: 10px;
+  padding-top: 24px;
+  padding-left: 23px;
+  padding-bottom: 23px;
+  border-radius: 10px;
+
+  color: var(--basic-blue);
+
+  background-color: var(--basic-white);
+}
+
+.trip__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.trip__number {
+  font-weight: 500;
+}
+
+.trip__companions {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.trip__dates {
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.trip__button {
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  background: transparent;
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.3;
+}

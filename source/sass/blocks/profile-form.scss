@@ -1,0 +1,88 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-form__load-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 40px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--basic-blue);
+
+  background-color: var(--special-blue-light);
+}
+
+.profile-form__fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 270px;
+  margin-top: 0;
+  margin-left: var(--page-padding-size);
+  margin-right: var(--page-padding-size);
+
+  border: 1px solid #cbced9;
+  border-radius: 10px;
+}
+
+.profile-form__fieldset_tags {
+  height: 89px;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.profile-form__fieldset_transport {
+  justify-content: center;
+  flex-direction: row;
+  height: 63px;
+  margin-bottom: 34px;
+}
+
+.profile-form__legend {
+  position: absolute;
+  top: -8px;
+  right: 50%;
+  transform: translateX(50%);
+
+  display: flex;
+  justify-content: center;
+  padding-left: 17px;
+  padding-right: 17px;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--basic-blue);
+
+  background-color: var(--basic-blue-light);
+}
+
+.profile-form__tags {
+  border: none;
+  background: transparent;
+}
+
+.profile-form__transport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--basic-white);
+}
+
+.profile-form__icon_airplane {
+  fill: var(--basic-blue);
+}

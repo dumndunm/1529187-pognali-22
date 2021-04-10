@@ -42,10 +42,19 @@
   padding-right: var(--page-padding-size);
   padding-bottom: 0;
 
+<<<<<<< HEAD
   @media (min-width: $tablet-width) {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+=======
+.page-form .header_collapse {
+  background-color: var(--extra-blue-dark);
+}
+
+.header_scroll {
+  --header-scroll-height: 76px;
+>>>>>>> 9ad2a10 (Добавляет стили к блокам формы)
 
   @media (min-width: $desktop-width) {
     padding-top: 47px;
@@ -67,6 +76,7 @@
   background-color: var(--basic-white);
 }
 
+<<<<<<< HEAD
 .header__wrapper {
   position: relative;
 
@@ -84,6 +94,14 @@
   padding-left: var(--page-padding-size);
   padding-right: var(--page-padding-size);
   padding-bottom: 29px;
+=======
+.page-form .header_scroll {
+  background-color: var(--basic-white);
+}
+
+.header__logo {
+  --header-logo-margin-bottom: 76px;
+>>>>>>> 9ad2a10 (Добавляет стили к блокам формы)
 
   @media (min-width: $tablet-width) {
     min-height: 910px;

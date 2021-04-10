@@ -1,0 +1,34 @@
+.trips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 28px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+  padding-bottom: 60px;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  background-color: var(--special-blue-light);
+}
+
+.trips__title {
+  align-self: start;
+  margin-bottom: 29px;
+}
+
+.trips__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 270px;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
+}

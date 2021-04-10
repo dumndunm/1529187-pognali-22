@@ -1,0 +1,29 @@
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox__icon {
+  margin-right: 13px;
+}
+
+.checkbox__bg {
+  fill: transparent;
+}
+
+.checkbox__border {
+  stroke: #cbced9;
+}
+
+.checkbox__marker {
+  // fill: #161c35;
+  fill: transparent;
+}
+
+.checkbox__text {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--basic-blue);
+}
