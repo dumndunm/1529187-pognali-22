@@ -1,40 +1,51 @@
 .description {
+  border-bottom-left-radius: var(--corner-radius-large);
+  border-bottom-right-radius: var(--corner-radius-large);
+
+  background-color: var(--basic-blue-dark);
+}
+
+.description__wrapper {
+  max-width: 480px;
+
+  margin-left: auto;
+  margin-right: auto;
+
   padding-top: 30px;
   padding-left: var(--page-padding-size);
   padding-right: var(--page-padding-size);
   padding-bottom: 82px;
 
-  border-bottom-left-radius: var(--corner-radius-large);
-  border-bottom-right-radius: var(--corner-radius-large);
+  @media (min-width: $tablet-width) {
+    max-width: 1024px;
+    padding-top: 42px;
+    padding-bottom: 90px;
+  }
 
-  background-color: var(--basic-blue-dark);
-  background-image: url("../../img/illustrations/phones-mobiles.png"),
-    url("../../img/illustrations/desc-back-rect.png");
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding-top: 128px;
+    padding-left: 94px;
+    padding-bottom: 164px;
+  }
+
+  background-image: url("../img/illustrations/phones-mobiles.png"),
+    url("../img/illustrations/desc-back-rect.png");
   background-repeat: no-repeat;
   background-size: contain, 113px 132px;
   background-position: calc(100% - 20px) bottom, left top;
 
   @media (min-width: $tablet-width) {
-    padding-top: 42px;
-    padding-bottom: 90px;
-
-    border-bottom-left-radius: var(--corner-radius-large);
-    border-bottom-right-radius: var(--corner-radius-large);
-
-    background-image: url("../../img/illustrations/phones-tablet.png"),
-      url("../../img/illustrations/desc-back-rect-tablet.png");
+    background-image: url("../img/illustrations/phones-tablet.png"),
+      url("../img/illustrations/desc-back-rect-tablet.png");
     background-size: 376px 548px,
       calc(100% - var(--page-padding-size) * 2) 212px;
     background-position: calc(100% - 8px) 48px, var(--page-padding-size) top;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 128px;
-    padding-left: 94px;
-    padding-bottom: 164px;
-
-    background-image: url("../../img/illustrations/phones-desktop.png"),
-      url("../../img/illustrations/desc-back-rect-desktop.png");
+    background-image: url("../img/illustrations/phones-desktop.png"),
+      url("../img/illustrations/desc-back-rect-desktop.png");
     background-size: 630px 635px, 212px 212px;
     background-position: calc(100% - var(--page-padding-size)) 85px,
       var(--page-padding-size) 71px;
@@ -60,7 +71,7 @@
 }
 
 .description__paragraph {
-  max-width: 270px;
+  max-width: 240px;
   margin-bottom: 20px;
 
   br {

@@ -1,18 +1,6 @@
 .feedback {
   position: relative;
-  padding-top: 110px;
-  padding-left: var(--page-padding-size);
-  padding-right: var(--page-padding-size);
-
   background-color: var(--basic-blue-dark);
-
-  @media (min-width: $tablet-width) {
-    padding-top: 136px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 170px;
-  }
 }
 
 .feedback::before {
@@ -31,14 +19,33 @@
 
   @media (min-width: $tablet-width) {
     height: 60px;
-    border-bottom-left-radius: var(--corner-radius-large);
-    border-bottom-right-radius: var(--corner-radius-large);
     bottom: -60px;
   }
 
   @media (min-width: $desktop-width) {
     height: 106px;
     bottom: -106px;
+  }
+}
+
+.feedback__wrapper {
+  max-width: 480px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 110px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+
+  @media (min-width: $tablet-width) {
+    max-width: 1024px;
+    padding-top: 136px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding-top: 170px;
   }
 }
 

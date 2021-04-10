@@ -1,26 +1,22 @@
 .navigation {
-  --navigation-font-size: 30px;
-  --navigation-line-height: 35px;
-  --navigation-text-align: center;
-
-  @media (min-width: $tablet-width) {
-    --navigation-font-size: 60px;
-    --navigation-line-height: 71px;
-    --navigation-text-align: left;
-  }
-
-  @media (min-width: $desktop-width) {
-    --navigation-font-size: 20px;
-    --navigation-line-height: 20px;
-  }
-
   position: relative;
 
   font-weight: 500;
-  font-size: var(--navigation-font-size);
-  line-height: var(--navigation-line-height);
+  font-size: 30px;
+  line-height: 35px;
   text-transform: uppercase;
-  text-align: var(--navigation-text-align);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .navigation::after {

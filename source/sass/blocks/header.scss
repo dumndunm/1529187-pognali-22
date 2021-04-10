@@ -1,25 +1,6 @@
 .header {
-  --header-height: 100vh;
-  --header-padding-top: 27px;
-
-  @media (min-width: $tablet-width) {
-    --header-height: 910px;
-    --header-padding-top: 40px;
-  }
-
   position: fixed;
   top: 0;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  min-width: 320px;
-  min-height: var(--header-height);
-
-  padding-top: var(--header-padding-top);
-  padding-left: var(--page-padding-size);
-  padding-right: var(--page-padding-size);
 
   background-color: var(--basic-white);
   z-index: 100;
@@ -30,30 +11,25 @@
 }
 
 .header_collapse {
-  --header-collapse-padding-top: 0;
-  --header-collapse-padding-bottom: 0;
-  --header-collapse-bgcolor: var(--special-blue);
-
-  @media (min-width: $tablet-width) {
-    --header-collapse-padding-top: 40px;
-    --header-collapse-padding-bottom: 40px;
-    --header-collapse-bgcolor: var(--extra-blue-dark);
-  }
-
-  @media (min-width: $desktop-width) {
-    --header-collapse-padding-top: 47px;
-    --header-collapse-padding-bottom: 0;
-    --header-collapse-bgcolor: var(--special-blue);
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    align-items: center;
-  }
-
   position: absolute;
   top: 0;
 
+  min-width: 320px;
+  width: 100%;
+
+  background-color: var(--special-blue);
+  z-index: 100;
+
+  @media (min-width: $tablet-width) {
+    background-color: var(--extra-blue-dark);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: var(--special-blue);
+  }
+}
+
+.header_collapse .header__wrapper {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -61,44 +37,81 @@
   width: 100%;
   min-height: 53px;
 
-  padding-top: var(--header-collapse-padding-top);
+  padding-top: 0;
   padding-left: var(--page-padding-size);
   padding-right: var(--page-padding-size);
-  padding-bottom: var(--header-collapse-padding-bottom);
+  padding-bottom: 0;
 
-  background-color: var(--header-collapse-bgcolor);
-  z-index: 100;
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+    padding-bottom: 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    max-width: 1440px;
+  }
 }
 
 .header_scroll {
-  --header-scroll-height: 76px;
-
-  @media (min-width: $desktop-width) {
-    --header-scroll-height: 90px;
-  }
-
   position: fixed;
   top: 0;
-
-  min-height: var(--header-scroll-height);
 
   background-color: var(--basic-white);
 }
 
-.header__logo {
-  --header-logo-margin-bottom: 76px;
+.header__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 27px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+  padding-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    --header-logo-margin-bottom: 98px;
+    min-height: 910px;
+    padding-top: 40px;
+    padding-bottom: 74px;
+  }
+}
+
+.header_scroll .header__wrapper {
+  min-height: 76px;
+
+  @media (min-width: $desktop-width) {
+    min-height: 90px;
+    padding-top: 0;
+  }
+}
+
+.header__logo {
+  margin-bottom: 76px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 98px;
   }
 
   @media (min-width: $desktop-width) {
-    --header-logo-margin-bottom: 0;
-
     grid-column: 1 / 2;
+    margin-bottom: 0;
   }
-
-  margin-bottom: var(--header-logo-margin-bottom);
 }
 
 .header_collapse .header__logo,
@@ -128,21 +141,18 @@
 }
 
 .header__navigation {
-  --header-navigation-margin-bottom: 51px;
+  margin-bottom: 51px;
 
   @media (min-width: $tablet-width) {
-    --header-navigation-margin-bottom: 144px;
+    margin-bottom: 144px;
   }
 
   @media (min-width: $desktop-width) {
-    --header-navigation-margin-bottom: 0;
-
     grid-column: 2 / 4;
     top: 4px;
+    margin-bottom: 0;
     padding-left: 16px;
   }
-
-  margin-bottom: var(--header-navigation-margin-bottom);
 }
 
 .header_collapse .header__navigation {
@@ -166,7 +176,6 @@
 
   margin-right: 0;
   margin-left: 0;
-  margin-bottom: 41px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -179,6 +188,8 @@
 }
 
 .header__socials {
+  margin-top: auto;
+
   @media (min-width: $tablet-width) {
     align-self: start;
     margin-left: var(--content-padding-size);

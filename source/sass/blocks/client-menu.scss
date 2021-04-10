@@ -3,7 +3,7 @@
   justify-content: center;
 
   margin-top: 0;
-  // margin-bottom: 0; header__client-menu не переопределяет из-за порядка подключения
+  margin-bottom: 0;
   padding-left: 0;
 
   list-style: none;
@@ -13,59 +13,51 @@
   }
 }
 
-.client-menu__contacts {
-  @media (min-width: $tablet-width) {
-    margin-bottom: 115px;
-  }
+// .client-menu__contacts {
+//   @media (min-width: $tablet-width) {
+//     margin-bottom: 115px;
+//   }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 0;
-  }
-}
+//   @media (min-width: $desktop-width) {
+//     margin-bottom: 0;
+//   }
+// }
 
 .header .client-menu__item_auth {
-  --header-auth-button-order: -1;
-  --header-auth-button-position: static;
-  --header-auth-button-width: 100%;
-  --header-auth-button-margin-bottom: 51px;
-
-  --header-auth-button-font-weight: 700;
-  --header-auth-button-letter-spacing: 0;
-
-  @media (min-width: $tablet-width) {
-    --header-auth-button-position: absolute;
-    --header-auth-button-width: 188px;
-    --header-auth-button-margin-bottom: 0;
-
-    top: 40px;
-    right: var(--page-padding-size);
-
-    --header-auth-button-font-weight: 400;
-    --header-auth-button-letter-spacing: 0.03em;
-  }
-
-  @media (min-width: $desktop-width) {
-    --header-auth-button-order: 0;
-    --header-auth-button-position: static;
-
-    top: auto;
-    right: auto;
-
-    --header-auth-button-font-weight: 700;
-    --header-auth-button-letter-spacing: 0;
-  }
-
-  order: var(--header-auth-button-order);
-  position: var(--header-auth-button-position);
-  min-width: var(--header-auth-button-width);
+  order: -1;
+  position: static;
+  min-width: 100%;
 
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: var(--header-auth-button-margin-bottom);
+  margin-bottom: 51px;
 
-  font-weight: var(--header-auth-button-font-weight);
-  letter-spacing: var(--header-auth-button-letter-spacing);
+  font-weight: 700;
+  letter-spacing: 0;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 40px;
+    right: var(--page-padding-size);
+
+    min-width: 188px;
+    margin-bottom: 0;
+
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    position: static;
+
+    top: auto;
+    right: auto;
+
+    font-weight: 700;
+    letter-spacing: 0;
+  }
 }
 
 .header_collapse .client-menu__item_auth,

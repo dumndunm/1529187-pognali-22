@@ -9,7 +9,7 @@
   background-position: center;
 
   @media (min-width: $desktop-width) {
-    display: none; // header__toggle не переопределяет из-за порядка подкл
+    display: none;
   }
 }
 

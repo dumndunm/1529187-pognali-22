@@ -1,18 +1,6 @@
 .footer {
   position: relative;
-  padding-top: 10px;
-  padding-left: var(--page-padding-size);
-  padding-right: var(--page-padding-size);
-
   background-color: var(--basic-white);
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 32px;
-  }
 }
 
 .footer::before {
@@ -31,9 +19,27 @@
 
   @media (min-width: $tablet-width) {
     height: 60px;
-    border-top-left-radius: var(--corner-radius-large);
-    border-top-right-radius: var(--corner-radius-large);
     top: -60px;
+  }
+}
+
+.footer__wrapper {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 10px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    padding-top: 0;
+    padding-bottom: 32px;
   }
 }
 

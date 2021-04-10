@@ -33,10 +33,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding-top: 25px;
   padding-bottom: 20px;
+
   border-bottom-left-radius: var(--corner-radius-small);
   border-bottom-right-radius: var(--corner-radius-small);
+
   background-color: var(--basic-white);
 
   @media (min-width: $tablet-width) {
@@ -72,6 +75,7 @@
   position: absolute;
   left: -16px;
   border-radius: 50%;
+
   background-color: var(--user-offline-color);
 
   @media (min-width: $tablet-width) {
@@ -162,17 +166,17 @@
 }
 
 .user__icon_airplane {
-  background-image: url("../../img/icons/icon-airplane.svg");
+  background-image: url("../img/icons/icon-airplane.svg");
 }
 
 .user__icon_bus {
-  background-image: url("../../img/icons/icon-bus.svg");
+  background-image: url("../img/icons/icon-bus.svg");
 }
 
 .user__icon_bicycle {
-  background-image: url("../../img/icons/icon-bicycle.svg");
+  background-image: url("../img/icons/icon-bicycle.svg");
 }
 
 .user__icon_walk {
-  background-image: url("../../img/icons/icon-walk.svg");
+  background-image: url("../img/icons/icon-walk.svg");
 }

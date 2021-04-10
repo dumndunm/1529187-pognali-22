@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
-    <div class="container">
-      <header class="header header_nojs">
+  <body class="page">
+    <header class="header header_nojs">
+      <div class="header__wrapper">
         <a class="logo header__logo">
           <picture class="logo__pic logo__pic_dark">
             <source
@@ -238,10 +238,12 @@
             </a>
           </li>
         </ul>
-      </header>
+      </div>
+    </header>
 
-      <main>
-        <section class="promo">
+    <main>
+      <section class="promo">
+        <div class="promo__wrapper">
           <h1 class="head-title promo__head-title">
             В путешествие с&nbsp;крутыми попутчиками!
           </h1>
@@ -329,28 +331,32 @@
               <span class="motivation__text">Путешествуйте вместе!</span>
             </li>
           </ol>
-        </section>
+        </div>
+      </section>
 
-        <section class="description">
+      <section class="description">
+        <div class="description__wrapper">
           <h2 class="title description__title">О сервисе</h2>
 
           <p class="paragraph description__paragraph">
-            Любое путешествие веселее с&nbsp;попутчиками, которые на
-            одной&nbsp;волне с тобой! Делитесь своими идеями путешествий<br />и&nbsp;черпайте
-            вдохновение в&nbsp;чужих.
+            Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне
+            с&nbsp;тобой! Делитесь своими идеями путешествий<br />
+            и черпайте вдохновение в чужих.
           </p>
 
           <p class="sub-paragraph description__sub-paragraph">
-            А если найдете кого-то близкого&nbsp;по духу — скорее зовите в
-            совместный трип!
+            А если найдете кого-то близкого по духу — скорее зовите в совместный
+            трип!
           </p>
 
           <button class="button button_special description__button">
             Подробнее
           </button>
-        </section>
+        </div>
+      </section>
 
-        <section class="regions">
+      <section class="regions">
+        <div class="regions__wrapper">
           <h2 class="title regions__title">Направления</h2>
 
           <p class="paragraph regions__paragraph">
@@ -441,9 +447,11 @@
           <a class="button button_special regions__button" href="./form.html">
             Показать все
           </a>
-        </section>
+        </div>
+      </section>
 
-        <section class="users">
+      <section class="users">
+        <div class="users__wrapper">
           <h2 class="title users__title">Попутчики</h2>
 
           <p class="paragraph users__paragraph">
@@ -575,9 +583,11 @@
           <a class="button button_special users__button" href="./catalog.html">
             Показать всех
           </a>
-        </section>
+        </div>
+      </section>
 
-        <section class="profile">
+      <section class="profile">
+        <div class="profile__wrapper">
           <h2 class="title profile__title">
             Добавьте<br />
             свой профиль
@@ -631,9 +641,11 @@
               Закрыть окно
             </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="feedback">
+      <section class="feedback">
+        <div class="feedback__wrapper">
           <h2 class="title feedback__title">Заинтересовались?</h2>
 
           <p class="paragraph feedback__paragraph">
@@ -709,23 +721,27 @@
               </a>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="address">
-          <h2 class="visually-hidden">Контакты</h2>
+      <section class="address">
+        <h2 class="visually-hidden">Контакты</h2>
 
+        <div class="address__content">
           <div class="address__wrapper">
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
             <a class="button button_special address__button" href="#">
               Проложить маршрут
             </a>
           </div>
+        </div>
 
-          <div class="address__map"></div>
-        </section>
-      </main>
+        <div class="address__map"></div>
+      </section>
+    </main>
 
-      <footer class="footer">
+    <footer class="footer">
+      <div class="footer__wrapper">
         <a class="logo footer__logo">
           <picture class="logo__pic logo__pic_dark">
             <source
@@ -808,8 +824,8 @@
             />
           </a>
         </section>
-      </footer>
-    </div>
+      </div>
+    </footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
