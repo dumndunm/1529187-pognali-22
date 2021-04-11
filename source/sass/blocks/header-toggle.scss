@@ -1,0 +1,42 @@
+.header-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.header .header-toggle__icon_close {
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  stroke: var(--special-grey);
+}
+
+.header_collapse .header-toggle__icon_close {
+  display: none;
+}
+
+.header .header-toggle__icon_burger {
+  display: none;
+}
+
+.header_collapse .header-toggle__icon_burger {
+  display: block;
+  width: 25px;
+  height: 11px;
+
+  fill: var(--basic-white);
+}
+
+.header_scroll .header-toggle__icon_burger {
+  fill: var(--special-grey);
+}

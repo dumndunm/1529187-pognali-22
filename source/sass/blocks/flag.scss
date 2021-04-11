@@ -1,0 +1,36 @@
+.flag {
+  display: block;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.flag__pic {
+  width: 100%;
+  height: 100%;
+}
+
+.flag_tai {
+  background-image: url("../img/flags/thailand.png");
+}
+
+.flag_france {
+  background-image: url("../img/flags/france.png");
+}
+
+.flag_czech {
+  background-image: url("../img/flags/czech.png");
+}
+
+.flag_sri {
+  background-image: url("../img/flags/sri-lanka.png");
+}
+
+.flag_sei {
+  background-image: url("../img/flags/seychelles.png");
+}
+
+.flag_belg {
+  background-image: url("../img/flags/belgium.png");
+}

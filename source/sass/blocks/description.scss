@@ -1,0 +1,123 @@
+.description {
+  border-bottom-left-radius: var(--corner-radius-large);
+  border-bottom-right-radius: var(--corner-radius-large);
+
+  background-color: var(--basic-blue-dark);
+}
+
+.description__wrapper {
+  max-width: 480px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 30px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+  padding-bottom: 82px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 1024px;
+    padding-top: 42px;
+    padding-bottom: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding-top: 128px;
+    padding-left: 94px;
+    padding-bottom: 164px;
+  }
+
+  background-image: url("../img/illustrations/phones-mobiles.png"),
+    url("../img/illustrations/desc-back-rect.png");
+  background-repeat: no-repeat;
+  background-size: contain, 113px 132px;
+  background-position: calc(100% - 20px) bottom, left top;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/illustrations/phones-tablet.png"),
+      url("../img/illustrations/desc-back-rect-tablet.png");
+    background-size: 376px 548px,
+      calc(100% - var(--page-padding-size) * 2) 212px;
+    background-position: calc(100% - 8px) 48px, var(--page-padding-size) top;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/illustrations/phones-desktop.png"),
+      url("../img/illustrations/desc-back-rect-desktop.png");
+    background-size: 630px 635px, 212px 212px;
+    background-position: calc(100% - var(--page-padding-size)) 85px,
+      var(--page-padding-size) 71px;
+  }
+}
+
+.description__title,
+.description__paragraph,
+.description__sub-paragraph {
+  padding-left: var(--content-padding-size);
+}
+
+.description__title {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.description__paragraph {
+  max-width: 240px;
+  margin-bottom: 20px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 332px;
+    margin-bottom: 30px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 650px;
+    margin-bottom: 38px;
+    line-height: 34px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.description__sub-paragraph {
+  max-width: 240px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 320px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 465px;
+    margin-bottom: 85px;
+  }
+}
+
+.description__button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 276px;
+    margin-left: var(--content-padding-size);
+  }
+}

@@ -3,18 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header header_collapse">
         <a class="logo header__logo" href="./index.html">
-          <img class="logo__pic" src="#" alt="Логотип сервиса «Погнали?»" />
+          <img
+            class="logo__pic logo__pic_dark"
+            src="./img/site-logo-dark.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
+          <img
+            class="logo__pic logo__pic_light"
+            src="./img/site-logo-light.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
         </a>
 
-        <button
-          class="visually-hidden header__button header__button_open"
-          type="button"
-        >
+        <button class="header__toggle header__toggle_open" type="button">
           <span class="visually-hidden">Открыть</span>
         </button>
 
@@ -24,53 +32,56 @@
               <a class="navigation__link" href="#">О сервисе</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Направления</a>
+              <a class="navigation__link" href="./form.html">Направления</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Попутчики</a>
+              <a class="navigation__link">Попутчики</a>
             </li>
           </ul>
         </nav>
 
         <ul class="client-menu header__client-menu">
           <li class="client-menu__item">
-            <ul class="contacts header__contacts">
-              <li class="contacts__item">
-                <a class="button contacts__link" href="tel:88005558628">
-                  8 800 555-86-28
+            <ul class="contacts client-menu__contacts">
+              <li class="contacts__item contacts__item_phone">
+                <a class="contacts__link" href="tel:88005558628">
+                  <span class="contacts__link-text">8 800 555-86-28</span>
                 </a>
               </li>
-              <li class="contacts__item">
-                <a
-                  class="button contacts__link"
-                  href="mailto:mail@htmlacademy.ru"
-                >
-                  mail@htmlacademy.ru
+              <li class="contacts__item contacts__item_mail">
+                <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+                  <span class="contacts__link-text">mail@htmlacademy.ru</span>
                 </a>
               </li>
             </ul>
           </li>
 
-          <li class="client-menu__item">
-            <a class="button button_auth header__auth" href="#">Авторизация</a>
+          <li class="client-menu__item client-menu__item_auth">
+            <a class="button" href="#">Авторизация</a>
           </li>
         </ul>
 
         <ul class="socials header__socials">
           <li class="socials__item">
-            <a class="button socials__link" href="#">Facebook</a>
+            <a class="socials__link socials__link_facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">VK</a>
+            <a class="socials__link socials__link_vk" href="#">
+              <span class="visually-hidden">VK</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">Instagram</a>
+            <a class="socials__link socials__link_instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
         </ul>
       </header>
 
-      <main class="content">
-        <h1 class="title title_special">Попутчики</h1>
+      <main>
+        <h1 class="head-title head-title_special">Попутчики</h1>
 
         <section class="region-filter region-filter_collapse">
           <h2 class="region-filter__title">Фильтрация по странам:</h2>
@@ -447,26 +458,26 @@
                 <input
                   class="companions-filter__numeric-field"
                   type="number"
-                  name="companions-filter-rate-min"
-                  id="companions-filter-rate-min"
+                  name="companions-filter-rating-min"
+                  id="companions-filter-rating-min"
                 />
                 <input
                   class="companions-filter__numeric-field"
                   type="number"
-                  name="companions-filter-rate-max"
-                  id="companions-filter-rate-max"
+                  name="companions-filter-rating-max"
+                  id="companions-filter-rating-max"
                 />
               </div>
 
-              <div class="rate-slider companions-filter__rate-slider">
-                <div class="rate-slider__line"></div>
-                <div class="rate-slider__line-filled"></div>
+              <div class="rating-slider companions-filter__rating-slider">
+                <div class="rating-slider__line"></div>
+                <div class="rating-slider__line-filled"></div>
                 <button
-                  class="rate-slider__pin rate-slider__pin_min"
+                  class="rating-slider__pin rating-slider__pin_min"
                   type="button"
                 ></button>
                 <button
-                  class="rate-slider__pin rate-slider__pin_max"
+                  class="rating-slider__pin rating-slider__pin_max"
                   type="button"
                 ></button>
               </div>
@@ -479,7 +490,7 @@
         </section>
 
         <section class="companions">
-          <h2 class="visually-hidden">Пользователи</h2>
+          <h2 class="visually-hidden">Попутчики</h2>
 
           <ul class="companions__list">
             <li class="companion companions__companion">
@@ -498,15 +509,15 @@
               <section class="companion__favs">
                 <h3 class="companion__title">Хочет посетить:</h3>
 
-                <ul class="favs companion__favs">
+                <ul class="companion__favs">
                   <li class="flag flag_sri">
-                    <span class="visually-hidden">Шри-ланка</span>
+                    <span class="flag__name">Шри-ланка</span>
                   </li>
                   <li class="flag flag_tai">
-                    <span class="visually-hidden">Тайланд</span>
+                    <span class="flag__name">Тайланд</span>
                   </li>
                   <li class="flag flag_sei">
-                    <span class="visually-hidden">Сейшелы</span>
+                    <span class="flag__name">Сейшелы</span>
                   </li>
                 </ul>
               </section>
@@ -514,17 +525,17 @@
               <section class="companion__transport">
                 <h3 class="companion__title">Транспорт:</h3>
 
-                <ul class="companion__icons">
-                  <li class="companion-icon companion-icon_prefer">
+                <ul class="companion__transport-icons">
+                  <li class="transport-icon transport-icon_prefer">
                     <span class="visually-hidden">Самолетом</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">На автобусе</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">На велосипеде</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -533,8 +544,9 @@
               <section class="companion__rating">
                 <h3 class="companion__title">Левел:</h3>
 
-                <div class="rate companion__rate">
-                  <span class="rate__count">99</span>
+                <div class="companion-rating">
+                  <span class="companion-rating__count">99</span>
+                  <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
@@ -559,12 +571,12 @@
               <section class="companion__favs">
                 <h3 class="companion__title">Хочет посетить:</h3>
 
-                <ul class="favs companion__favs">
+                <ul class="companion__favs">
                   <li class="flag flag_belgium">
-                    <span class="visually-hidden">Бельгия</span>
+                    <span class="flag__name">Бельгия</span>
                   </li>
                   <li class="flag flag_czech">
-                    <span class="visually-hidden">Чехия</span>
+                    <span class="flag__name">Чехия</span>
                   </li>
                 </ul>
               </section>
@@ -572,17 +584,17 @@
               <section class="companion__transport">
                 <h3 class="companion__title">Транспорт:</h3>
 
-                <ul class="companion__icons">
-                  <li class="companion-icon companion-icon_prefer">
+                <ul class="companion__transport-icons">
+                  <li class="transport-icon transport-icon_prefer">
                     <span class="visually-hidden">Самолетом</span>
                   </li>
-                  <li class="companion-icon companion-icon_prefer">
+                  <li class="transport-icon transport-icon_prefer">
                     <span class="visually-hidden">На автобусе</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">На велосипеде</span>
                   </li>
-                  <li class="companion-icon companion-icon_prefer">
+                  <li class="transport-icon transport-icon_prefer">
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -591,8 +603,9 @@
               <section class="companion__rating">
                 <h3 class="companion__title">Левел:</h3>
 
-                <div class="rate companion__rate">
-                  <span class="rate__count">80</span>
+                <div class="companion-rating">
+                  <span class="companion-rating__count">80</span>
+                  <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
@@ -617,15 +630,15 @@
               <section class="companion__favs">
                 <h3 class="companion__title">Хочет посетить:</h3>
 
-                <ul class="favs companion__favs">
+                <ul class="companion__favs">
                   <li class="flag flag_belgium">
-                    <span class="visually-hidden">США</span>
+                    <span class="flag__name">США</span>
                   </li>
                   <li class="flag flag_czech">
-                    <span class="visually-hidden">Австралия</span>
+                    <span class="flag__name">Австралия</span>
                   </li>
                   <li class="flag flag_czech">
-                    <span class="visually-hidden">Доминика</span>
+                    <span class="flag__name">Доминика</span>
                   </li>
                 </ul>
               </section>
@@ -633,17 +646,17 @@
               <section class="companion__transport">
                 <h3 class="companion__title">Транспорт:</h3>
 
-                <ul class="companion__icons">
-                  <li class="companion-icon companion-icon_prefer">
+                <ul class="companion__transport-icons">
+                  <li class="transport-icon transport-icon_prefer">
                     <span class="visually-hidden">Самолетом</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">На автобусе</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">На велосипеде</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -652,8 +665,9 @@
               <section class="companion__rating">
                 <h3 class="companion__title">Левел:</h3>
 
-                <div class="rate companion__rate">
-                  <span class="rate__count">25</span>
+                <div class="companion-rating">
+                  <span class="companion-rating__count">25</span>
+                  <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
@@ -677,12 +691,12 @@
               <section class="companion__favs">
                 <h3 class="companion__title">Хочет посетить:</h3>
 
-                <ul class="favs companion__favs">
+                <ul class="companion__favs">
                   <li class="flag flag_czech">
-                    <span class="visually-hidden">Великобритания</span>
+                    <span class="flag__name">Великобритания</span>
                   </li>
                   <li class="flag flag_belgium">
-                    <span class="visually-hidden">Германия</span>
+                    <span class="flag__name">Германия</span>
                   </li>
                 </ul>
               </section>
@@ -690,17 +704,17 @@
               <section class="companion__transport">
                 <h3 class="companion__title">Транспорт:</h3>
 
-                <ul class="companion__icons">
-                  <li class="companion-icon companion-icon_prefer">
+                <ul class="companion__transport-icons">
+                  <li class="transport-icon transport-icon_prefer">
                     <span class="visually-hidden">Самолетом</span>
                   </li>
-                  <li class="companion-icon companion-icon_prefer">
+                  <li class="transport-icon transport-icon_prefer">
                     <span class="visually-hidden">На автобусе</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">На велосипеде</span>
                   </li>
-                  <li class="companion-icon">
+                  <li class="transport-icon">
                     <span class="visually-hidden">Пешком</span>
                   </li>
                 </ul>
@@ -709,8 +723,9 @@
               <section class="companion__rating">
                 <h3 class="companion__title">Левел:</h3>
 
-                <div class="rate companion__rate">
-                  <span class="rate__count">50</span>
+                <div class="companion-rating">
+                  <span class="companion-rating__count">50</span>
+                  <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
@@ -736,25 +751,36 @@
 
       <footer class="footer">
         <a class="logo footer__logo">
-          <img class="logo__pic" src="#" alt="Логотип сервиса «Погнали?»" />
+          <img
+            class="logo__pic"
+            src="./img/site-logo-dark.png"
+            alt="Логотип сервиса «Погнали?»"
+          />
         </a>
 
         <ul class="socials footer__socials">
           <li class="socials__item">
-            <a class="button socials__link" href="#">Facebook</a>
+            <a class="socials__link socials__link_facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">VK</a>
+            <a class="socials__link socials__link_vk" href="#">
+              <span class="visually-hidden">VK</span>
+            </a>
           </li>
           <li class="socials__item">
-            <a class="button socials__link" href="#">Instagram</a>
+            <a class="socials__link socials__link_instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
+        </ul>
         </ul>
 
         <section class="developed">
           <h2 class="developed__title">Разработано</h2>
           <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="#" alt="Логотип академии" />
+            <img src="./img/icons/logo-htmlacademy.svg" alt="Логотип академии" />
           </a>
         </section>
       </footer>

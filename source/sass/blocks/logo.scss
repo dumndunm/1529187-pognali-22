@@ -1,0 +1,40 @@
+.logo {
+  display: block;
+  width: 100px;
+  height: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 166px;
+    height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    height: 52px;
+  }
+}
+
+.logo__pic {
+  width: 100%;
+  height: 100%;
+}
+
+.logo__pic_light {
+  display: none;
+}
+
+.header_collapse .logo__pic_dark {
+  display: none;
+}
+
+.header_collapse .logo__pic_light {
+  display: block;
+}
+
+.header_scroll .logo__pic_dark {
+  display: block;
+}
+
+.header_scroll .logo__pic_light {
+  display: none;
+}

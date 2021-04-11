@@ -1,0 +1,57 @@
+.profile-modal {
+  position: absolute;
+  top: 20px;
+  width: calc(100% - var(--content-padding-size) * 2);
+  height: 443px;
+  padding-top: 34px;
+  border-radius: 20px;
+  background-color: var(--basic-white);
+  box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
+  z-index: 100;
+
+  @media (min-width: $tablet-width) {
+    max-width: 750px;
+    height: 526px;
+  }
+}
+
+.profile-modal_hidden {
+  display: none;
+}
+
+.profile-modal__title {
+  margin-bottom: 28px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+}
+
+.profile-modal__business-services {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.profile-modal__button {
+  width: 100%;
+  height: 59px;
+
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #f3f4f8;
+
+  @media (min-width: $tablet-width) {
+    height: 108px;
+    font-size: 24px;
+  }
+}

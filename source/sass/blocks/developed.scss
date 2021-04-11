@@ -1,0 +1,24 @@
+.developed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid var(--basic-grey-light);
+
+  @media (min-width: $tablet-width) {
+    border-top: 0;
+  }
+}
+
+.developed__title {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--basic-grey);
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    margin-right: 23px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
