@@ -21,7 +21,7 @@
   border-radius: 50%;
   text-decoration: none;
 
-  @media (min-width: 688px) {
+  @media (min-width: $tablet-width) {
     width: 62px;
     height: 62px;
   }

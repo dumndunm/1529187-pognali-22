@@ -1,9 +1,37 @@
 .header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   background-color: var(--basic-white);
   z-index: 100;
+}
+
+.header .header__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  width: 100%;
+  min-height: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 27px;
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+  padding-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 910px;
+    padding-top: 40px;
+    padding-bottom: 74px;
+  }
 }
 
 .header_nojs {
@@ -13,6 +41,9 @@
 .header_collapse {
   position: absolute;
   top: 0;
+  left: auto;
+  right: auto;
+  bottom: auto;
 
   min-width: 320px;
   width: 100%;
@@ -29,6 +60,10 @@
   }
 }
 
+.page_form .header_collapse {
+  background-color: var(--extra-blue-dark);
+}
+
 .header_collapse .header__wrapper {
   flex-direction: row;
   justify-content: space-between;
@@ -42,19 +77,10 @@
   padding-right: var(--page-padding-size);
   padding-bottom: 0;
 
-<<<<<<< HEAD
   @media (min-width: $tablet-width) {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-=======
-.page-form .header_collapse {
-  background-color: var(--extra-blue-dark);
-}
-
-.header_scroll {
-  --header-scroll-height: 76px;
->>>>>>> 9ad2a10 (Добавляет стили к блокам формы)
 
   @media (min-width: $desktop-width) {
     padding-top: 47px;
@@ -76,38 +102,8 @@
   background-color: var(--basic-white);
 }
 
-<<<<<<< HEAD
-.header__wrapper {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-top: 27px;
-  padding-left: var(--page-padding-size);
-  padding-right: var(--page-padding-size);
-  padding-bottom: 29px;
-=======
-.page-form .header_scroll {
+.page_form .header_scroll {
   background-color: var(--basic-white);
-}
-
-.header__logo {
-  --header-logo-margin-bottom: 76px;
->>>>>>> 9ad2a10 (Добавляет стили к блокам формы)
-
-  @media (min-width: $tablet-width) {
-    min-height: 910px;
-    padding-top: 40px;
-    padding-bottom: 74px;
-  }
 }
 
 .header_scroll .header__wrapper {

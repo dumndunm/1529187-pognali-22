@@ -1,22 +1,59 @@
 .trips {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  background-color: var(--special-blue-light);
+
+  @media (min-width: $tablet-width) {
+    padding-left: var(--page-padding-size);
+    padding-right: var(--page-padding-size);
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+}
+
+.trips__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  max-width: 480px;
+
+  margin-left: auto;
+  margin-right: auto;
 
   padding-top: 28px;
   padding-left: var(--page-padding-size);
   padding-right: var(--page-padding-size);
   padding-bottom: 60px;
 
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  @media (min-width: $tablet-width) {
+    max-width: 1024px;
+    padding-top: 57px;
+    padding-left: var(--content-padding-size);
+    padding-right: var(--content-padding-size);
+  }
 
-  background-color: var(--special-blue-light);
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding-left: 64px;
+    padding-right: 0;
+    padding-bottom: 124px;
+  }
 }
 
 .trips__title {
   align-self: start;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
 }
 
 .trips__list {
@@ -24,11 +61,23 @@
   flex-direction: column;
   align-items: center;
 
-  width: 270px;
+  width: 100%;
 
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
 
   list-style: none;
+}
+
+.trips__trip {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
+  }
 }

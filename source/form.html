@@ -17,7 +17,7 @@
             />
             <source
               srcset="./img/contents/site-logo-tablet-dark.png"
-              media="(min-width: 688px)"
+              media="(min-width: 758px)"
             />
             <img
               src="./img/contents/site-logo-dark.png"
@@ -32,7 +32,7 @@
             />
             <source
               srcset="./img/contents/site-logo-tablet-light.png"
-              media="(min-width: 688px)"
+              media="(min-width: 758px)"
             />
             <img
               src="./img/contents/site-logo-light.png"
@@ -264,7 +264,7 @@
 
       <form class="profile-form" action="#" method="get">
         <label class="profile-form__load-photo" for="profile-form-photo">
-          <span>Сменить фото</span>
+          <span>Сменить</span>&nbsp;фото
         </label>
         <input
           class="visually-hidden"
@@ -432,15 +432,17 @@
                 <span class="trip__number">1.</span>
                 Франция, Италия
               </h3>
-              <p class="trip__companions">3 попутчика</p>
+              <div class="trip__wrapper">
+                <p class="trip__companions">3 попутчика</p>
 
-              <p class="trip__dates">
-                <time datetime="2021-03-26">26 мар</time>
-                —
-                <time datetime="2021-03-29">29 мар</time>
-              </p>
+                <p class="trip__dates">
+                  <time datetime="2021-03-26">26 мар</time>
+                  —
+                  <time datetime="2021-03-29">29 мар</time>
+                </p>
 
-              <button class="trip__button" type="button">Изменить</button>
+                <button class="trip__button" type="button">Изменить</button>
+              </div>
             </li>
 
             <li class="trip trips__trip">
@@ -448,15 +450,17 @@
                 <span class="trip__number">2.</span>
                 Таиланд, Индонезия
               </h3>
-              <p class="trip__companions">1 попутчик</p>
+              <div class="trip__wrapper">
+                <p class="trip__companions">1 попутчик</p>
 
-              <p class="trip__dates">
-                <time datetime="2021-07-01">1 июл</time>
-                —
-                <time datetime="2021-07-15">15 июл</time>
-              </p>
+                <p class="trip__dates">
+                  <time datetime="2021-07-01">1 июл</time>
+                  —
+                  <time datetime="2021-07-15">15 июл</time>
+                </p>
 
-              <button class="trip__button" type="button">Изменить</button>
+                <button class="trip__button" type="button">Изменить</button>
+              </div>
             </li>
           </ul>
         </div>
@@ -480,7 +484,10 @@
 
           <form action="#" method="get">
             <section class="trip-form__step" id="trip-form-step-one">
-              <h3 class="trip-form__heading">Шаг 1.<br />Даты пребывания</h3>
+              <h3 class="trip-form__heading">
+                Шаг 1.<br />
+                Даты пребывания
+              </h3>
               <p class="trip-form__text">
                 Укажите предпочтительное количество попутчиков, которых вы
                 хотели бы позвать в поездку, и ее предполагаемую длительность.
@@ -489,110 +496,59 @@
               <section class="trip-form__base-info">
                 <h4 class="visually-hidden">Базовая информация о поездке</h4>
 
-                <label
-                  class="trip-form__numeric-label"
-                  for="trip-form-companions"
-                >
-                  Ищу попутчиков:
-                </label>
-                <div class="numeric-field trip-form__numeric-field">
-                  <button
-                    class="numeric-field__button numeric-field__button_inc"
-                    type="button"
-                    aria-label="Кнопка минус"
+                <div class="trip-form__companions-info">
+                  <label
+                    class="trip-form__numeric-label"
+                    for="trip-form-companions"
                   >
-                    <svg
-                      class="numeric-field__icon"
-                      width="14"
-                      height="2"
-                      viewBox="0 0 14 2"
-                      xmlns="http://www.w3.org/2000/svg"
+                    Ищу попутчиков:
+                  </label>
+                  <div class="numeric-field trip-form__numeric-field">
+                    <button
+                      class="numeric-field__button numeric-field__button_inc"
+                      type="button"
+                      aria-label="Кнопка минус"
                     >
-                      <line y1="1" x2="14" y2="1" stroke-width="2" />
-                    </svg>
-                  </button>
+                      <svg
+                        class="numeric-field__icon"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line y1="1" x2="14" y2="1" stroke-width="2" />
+                      </svg>
+                    </button>
 
-                  <input
-                    class="numeric-field__input"
-                    type="number"
-                    name="trip-form-companions"
-                    id="trip-form-companions"
-                  />
+                    <input
+                      class="numeric-field__input"
+                      type="number"
+                      name="trip-form-companions"
+                      id="trip-form-companions"
+                    />
 
-                  <button
-                    class="numeric-field__button numeric-field__button_dec"
-                    type="button"
-                    aria-label="Кнопка плюс"
-                  >
-                    <svg
-                      class="numeric-field__icon"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <button
+                      class="numeric-field__button numeric-field__button_dec"
+                      type="button"
+                      aria-label="Кнопка плюс"
                     >
-                      <line
-                        y1="6.69995"
-                        x2="14"
-                        y2="6.69995"
-                        stroke-width="2"
-                      />
-                      <line x1="6.7" y1="14" x2="6.7" stroke-width="2" />
-                    </svg>
-                  </button>
-                </div>
-
-                <label
-                  class="trip-form__numeric-label"
-                  for="trip-form-duration"
-                >
-                  Длительность:
-                </label>
-                <div class="numeric-field trip-form__numeric-field">
-                  <button
-                    class="numeric-field__button numeric-field__button_inc"
-                    type="button"
-                    aria-label="Кнопка минус"
-                  >
-                    <svg
-                      class="numeric-field__icon"
-                      width="14"
-                      height="2"
-                      viewBox="0 0 14 2"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line y1="1" x2="14" y2="1" stroke-width="2" />
-                    </svg>
-                  </button>
-
-                  <input
-                    class="numeric-field__input"
-                    type="number"
-                    name="trip-form-duration"
-                    id="trip-form-duration"
-                  />
-
-                  <button
-                    class="numeric-field__button numeric-field__button_dec"
-                    type="button"
-                    aria-label="Кнопка плюс"
-                  >
-                    <svg
-                      class="numeric-field__icon"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <line
-                        y1="6.69995"
-                        x2="14"
-                        y2="6.69995"
-                        stroke-width="2"
-                      />
-                      <line x1="6.7" y1="14" x2="6.7" stroke-width="2" />
-                    </svg>
-                  </button>
+                      <svg
+                        class="numeric-field__icon"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="6.69995"
+                          x2="14"
+                          y2="6.69995"
+                          stroke-width="2"
+                        />
+                        <line x1="6.7" y1="14" x2="6.7" stroke-width="2" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
 
                 <input
@@ -636,6 +592,61 @@
                   </svg>
                   <span class="checkbox__text">Можно с детьми</span>
                 </label>
+
+                <div class="trip-form__duration-info">
+                  <label
+                    class="trip-form__numeric-label"
+                    for="trip-form-duration"
+                  >
+                    Длительность:
+                  </label>
+                  <div class="numeric-field trip-form__numeric-field">
+                    <button
+                      class="numeric-field__button numeric-field__button_inc"
+                      type="button"
+                      aria-label="Кнопка минус"
+                    >
+                      <svg
+                        class="numeric-field__icon"
+                        width="14"
+                        height="2"
+                        viewBox="0 0 14 2"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line y1="1" x2="14" y2="1" stroke-width="2" />
+                      </svg>
+                    </button>
+
+                    <input
+                      class="numeric-field__input"
+                      type="number"
+                      name="trip-form-duration"
+                      id="trip-form-duration"
+                    />
+
+                    <button
+                      class="numeric-field__button numeric-field__button_dec"
+                      type="button"
+                      aria-label="Кнопка плюс"
+                    >
+                      <svg
+                        class="numeric-field__icon"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          y1="6.69995"
+                          x2="14"
+                          y2="6.69995"
+                          stroke-width="2"
+                        />
+                        <line x1="6.7" y1="14" x2="6.7" stroke-width="2" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </section>
 
               <section class="date-info trip-form__date-info">
@@ -687,72 +698,171 @@
                   </button>
                 </div>
 
-                <table class="table date-info__table">
-                  <thead class="table__header">
-                    <tr class="table__row">
-                      <th class="table__cell">П</th>
-                      <th class="table__cell">В</th>
-                      <th class="table__cell">С</th>
-                      <th class="table__cell">Ч</th>
-                      <th class="table__cell">П</th>
-                      <th class="table__cell">С</th>
-                      <th class="table__cell">В</th>
+                <table class="table-date date-info__table">
+                  <thead class="table-date__header">
+                    <tr class="table-date__row">
+                      <th class="table-date__cell">
+                        <span class="table-date__day_mobile">П</span>
+                        <span class="table-date__day_tablet">Пн</span>
+                      </th>
+                      <th class="table-date__cell">
+                        <span class="table-date__day_mobile">В</span>
+                        <span class="table-date__day_tablet">Вт</span>
+                      </th>
+                      <th class="table-date__cell">
+                        <span class="table-date__day_mobile">С</span>
+                        <span class="table-date__day_tablet">Ср</span>
+                      </th>
+                      <th class="table-date__cell">
+                        <span class="table-date__day_mobile">Ч</span>
+                        <span class="table-date__day_tablet">Чт</span>
+                      </th>
+                      <th class="table-date__cell">
+                        <span class="table-date__day_mobile">П</span>
+                        <span class="table-date__day_tablet">Пт</span>
+                      </th>
+                      <th class="table-date__cell">
+                        <span class="table-date__day_mobile">С</span>
+                        <span class="table-date__day_tablet">Сб</span>
+                      </th>
+                      <th class="table-date__cell">
+                        <span class="table-date__day_mobile">В</span>
+                        <span class="table-date__day_tablet">Вс</span>
+                      </th>
                     </tr>
                   </thead>
-                  <tbody class="table__body">
-                    <tr class="table__row">
-                      <td class="table__cell table__cell_disabled">23</td>
-                      <td class="table__cell table__cell_disabled">24</td>
-                      <td class="table__cell table__cell_disabled">25</td>
-                      <td class="table__cell table__cell_disabled">26</td>
-                      <td class="table__cell table__cell_disabled">27</td>
-                      <td class="table__cell table__cell_disabled">28</td>
-                      <td class="table__cell table__cell_disabled">1</td>
+                  <tbody class="table-date__body">
+                    <tr class="table-date__row">
+                      <td class="table-date__cell table-date__cell_disabled">
+                        23
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        24
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        25
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        26
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        27
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        28
+                      </td>
+                      <td
+                        class="table-date__cell table-date__cell_disabled table-date__cell_first-day"
+                      >
+                        1
+                        <span>мар</span>
+                      </td>
                     </tr>
-                    <tr class="table__row">
-                      <td class="table__cell table__cell_disabled">2</td>
-                      <td class="table__cell table__cell_disabled">3</td>
-                      <td class="table__cell table__cell_disabled">4</td>
-                      <td class="table__cell table__cell_disabled">5</td>
-                      <td class="table__cell table__cell_disabled">6</td>
-                      <td class="table__cell table__cell_disabled">7</td>
-                      <td class="table__cell table__cell_disabled">8</td>
+                    <tr class="table-date__row">
+                      <td class="table-date__cell table-date__cell_disabled">
+                        2
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        3
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        4
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        5
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        6
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        7
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        8
+                      </td>
                     </tr>
-                    <tr class="table__row">
-                      <td class="table__cell table__cell_disabled">9</td>
-                      <td class="table__cell table__cell_disabled">10</td>
-                      <td class="table__cell table__cell_disabled">11</td>
-                      <td class="table__cell table__cell_disabled">12</td>
-                      <td class="table__cell table__cell_disabled">13</td>
-                      <td class="table__cell table__cell_disabled">14</td>
-                      <td class="table__cell table__cell_disabled">15</td>
+                    <tr class="table-date__row">
+                      <td class="table-date__cell table-date__cell_disabled">
+                        9
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        10
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        11
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        12
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        13
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        14
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        15
+                      </td>
                     </tr>
-                    <tr class="table__row">
-                      <td class="table__cell table__cell_disabled">16</td>
-                      <td class="table__cell table__cell_disabled">17</td>
-                      <td class="table__cell table__cell_disabled">18</td>
-                      <td class="table__cell table__cell_disabled">19</td>
-                      <td class="table__cell table__cell_disabled">20</td>
-                      <td class="table__cell table__cell_disabled">21</td>
-                      <td class="table__cell table__cell_disabled">22</td>
+                    <tr class="table-date__row">
+                      <td class="table-date__cell table-date__cell_disabled">
+                        16
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        17
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        18
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        19
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        20
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        21
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        22
+                      </td>
                     </tr>
-                    <tr class="table__row">
-                      <td class="table__cell table__cell_disabled">23</td>
-                      <td class="table__cell table__cell_disabled">24</td>
-                      <td class="table__cell table__cell_disabled">25</td>
-                      <td class="table__cell table__cell_choosen">26</td>
-                      <td class="table__cell table__cell_choosen">27</td>
-                      <td class="table__cell table__cell_choosen">28</td>
-                      <td class="table__cell">29</td>
+                    <tr class="table-date__row">
+                      <td class="table-date__cell table-date__cell_disabled">
+                        23
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        24
+                      </td>
+                      <td class="table-date__cell table-date__cell_disabled">
+                        25
+                      </td>
+                      <td
+                        class="table-date__cell table-date__cell_choosen table-date__cell_choosen-first"
+                      >
+                        26
+                      </td>
+                      <td class="table-date__cell table-date__cell_choosen">
+                        27
+                      </td>
+                      <td
+                        class="table-date__cell table-date__cell_choosen table-date__cell_choosen-last"
+                      >
+                        28
+                      </td>
+                      <td class="table-date__cell">29</td>
                     </tr>
-                    <tr class="table__row">
-                      <td class="table__cell">30</td>
-                      <td class="table__cell">31</td>
-                      <td class="table__cell">1</td>
-                      <td class="table__cell">2</td>
-                      <td class="table__cell">3</td>
-                      <td class="table__cell">4</td>
-                      <td class="table__cell">5</td>
+                    <tr class="table-date__row">
+                      <td class="table-date__cell">30</td>
+                      <td class="table-date__cell">31</td>
+                      <td class="table-date__cell table-date__cell_first-day">
+                        1
+                        <span>апр</span>
+                      </td>
+                      <td class="table-date__cell">2</td>
+                      <td class="table-date__cell">3</td>
+                      <td class="table-date__cell">4</td>
+                      <td class="table-date__cell">5</td>
                     </tr>
                   </tbody>
                 </table>
@@ -764,10 +874,14 @@
             </section>
 
             <section class="trip-form__step" id="trip-form-step-two">
-              <h3 class="trip-form__heading">Шаг 2.<br />Маршрут</h3>
+              <h3 class="trip-form__heading">
+                Шаг 2.<br />
+                Маршрут
+              </h3>
               <p class="trip-form__text">
-                Укажите страны, которые вы хотели бы посетить. Это может быть
-                одна или сразу несколько.
+                Укажите страны, которые вы хотели бы посетить.
+                <br />
+                Это может быть одна или сразу несколько.
               </p>
 
               <input
@@ -779,8 +893,24 @@
                 <li class="country route__country">
                   <div class="country__name">
                     <span class="country__name-text">Босния и герцеговина</span>
-                    <button class="country__button-choose" type="button">
-                      <span class="visually-hidden">Выбрать страну</span>
+                    <button
+                      class="country__button-choose"
+                      type="button"
+                      aria-label="Выбрать страну"
+                    >
+                      <svg
+                        width="12"
+                        height="16"
+                        viewBox="0 0 12 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g>
+                          <path
+                            d="M0.638485 5.09805C0.569006 5.17667 0.513881 5.27007 0.476269 5.37289C0.438657 5.47571 0.419296 5.58595 0.419296 5.69727C0.419296 5.8086 0.438657 5.91883 0.476269 6.02165C0.513881 6.12448 0.569006 6.21787 0.638485 6.29649L5.59843 11.9231C5.65365 11.9859 5.71924 12.0357 5.79144 12.0696C5.86364 12.1036 5.94105 12.1211 6.01922 12.1211C6.09739 12.1211 6.17479 12.1036 6.247 12.0696C6.3192 12.0357 6.38479 11.9859 6.44001 11.9231L11.4 6.29649C11.6924 5.96472 11.6924 5.42982 11.4 5.09805C11.1075 4.76628 10.8004 5.04112 10.5079 5.37289L7.90792 8.3364L5.99995 10.4241L1.19996 5.09079C1.19996 5.09079 0.92498 4.76628 0.638485 5.09805Z"
+                            fill="black"
+                          />
+                        </g>
+                      </svg>
                     </button>
                   </div>
 
@@ -790,16 +920,57 @@
                     </div>
                   </div>
 
-                  <button class="country__button-delete" type="button">
-                    <span class="visually-hidden">Удалить</span>
+                  <button
+                    class="country__button-delete"
+                    type="button"
+                    aria-label="Удалить страну"
+                  >
+                    <svg
+                      class="country__icon-delete"
+                      width="24"
+                      height="22"
+                      viewBox="0 0 24 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          d="M21 2.75L3 19.25"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3 2.75L21 19.25"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
                   </button>
                 </li>
 
                 <li class="country route__country">
                   <div class="country__name">
                     <span class="country__name-text">Чехия</span>
-                    <button class="country__button-choose" type="button">
-                      <span class="visually-hidden">Выбрать страну</span>
+                    <button
+                      class="country__button-choose"
+                      type="button"
+                      aria-label="Выбрать страну"
+                    >
+                      <svg
+                        width="12"
+                        height="16"
+                        viewBox="0 0 12 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g>
+                          <path
+                            d="M0.638485 5.09805C0.569006 5.17667 0.513881 5.27007 0.476269 5.37289C0.438657 5.47571 0.419296 5.58595 0.419296 5.69727C0.419296 5.8086 0.438657 5.91883 0.476269 6.02165C0.513881 6.12448 0.569006 6.21787 0.638485 6.29649L5.59843 11.9231C5.65365 11.9859 5.71924 12.0357 5.79144 12.0696C5.86364 12.1036 5.94105 12.1211 6.01922 12.1211C6.09739 12.1211 6.17479 12.1036 6.247 12.0696C6.3192 12.0357 6.38479 11.9859 6.44001 11.9231L11.4 6.29649C11.6924 5.96472 11.6924 5.42982 11.4 5.09805C11.1075 4.76628 10.8004 5.04112 10.5079 5.37289L7.90792 8.3364L5.99995 10.4241L1.19996 5.09079C1.19996 5.09079 0.92498 4.76628 0.638485 5.09805Z"
+                            fill="black"
+                          />
+                        </g>
+                      </svg>
                     </button>
                   </div>
 
@@ -809,66 +980,130 @@
                     </div>
                   </div>
 
-                  <button class="country__button-delete" type="button">
-                    <span class="visually-hidden">Удалить</span>
+                  <button
+                    class="country__button-delete"
+                    type="button"
+                    aria-label="Удалить страну"
+                  >
+                    <svg
+                      class="country__icon-delete"
+                      width="24"
+                      height="22"
+                      viewBox="0 0 24 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          d="M21 2.75L3 19.25"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3 2.75L21 19.25"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
                   </button>
                 </li>
 
-                <li
-                  class="country route__country country_null country_dropdown"
-                >
+                <li class="country route__country country_null">
                   <div class="country__name">
                     <span class="country__name-text">Выберите страну</span>
-                    <button class="country__button-choose" type="button">
-                      <span class="visually-hidden">Выбрать страну</span>
+                    <button
+                      class="country__button-choose"
+                      type="button"
+                      aria-label="Выбрать страну"
+                    >
+                      <svg
+                        width="12"
+                        height="16"
+                        viewBox="0 0 12 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g>
+                          <path
+                            d="M0.638485 5.09805C0.569006 5.17667 0.513881 5.27007 0.476269 5.37289C0.438657 5.47571 0.419296 5.58595 0.419296 5.69727C0.419296 5.8086 0.438657 5.91883 0.476269 6.02165C0.513881 6.12448 0.569006 6.21787 0.638485 6.29649L5.59843 11.9231C5.65365 11.9859 5.71924 12.0357 5.79144 12.0696C5.86364 12.1036 5.94105 12.1211 6.01922 12.1211C6.09739 12.1211 6.17479 12.1036 6.247 12.0696C6.3192 12.0357 6.38479 11.9859 6.44001 11.9231L11.4 6.29649C11.6924 5.96472 11.6924 5.42982 11.4 5.09805C11.1075 4.76628 10.8004 5.04112 10.5079 5.37289L7.90792 8.3364L5.99995 10.4241L1.19996 5.09079C1.19996 5.09079 0.92498 4.76628 0.638485 5.09805Z"
+                            fill="black"
+                          />
+                        </g>
+                      </svg>
                     </button>
                   </div>
 
-                  <div class="country__flag">
-                    <div class="flag flag_czech"></div>
-                  </div>
-
-                  <button class="country__button-delete" type="button">
-                    <span class="visually-hidden">Удалить</span>
+                  <button
+                    class="country__button-delete"
+                    type="button"
+                    aria-label="Удалить страну"
+                  >
+                    <svg
+                      class="country__icon-delete"
+                      width="24"
+                      height="22"
+                      viewBox="0 0 24 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g>
+                        <path
+                          d="M21 2.75L3 19.25"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3 2.75L21 19.25"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </svg>
                   </button>
 
                   <div class="choose-country country__choose-country">
-                    <table class="table choose-country__table">
-                      <tbody class="table__body">
-                        <tr class="table__row">
-                          <td class="table__cell table__cell_active">А</td>
-                          <td class="table__cell">Б</td>
-                          <td class="table__cell">В</td>
-                          <td class="table__cell">Г</td>
-                          <td class="table__cell">Д</td>
+                    <table class="table-symbols choose-country__table">
+                      <tbody class="table-symbols__body">
+                        <tr class="table-symbols__row">
+                          <td
+                            class="table-symbols__cell table-symbols__cell_active"
+                          >
+                            А
+                          </td>
+                          <td class="table-symbols__cell">Б</td>
+                          <td class="table-symbols__cell">В</td>
+                          <td class="table-symbols__cell">Г</td>
+                          <td class="table-symbols__cell">Д</td>
                         </tr>
-                        <tr class="table__row">
-                          <td class="table__cell">Е</td>
-                          <td class="table__cell">З</td>
-                          <td class="table__cell">И</td>
-                          <td class="table__cell">К</td>
-                          <td class="table__cell">Л</td>
+                        <tr class="table-symbols__row">
+                          <td class="table-symbols__cell">Е</td>
+                          <td class="table-symbols__cell">З</td>
+                          <td class="table-symbols__cell">И</td>
+                          <td class="table-symbols__cell">К</td>
+                          <td class="table-symbols__cell">Л</td>
                         </tr>
-                        <tr class="table__row">
-                          <td class="table__cell">М</td>
-                          <td class="table__cell">Н</td>
-                          <td class="table__cell">О</td>
-                          <td class="table__cell">П</td>
-                          <td class="table__cell">Р</td>
+                        <tr class="table-symbols__row">
+                          <td class="table-symbols__cell">М</td>
+                          <td class="table-symbols__cell">Н</td>
+                          <td class="table-symbols__cell">О</td>
+                          <td class="table-symbols__cell">П</td>
+                          <td class="table-symbols__cell">Р</td>
                         </tr>
-                        <tr class="table__row">
-                          <td class="table__cell">С</td>
-                          <td class="table__cell">Т</td>
-                          <td class="table__cell">У</td>
-                          <td class="table__cell">Ф</td>
-                          <td class="table__cell">Х</td>
+                        <tr class="table-symbols__row">
+                          <td class="table-symbols__cell">С</td>
+                          <td class="table-symbols__cell">Т</td>
+                          <td class="table-symbols__cell">У</td>
+                          <td class="table-symbols__cell">Ф</td>
+                          <td class="table-symbols__cell">Х</td>
                         </tr>
-                        <tr class="table__row">
-                          <td class="table__cell">Ч</td>
-                          <td class="table__cell">Ш</td>
-                          <td class="table__cell">Щ</td>
-                          <td class="table__cell">Э</td>
-                          <td class="table__cell">Ю</td>
+                        <tr class="table-symbols__row">
+                          <td class="table-symbols__cell">Ч</td>
+                          <td class="table-symbols__cell">Ш</td>
+                          <td class="table-symbols__cell">Щ</td>
+                          <td class="table-symbols__cell">Э</td>
+                          <td class="table-symbols__cell">Ю</td>
                         </tr>
                       </tbody>
                     </table>
@@ -886,23 +1121,64 @@
                       <li class="choose-country__text">Армения</li>
                       <li class="choose-country__text">Афганистан</li>
                     </ul>
+
+                    <button class="choose-country__close">
+                      <svg
+                        class="choose-country__icon-close"
+                        width="9"
+                        height="9"
+                        viewBox="0 0 9 9"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M7.875 1.125L1.125 7.875"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M1.125 1.125L7.875 7.875"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </li>
               </ul>
               <button class="trip-form__button-add" type="button">
-                Добавить страну
+                <span>Добавить страну</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line y1="6.69995" x2="14" y2="6.69995" stroke-width="2" />
+                  <line x1="6.7" y1="14" x2="6.7" stroke-width="2" />
+                </svg>
               </button>
 
-              <a class="button trip-form__button" href="#trip-form-step-three">
-                Следующий шаг
-              </a>
-              <a class="button button_step-back" href="#trip-form-step-one">
-                На шаг назад
-              </a>
+              <div class="trip-form__buttons">
+                <a
+                  class="button trip-form__button"
+                  href="#trip-form-step-three"
+                >
+                  Следующий шаг
+                </a>
+                <a
+                  class="button trip-form__button-back"
+                  href="#trip-form-step-one"
+                >
+                  На шаг назад
+                </a>
+              </div>
             </section>
 
             <section class="trip-form__step" id="trip-form-step-three">
-              <h3 class="trip-form__heading">Шаг 3.<br />Развлечения</h3>
+              <h3 class="trip-form__heading">
+                Шаг 3.<br />
+                Развлечения
+              </h3>
               <p class="trip-form__text">
                 Наконец, расскажите о своих планах времяпровождения. Можно
                 писать в свободной форме и ставить тэги.
@@ -915,20 +1191,21 @@
                       class="action-plan__country-name"
                       for="trip-form-plan-bosnia"
                     >
-                      Босния и герцеговина
+                      Босния и Герцеговина
                     </label>
-                    <div class="flag flag_bosnia action-plan__flag">
-                      <span class="visually-hidden">Босния и герцеговина</span>
-                    </div>
+                    <div
+                      class="flag flag_bosnia action-plan__flag"
+                      aria-label="Босния и Герцеговина"
+                    ></div>
                   </div>
 
-                  <input
+                  <textarea
                     class="action-plan__input"
                     type="text"
                     name="trip-form-plan-bosnia"
                     id="trip-form-plan-bosnia"
                     placeholder="План действий"
-                  />
+                  ></textarea>
                 </li>
 
                 <li class="action-plan__item">
@@ -944,22 +1221,27 @@
                     </div>
                   </div>
 
-                  <input
+                  <textarea
                     class="action-plan__input"
                     type="text"
                     name="trip-form-plan-czech"
                     id="trip-form-plan-czech"
                     placeholder="План действий"
-                  />
+                  ></textarea>
                 </li>
               </ul>
 
-              <button class="button trip-form__button" type="submit">
-                Отправить
-              </button>
-              <a class="button button_step-back" href="trip-form-step-two">
-                На шаг назад
-              </a>
+              <div class="trip-form__buttons">
+                <button class="button trip-form__button" type="submit">
+                  Отправить
+                </button>
+                <a
+                  class="button trip-form__button-back"
+                  href="trip-form-step-two"
+                >
+                  На шаг назад
+                </a>
+              </div>
             </section>
           </form>
         </div>
@@ -967,87 +1249,93 @@
     </main>
 
     <footer class="footer">
-      <a class="logo footer__logo">
-        <picture class="logo__pic logo__pic_dark">
-          <source
-            srcset="./img/contents/site-logo-desktop-dark.png"
-            media="(min-width: 1320px)"
-          />
-          <source
-            srcset="./img/contents/site-logo-tablet-dark.png"
-            media="(min-width: 688px)"
-          />
-          <img
-            src="./img/contents/site-logo-dark.png"
-            alt="Логотип сервиса «Погнали?»"
-          />
-        </picture>
-      </a>
-
-      <ul class="socials footer__socials">
-        <li class="socials__item">
-          <a class="socials__link" href="#" aria-label="Facebook">
-            <svg
-              class="socials__icon socials__icon_facebook"
-              width="14"
-              height="28"
-              viewBox="0 0 14 28"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9.53 27.75H2.71V14.85H0V8.47H2.63C2.43 5.58 2.93 3.47 4.15 2.03C4.73171 1.39087 5.44042 0.8802 6.23079 0.530647C7.02116 0.181094 7.87578 0.000357734 8.74 0L13.52 0V6.15H9.76C9.53848 6.90214 9.4538 7.68794 9.51 8.47H13.51V14.85H9.51L9.53 27.75ZM4.22 26.25H8V13.35H12V10H8V9.24C8 7.24 8 5.45 9 4.78L9.19 4.65H12V1.5H8.78C8.12565 1.49154 7.47682 1.62071 6.87559 1.87911C6.27436 2.13752 5.73416 2.5194 5.29 3C4.29 4.23 3.88 6.29 4.19 9.14L4.29 9.97H1.5V13.35H4.22V26.25Z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#" aria-label="Вконтакте">
-            <svg
-              class="socials__icon socials__icon_vkontakte"
-              width="31"
-              height="16"
-              viewBox="0 0 31 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M23.9461 15.7775C23.2083 15.761 22.4891 15.5431 21.8661 15.1475C21.2157 14.7079 20.6184 14.1945 20.0861 13.6175C19.6461 13.1775 18.9161 12.4375 18.6361 12.4375C18.3561 12.4375 18.1561 13.3575 18.1661 14.0075C18.1703 14.4562 18.0021 14.8894 17.6961 15.2175C17.3481 15.5018 16.9234 15.6758 16.4761 15.7175H14.5561C11.7965 15.6568 9.15414 14.59 7.12606 12.7175C3.44606 9.34753 0.286063 2.90753 0.156063 2.62753C0.0320633 2.39361 -0.0198655 2.12821 0.00683068 1.86481C0.0335268 1.6014 0.137651 1.35181 0.306063 1.14753C0.687199 0.829675 1.16985 0.659328 1.66606 0.667532H5.74606H5.86606C6.20364 0.716784 6.52722 0.835995 6.81606 1.01753C7.08788 1.1998 7.30552 1.45198 7.44606 1.74753C7.87724 2.6706 8.37175 3.56273 8.92606 4.41753C10.2361 6.41753 10.8161 6.87753 11.0261 6.97753C11.2597 6.03979 11.324 5.06788 11.2161 4.10753C11.2511 3.67014 11.179 3.2308 11.0061 2.82753C10.7865 2.65191 10.5169 2.55038 10.2361 2.53753L9.50606 1.84753C9.36606 1.18753 10.0961 0.617532 10.6061 0.397532C11.6238 0.0786297 12.6916 -0.0501836 13.7561 0.017532H14.4661C15.1881 -0.00127074 15.9099 0.0658674 16.6161 0.217532C18.3161 0.577532 18.2561 1.94753 18.1861 3.52753C18.1861 3.98753 18.1361 4.52753 18.1361 5.14753C18.1361 5.29753 18.1361 5.45753 18.1361 5.62753C18.0967 6.06289 18.1271 6.50174 18.2261 6.92753C19.0586 6.23108 19.7597 5.39116 20.2961 4.44753C20.875 3.55527 21.3832 2.61908 21.8161 1.64753C21.9479 1.34025 22.1739 1.08272 22.4614 0.912012C22.7489 0.741299 23.0832 0.666204 23.4161 0.697532H27.6961C27.8224 0.685471 27.9497 0.685471 28.0761 0.697532C29.0761 0.697532 29.6661 0.987532 29.9061 1.54753C30.1461 2.10753 30.0761 3.20753 27.5461 6.15753L26.5461 7.28753C26.0616 7.75797 25.6443 8.29301 25.3061 8.87753C25.6848 9.30811 26.1147 9.69093 26.5861 10.0175C27.7353 10.8835 28.7468 11.9186 29.5861 13.0875C29.7829 13.3148 29.9117 13.593 29.9576 13.8901C30.0036 14.1873 29.965 14.4914 29.8461 14.7675C29.6365 15.0734 29.3561 15.3241 29.0288 15.4982C28.7014 15.6723 28.3368 15.7647 27.9661 15.7675L24.1761 15.8175L23.9461 15.7775ZM18.6361 10.9375C19.5361 10.9375 20.3161 11.7275 21.1461 12.5575C21.5944 13.0471 22.0977 13.4833 22.6461 13.8575C23.0607 14.1333 23.5481 14.2795 24.0461 14.2775H24.1461L27.9461 14.2275C28.1335 14.2168 28.317 14.1692 28.4861 14.0875L28.3861 13.9275C27.6291 12.8959 26.7263 11.9797 25.7061 11.2075C24.5161 10.2075 23.9061 9.73753 23.8361 8.96753C23.7661 8.19753 24.3261 7.52753 25.4461 6.25753L26.4461 5.14753C27.2903 4.28639 27.9834 3.28908 28.4961 2.19753C28.2729 2.1843 28.0492 2.1843 27.8261 2.19753H23.4561C23.377 2.17986 23.2951 2.17986 23.2161 2.19753C22.7532 3.25898 22.2012 4.27929 21.5661 5.24753C19.6761 8.06753 18.7861 8.44753 18.1561 8.44753C17.9607 8.44753 17.7684 8.39945 17.5961 8.30753C16.5961 7.73753 16.5961 6.46753 16.6561 5.54753C16.6561 5.39753 16.6561 5.24753 16.6561 5.11753C16.6561 4.46753 16.6561 3.90753 16.7061 3.42753C16.7861 1.74753 16.7061 1.73753 16.3261 1.64753C15.7138 1.52655 15.09 1.4729 14.4661 1.48753H13.7761C13.1411 1.47441 12.5061 1.50784 11.8761 1.58753C11.9715 1.65784 12.0558 1.74212 12.1261 1.83753C12.5385 2.48787 12.7442 3.24794 12.7161 4.01753C12.8461 5.66753 12.7761 7.81753 11.7161 8.33753C11.5284 8.42537 11.3233 8.4698 11.1161 8.46753C10.1861 8.46753 9.26606 7.58753 7.69606 5.20753C7.09358 4.29624 6.5556 3.34392 6.08606 2.35753L6.00606 2.25753C5.90508 2.20606 5.79736 2.16903 5.68606 2.14753H1.68606H1.61606C2.20606 3.36753 5.00606 8.76753 8.13606 11.5975C9.89364 13.2122 12.1708 14.1451 14.5561 14.2275H16.4061C16.5004 14.2074 16.5914 14.1737 16.6761 14.1275C16.6761 14.1275 16.6761 14.1275 16.6761 14.0375C16.6761 13.7675 16.6761 11.4375 18.2561 11.0375C18.3784 10.9894 18.5059 10.9558 18.6361 10.9375Z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link" href="#" aria-label="Instagram">
-            <svg
-              class="socials__icon socials__icon_instagram"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g>
-                <path
-                  d="M17.2802 2.40094C18.4252 2.40347 19.5225 2.85943 20.3321 3.66904C21.1417 4.47865 21.5977 5.57598 21.6002 6.72094V17.2809C21.5977 18.4259 21.1417 19.5232 20.3321 20.3328C19.5225 21.1424 18.4252 21.5984 17.2802 21.6009H6.7202C5.57691 21.5959 4.48204 21.1388 3.6745 20.3295C2.86696 19.5201 2.41233 18.4242 2.4098 17.2809V6.72094C2.41233 5.57764 2.86696 4.48175 3.6745 3.67241C4.48204 2.86308 5.57691 2.406 6.7202 2.40094H17.2802ZM17.2802 0.960938H6.7202C5.19256 0.960938 3.72748 1.56779 2.64727 2.648C1.56706 3.72821 0.960205 5.19329 0.960205 6.72094L0.960205 17.2809C0.960205 18.8086 1.56706 20.2737 2.64727 21.3539C3.72748 22.4341 5.19256 23.0409 6.7202 23.0409H17.2802C18.8078 23.0409 20.2729 22.4341 21.3531 21.3539C22.4333 20.2737 23.0402 18.8086 23.0402 17.2809V6.72094C23.0402 5.19329 22.4333 3.72821 21.3531 2.648C20.2729 1.56779 18.8078 0.960938 17.2802 0.960938V0.960938Z"
-                />
-                <path
-                  d="M12.0093 7.75642C12.8504 7.75642 13.6727 8.00584 14.372 8.47314C15.0714 8.94045 15.6165 9.60464 15.9384 10.3817C16.2603 11.1588 16.3445 12.0139 16.1804 12.8389C16.0163 13.6639 15.6112 14.4216 15.0165 15.0164C14.4217 15.6112 13.6639 16.0162 12.839 16.1803C12.014 16.3444 11.1589 16.2602 10.3818 15.9383C9.60472 15.6164 8.94052 15.0713 8.47321 14.3719C8.00591 13.6726 7.75649 12.8503 7.75649 12.0092C7.75522 11.4504 7.86436 10.8968 8.07764 10.3802C8.29091 9.8637 8.60412 9.39437 8.99928 8.99921C9.39444 8.60405 9.86377 8.29084 10.3803 8.07756C10.8969 7.86429 11.4504 7.75515 12.0093 7.75642ZM12.0093 6.31641C10.883 6.31451 9.78137 6.64678 8.84393 7.27115C7.90649 7.89553 7.17533 8.78396 6.74299 9.82402C6.31064 10.8641 6.19653 12.009 6.4151 13.1139C6.63368 14.2189 7.17511 15.2341 7.97088 16.0312C8.76664 16.8283 9.78099 17.3715 10.8855 17.5919C11.9901 17.8124 13.1352 17.7002 14.176 17.2696C15.2168 16.839 16.1065 16.1093 16.7324 15.173C17.3584 14.2366 17.6925 13.1356 17.6925 12.0092C17.6938 11.2621 17.5477 10.522 17.2626 9.8314C16.9776 9.14077 16.5592 8.51313 16.0313 7.98438C15.5035 7.45563 14.8765 7.03615 14.1864 6.74994C13.4962 6.46373 12.7564 6.31641 12.0093 6.31641Z"
-                />
-                <path
-                  d="M17.9043 7.41264C18.6148 7.41264 19.1907 6.8367 19.1907 6.12624C19.1907 5.41578 18.6148 4.83984 17.9043 4.83984C17.1939 4.83984 16.6179 5.41578 16.6179 6.12624C16.6179 6.8367 17.1939 7.41264 17.9043 7.41264Z"
-                />
-              </g>
-            </svg>
-          </a>
-        </li>
-      </ul>
-
-      <section class="developed footer__developed">
-        <h2 class="developed__title">Разработано</h2>
-        <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="./img/icons/logo-htmlacademy.svg" alt="Логотип академии" />
+      <div class="footer__wrapper">
+        <a class="logo footer__logo">
+          <picture class="logo__pic logo__pic_dark">
+            <source
+              srcset="./img/contents/site-logo-desktop-dark.png"
+              media="(min-width: 1320px)"
+            />
+            <source
+              srcset="./img/contents/site-logo-tablet-dark.png"
+              media="(min-width: 758px)"
+            />
+            <img
+              src="./img/contents/site-logo-dark.png"
+              alt="Логотип сервиса «Погнали?»"
+            />
+          </picture>
         </a>
-      </section>
+
+        <ul class="socials footer__socials">
+          <li class="socials__item">
+            <a class="socials__link" href="#" aria-label="Facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                width="14"
+                height="28"
+                viewBox="0 0 14 28"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.53 27.75H2.71V14.85H0V8.47H2.63C2.43 5.58 2.93 3.47 4.15 2.03C4.73171 1.39087 5.44042 0.8802 6.23079 0.530647C7.02116 0.181094 7.87578 0.000357734 8.74 0L13.52 0V6.15H9.76C9.53848 6.90214 9.4538 7.68794 9.51 8.47H13.51V14.85H9.51L9.53 27.75ZM4.22 26.25H8V13.35H12V10H8V9.24C8 7.24 8 5.45 9 4.78L9.19 4.65H12V1.5H8.78C8.12565 1.49154 7.47682 1.62071 6.87559 1.87911C6.27436 2.13752 5.73416 2.5194 5.29 3C4.29 4.23 3.88 6.29 4.19 9.14L4.29 9.97H1.5V13.35H4.22V26.25Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#" aria-label="Вконтакте">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                width="31"
+                height="16"
+                viewBox="0 0 31 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.9461 15.7775C23.2083 15.761 22.4891 15.5431 21.8661 15.1475C21.2157 14.7079 20.6184 14.1945 20.0861 13.6175C19.6461 13.1775 18.9161 12.4375 18.6361 12.4375C18.3561 12.4375 18.1561 13.3575 18.1661 14.0075C18.1703 14.4562 18.0021 14.8894 17.6961 15.2175C17.3481 15.5018 16.9234 15.6758 16.4761 15.7175H14.5561C11.7965 15.6568 9.15414 14.59 7.12606 12.7175C3.44606 9.34753 0.286063 2.90753 0.156063 2.62753C0.0320633 2.39361 -0.0198655 2.12821 0.00683068 1.86481C0.0335268 1.6014 0.137651 1.35181 0.306063 1.14753C0.687199 0.829675 1.16985 0.659328 1.66606 0.667532H5.74606H5.86606C6.20364 0.716784 6.52722 0.835995 6.81606 1.01753C7.08788 1.1998 7.30552 1.45198 7.44606 1.74753C7.87724 2.6706 8.37175 3.56273 8.92606 4.41753C10.2361 6.41753 10.8161 6.87753 11.0261 6.97753C11.2597 6.03979 11.324 5.06788 11.2161 4.10753C11.2511 3.67014 11.179 3.2308 11.0061 2.82753C10.7865 2.65191 10.5169 2.55038 10.2361 2.53753L9.50606 1.84753C9.36606 1.18753 10.0961 0.617532 10.6061 0.397532C11.6238 0.0786297 12.6916 -0.0501836 13.7561 0.017532H14.4661C15.1881 -0.00127074 15.9099 0.0658674 16.6161 0.217532C18.3161 0.577532 18.2561 1.94753 18.1861 3.52753C18.1861 3.98753 18.1361 4.52753 18.1361 5.14753C18.1361 5.29753 18.1361 5.45753 18.1361 5.62753C18.0967 6.06289 18.1271 6.50174 18.2261 6.92753C19.0586 6.23108 19.7597 5.39116 20.2961 4.44753C20.875 3.55527 21.3832 2.61908 21.8161 1.64753C21.9479 1.34025 22.1739 1.08272 22.4614 0.912012C22.7489 0.741299 23.0832 0.666204 23.4161 0.697532H27.6961C27.8224 0.685471 27.9497 0.685471 28.0761 0.697532C29.0761 0.697532 29.6661 0.987532 29.9061 1.54753C30.1461 2.10753 30.0761 3.20753 27.5461 6.15753L26.5461 7.28753C26.0616 7.75797 25.6443 8.29301 25.3061 8.87753C25.6848 9.30811 26.1147 9.69093 26.5861 10.0175C27.7353 10.8835 28.7468 11.9186 29.5861 13.0875C29.7829 13.3148 29.9117 13.593 29.9576 13.8901C30.0036 14.1873 29.965 14.4914 29.8461 14.7675C29.6365 15.0734 29.3561 15.3241 29.0288 15.4982C28.7014 15.6723 28.3368 15.7647 27.9661 15.7675L24.1761 15.8175L23.9461 15.7775ZM18.6361 10.9375C19.5361 10.9375 20.3161 11.7275 21.1461 12.5575C21.5944 13.0471 22.0977 13.4833 22.6461 13.8575C23.0607 14.1333 23.5481 14.2795 24.0461 14.2775H24.1461L27.9461 14.2275C28.1335 14.2168 28.317 14.1692 28.4861 14.0875L28.3861 13.9275C27.6291 12.8959 26.7263 11.9797 25.7061 11.2075C24.5161 10.2075 23.9061 9.73753 23.8361 8.96753C23.7661 8.19753 24.3261 7.52753 25.4461 6.25753L26.4461 5.14753C27.2903 4.28639 27.9834 3.28908 28.4961 2.19753C28.2729 2.1843 28.0492 2.1843 27.8261 2.19753H23.4561C23.377 2.17986 23.2951 2.17986 23.2161 2.19753C22.7532 3.25898 22.2012 4.27929 21.5661 5.24753C19.6761 8.06753 18.7861 8.44753 18.1561 8.44753C17.9607 8.44753 17.7684 8.39945 17.5961 8.30753C16.5961 7.73753 16.5961 6.46753 16.6561 5.54753C16.6561 5.39753 16.6561 5.24753 16.6561 5.11753C16.6561 4.46753 16.6561 3.90753 16.7061 3.42753C16.7861 1.74753 16.7061 1.73753 16.3261 1.64753C15.7138 1.52655 15.09 1.4729 14.4661 1.48753H13.7761C13.1411 1.47441 12.5061 1.50784 11.8761 1.58753C11.9715 1.65784 12.0558 1.74212 12.1261 1.83753C12.5385 2.48787 12.7442 3.24794 12.7161 4.01753C12.8461 5.66753 12.7761 7.81753 11.7161 8.33753C11.5284 8.42537 11.3233 8.4698 11.1161 8.46753C10.1861 8.46753 9.26606 7.58753 7.69606 5.20753C7.09358 4.29624 6.5556 3.34392 6.08606 2.35753L6.00606 2.25753C5.90508 2.20606 5.79736 2.16903 5.68606 2.14753H1.68606H1.61606C2.20606 3.36753 5.00606 8.76753 8.13606 11.5975C9.89364 13.2122 12.1708 14.1451 14.5561 14.2275H16.4061C16.5004 14.2074 16.5914 14.1737 16.6761 14.1275C16.6761 14.1275 16.6761 14.1275 16.6761 14.0375C16.6761 13.7675 16.6761 11.4375 18.2561 11.0375C18.3784 10.9894 18.5059 10.9558 18.6361 10.9375Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#" aria-label="Instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M17.2802 2.40094C18.4252 2.40347 19.5225 2.85943 20.3321 3.66904C21.1417 4.47865 21.5977 5.57598 21.6002 6.72094V17.2809C21.5977 18.4259 21.1417 19.5232 20.3321 20.3328C19.5225 21.1424 18.4252 21.5984 17.2802 21.6009H6.7202C5.57691 21.5959 4.48204 21.1388 3.6745 20.3295C2.86696 19.5201 2.41233 18.4242 2.4098 17.2809V6.72094C2.41233 5.57764 2.86696 4.48175 3.6745 3.67241C4.48204 2.86308 5.57691 2.406 6.7202 2.40094H17.2802ZM17.2802 0.960938H6.7202C5.19256 0.960938 3.72748 1.56779 2.64727 2.648C1.56706 3.72821 0.960205 5.19329 0.960205 6.72094L0.960205 17.2809C0.960205 18.8086 1.56706 20.2737 2.64727 21.3539C3.72748 22.4341 5.19256 23.0409 6.7202 23.0409H17.2802C18.8078 23.0409 20.2729 22.4341 21.3531 21.3539C22.4333 20.2737 23.0402 18.8086 23.0402 17.2809V6.72094C23.0402 5.19329 22.4333 3.72821 21.3531 2.648C20.2729 1.56779 18.8078 0.960938 17.2802 0.960938V0.960938Z"
+                  />
+                  <path
+                    d="M12.0093 7.75642C12.8504 7.75642 13.6727 8.00584 14.372 8.47314C15.0714 8.94045 15.6165 9.60464 15.9384 10.3817C16.2603 11.1588 16.3445 12.0139 16.1804 12.8389C16.0163 13.6639 15.6112 14.4216 15.0165 15.0164C14.4217 15.6112 13.6639 16.0162 12.839 16.1803C12.014 16.3444 11.1589 16.2602 10.3818 15.9383C9.60472 15.6164 8.94052 15.0713 8.47321 14.3719C8.00591 13.6726 7.75649 12.8503 7.75649 12.0092C7.75522 11.4504 7.86436 10.8968 8.07764 10.3802C8.29091 9.8637 8.60412 9.39437 8.99928 8.99921C9.39444 8.60405 9.86377 8.29084 10.3803 8.07756C10.8969 7.86429 11.4504 7.75515 12.0093 7.75642ZM12.0093 6.31641C10.883 6.31451 9.78137 6.64678 8.84393 7.27115C7.90649 7.89553 7.17533 8.78396 6.74299 9.82402C6.31064 10.8641 6.19653 12.009 6.4151 13.1139C6.63368 14.2189 7.17511 15.2341 7.97088 16.0312C8.76664 16.8283 9.78099 17.3715 10.8855 17.5919C11.9901 17.8124 13.1352 17.7002 14.176 17.2696C15.2168 16.839 16.1065 16.1093 16.7324 15.173C17.3584 14.2366 17.6925 13.1356 17.6925 12.0092C17.6938 11.2621 17.5477 10.522 17.2626 9.8314C16.9776 9.14077 16.5592 8.51313 16.0313 7.98438C15.5035 7.45563 14.8765 7.03615 14.1864 6.74994C13.4962 6.46373 12.7564 6.31641 12.0093 6.31641Z"
+                  />
+                  <path
+                    d="M17.9043 7.41264C18.6148 7.41264 19.1907 6.8367 19.1907 6.12624C19.1907 5.41578 18.6148 4.83984 17.9043 4.83984C17.1939 4.83984 16.6179 5.41578 16.6179 6.12624C16.6179 6.8367 17.1939 7.41264 17.9043 7.41264Z"
+                  />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <section class="developed footer__developed">
+          <h2 class="developed__title">Разработано</h2>
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img
+              src="./img/icons/logo-htmlacademy.svg"
+              alt="Логотип академии"
+            />
+          </a>
+        </section>
+      </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/dropdown.js"></script>
   </body>
 </html>

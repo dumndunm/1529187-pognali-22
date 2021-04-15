@@ -17,12 +17,24 @@
 
   border-top: 1px solid #d6d9e6;
   border-bottom: 1px solid #d6d9e6;
+
+  @media (min-width: $tablet-width) {
+    height: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .date-info__date {
   font-weight: 700;
   font-size: 20px;
   color: var(--basic-blue);
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+  }
 }
 
 .date-info__button {
@@ -34,5 +46,24 @@
 }
 
 .date-info__icon {
+  width: 15px;
+  height: 21px;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 25px;
+    height: 40px;
+  }
+}
+
+.date-info__table {
+  width: 221px;
+
+  @media (min-width: $tablet-width) {
+    width: 538px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1000px;
+  }
 }

@@ -1,12 +1,46 @@
 .profile-info {
   display: flex;
-  max-width: 270px;
   justify-content: space-between;
+
+  width: 100%;
+  max-width: 480px;
 
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 18px;
+
   padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 19px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+
+    max-width: 1024px;
+
+    padding-top: 66px;
+    padding-left: calc(var(--page-padding-size) + var(--content-padding-size));
+    padding-right: calc(var(--page-padding-size) + var(--content-padding-size));
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 161px;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    max-width: 1160px;
+
+    margin-bottom: 0;
+
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    z-index: 1;
+  }
 }
 
 .profile-info::before {
@@ -19,16 +53,52 @@
   top: 126px;
   left: 0;
   background-color: var(--basic-yellow);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .profile-info__rating {
+  width: 100px;
+  height: 100px;
+
   margin-left: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 44px;
+  }
 }
 
 .profile-info__pic {
   display: block;
   width: 100px;
   height: 100px;
+
   margin-right: 19px;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+
+    margin-right: 0;
+    border-radius: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
 }

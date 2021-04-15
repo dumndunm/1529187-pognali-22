@@ -1,0 +1,158 @@
+.table-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-collapse: collapse;
+
+  font-weight: 500;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.table-date__body {
+  border: 1px solid #d6d9e6;
+}
+
+.table-date__row {
+  display: flex;
+}
+
+.table-date__row:not(:last-child) {
+  border-bottom: 1px solid #d6d9e6;
+}
+
+.table-date__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  font-weight: 500;
+  color: var(--basic-blue);
+
+  background-color: var(--basic-blue-light);
+
+  @media (min-width: $tablet-width) {
+    width: 76px;
+    height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+    align-items: start;
+
+    width: 142px;
+    height: 72px;
+
+    padding-top: 15px;
+    padding-left: 16px;
+
+    font-weight: 400;
+  }
+}
+
+.table-date__cell:not(:last-child) {
+  border-right: 1px solid #d6d9e6;
+}
+
+.table-date__header .table-date__cell {
+  border: none;
+  font-weight: 400;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 76px;
+    height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+    align-items: center;
+
+    width: 142px;
+    height: 55px;
+
+    padding-top: 0;
+    padding-left: 16px;
+  }
+}
+
+.table-date__header .table-date__cell:nth-child(6),
+.table-date__header .table-date__cell:nth-child(7) {
+  color: #ff5c23;
+}
+
+.table-date__cell:not(.table-date__cell_disabled):hover {
+  border: 2px solid #ff5c23;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+
+  @media (min-width: $tablet-width) {
+    border-width: 4px;
+  }
+}
+
+.table-date__cell_disabled {
+  font-weight: 400;
+  color: #c7c7c7;
+  background-color: transparent;
+}
+
+.table-date__cell_choosen {
+  position: relative;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.table-date__cell_choosen-first::after {
+  @media (min-width: $desktop-width) {
+    content: "Заезд";
+    position: absolute;
+    top: 40px;
+    left: 16px;
+  }
+}
+
+.table-date__cell_choosen-last::after {
+  @media (min-width: $desktop-width) {
+    content: "Выезд";
+    position: absolute;
+    top: 40px;
+    left: 16px;
+  }
+}
+
+.table-date__cell_first-day {
+  span {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    span {
+      display: inline;
+      margin-left: 5px;
+    }
+  }
+}
+
+.table-date__day_mobile {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.table-date__day_tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

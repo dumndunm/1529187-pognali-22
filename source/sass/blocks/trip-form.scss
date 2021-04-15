@@ -1,14 +1,19 @@
 .trip-form {
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding-left: var(--page-padding-size);
-  padding-right: var(--page-padding-size);
+  padding-bottom: 73px;
 
   background-color: var(--extra-blue-light);
+
+  form {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: var(--page-padding-size);
+    padding-right: var(--page-padding-size);
+
+    padding-bottom: 105px;
+  }
 }
 
 .trip-form::before {
@@ -24,11 +29,62 @@
 
   background-color: var(--extra-blue-light);
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 60px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    top: -60px;
+  }
+}
+
+.trip-form__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 480px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+
+  @media (min-width: $tablet-width) {
+    max-width: 1024px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1320px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .trip-form__title {
   align-self: start;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+    font-size: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 64px;
+    margin-bottom: 56px;
+    font-size: 36px;
+  }
 }
 
 .trip-form__markers {
@@ -42,6 +98,11 @@
   margin-bottom: 0;
   margin-top: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    right: var(--content-padding-size);
+    height: 36px;
+  }
 }
 
 .trip-form__marker {
@@ -50,6 +111,10 @@
 
 .trip-form__marker:not(:last-child) {
   margin-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 29px;
+  }
 }
 
 .trip-form__marker::before {
@@ -60,6 +125,11 @@
   border-radius: 50%;
   background-color: var(--basic-blue);
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
 }
 
 .trip-form__marker_active::before {
@@ -74,21 +144,55 @@
 }
 
 .trip-form__step {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin-left: var(--page-padding-size);
-  margin-right: var(--page-padding-size);
-
   padding-top: 24px;
   padding-left: var(--content-padding-size);
   padding-right: var(--content-padding-size);
-  padding-bottom: 23px;
+  padding-bottom: 0;
 
   border-radius: 10px;
 
   background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    min-width: 618px;
+    padding-top: 48px;
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-bottom: 56px;
+
+    border-radius: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 101px;
+    padding-left: 159px;
+    padding-right: 159px;
+    padding-bottom: 106px;
+
+    border-radius: 60px;
+  }
+}
+
+.trip-form__step:first-child {
+  padding-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 39px;
+    padding-bottom: 56px;
+  }
+}
+
+.trip-form__step:not(:last-child) {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .trip-form__heading {
@@ -100,15 +204,53 @@
   font-size: 20px;
   line-height: 20px;
   color: var(--basic-blue);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .trip-form__text {
+  align-self: start;
+  width: 218px;
+
   margin-top: 0;
   margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 22px;
   color: var(--basic-grey);
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 505px;
+    margin-bottom: 33px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 581px;
+    margin-bottom: 55px;
+  }
 }
 
 .trip-form__base-info {
@@ -117,10 +259,62 @@
   align-items: center;
 
   width: 100%;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    border-top: 1px solid #cbced9;
+  }
+}
+
+.trip-form__companions-info {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+    border-top: 1px solid #cbced9;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+
+    width: 540px;
+
+    margin-bottom: 14px;
+    border-top: none;
+  }
+}
+
+.trip-form__duration-info {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    border-top: 1px solid #cbced9;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 0;
+    border-top: none;
+  }
 }
 
 .trip-form__numeric-label {
   align-self: start;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
   margin-bottom: 8px;
 
   font-weight: 500;
@@ -128,22 +322,292 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--basic-blue);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+    padding-top: 26px;
+
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    margin: 0;
+    border-top: none;
+
+    letter-spacing: 0;
+  }
 }
 
-.trip-form__numeric-field:not(:last-child) {
-  margin-bottom: 20px;
+.trip-form__numeric-label[for="trip-form-companions"]::after {
+  content: "Чел.";
+  opacity: 0.3;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
+
+.trip-form__numeric-label[for="trip-form-duration"]::after {
+  content: "Дн.";
+  opacity: 0.3;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+// .trip-form__numeric-field {
+//   margin-bottom: 20px;
+
+//   @media (min-width: $tablet-width) {
+//     margin-bottom: 25px;
+
+//     &:last-of-type {
+//       margin-bottom: 60px;
+//     }
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     margin: 0;
+
+//     &:last-of-type {
+//       margin-bottom: 0;
+//       margin-left: 100px;
+//     }
+//   }
+// }
 
 .trip-form__checkbox {
+  order: 1;
   align-self: start;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 17px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
 }
 
 .trip-form__date-info {
   margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.trip-form__buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .trip-form__button {
   width: 100%;
   font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+    justify-content: space-between;
+    width: 284px;
+    height: 80px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: var(--corner-radius-small);
+
+    font-size: 24px;
+    text-transform: none;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+
+      background-image: url("../img/icons/arrow-blue.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.trip-form__button-back {
+  margin-top: 6px;
+  width: 100%;
+  font-weight: 700;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    height: 80px;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 24px;
+    text-transform: none;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+
+      margin-right: 20px;
+      margin-bottom: 5px;
+
+      background-image: url("../img/icons/arrow-blue-revert.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    left: 15px;
+  }
+}
+
+.trip-form__route {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 13px;
+  }
+}
+
+.trip-form__button-add {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 42px;
+
+  margin-bottom: 25px;
+
+  padding-left: 10px;
+  padding-right: 15px;
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background-color: var(--basic-blue-light);
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+    width: calc(100% - 162px - 13px);
+    height: 70px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    margin-bottom: 58px;
+  }
+}
+
+.trip-form__button-add svg {
+  opacity: 0.2;
+  stroke: #000000;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.trip-form__button-add::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 70px;
+
+    position: absolute;
+    top: 50%;
+    right: -35px;
+
+    background-image: url("../../img/icons/shadow-line.png");
+    background-repeat: no-repeat;
+    background-size: 1px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -53px;
+
+    height: 190px;
+    background-color: #e1e3e9;
+    background-image: none;
+  }
+}
+
+.trip-form__button-add::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 49px;
+
+  border-radius: 50%;
+  border: 1px solid #cbced9;
+
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 14px;
+    height: 14px;
+    right: -42px;
+
+    background-color: var(--basic-blue-light);
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -60px;
+  }
+}
+
+.trip-form__action-plan {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
 }

@@ -6,11 +6,23 @@
 
   border: 1px solid #cbced9;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 180px;
+  }
 }
 
 .numeric-field__input {
   border: none;
   background: transparent;
+
+  @media (min-width: $desktop-width) {
+    width: 57px;
+  }
 }
 
 .numeric-field__button {
@@ -22,8 +34,18 @@
 
   border: none;
   background: transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .numeric-field__icon {
   stroke: var(--special-grey);
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
 }
