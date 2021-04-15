@@ -159,6 +159,12 @@
   }
 }
 
+.profile-form__fieldset_tags .profile-form__legend {
+  @media (min-width: $desktop-width) {
+    right: calc(100% - 66px);
+  }
+}
+
 .profile-form__tags {
   border: none;
   background: transparent;
