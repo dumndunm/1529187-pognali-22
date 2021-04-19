@@ -1,0 +1,121 @@
+.choose-country {
+  position: relative;
+
+  display: none;
+
+  border: 1px solid #cbced9;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: none;
+
+  background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    width: 575px;
+    max-width: 575px;
+    border: none;
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18); // tablet
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    max-width: 730px;
+
+    border: none;
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18); // tablet
+  }
+}
+
+.choose-country_active {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.choose-country__table {
+  @media (min-width: $tablet-width) {
+    border-right: 1px solid #d6d9e6;
+  }
+}
+
+.choose-country__list {
+  padding-top: 20px;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-bottom: 20px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 38px;
+    padding-left: 26px;
+  }
+}
+
+.choose-country__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--basic-grey);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.choose-country__text:not(:last-child) {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.choose-country__close {
+  position: absolute;
+  top: -32px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 21px;
+  height: 21px;
+
+  padding: 0;
+
+  border: none;
+
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    top: -70px;
+    right: 230px;
+
+    width: 24px;
+    height: 70px;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 23px;
+  }
+}
+
+.choose-country__icon-close {
+  stroke: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    width: 17px;
+    height: 18px;
+
+    opacity: 0.3;
+  }
+}

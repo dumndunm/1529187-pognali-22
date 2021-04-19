@@ -1,0 +1,40 @@
+.profile-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background-image: url("../img/svg/subtract-level-80.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.profile-rating__count {
+  display: block;
+
+  border-bottom: 1px solid #babcc1;
+
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 38px;
+  color: var(--special-blue);
+
+  @media (min-width: $desktop-width) {
+    color: var(--basic-white);
+  }
+}
+
+.profile-rating__text {
+  display: block;
+  margin-top: 6px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--basic-grey);
+
+  @media (min-width: $desktop-width) {
+    color: var(--basic-white);
+  }
+}

@@ -1,0 +1,41 @@
+.route {
+  position: relative;
+  width: 100%;
+
+  margin-top: 0;
+  padding-left: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+    border-top: 1px solid var(--special-grey-light);
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: calc(100% + 13px + 35px);
+
+      position: absolute;
+      top: 0;
+      right: 140px;
+
+      background-color: var(--special-grey-light);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      right: 219px;
+    }
+  }
+}
+
+.route__country:not(:last-child) {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 13px;
+  }
+}

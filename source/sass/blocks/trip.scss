@@ -1,0 +1,166 @@
+.trip {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 154px;
+
+  padding-top: 24px;
+  padding-left: 23px;
+  padding-bottom: 23px;
+  border-radius: 10px;
+
+  color: var(--basic-blue);
+
+  background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    height: 152px;
+
+    padding-top: 40px;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+
+    height: 97px;
+
+    padding-top: 36px;
+    padding-left: 43px;
+    padding-right: 40px;
+    padding-bottom: 36px;
+  }
+}
+
+.trip__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+
+    margin-bottom: 0;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 34px;
+
+    border-bottom: 1px solid #cbced9;
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+
+    min-width: 584px;
+    max-width: 584px;
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    border-bottom: none;
+  }
+}
+
+.trip__number {
+  font-weight: 500;
+  font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    margin-right: 36px;
+    font-size: 24px;
+  }
+}
+
+.trip__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 54px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+
+    height: auto;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.trip__companions {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: auto;
+  }
+}
+
+.trip__dates {
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+
+.trip__button {
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  background: transparent;
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 131px;
+  }
+}

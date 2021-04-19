@@ -1,10 +1,6 @@
 const header = document.querySelector(".header");
 const headerToggle = document.querySelector(".header__toggle");
 
-const profileModal = document.querySelector(".profile-modal");
-const profileButton = document.querySelector(".profile__button");
-const profileModalButton = document.querySelector(".profile-modal__button");
-
 const HEADER_COLLAPSE_HEIGHT = 53;
 const HEADER_SCROLL_HEIGHT = 76;
 
@@ -62,23 +58,9 @@ const onPageScroll = (evt) => {
   }
 };
 
-const onProfileButtonClick = (evt) => {
-  evt.preventDefault();
-  profileModal.classList.remove("profile-modal_hidden");
-
-  const onProfileModalButtonClick = () => {
-    evt.preventDefault();
-    profileModal.classList.add("profile-modal_hidden");
-    profileModalButton.removeEventListener("click", onProfileModalButtonClick);
-  };
-
-  profileModalButton.addEventListener("click", onProfileModalButtonClick);
-};
-
 document.addEventListener("DOMContentLoaded", onPageLoad);
 window.addEventListener("scroll", onPageScroll);
 headerToggle.addEventListener("click", onHeaderToggleClick);
-profileButton.addEventListener("click", onProfileButtonClick);
 
 window.addEventListener("resize", (evt) => {
   evt.preventDefault();
