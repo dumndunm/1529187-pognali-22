@@ -44,7 +44,7 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer(), csso()]))
-    .pipe(sourcemap.write("."))
+    .pipe(sourcemap.write())
     .pipe(
       rename({
         suffix: ".min",
