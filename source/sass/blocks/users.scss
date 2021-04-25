@@ -33,16 +33,19 @@
   padding-left: var(--page-padding-size);
   padding-right: var(--page-padding-size);
 
+  background-image: url("../../img/graphics/rect-users-back.png"),
+    url("../../img/graphics/rogovaya-back.png"),
+    url("../../img/graphics/smolov-back.png");
+  background-repeat: no-repeat;
+  background-size: 132px 132px, 71px 71px, 143px 143px;
+  background-position: -19px 70px, -10px 340px, 152px 70px;
+
   @media (min-width: $tablet-width) {
     max-width: 1024px;
 
     padding-top: 200px;
     padding-bottom: 27px;
 
-    background-image: url("../../img/illustrations/rect-users-back.png"),
-      url("../../img/illustrations/rogovaya-back.png"),
-      url("../../img/illustrations/smolov-back.png");
-    background-repeat: no-repeat;
     background-size: 212px 212px, 285px 285px, 143px 143px;
     background-position: 40px 132px, calc(100% - 40px - 32px) 140px, 40px 480px;
   }

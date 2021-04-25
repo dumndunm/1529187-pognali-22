@@ -8,6 +8,7 @@
   list-style: none;
 
   @media (min-width: $tablet-width) {
+    min-width: 534px;
     padding-top: 42px;
     border-top: 1px solid var(--special-grey-light);
 

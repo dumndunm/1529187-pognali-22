@@ -92,55 +92,13 @@
   top: 0;
   right: calc(var(--page-padding-size) + 19px);
 
-  display: flex;
-  align-items: center;
-  height: 24px;
-  margin-bottom: 0;
-  margin-top: 0;
-  list-style: none;
-
   @media (min-width: $tablet-width) {
     right: var(--content-padding-size);
-    height: 36px;
   }
-}
 
-.trip-form__marker {
-  display: flex;
-}
-
-.trip-form__marker:not(:last-child) {
-  margin-right: 16px;
-
-  @media (min-width: $tablet-width) {
-    margin-right: 29px;
+  @media (min-width: $desktop-width) {
+    display: none;
   }
-}
-
-.trip-form__marker::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--basic-blue);
-  opacity: 0.3;
-
-  @media (min-width: $tablet-width) {
-    width: 6px;
-    height: 6px;
-  }
-}
-
-.trip-form__marker_active::before {
-  opacity: 1;
-}
-
-.trip-form__marker-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
 }
 
 .trip-form__step {
@@ -161,8 +119,8 @@
   @media (min-width: $tablet-width) {
     min-width: 618px;
     padding-top: 48px;
-    padding-left: 42px;
-    padding-right: 42px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 56px;
 
     border-radius: 30px;
@@ -192,6 +150,17 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 52px;
+  }
+}
+
+.trip-form__step-markers {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    top: 107px;
+    left: calc(100% - 382px);
   }
 }
 
@@ -358,27 +327,6 @@
   }
 }
 
-// .trip-form__numeric-field {
-//   margin-bottom: 20px;
-
-//   @media (min-width: $tablet-width) {
-//     margin-bottom: 25px;
-
-//     &:last-of-type {
-//       margin-bottom: 60px;
-//     }
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     margin: 0;
-
-//     &:last-of-type {
-//       margin-bottom: 0;
-//       margin-left: 100px;
-//     }
-//   }
-// }
-
 .trip-form__checkbox {
   order: 1;
   align-self: start;
@@ -441,7 +389,7 @@
       width: 14px;
       height: 14px;
 
-      background-image: url("../img/icons/arrow-blue.svg");
+      background-image: url("../img/svg/blue-arrow.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -458,6 +406,7 @@
     width: 223px;
     height: 80px;
 
+    margin-top: 0;
     padding-left: 0;
     padding-right: 0;
 
@@ -473,7 +422,7 @@
       margin-right: 20px;
       margin-bottom: 5px;
 
-      background-image: url("../img/icons/arrow-blue-revert.svg");
+      background-image: url("../img/svg/blue-arrow-revert.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -493,85 +442,19 @@
   }
 }
 
-.trip-form__button-add {
+.trip-form__button-add-wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   width: 100%;
-  height: 42px;
 
   margin-bottom: 25px;
 
-  padding-left: 10px;
-  padding-right: 15px;
-
-  border: none;
-  border-radius: 4px;
-
-  font-family: "Blogger Sans", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-
-  background-color: var(--basic-blue-light);
-
-  @media (min-width: $tablet-width) {
-    align-self: start;
-    width: calc(100% - 162px - 13px);
-    height: 70px;
-
-    padding-left: 25px;
-    padding-right: 25px;
-
-    font-size: 20px;
-    letter-spacing: 0.1em;
-  }
-
   @media (min-width: $desktop-width) {
-    width: 730px;
     margin-bottom: 58px;
   }
 }
 
-.trip-form__button-add svg {
-  opacity: 0.2;
-  stroke: #000000;
-
-  @media (min-width: $tablet-width) {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-.trip-form__button-add::after {
-  @media (min-width: $tablet-width) {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 70px;
-
-    position: absolute;
-    top: 50%;
-    right: -35px;
-
-    background-image: url("../../img/icons/shadow-line.png");
-    background-repeat: no-repeat;
-    background-size: 1px 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    right: -53px;
-
-    height: 190px;
-    background-color: #e1e3e9;
-    background-image: none;
-  }
-}
-
-.trip-form__button-add::before {
+.trip-form__button-add-wrapper::before {
   content: "";
   display: block;
   width: 8px;
@@ -590,13 +473,90 @@
   @media (min-width: $tablet-width) {
     width: 14px;
     height: 14px;
-    right: -42px;
+    right: 133px;
 
     background-color: var(--basic-blue-light);
   }
 
   @media (min-width: $desktop-width) {
-    right: -60px;
+    right: 212px;
+  }
+}
+
+.trip-form__button-add-wrapper::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 70px;
+
+    position: absolute;
+    top: 50%;
+    right: 140px;
+
+    background-image: url("../img/graphics/shadow-line.png");
+    background-repeat: no-repeat;
+    background-size: 1px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 219px;
+
+    height: 190px;
+    background-color: #e1e3e9;
+    background-image: none;
+  }
+}
+
+.trip-form__button-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 42px;
+
+  padding-left: 10px;
+  padding-right: 15px;
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background-color: var(--basic-blue-light);
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+    min-width: 369px;
+    width: calc(100% - 162px - 13px);
+    height: 70px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
+}
+
+.trip-form__button-add svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.2;
+  stroke: #000000;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
   }
 }
 

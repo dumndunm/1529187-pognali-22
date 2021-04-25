@@ -7,7 +7,7 @@
   border-radius: 20px;
   background-color: var(--basic-white);
   box-shadow: 0 4px 22px rgba(29, 46, 91, 0.18);
-  z-index: 100;
+  z-index: 80;
 
   @media (min-width: $tablet-width) {
     max-width: 750px;
@@ -48,6 +48,7 @@
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
+  color: var(--basic-blue);
   background-color: #f3f4f8;
 
   @media (min-width: $tablet-width) {

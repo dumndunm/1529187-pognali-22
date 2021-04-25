@@ -110,25 +110,25 @@
 }
 
 .profile-form__fieldset_transport {
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 63px;
-  padding: 0;
+  padding-top: calc((63px - 32px) / 2);
 
   @media (min-width: $tablet-width) {
     order: -1;
     width: 308px;
     height: 95px;
     margin-bottom: 50px;
+    padding-top: calc((95px - 43px) / 2);
   }
 
   @media (min-width: $desktop-width) {
     order: 1;
     min-width: 384px;
     margin-bottom: 0;
-
-    padding-left: 108px;
-    padding-right: 104px;
+    padding-top: calc((95px - 72px) / 2);
   }
 }
 
@@ -151,11 +151,25 @@
   background-color: var(--basic-blue-light);
 
   @media (min-width: $tablet-width) {
-    top: calc(100% - 10px);
+    top: calc(100% - 6px);
 
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 0.08em;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: calc(100% - 12px);
+  }
+}
+
+.profile-form__fieldset_transport .profile-form__legend {
+  @media (min-width: $tablet-width) {
+    top: calc(100% + 4px);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: calc(100% - 12px);
   }
 }
 
@@ -166,7 +180,11 @@
 }
 
 .profile-form__tags {
+  width: 100%;
+  height: 89px;
+
   border: none;
+  resize: none;
   background: transparent;
 }
 
@@ -176,8 +194,14 @@
   align-items: center;
   width: 32px;
   height: 32px;
+
   border-radius: 50%;
   background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 44px;
@@ -185,6 +209,14 @@
   }
 }
 
-// .profile-form__icon_airplane {
-//   fill: var(--basic-blue);
-// }
+.profile-form__icon {
+  width: 17px;
+  height: 16px;
+
+  fill: var(--basic-blue);
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 22px;
+  }
+}

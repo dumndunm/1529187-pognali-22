@@ -5,10 +5,6 @@
   align-items: center;
 
   border-radius: 4px;
-
-  @media (min-width: $tablet-width) {
-    min-width: 532px;
-  }
 }
 
 .country::before {
@@ -178,14 +174,10 @@
   border: none;
 
   background-color: transparent;
-  background-image: url("../img/icons/fade_button-choose.png");
+  background-image: url("../img/graphics/fade.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-
-  svg {
-    opacity: 0.3;
-  }
 
   @media (min-width: $tablet-width) {
     width: 70px;
@@ -194,16 +186,22 @@
     padding-right: 21px;
 
     background-image: none;
-
-    svg {
-      width: 26px;
-      height: 22px;
-    }
   }
 }
 
 .country_dropdown .country__button-choose {
   display: none;
+}
+
+.country__icon-choose {
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 22px;
+  }
 }
 
 .country__flag {
@@ -223,7 +221,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 162px;
+    width: 166px;
     height: 70px;
 
     border: none;

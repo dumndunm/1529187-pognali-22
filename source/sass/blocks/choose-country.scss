@@ -14,15 +14,12 @@
     width: 575px;
     max-width: 575px;
     border: none;
-    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18); // tablet
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
   }
 
   @media (min-width: $desktop-width) {
     width: 730px;
     max-width: 730px;
-
-    border: none;
-    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18); // tablet
   }
 }
 
@@ -110,7 +107,10 @@
 }
 
 .choose-country__icon-close {
+  width: 9px;
+  height: 9px;
   stroke: var(--basic-white);
+  stroke-width: 3px;
 
   @media (min-width: $tablet-width) {
     width: 17px;

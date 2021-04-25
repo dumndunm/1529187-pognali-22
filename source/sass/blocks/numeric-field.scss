@@ -17,6 +17,7 @@
 }
 
 .numeric-field__input {
+  text-align: center;
   border: none;
   background: transparent;
 
@@ -42,6 +43,8 @@
 }
 
 .numeric-field__icon {
+  width: 14px;
+  height: 14px;
   stroke: var(--special-grey);
 
   @media (min-width: $tablet-width) {

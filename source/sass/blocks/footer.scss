@@ -62,14 +62,16 @@
   margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     margin-right: 10px;
-    margin-bottom: 0;
+    margin-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 44px;
     position: relative;
     top: -14px;
+    margin-right: 44px;
+    margin-bottom: 0;
     z-index: 10;
   }
 }

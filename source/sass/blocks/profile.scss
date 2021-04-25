@@ -89,9 +89,17 @@
   min-height: 100px;
   margin-left: 36px;
 
-  background-image: url("../img/icons/icon-profile-services.png");
+  background-image: url("../img/graphics/rates.png");
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/graphics/rates@2x.png");
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: url("../img/graphics/rates@3x.png");
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -117,7 +125,7 @@
     font-size: 20px;
 
     &::before {
-      content: url("../img/icons/icon_businessman.svg");
+      content: url("../img/svg/icon_businessman.svg");
       display: flex;
       justify-content: center;
       align-items: center;

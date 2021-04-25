@@ -29,26 +29,56 @@
     padding-bottom: 164px;
   }
 
-  background-image: url("../img/illustrations/phones-mobiles.png"),
-    url("../img/illustrations/desc-back-rect.png");
+  background-image: url("../img/graphics/phones-mobile.png"),
+    url("../img/graphics/desc-back-rect.png");
   background-repeat: no-repeat;
   background-size: contain, 113px 132px;
   background-position: calc(100% - 20px) bottom, left top;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/graphics/phones-mobile@2x.png"),
+      url("../img/graphics/desc-back-rect.png");
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: url("../img/graphics/phones-mobile@3x.png"),
+      url("../img/graphics/desc-back-rect.png");
+  }
+
   @media (min-width: $tablet-width) {
-    background-image: url("../img/illustrations/phones-tablet.png"),
-      url("../img/illustrations/desc-back-rect-tablet.png");
+    background-image: url("../img/graphics/phones-tablet.png"),
+      url("../img/graphics/desc-back-rect-tablet.png");
     background-size: 376px 548px,
       calc(100% - var(--page-padding-size) * 2) 212px;
     background-position: calc(100% - 8px) 48px, var(--page-padding-size) top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/graphics/phones-tablet@2x.png"),
+        url("../img/graphics/desc-back-rect-tablet.png");
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url("../img/graphics/phones-tablet@3x.png"),
+        url("../img/graphics/desc-back-rect-tablet.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/illustrations/phones-desktop.png"),
-      url("../img/illustrations/desc-back-rect-desktop.png");
+    background-image: url("../img/graphics/phones-desktop.png"),
+      url("../img/graphics/desc-back-rect-desktop.png");
     background-size: 630px 635px, 212px 212px;
     background-position: calc(100% - var(--page-padding-size)) 85px,
       var(--page-padding-size) 71px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/graphics/phones-desktop@2x.png"),
+        url("../img/graphics/desc-back-rect-desktop.png");
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url("../img/graphics/phones-desktop@3x.png"),
+        url("../img/graphics/desc-back-rect-desktop.png");
+    }
   }
 }
 

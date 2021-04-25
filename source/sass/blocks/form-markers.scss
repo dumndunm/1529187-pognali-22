@@ -1,0 +1,85 @@
+.form-markers {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+.form-markers__marker {
+  display: flex;
+  align-items: center;
+}
+
+.form-markers__marker:not(:last-child) {
+  margin-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.form-markers__marker::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--basic-blue);
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 36px;
+  }
+}
+
+.form-markers__marker_active::before {
+  opacity: 1;
+}
+
+.form-markers__marker-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    top: auto;
+    left: auto;
+    opacity: 0.6;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+}
+
+.form-markers__marker_active .form-markers__marker-text {
+  @media (min-width: $desktop-width) {
+    opacity: 1;
+  }
+}

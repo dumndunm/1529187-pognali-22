@@ -37,10 +37,18 @@
   @media (min-width: $tablet-width) {
     max-width: 1024px;
 
-    background-image: url("../img/illustrations/flags-back-tablet.png");
+    background-image: url("../img/graphics/flags-back-tablet.png");
     background-repeat: no-repeat;
     background-size: 288px 574px;
     background-position: calc(100% - var(--page-padding-size)) 12px;
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/graphics/flags-back-tablet@2x.png");
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 3dppx) {
+    background-image: url("../img/graphics/flags-back-tablet@3x.png");
   }
 
   @media (min-width: $desktop-width) {
