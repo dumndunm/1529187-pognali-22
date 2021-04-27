@@ -60,7 +60,8 @@
   }
 }
 
-.page_form .header_collapse {
+.page_form .header_collapse,
+.page_catalog .header_collapse {
   background-color: var(--extra-blue-dark);
 }
 
@@ -102,7 +103,8 @@
   background-color: var(--basic-white);
 }
 
-.page_form .header_scroll {
+.page_form .header_scroll,
+.page_catalog .header_scroll {
   background-color: var(--basic-white);
 }
 

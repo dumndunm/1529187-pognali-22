@@ -1,0 +1,141 @@
+.region-table {
+  position: relative;
+  margin-bottom: 284px;
+
+  border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 49px;
+  }
+}
+
+.region-filter_collapse .region-table {
+  display: none;
+}
+
+.region-table__body {
+  border: 1px solid #cbced9;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 378px;
+
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: auto;
+  }
+}
+
+.region-table__row {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 346px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1320px;
+  }
+}
+
+.region-table__row:not(:first-child) {
+  padding-top: 51px;
+}
+
+.region-table__row:not(:last-child) {
+  border-bottom: 1px solid #cbced9;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+}
+
+.region-table__cell {
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 252px;
+  }
+}
+
+.region-table__cell:not(:last-child) {
+  border-right: 1px solid #cbced9;
+
+  @media (min-width: $tablet-width) {
+    border-right: none;
+  }
+}
+
+.region-table__cell_active {
+  border: 1px solid var(--basic-blue-dark);
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--basic-blue-dark);
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+  }
+}
+
+.region-table__cell_active .region-table__cell-symbol {
+  color: var(--basic-white);
+  background-color: var(--basic-blue-dark);
+
+  @media (min-width: $tablet-width) {
+    color: var(--basic-blue-dark);
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+
+.region-table__cell-symbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 43px;
+  height: 40px;
+
+  padding: 0;
+
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: var(--basic-blue);
+
+  border: none;
+  background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    width: 48px;
+    height: 60px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    background-color: transparent;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-bottom: 30px;
+
+    opacity: 1;
+  }
+}
