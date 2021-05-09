@@ -17,17 +17,16 @@
   @media (min-width: $tablet-width) {
     grid-template-rows: repeat(4, min-content);
     padding-top: 35px;
-    padding-left: 35px;
-    padding-right: 25px;
-    padding-bottom: 25px;
+    padding-left: 36px;
+    padding-right: 26px;
+    padding-bottom: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: min-content max-content max-content max-content 1fr;
+    grid-template-columns: 286px 344px 318px;
     grid-template-rows: min-content min-content 1fr;
 
     padding: 0;
-    padding-right: 43px;
   }
 }
 
@@ -54,16 +53,21 @@
   background-color: #bbf085;
 }
 
-.companion__pic-wrapper {
-  grid-column: 1 / 2;
+.companion:hover {
+  filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+}
 
+.companion__photo {
+  grid-column: 1 / 2;
   position: relative;
-  left: -7px;
+  left: -2px;
 
   width: 70px;
   height: 70px;
 
-  margin-right: 9px;
+  margin-right: 14px;
+  border-radius: 50%;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     grid-row: 1 / 4;
@@ -71,12 +75,32 @@
     height: 190px;
     left: 0;
     margin-right: 36px;
+    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
     width: 286px;
     height: 286px;
-    margin-right: 62px;
+    margin-right: 0;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+.companion__pic-wrapper {
+  display: block;
+  width: 70px;
+  height: 70px;
+
+  @media (min-width: $tablet-width) {
+    width: 190px;
+    height: 190px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 286px;
+    height: 286px;
   }
 }
 
@@ -94,6 +118,11 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
+}
+
+.companion:hover .companion__pic {
+  transform-origin: center;
+  transform: scale(1.2);
 }
 
 .companion__name {
@@ -120,6 +149,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 46px;
+    margin-left: 61px;
     margin-bottom: 20px;
   }
 }
@@ -142,6 +172,20 @@
   }
 }
 
+.companion__name:hover,
+.companion__name:focus {
+  opacity: 0.6;
+}
+
+.companion__name:active {
+  opacity: 0.3;
+}
+
+.companion__name-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .companion__title {
   position: relative;
   width: max-content;
@@ -155,6 +199,9 @@
 }
 
 .companion__title_favs {
+  position: relative;
+  left: 6px;
+
   @media (min-width: $tablet-width) {
     padding-left: 48px;
     margin-bottom: 19px;
@@ -203,6 +250,9 @@
 }
 
 .companion__title_transport {
+  position: relative;
+  left: 6px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -281,7 +331,7 @@
 
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-left: 7px;
 
   padding-top: 13px;
 
@@ -299,9 +349,14 @@
     height: min-content;
     margin-bottom: 20px;
     padding-top: 0;
+    padding-left: 0;
 
     font-size: 20px;
     line-height: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 61px;
   }
 }
 
@@ -312,18 +367,19 @@
 .companion__favs {
   grid-column: 1 / 4;
 
-  padding-top: 15px;
-  padding-bottom: 2px;
+  padding-top: 11px;
+  padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     padding-top: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 3 / 5;
+    grid-column: 3 / 4;
     grid-row: 1 / 3;
 
     margin-top: 46px;
+    margin-left: 39px;
     padding-top: 0;
   }
 }
@@ -332,8 +388,8 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  padding-top: 18px;
-  padding-left: 0;
+  padding-top: 17px;
+  padding-left: 5px;
 
   list-style: none;
 
@@ -359,19 +415,24 @@
 
   @media (min-width: $tablet-width) {
     height: 24px;
-    margin-right: 25px;
+    margin-right: 28px;
     margin-bottom: 0;
-    padding-left: 50px;
+    padding-left: 44px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 0;
     margin-bottom: 14px;
+    padding-left: 52px;
   }
 }
 
 .companion__favs-list .flag__name {
   margin-top: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 7px;
+  }
 }
 
 .companion__transport {
@@ -383,11 +444,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 3 / 5;
+    grid-column: 3 / 4;
     grid-row: 3 / 4;
     height: min-content;
 
-    margin-top: auto;
+    margin-top: 32px;
+    margin-left: 45px;
     margin-bottom: auto;
   }
 }
@@ -406,7 +468,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: column;
     width: 32px;
-    margin-left: auto;
+    margin-left: 15px;
     padding-top: 0;
   }
 
@@ -470,8 +532,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 5 / 6;
+    grid-column: 3 / 4;
     grid-row: 3 / 4;
+
+    margin-right: 41px;
+    margin-bottom: 25px;
   }
 }
 
@@ -486,10 +551,15 @@
     height: min-content;
 
     margin-top: auto;
+
+    position: relative;
+    right: 10px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 75px;
+    right: 0;
+    margin-top: 22px;
+    margin-left: 53px;
     margin-bottom: auto;
   }
 }
@@ -530,10 +600,19 @@
   }
 }
 
+.companion__button:hover,
+.companion__button:focus {
+  background-color: var(--basic-orange);
+}
+
+.companion__button:active .companion__button-text {
+  opacity: 0.3;
+}
+
 .companion__like-wrapper {
   position: absolute;
-  top: 56px;
-  left: 58px;
+  top: 55px;
+  left: 69px;
 
   display: flex;
   align-items: center;
@@ -545,7 +624,7 @@
 
   span {
     margin-top: 4px;
-    margin-left: 2px;
+    margin-left: 6px;
   }
 
   @media (min-width: $tablet-width) {
@@ -581,8 +660,26 @@
   }
 }
 
+.companion__button-like:hover,
+.companion__button-like:focus {
+  .companion__like-icon {
+    fill-opacity: 0.5;
+  }
+}
+
+.companion__button-like:active {
+  .companion__like-icon {
+    fill-opacity: 0.1;
+  }
+}
+
 .companion__button-like_active {
   background-color: #f9eaea;
+}
+
+.companion__button-like_active:hover,
+.companion__button-like_active:focus {
+  background-color: #f9d8d8;
 }
 
 .companion__like-icon-fill {
@@ -597,11 +694,19 @@
   }
 }
 
+.companion__button-like_active:active {
+  .companion__like-icon-fill {
+    fill-opacity: 0.3;
+  }
+}
+
 .companion__like-icon {
   display: block;
 
   width: 12px;
   height: 11px;
+
+  fill-opacity: 0.3;
 
   @media (min-width: $tablet-width) {
     width: 20px;

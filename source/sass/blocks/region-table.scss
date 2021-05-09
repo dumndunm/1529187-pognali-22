@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 49px;
+    margin-bottom: 68px;
   }
 }
 
@@ -31,6 +31,7 @@
 
   @media (min-width: $desktop-width) {
     height: auto;
+    padding-left: 36px;
   }
 }
 
@@ -42,12 +43,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1320px;
+    width: 1255px;
   }
 }
 
 .region-table__row:not(:first-child) {
-  padding-top: 51px;
+  @media (min-width: $desktop-width) {
+    padding-top: 51px;
+  }
+}
+
+.region-table__row:nth-child(4) {
+  @media (min-width: $desktop-width) {
+    padding-top: 81px;
+  }
 }
 
 .region-table__row:not(:last-child) {
@@ -132,7 +141,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: auto;
     margin-bottom: 30px;
 

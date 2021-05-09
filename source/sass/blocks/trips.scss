@@ -29,20 +29,22 @@
   padding-top: 28px;
   padding-left: var(--page-padding-size);
   padding-right: var(--page-padding-size);
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 
   @media (min-width: $tablet-width) {
     max-width: 1024px;
     padding-top: 57px;
     padding-left: var(--content-padding-size);
     padding-right: var(--content-padding-size);
+    padding-bottom: 95px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1320px;
+    padding-top: 49px;
     padding-left: 64px;
     padding-right: 0;
-    padding-bottom: 124px;
+    padding-bottom: 104px;
   }
 }
 
@@ -52,7 +54,11 @@
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
-    margin-bottom: 48px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 6px;
   }
 }
 

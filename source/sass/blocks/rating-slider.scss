@@ -45,6 +45,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    left: 59px;
+    width: calc(100% - 59px);
     border-radius: 2px;
   }
 }
@@ -62,12 +64,30 @@
   }
 }
 
+.rating-slider__pin:hover,
+.rating-slider__pin:focus {
+  @media (min-width: $tablet-width) {
+    transform-origin: center;
+    transform: scale(1.5);
+  }
+}
+
+.rating-slider__pin:active {
+  @media (min-width: $tablet-width) {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+  }
+}
+
 .rating-slider__pin_min {
   position: absolute;
   left: 84px;
 
   @media (min-width: $tablet-width) {
     left: 107px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 59px;
   }
 }
 

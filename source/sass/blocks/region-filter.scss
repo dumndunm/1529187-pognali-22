@@ -120,9 +120,12 @@
   padding: 0;
 
   font-family: "Blogger Sans", sans-serif;
+  color: var(--basic-blue-dark);
 
   background: transparent;
   border: none;
+
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
@@ -130,6 +133,15 @@
     width: 174px;
     height: 20px;
   }
+}
+
+.region-filter__button:hover,
+.region-filter__button:focus {
+  opacity: 0.6;
+}
+
+.region-filter__button:active {
+  opacity: 0.3;
 }
 
 .region-filter_collapse .region-filter__button {
@@ -179,6 +191,7 @@
 
   width: 17px;
   height: 3px;
+  margin-bottom: 3px;
 
   fill: var(--basic-blue-dark);
 
@@ -222,7 +235,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 17px;
+    padding-top: 12px;
     background-color: transparent;
   }
 }
@@ -276,7 +289,7 @@
     width: 768px;
     padding-top: 0;
     padding-left: calc(var(--page-padding-size) + var(--content-padding-size));
-    padding-right: calc(var(--page-padding-size) + var(--content-padding-size));
+    // padding-right: calc(var(--page-padding-size) + var(--content-padding-size));
   }
 
   @media (min-width: $desktop-width) {
@@ -346,6 +359,10 @@
   }
 }
 
+.region-filter__label:hover {
+  opacity: 0.6;
+}
+
 input:checked + .region-filter__label {
   opacity: 1;
 }
@@ -374,7 +391,7 @@ input:checked + .region-filter__label {
     left: 446px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     position: static;
   }
 }
@@ -423,9 +440,24 @@ input:checked + .region-filter__label {
     font-size: 20px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 1320px;
     height: 100px;
+  }
+}
+
+.region-filter__button-folded:hover,
+.region-filter__button-folded:focus {
+  background-color: #c8cee8;
+}
+
+.region-filter__button-folded:active {
+  .region-filter__button-folded-icon {
+    stroke-opacity: 0.3;
+  }
+
+  .region-filter__button-folded-text {
+    opacity: 0.3;
   }
 }
 

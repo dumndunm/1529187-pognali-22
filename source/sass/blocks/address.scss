@@ -3,16 +3,16 @@
   top: -10px;
 
   margin-bottom: -10px;
-  padding-top: 52px;
+  padding-top: 54px;
 
   background-color: var(--basic-yellow);
 
   @media (min-width: $tablet-width) {
-    padding-top: 104px;
+    padding-top: 99px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 142px;
+    padding-top: 138px;
   }
 }
 
@@ -30,7 +30,7 @@
   border-bottom-right-radius: var(--corner-radius-large);
 
   position: absolute;
-  bottom: -36px;
+  bottom: -30px;
   left: 0;
 
   background-color: var(--basic-yellow);
@@ -38,7 +38,7 @@
 
   @media (min-width: $tablet-width) {
     height: 60px;
-    bottom: -60px;
+    bottom: -55px;
   }
 }
 
@@ -113,6 +113,8 @@
   background-size: 21px 21px;
   background-position: center;
 
+  z-index: 1;
+
   @media (min-width: $tablet-width) {
     min-width: 68px;
     height: 68px;
@@ -125,6 +127,8 @@
     min-width: 90px;
     height: 90px;
     margin-right: 31px;
+
+    background-size: 42px 42px;
   }
 }
 
@@ -132,6 +136,7 @@
   width: 270px;
   margin-bottom: 5px;
   border: 3px solid var(--basic-blue-dark);
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     width: 618px;
@@ -143,6 +148,17 @@
     width: 324px;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+.address__button:hover,
+.address__button:focus {
+  color: var(--basic-white);
+  border-color: var(--basic-blue-dark);
+  background-color: var(--basic-blue-dark);
+
+  .button__icon {
+    fill: var(--basic-white);
   }
 }
 
@@ -158,4 +174,10 @@
   @media (min-width: $desktop-width) {
     height: 515px;
   }
+}
+
+.address__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }

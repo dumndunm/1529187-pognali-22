@@ -4,12 +4,58 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-light.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-medium.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-bold.woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body class="page page_catalog">
     <header class="header header_nojs">
       <div class="header__wrapper">
-        <a class="logo header__logo" href="./index.html">
+        <a class="logo header__logo" href="./index.html" tabindex="1">
           <picture class="logo__pic logo__pic_dark">
             <source
               type="image/webp"
@@ -19,6 +65,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -27,6 +75,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -36,6 +86,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
               "
+              width="166"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -44,6 +96,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
               "
+              width="166"
+              height="42"
             />
             <source
               type="image/webp"
@@ -52,6 +106,8 @@
                 ./img/contents/logos/site-logo-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-dark@3x.webp 3x
               "
+              width="100"
+              height="15"
             />
             <img
               srcset="
@@ -60,6 +116,8 @@
               "
               src="./img/contents/logos/site-logo-dark.png"
               alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
             />
           </picture>
 
@@ -72,6 +130,8 @@
                 ./img/contents/logos/site-logo-desktop-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -80,6 +140,8 @@
                 ./img/contents/logos/site-logo-desktop-light@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -89,6 +151,8 @@
                 ./img/contents/logos/site-logo-tablet-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.webp 3x
               "
+              width="166"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -97,6 +161,8 @@
                 ./img/contents/logos/site-logo-tablet-light@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.png 3x
               "
+              width="166"
+              height="42"
             />
             <source
               type="image/webp"
@@ -105,6 +171,8 @@
                 ./img/contents/logos/site-logo-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-light@3x.webp 3x
               "
+              width="96"
+              height="15"
             />
             <img
               srcset="
@@ -113,6 +181,8 @@
               "
               src="./img/contents/logos/site-logo-light.png"
               alt="Логотип сервиса «Погнали?»"
+              width="96"
+              height="15"
             />
           </picture>
         </a>
@@ -122,11 +192,21 @@
           type="button"
           aria-label="Открыть"
         >
-          <svg class="header-toggle__icon_close">
+          <svg
+            class="header-toggle__icon_close"
+            aria-hidden="true"
+            width="18"
+            height="18"
+          >
             <use xlink:href="./img/sprite.svg#icon_close"></use>
           </svg>
 
-          <svg class="header-toggle__icon_burger">
+          <svg
+            class="header-toggle__icon_burger"
+            aria-hidden="true"
+            width="25"
+            height="11"
+          >
             <use xlink:href="./img/sprite.svg#icon_burger"></use>
           </svg>
         </button>
@@ -134,13 +214,25 @@
         <nav class="navigation header__navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="#">О сервисе</a>
+              <a class="navigation__link" href="#" tabindex="2">
+                <span class="navigation__text" data-hover="О сервисе">
+                  О сервисе
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./form.html">Направления</a>
+              <a class="navigation__link" href="./form.html" tabindex="3">
+                <span class="navigation__text" data-hover="Направления">
+                  Направления
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link">Попутчики</a>
+              <a class="navigation__link" tabindex="4">
+                <span class="navigation__text" data-hover="Попутчики">
+                  Попутчики
+                </span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -152,9 +244,15 @@
                 <a
                   class="contacts__link contacts__link_telephone"
                   href="tel:88005558628"
+                  aria-label="Позвонить"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_telephone">
+                    <svg
+                      class="contacts__icon contacts__icon_telephone"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_telephone"></use>
                     </svg>
                   </div>
@@ -162,9 +260,15 @@
                 <a
                   class="contacts__link contacts__link_call"
                   href="tel:88005558628"
+                  aria-label="Позвонить"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_call">
+                    <svg
+                      class="contacts__icon contacts__icon_call"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_call"></use>
                     </svg>
                   </div>
@@ -174,9 +278,15 @@
                 <a
                   class="contacts__link contacts__link_email"
                   href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_email">
+                    <svg
+                      class="contacts__icon contacts__icon_email"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_email"></use>
                     </svg>
                   </div>
@@ -184,9 +294,15 @@
                 <a
                   class="contacts__link contacts__link_mail"
                   href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_mail">
+                    <svg
+                      class="contacts__icon contacts__icon_mail"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_mail"></use>
                     </svg>
                   </div>
@@ -203,21 +319,36 @@
         <ul class="socials header__socials">
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Facebook">
-              <svg class="socials__icon socials__icon_facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
                 <use xlink:href="./img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg class="socials__icon socials__icon_vkontakte">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
                 <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Instagram">
-              <svg class="socials__icon socials__icon_instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
                 <use xlink:href="./img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -227,29 +358,41 @@
     </header>
 
     <main>
-      <h1 class="head-title head-title_special">
-        <div class="head-title__wrapper">
+      <div class="head-title head-title_special">
+        <h1 class="head-title__wrapper">
           <span class="head-title__text">Попутчики</span>
-        </div>
-      </h1>
+        </h1>
+      </div>
 
-      <a class="main-link" href="./index.html">На главную</a>
+      <div class="main-link">
+        <a class="main-link__text" href="./index.html">На главную</a>
+      </div>
 
-      <!-- <section class="region-filter"> -->
-      <section class="region-filter region-filter_collapse">
+      <section class="region-filter">
         <div class="region-filter__header">
           <div class="region-filter__header-wrapper">
             <h2 class="region-filter__title">Фильтрация по странам:</h2>
             <button
               class="region-filter__button region-filter__button_open"
               type="button"
+              aria-label="Показать/свернуть"
             >
               <span class="region-filter__button-text-open">Показать все</span>
               <span class="region-filter__button-text-close">Свернуть</span>
-              <svg class="region-filter__button-icon-open">
+              <svg
+                class="region-filter__button-icon-open"
+                aria-hidden="true"
+                width="17"
+                height="3"
+              >
                 <use xlink:href="./img/sprite.svg#icon_more"></use>
               </svg>
-              <svg class="region-filter__button-icon-close">
+              <svg
+                class="region-filter__button-icon-close"
+                aria-hidden="true"
+                width="16"
+                height="16"
+              >
                 <use xlink:href="./img/sprite.svg#icon_close"></use>
               </svg>
             </button>
@@ -320,7 +463,7 @@
                   class="region-filter__label"
                   for="region-filter-continent-islands"
                 >
-                  Острова
+                  Оcтрова
                 </label>
               </li>
             </ul>
@@ -439,7 +582,7 @@
                           class="region-filter__country-name"
                           href="europe/country"
                         >
-                          Бангладеш
+                          Багамские Острова
                         </a>
                       </li>
                       <li class="region-filter__country">
@@ -447,7 +590,7 @@
                           class="region-filter__country-name"
                           href="europe/country"
                         >
-                          Багамские Острова
+                          Бангладеш
                         </a>
                       </li>
                       <li class="region-filter__country">
@@ -1827,7 +1970,12 @@
           </div>
 
           <button class="region-filter__button-folded" type="button">
-            <svg class="region-filter__button-folded-icon">
+            <svg
+              class="region-filter__button-folded-icon"
+              aria-hidden="true"
+              width="14"
+              height="14"
+            >
               <use xlink:href="./img/sprite.svg#icon_close"></use>
             </svg>
             <span class="region-filter__button-folded-text">Свернуть</span>
@@ -1843,8 +1991,25 @@
             </h2>
 
             <form action="#" method="get">
-              <fieldset class="companions-filter__fieldset">
-                <legend class="companions-filter__legend">Хобби</legend>
+              <fieldset
+                class="companions-filter__fieldset companions-filter__fieldset_collapse"
+              >
+                <legend class="visually-hidden">Хобби</legend>
+                <button
+                  class="companions-filter__fieldset-toggle"
+                  type="button"
+                  aria-label="Открыть поле"
+                >
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
+                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+                  </svg>
+                </button>
+                <p class="companions-filter__legend">Хобби</p>
 
                 <input
                   class="visually-hidden"
@@ -1861,13 +2026,12 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">Спортзал</span>
@@ -1888,13 +2052,12 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">Кальян</span>
@@ -1915,31 +2078,35 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">Диван</span>
                 </label>
+              </fieldset>
 
+              <fieldset class="companions-filter__fieldset">
+                <legend class="visually-hidden">Музыка</legend>
                 <button
                   class="companions-filter__fieldset-toggle"
                   type="button"
                   aria-label="Открыть поле"
                 >
-                  <svg class="companions-filter__toggle-icon">
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
                     <use xlink:href="./img/sprite.svg#icon_toggle"></use>
                   </svg>
                 </button>
-              </fieldset>
-
-              <fieldset class="companions-filter__fieldset">
-                <legend class="companions-filter__legend">Музыка</legend>
+                <p class="companions-filter__legend">Музыка</p>
 
                 <input
                   class="visually-hidden"
@@ -1956,13 +2123,12 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">
@@ -1985,13 +2151,12 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">
@@ -2014,30 +2179,37 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">Евродэнс</span>
                 </label>
+              </fieldset>
+
+              <fieldset
+                class="companions-filter__fieldset companions-filter__fieldset_collapse"
+              >
+                <legend class="visually-hidden">Еда</legend>
                 <button
                   class="companions-filter__fieldset-toggle"
                   type="button"
                   aria-label="Открыть поле"
                 >
-                  <svg class="companions-filter__toggle-icon">
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
                     <use xlink:href="./img/sprite.svg#icon_toggle"></use>
                   </svg>
                 </button>
-              </fieldset>
-
-              <fieldset class="companions-filter__fieldset">
-                <legend class="companions-filter__legend">Еда</legend>
+                <p class="companions-filter__legend">Еда</p>
 
                 <input
                   class="visually-hidden"
@@ -2054,13 +2226,12 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">Мясоед</span>
@@ -2081,13 +2252,12 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">
@@ -2110,34 +2280,39 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
-                    <rect width="24" height="24" rx="4" fill="white" />
+                    <rect width="24" height="24" rx="4" />
                     <path
                       d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
-                      fill="#161C35"
                     />
                   </svg>
                   <span class="companions-filter__checkbox-text">
                     Веган-сыроед
                   </span>
                 </label>
-                <button
-                  class="companions-filter__fieldset-toggle"
-                  type="button"
-                  aria-label="Открыть поле"
-                >
-                  <svg class="companions-filter__toggle-icon">
-                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
-                  </svg>
-                </button>
               </fieldset>
 
               <fieldset
                 class="companions-filter__fieldset companions-filter__fieldset_transport"
               >
-                <legend class="companions-filter__legend">Транспорт</legend>
+                <legend class="visually-hidden">Транспорт</legend>
+                <button
+                  class="companions-filter__fieldset-toggle"
+                  type="button"
+                  aria-label="Открыть поле"
+                >
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
+                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+                  </svg>
+                </button>
+                <p class="companions-filter__legend">Транспорт</p>
 
                 <div class="companions-filter__fieldset-wrapper">
                   <input
@@ -2151,7 +2326,12 @@
                     class="companions-filter__transport companions-filter__transport_airplane"
                     for="companions-filter-transport-airplane"
                   >
-                    <svg class="companions-filter__transport-icon">
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_airplane"></use>
                     </svg>
                     <span class="visually-hidden">Самолетом</span>
@@ -2168,7 +2348,12 @@
                     class="companions-filter__transport companions-filter__transport_bus"
                     for="companions-filter-transport-bus"
                   >
-                    <svg class="companions-filter__transport-icon">
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bus"></use>
                     </svg>
                     <span class="visually-hidden">На автобусе</span>
@@ -2184,7 +2369,12 @@
                     class="companions-filter__transport companions-filter__transport_bicycle"
                     for="companions-filter-transport-bicycle"
                   >
-                    <svg class="companions-filter__transport-icon">
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
                     </svg>
                     <span class="visually-hidden">На велосипеде</span>
@@ -2201,67 +2391,66 @@
                     class="companions-filter__transport companions-filter__transport_walk"
                     for="companions-filter-transport-walk"
                   >
-                    <svg class="companions-filter__transport-icon">
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_walk"></use>
                     </svg>
                     <span class="visually-hidden">Пешком</span>
                   </label>
                 </div>
+              </fieldset>
 
+              <fieldset class="companions-filter__fieldset">
+                <legend class="visually-hidden">Левел</legend>
                 <button
                   class="companions-filter__fieldset-toggle"
                   type="button"
                   aria-label="Открыть поле"
                 >
-                  <svg class="companions-filter__toggle-icon">
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
                     <use xlink:href="./img/sprite.svg#icon_toggle"></use>
                   </svg>
                 </button>
-              </fieldset>
-
-              <fieldset class="companions-filter__fieldset">
-                <legend class="companions-filter__legend">Левел</legend>
+                <p class="companions-filter__legend">Левел</p>
 
                 <div class="companions-filter__rating">
                   <input
                     class="companions-filter__numeric-field"
-                    type="number"
+                    type="text"
                     name="companions-filter-rating-min"
                     id="companions-filter-rating-min"
+                    aria-label="Минимальный рейтинг"
+                    value="30"
                   />
                   <input
                     class="companions-filter__numeric-field"
-                    type="number"
+                    type="text"
                     name="companions-filter-rating-max"
                     id="companions-filter-rating-max"
+                    aria-label="Максимальный рейтинг"
+                    value="100"
                   />
                 </div>
 
                 <div class="rating-slider companions-filter__rating-slider">
                   <div class="rating-slider__line"></div>
                   <div class="rating-slider__line-filled"></div>
-                  <div
-                    class="rating-slider__pin rating-slider__pin_min"
-                    type="button"
-                  ></div>
-                  <div
-                    class="rating-slider__pin rating-slider__pin_max"
-                    type="button"
-                  ></div>
+                  <div class="rating-slider__pin rating-slider__pin_min"></div>
+                  <div class="rating-slider__pin rating-slider__pin_max"></div>
                 </div>
-                <button
-                  class="companions-filter__fieldset-toggle"
-                  type="button"
-                  aria-label="Открыть поле"
-                >
-                  <svg class="companions-filter__toggle-icon">
-                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
-                  </svg>
-                </button>
               </fieldset>
 
-              <button class="companions-filter__button" type="sumbit">
-                Показать
+              <button class="companions-filter__button" type="submit">
+                <span class="companions-filter__button-text">Показать</span>
               </button>
             </form>
           </div>
@@ -2272,28 +2461,34 @@
 
           <ul class="companions__list">
             <li class="companion companions__companion">
-              <picture class="companion__pic-wrapper">
-                <source
-                  type="image/webp"
-                  srcset="
-                    ./img/users/tat-firsova-small.webp    1x,
-                    ./img/users/tat-firsova-small@2x.webp 2x,
-                    ./img/users/tat-firsova-small@3x.webp 3x
-                  "
-                />
-                <img
-                  class="companion__pic"
-                  srcset="
-                    ./img/users/tat-firsova-small.jpg    1x,
-                    ./img/users/tat-firsova-small@2x.jpg 2x,
-                    ./img/users/tat-firsova-small@3x.jpg 3x
-                  "
-                  src="./img/users/tat-firsova-small.jpg"
-                  alt="Татьяна Фирсова"
-                />
-              </picture>
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/tat-firsova-small.webp    1x,
+                      ./img/users/tat-firsova-small@2x.webp 2x,
+                      ./img/users/tat-firsova-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/tat-firsova-small.jpg    1x,
+                      ./img/users/tat-firsova-small@2x.jpg 2x,
+                      ./img/users/tat-firsova-small@3x.jpg 3x
+                    "
+                    src="./img/users/tat-firsova-small.jpg"
+                    alt="Татьяна Фирсова"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
 
-              <h3 class="companion__name">Таня Фирсова</h3>
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Таня Фирсова</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#ЗОЖ</li>
@@ -2332,12 +2527,22 @@
                     class="companion__icon-wrapper companion__icon-wrapper_prefer"
                     aria-label="Самолетом"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_airplane"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="На автобусе">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bus"></use>
                     </svg>
                   </li>
@@ -2345,12 +2550,22 @@
                     class="companion__icon-wrapper"
                     aria-label="На велосипеде"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="Пешком">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_walk"></use>
                     </svg>
                   </li>
@@ -2367,16 +2582,29 @@
               </section>
 
               <div class="companion__buttons">
-                <button class="companion__button" type="button">Позвать</button>
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
                 <div class="companion__like-wrapper">
                   <button
                     class="companion__button-like companion__button-like_active"
                     type="button"
+                    aria-label="Поставить лайк"
                   >
-                    <svg class="companion__like-icon-fill">
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
                     </svg>
-                    <svg class="companion__like-icon">
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart"></use>
                     </svg>
                   </button>
@@ -2386,28 +2614,34 @@
             </li>
 
             <li class="companion companions__companion">
-              <picture class="companion__pic-wrapper">
-                <source
-                  type="image/webp"
-                  srcset="
-                    ./img/users/petr-demin-small.webp    1x,
-                    ./img/users/petr-demin-small@2x.webp 2x,
-                    ./img/users/petr-demin-small@3x.webp 3x
-                  "
-                />
-                <img
-                  class="companion__pic"
-                  srcset="
-                    ./img/users/petr-demin-small.jpg    1x,
-                    ./img/users/petr-demin-small@2x.jpg 2x,
-                    ./img/users/petr-demin-small@3x.jpg 3x
-                  "
-                  src="./img/users/petr-demin-small.jpg"
-                  alt="Петр Демин"
-                />
-              </picture>
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/petr-demin-small.webp    1x,
+                      ./img/users/petr-demin-small@2x.webp 2x,
+                      ./img/users/petr-demin-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/petr-demin-small.jpg    1x,
+                      ./img/users/petr-demin-small@2x.jpg 2x,
+                      ./img/users/petr-demin-small@3x.jpg 3x
+                    "
+                    src="./img/users/petr-demin-small.jpg"
+                    alt="Петр Демин"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
 
-              <h3 class="companion__name">Петя Демин</h3>
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Петя Демин</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#бургер</li>
@@ -2442,12 +2676,22 @@
                     class="companion__icon-wrapper companion__icon-wrapper_prefer"
                     aria-label="Самолетом"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_airplane"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="На автобусе">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bus"></use>
                     </svg>
                   </li>
@@ -2455,12 +2699,22 @@
                     class="companion__icon-wrapper"
                     aria-label="На велосипеде"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="Пешком">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_walk"></use>
                     </svg>
                   </li>
@@ -2477,13 +2731,29 @@
               </section>
 
               <div class="companion__buttons">
-                <button class="companion__button" type="button">Позвать</button>
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
                 <div class="companion__like-wrapper">
-                  <button class="companion__button-like" type="button">
-                    <svg class="companion__like-icon-fill">
+                  <button
+                    class="companion__button-like"
+                    type="button"
+                    aria-label="Поставить лайк"
+                  >
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
                     </svg>
-                    <svg class="companion__like-icon">
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart"></use>
                     </svg>
                   </button>
@@ -2493,28 +2763,34 @@
             </li>
 
             <li class="companion companions__companion">
-              <picture class="companion__pic-wrapper">
-                <source
-                  type="image/webp"
-                  srcset="
-                    ./img/users/mark-smolov-small.webp    1x,
-                    ./img/users/mark-smolov-small@2x.webp 2x,
-                    ./img/users/mark-smolov-small@3x.webp 3x
-                  "
-                />
-                <img
-                  class="companion__pic"
-                  srcset="
-                    ./img/users/mark-smolov-small.jpg    1x,
-                    ./img/users/mark-smolov-small@2x.jpg 2x,
-                    ./img/users/mark-smolov-small@3x.jpg 3x
-                  "
-                  src="./img/users/mark-smolov-small.jpg"
-                  alt="Марк Смолов"
-                />
-              </picture>
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/mark-smolov-small.webp    1x,
+                      ./img/users/mark-smolov-small@2x.webp 2x,
+                      ./img/users/mark-smolov-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/mark-smolov-small.jpg    1x,
+                      ./img/users/mark-smolov-small@2x.jpg 2x,
+                      ./img/users/mark-smolov-small@3x.jpg 3x
+                    "
+                    src="./img/users/mark-smolov-small.jpg"
+                    alt="Марк Смолов"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
 
-              <h3 class="companion__name">Марк Смолов</h3>
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Марк Смолов</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#рэп</li>
@@ -2552,12 +2828,22 @@
                     class="companion__icon-wrapper companion__icon-wrapper_prefer"
                     aria-label="Самолетом"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_airplane"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="На автобусе">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bus"></use>
                     </svg>
                   </li>
@@ -2565,12 +2851,22 @@
                     class="companion__icon-wrapper"
                     aria-label="На велосипеде"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="Пешком">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_walk"></use>
                     </svg>
                   </li>
@@ -2587,13 +2883,29 @@
               </section>
 
               <div class="companion__buttons">
-                <button class="companion__button" type="button">Позвать</button>
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
                 <div class="companion__like-wrapper">
-                  <button class="companion__button-like" type="button">
-                    <svg class="companion__like-icon-fill">
+                  <button
+                    class="companion__button-like"
+                    type="button"
+                    aria-label="Поставить лайк"
+                  >
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
                     </svg>
-                    <svg class="companion__like-icon">
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart"></use>
                     </svg>
                   </button>
@@ -2603,28 +2915,34 @@
             </li>
 
             <li class="companion companion_online companions__companion">
-              <picture class="companion__pic-wrapper">
-                <source
-                  type="image/webp"
-                  srcset="
-                    ./img/users/lar-rogovaya-small.webp    1x,
-                    ./img/users/lar-rogovaya-small@2x.webp 2x,
-                    ./img/users/lar-rogovaya-small@3x.webp 3x
-                  "
-                />
-                <img
-                  class="companion__pic"
-                  srcset="
-                    ./img/users/lar-rogovaya-small.jpg    1x,
-                    ./img/users/lar-rogovaya-small@2x.jpg 2x,
-                    ./img/users/lar-rogovaya-small@3x.jpg 3x
-                  "
-                  src="./img/users/lar-rogovaya-small.jpg"
-                  alt="Лариса Роговая"
-                />
-              </picture>
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/lar-rogovaya-small.webp    1x,
+                      ./img/users/lar-rogovaya-small@2x.webp 2x,
+                      ./img/users/lar-rogovaya-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/lar-rogovaya-small.jpg    1x,
+                      ./img/users/lar-rogovaya-small@2x.jpg 2x,
+                      ./img/users/lar-rogovaya-small@3x.jpg 3x
+                    "
+                    src="./img/users/lar-rogovaya-small.jpg"
+                    alt="Лариса Роговая"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
 
-              <h3 class="companion__name">Лариса Роговая</h3>
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Лариса Роговая</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#образование</li>
@@ -2658,12 +2976,22 @@
                     class="companion__icon-wrapper companion__icon-wrapper_prefer"
                     aria-label="Самолетом"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_airplane"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="На автобусе">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bus"></use>
                     </svg>
                   </li>
@@ -2671,12 +2999,22 @@
                     class="companion__icon-wrapper"
                     aria-label="На велосипеде"
                   >
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
                     </svg>
                   </li>
                   <li class="companion__icon-wrapper" aria-label="Пешком">
-                    <svg class="companion__icon">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_walk"></use>
                     </svg>
                   </li>
@@ -2693,13 +3031,29 @@
               </section>
 
               <div class="companion__buttons">
-                <button class="companion__button" type="button">Позвать</button>
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
                 <div class="companion__like-wrapper">
-                  <button class="companion__button-like" type="button">
-                    <svg class="companion__like-icon-fill">
+                  <button
+                    class="companion__button-like"
+                    type="button"
+                    aria-label="Поставить лайк"
+                  >
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
                     </svg>
-                    <svg class="companion__like-icon">
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_heart"></use>
                     </svg>
                   </button>
@@ -2710,7 +3064,12 @@
           </ul>
 
           <button class="companions__button" type="button">
-            <svg class="companions__button-icon">
+            <svg
+              class="companions__button-icon"
+              aria-hidden="true"
+              width="18"
+              height="18"
+            >
               <use xlink:href="./img/sprite.svg#icon_plus-more"></use>
             </svg>
             <span class="companions__button-text">Показать еще</span>
@@ -2737,7 +3096,12 @@
               type="button"
               aria-label="Предыдущая страница"
             >
-              <svg class="companions__pagination-icon">
+              <svg
+                class="companions__pagination-icon"
+                aria-hidden="true"
+                width="13"
+                height="20"
+              >
                 <use xlink:href="./img/sprite.svg#icon_toggle"></use>
               </svg>
             </button>
@@ -2746,7 +3110,12 @@
               type="button"
               aria-label="Следующая страница"
             >
-              <svg class="companions__pagination-icon">
+              <svg
+                class="companions__pagination-icon"
+                aria-hidden="true"
+                width="13"
+                height="20"
+              >
                 <use xlink:href="./img/sprite.svg#icon_toggle"></use>
               </svg>
             </button>
@@ -2757,7 +3126,7 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <a class="logo footer__logo">
+        <a class="logo footer__logo" href="./index.html">
           <picture class="logo__pic logo__pic_dark">
             <source
               type="image/webp"
@@ -2767,6 +3136,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -2775,6 +3146,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -2784,6 +3157,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
               "
+              width="166"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -2792,6 +3167,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
               "
+              width="166"
+              height="42"
             />
             <source
               type="image/webp"
@@ -2800,6 +3177,8 @@
                 ./img/contents/logos/site-logo-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-dark@3x.webp 3x
               "
+              width="100"
+              height="15"
             />
             <img
               srcset="
@@ -2808,6 +3187,8 @@
               "
               src="./img/contents/logos/site-logo-dark.png"
               alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
             />
           </picture>
         </a>
@@ -2815,21 +3196,36 @@
         <ul class="socials footer__socials">
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Facebook">
-              <svg class="socials__icon socials__icon_facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
                 <use xlink:href="./img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg class="socials__icon socials__icon_vkontakte">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
                 <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Instagram">
-              <svg class="socials__icon socials__icon_instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
                 <use xlink:href="./img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -2837,13 +3233,22 @@
         </ul>
 
         <section class="developed footer__developed">
-          <h2 class="developed__title">Разработано</h2>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="./img/svg/logo-htmlacademy.svg" alt="Логотип академии" />
+          <a
+            class="developed__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
+            <h2 class="developed__title">Разработано</h2>
+            <img
+              src="./img/svg/logo-htmlacademy.svg"
+              alt="Логотип академии"
+              width="27"
+              height="33"
+            />
           </a>
         </section>
       </div>
     </footer>
     <script src="./js/header.min.js"></script>
+    <script src="./js/region-filter.min.js"></script>
   </body>
 </html>

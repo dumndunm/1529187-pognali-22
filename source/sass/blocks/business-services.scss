@@ -38,6 +38,12 @@
   }
 }
 
+.profile-modal .business-services__wrapper {
+  @media (min-width: $tablet-width) {
+    height: 55px;
+  }
+}
+
 .business-services__title {
   position: relative;
   margin-bottom: 5px;

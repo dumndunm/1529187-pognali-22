@@ -4,12 +4,58 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-light.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-medium.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-bold.woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body class="page">
     <header class="header header_nojs">
       <div class="header__wrapper">
-        <a class="logo header__logo">
+        <a class="logo header__logo" tabindex="1">
           <picture class="logo__pic logo__pic_dark">
             <source
               type="image/webp"
@@ -19,6 +65,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -27,6 +75,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -36,6 +86,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
               "
+              width="166"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -44,6 +96,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
               "
+              width="166"
+              height="42"
             />
             <source
               type="image/webp"
@@ -52,6 +106,8 @@
                 ./img/contents/logos/site-logo-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-dark@3x.webp 3x
               "
+              width="100"
+              height="15"
             />
             <img
               srcset="
@@ -60,6 +116,8 @@
               "
               src="./img/contents/logos/site-logo-dark.png"
               alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
             />
           </picture>
 
@@ -72,6 +130,8 @@
                 ./img/contents/logos/site-logo-desktop-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.webp 3x
               "
+              width="198"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -80,6 +140,8 @@
                 ./img/contents/logos/site-logo-desktop-light@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.png 3x
               "
+              width="198"
+              height="52"
             />
             <source
               type="image/webp"
@@ -89,6 +151,8 @@
                 ./img/contents/logos/site-logo-tablet-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.webp 3x
               "
+              width="164"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -97,6 +161,8 @@
                 ./img/contents/logos/site-logo-tablet-light@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.png 3x
               "
+              width="164"
+              height="42"
             />
             <source
               type="image/webp"
@@ -105,6 +171,8 @@
                 ./img/contents/logos/site-logo-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-light@3x.webp 3x
               "
+              width="96"
+              height="15"
             />
             <img
               srcset="
@@ -113,6 +181,8 @@
               "
               src="./img/contents/logos/site-logo-light.png"
               alt="Логотип сервиса «Погнали?»"
+              width="96"
+              height="15"
             />
           </picture>
         </a>
@@ -122,11 +192,21 @@
           type="button"
           aria-label="Открыть"
         >
-          <svg class="header-toggle__icon_close">
+          <svg
+            class="header-toggle__icon_close"
+            aria-hidden="true"
+            width="18"
+            height="18"
+          >
             <use xlink:href="./img/sprite.svg#icon_close"></use>
           </svg>
 
-          <svg class="header-toggle__icon_burger">
+          <svg
+            class="header-toggle__icon_burger"
+            aria-hidden="true"
+            width="25"
+            height="11"
+          >
             <use xlink:href="./img/sprite.svg#icon_burger"></use>
           </svg>
         </button>
@@ -134,13 +214,25 @@
         <nav class="navigation header__navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="#">О сервисе</a>
+              <a class="navigation__link" href="#" tabindex="2">
+                <span class="navigation__text" data-hover="О сервисе">
+                  О сервисе
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./form.html">Направления</a>
+              <a class="navigation__link" href="./form.html" tabindex="3">
+                <span class="navigation__text" data-hover="Направления">
+                  Направления
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./catalog.html">Попутчики</a>
+              <a class="navigation__link" href="./catalog.html" tabindex="4">
+                <span class="navigation__text" data-hover="Попутчики">
+                  Попутчики
+                </span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -152,9 +244,15 @@
                 <a
                   class="contacts__link contacts__link_telephone"
                   href="tel:88005558628"
+                  aria-label="Позвонить"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_telephone">
+                    <svg
+                      class="contacts__icon contacts__icon_telephone"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_telephone"></use>
                     </svg>
                   </div>
@@ -162,9 +260,15 @@
                 <a
                   class="contacts__link contacts__link_call"
                   href="tel:88005558628"
+                  aria-label="Позвонить"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_call">
+                    <svg
+                      class="contacts__icon contacts__icon_call"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_call"></use>
                     </svg>
                   </div>
@@ -174,9 +278,15 @@
                 <a
                   class="contacts__link contacts__link_email"
                   href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_email">
+                    <svg
+                      class="contacts__icon contacts__icon_email"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_email"></use>
                     </svg>
                   </div>
@@ -184,9 +294,15 @@
                 <a
                   class="contacts__link contacts__link_mail"
                   href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_mail">
+                    <svg
+                      class="contacts__icon contacts__icon_mail"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_mail"></use>
                     </svg>
                   </div>
@@ -203,21 +319,36 @@
         <ul class="socials header__socials">
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Facebook">
-              <svg class="socials__icon socials__icon_facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
                 <use xlink:href="./img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg class="socials__icon socials__icon_vkontakte">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
                 <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Instagram">
-              <svg class="socials__icon socials__icon_instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
                 <use xlink:href="./img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -242,7 +373,12 @@
                     href="tel:88005558628"
                   >
                     <div class="contacts__icon-wrapper">
-                      <svg class="contacts__icon contacts__icon_call">
+                      <svg
+                        class="contacts__icon contacts__icon_call"
+                        aria-hidden="true"
+                        width="18"
+                        height="18"
+                      >
                         <use xlink:href="./img/sprite.svg#icon_call"></use>
                       </svg>
                     </div>
@@ -254,7 +390,12 @@
                     href="mailto:mail@htmlacademy.ru"
                   >
                     <div class="contacts__icon-wrapper">
-                      <svg class="contacts__icon contacts__icon_mail">
+                      <svg
+                        class="contacts__icon contacts__icon_mail"
+                        aria-hidden="true"
+                        width="18"
+                        height="16"
+                      >
                         <use xlink:href="./img/sprite.svg#icon_mail"></use>
                       </svg>
                     </div>
@@ -275,7 +416,7 @@
             >
             <cite class="sub-paragraph">
               Мурат Эльтазин<br />
-              главный редактор газеты&nbsp;«гаджетлайф»
+              главный редактор газеты «гаджетлайф»
             </cite>
           </p>
 
@@ -307,7 +448,7 @@
           <p class="paragraph description__paragraph">
             Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне
             с&nbsp;тобой! Делитесь своими идеями путешествий<br />
-            и черпайте вдохновение в чужих.
+            &nbsp;и черпайте вдохновение в чужих.
           </p>
 
           <p class="sub-paragraph description__sub-paragraph">
@@ -316,7 +457,10 @@
           </p>
 
           <button class="button button_special description__button">
-            Подробнее
+            <span class="button__text">Подробнее</span>
+            <svg class="button__icon" aria-hidden="true" width="13" height="13">
+              <use xlink:href="./img/sprite.svg#icon_fill-arrow-right"></use>
+            </svg>
           </button>
         </div>
       </section>
@@ -344,6 +488,8 @@
                     ./img/contents/regions/thailand-desktop@2x.webp 2x,
                     ./img/contents/regions/thailand-desktop@3x.webp 3x
                   "
+                  width="559"
+                  height="140"
                 />
                 <source
                   media="(min-width: 768px)"
@@ -352,6 +498,8 @@
                     ./img/contents/regions/thailand-desktop@2x.jpg 2x,
                     ./img/contents/regions/thailand-desktop@3x.jpg 3x
                   "
+                  width="559"
+                  height="140"
                 />
                 <source
                   type="image/webp"
@@ -360,6 +508,8 @@
                     ./img/contents/regions/thailand-mobile@2x.webp 2x,
                     ./img/contents/regions/thailand-mobile@3x.webp 3x
                   "
+                  width="270"
+                  height="110"
                 />
                 <img
                   srcset="
@@ -369,6 +519,8 @@
                   "
                   src="./img/contents/regions/thailand-mobile.jpg"
                   alt="Море и скалы"
+                  width="270"
+                  height="110"
                 />
               </picture>
               <div class="region__wrapper">
@@ -391,6 +543,8 @@
                       "
                       src="./img/flags/thailand.png"
                       alt="Флаг Тайланда"
+                      width="35"
+                      height="24"
                     />
                   </picture>
                 </div>
@@ -410,6 +564,8 @@
                     ./img/contents/regions/france-desktop@2x.webp 2x,
                     ./img/contents/regions/france-desktop@3x.webp 3x
                   "
+                  width="559"
+                  height="140"
                 />
                 <source
                   media="(min-width: 768px)"
@@ -418,6 +574,8 @@
                     ./img/contents/regions/france-desktop@2x.jpg 2x,
                     ./img/contents/regions/france-desktop@3x.jpg 3x
                   "
+                  width="559"
+                  height="140"
                 />
                 <source
                   type="image/webp"
@@ -426,6 +584,8 @@
                     ./img/contents/regions/france-mobile@2x.webp 2x,
                     ./img/contents/regions/france-mobile@3x.webp 3x
                   "
+                  width="270"
+                  height="110"
                 />
                 <img
                   srcset="
@@ -435,6 +595,8 @@
                   "
                   src="./img/contents/regions/france-mobile.jpg"
                   alt="Уютные улочки франции"
+                  width="270"
+                  height="110"
                 />
               </picture>
               <div class="region__wrapper">
@@ -457,6 +619,8 @@
                       "
                       src="./img/flags/france.png"
                       alt="Флаг Франции"
+                      width="35"
+                      height="24"
                     />
                   </picture>
                 </div>
@@ -476,6 +640,8 @@
                     ./img/contents/regions/czech-desktop@2x.webp 2x,
                     ./img/contents/regions/czech-desktop@3x.webp 3x
                   "
+                  width="559"
+                  height="140"
                 />
                 <source
                   media="(min-width: 768px)"
@@ -484,6 +650,8 @@
                     ./img/contents/regions/czech-desktop@2x.jpg 2x,
                     ./img/contents/regions/czech-desktop@3x.jpg 3x
                   "
+                  width="559"
+                  height="140"
                 />
                 <source
                   type="image/webp"
@@ -492,6 +660,8 @@
                     ./img/contents/regions/czech-mobile@2x.webp 2x,
                     ./img/contents/regions/czech-mobile@3x.webp 3x
                   "
+                  width="270"
+                  height="110"
                 />
                 <img
                   srcset="
@@ -501,6 +671,8 @@
                   "
                   src="./img/contents/regions/czech-mobile.jpg"
                   alt="Чешский замок на реке, проезжающий корабль"
+                  width="270"
+                  height="110"
                 />
               </picture>
               <div class="region__wrapper">
@@ -523,6 +695,8 @@
                       "
                       src="./img/flags/czech.png"
                       alt="Флаг Чехии"
+                      width="35"
+                      height="24"
                     />
                   </picture>
                 </div>
@@ -534,7 +708,10 @@
           </ul>
 
           <a class="button button_special regions__button" href="./form.html">
-            Показать все
+            <span class="button__text">Показать все</span>
+            <svg class="button__icon" aria-hidden="true" width="13" height="13">
+              <use xlink:href="./img/sprite.svg#icon_fill-arrow-right"></use>
+            </svg>
           </a>
         </div>
       </section>
@@ -572,6 +749,8 @@
                   "
                   src="./img/users/tat-firsova.jpg"
                   alt="Татьяна Фирсова"
+                  width="270"
+                  height="270"
                 />
               </picture>
 
@@ -581,7 +760,9 @@
               </div>
 
               <div class="user__wrapper">
-                <h3 class="user__name">Таня Фирсова</h3>
+                <h3 class="user__name">
+                  <a class="user__name-link" href="#">Таня Фирсова</a>
+                </h3>
 
                 <ul class="user__favs">
                   <li
@@ -611,19 +792,52 @@
                   <li
                     class="user__icon user__icon_airplane user__icon_prefer"
                     aria-label="Самолетом"
-                  ></li>
+                  >
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="21"
+                      height="21"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_airplane"></use>
+                    </svg>
+                  </li>
                   <li
                     class="user__icon user__icon_bus"
                     aria-label="На автобусе"
-                  ></li>
+                  >
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="17"
+                      height="19"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                    </svg>
+                  </li>
                   <li
                     class="user__icon user__icon_bicycle"
                     aria-label="На велосипеде"
-                  ></li>
-                  <li
-                    class="user__icon user__icon_walk"
-                    aria-label="Пешком"
-                  ></li>
+                  >
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="23"
+                      height="24"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="user__icon user__icon_walk" aria-label="Пешком">
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="21"
+                      height="23"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_walk"></use>
+                    </svg>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -647,6 +861,8 @@
                   "
                   src="./img/users/petr-demin.jpg"
                   alt="Петя Демин"
+                  width="270"
+                  height="270"
                 />
               </picture>
 
@@ -656,7 +872,9 @@
               </div>
 
               <div class="user__wrapper">
-                <h3 class="user__name">Петя Демин</h3>
+                <h3 class="user__name">
+                  <a class="user__name-link" href="#">Петя Демин</a>
+                </h3>
 
                 <ul class="user__favs">
                   <li
@@ -681,26 +899,65 @@
                   <li
                     class="user__icon user__icon_airplane user__icon_prefer"
                     aria-label="Самолетом"
-                  ></li>
+                  >
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="21"
+                      height="21"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_airplane"></use>
+                    </svg>
+                  </li>
                   <li
                     class="user__icon user__icon_bus user__icon_prefer"
                     aria-label="На автобусе"
-                  ></li>
+                  >
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="17"
+                      height="19"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                    </svg>
+                  </li>
                   <li
                     class="user__icon user__icon_bicycle"
                     aria-label="На велосипеде"
-                  ></li>
+                  >
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="23"
+                      height="24"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                    </svg>
+                  </li>
                   <li
                     class="user__icon user__icon_walk user__icon_prefer"
                     aria-label="Пешком"
-                  ></li>
+                  >
+                    <svg
+                      class="user__icon-svg"
+                      aria-hidden="true"
+                      width="21"
+                      height="23"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_walk"></use>
+                    </svg>
+                  </li>
                 </ul>
               </div>
             </li>
           </ul>
 
           <a class="button button_special users__button" href="./catalog.html">
-            Показать всех
+            <span class="button__text">Показать всех</span>
+            <svg class="button__icon" aria-hidden="true" width="13" height="13">
+              <use xlink:href="./img/sprite.svg#icon_fill-arrow-right"></use>
+            </svg>
           </a>
         </div>
       </section>
@@ -726,7 +983,11 @@
             </div>
           </dl>
 
-          <a class="profile__button" href="#">Показать тарифы для бизнеса</a>
+          <a class="profile__button" href="./tariffs.html">
+            <span class="profile__button-text">
+              Показать тарифы для бизнеса
+            </span>
+          </a>
 
           <div class="profile-modal profile__modal profile-modal_hidden">
             <h2 class="title profile-modal__title">Бизнес-тарифы</h2>
@@ -754,7 +1015,7 @@
             </dl>
 
             <button class="profile-modal__button" type="button">
-              Закрыть окно
+              <span class="profile-modal__button-text">Закрыть окно</span>
             </button>
           </div>
         </div>
@@ -765,17 +1026,20 @@
           <h2 class="title feedback__title">Заинтересовались?</h2>
 
           <p class="paragraph feedback__paragraph">
-            Зарегистрируйтесь,<br />это быстро и бесплатно!<br />
+            <span>
+              Зарегистрируйтесь,<br />&nbsp;это быстро и бесплатно!<br />
+            </span>
             Уже&nbsp;зарегистрированы? Тогда скорее
             <a class="feedback__link" href="#">авторизуйтесь</a>.
           </p>
 
-          <form class="feedback-form feedback__form" action="#" method="#">
+          <form class="feedback-form feedback__form" action="#" method="POST">
             <input
-              class="feedback-form__field"
+              class="feedback-form__field feedback-form__field_invalid"
               type="email"
               name="feedback-mail"
               id="feedback-mail"
+              placeholder="E-mail"
             />
             <button
               class="button button_special feedback-form__button"
@@ -783,6 +1047,14 @@
               aria-label="Отправить"
             >
               <span class="button__text">Регистрация</span>
+              <svg
+                class="button__icon"
+                aria-hidden="true"
+                width="13"
+                height="13"
+              >
+                <use xlink:href="./img/sprite.svg#icon_fill-arrow-right"></use>
+              </svg>
             </button>
           </form>
 
@@ -797,7 +1069,12 @@
                 href="tel:88005558628"
               >
                 <div class="contacts__icon-wrapper">
-                  <svg class="contacts__icon contacts__icon_telephone">
+                  <svg
+                    class="contacts__icon contacts__icon_telephone"
+                    aria-hidden="true"
+                    width="18"
+                    height="17"
+                  >
                     <use xlink:href="./img/sprite.svg#icon_telephone"></use>
                   </svg>
                 </div>
@@ -809,7 +1086,12 @@
                 href="mailto:mail@htmlacademy.ru"
               >
                 <div class="contacts__icon-wrapper">
-                  <svg class="contacts__icon contacts__icon_email">
+                  <svg
+                    class="contacts__icon contacts__icon_email"
+                    aria-hidden="true"
+                    width="18"
+                    height="12"
+                  >
                     <use xlink:href="./img/sprite.svg#icon_email"></use>
                   </svg>
                 </div>
@@ -825,13 +1107,32 @@
         <div class="address__content">
           <div class="address__wrapper">
             <p class="address__text">ул. Большая Конюшенная, 19/8</p>
-            <a class="button button_special address__button" href="#">
-              Проложить маршрут
+            <a
+              class="button button_special address__button"
+              href="https://www.google.ru/maps/dir/Кемпински/Большая+Конюшенная+ул.,+19%2F8,+Санкт-Петербург,+191186/@59.9387192,30.3208587,17z/data=!4m13!4m12!1m5!1m1!1s0x4696310fd5457085:0x97c45f23bff7dad4!2m2!1d30.319751!2d59.9395841!1m5!1m1!1s0x4696310fca145cc1:0x42b32648d8238007!2m2!1d30.3230474!2d59.9387165"
+            >
+              <span class="button__text">Проложить маршрут</span>
+              <svg
+                class="button__icon"
+                aria-hidden="true"
+                width="13"
+                height="13"
+              >
+                <use xlink:href="./img/sprite.svg#icon_fill-arrow-right"></use>
+              </svg>
             </a>
           </div>
         </div>
 
-        <div class="address__map"></div>
+        <div class="address__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003076!2d30.320858716060556!3d59.938719169054224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1620558141680!5m2!1sru!2sru"
+            allowfullscreen=""
+            loading="lazy"
+            width="320"
+            height="320"
+          ></iframe>
+        </div>
       </section>
     </main>
 
@@ -847,6 +1148,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -855,6 +1158,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -864,6 +1169,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
               "
+              width="164"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -872,6 +1179,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
               "
+              width="164"
+              height="42"
             />
             <source
               type="image/webp"
@@ -880,6 +1189,8 @@
                 ./img/contents/logos/site-logo-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-dark@3x.webp 3x
               "
+              width="100"
+              height="15"
             />
             <img
               srcset="
@@ -888,6 +1199,8 @@
               "
               src="./img/contents/logos/site-logo-dark.png"
               alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
             />
           </picture>
         </a>
@@ -895,21 +1208,36 @@
         <ul class="socials footer__socials">
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Facebook">
-              <svg class="socials__icon socials__icon_facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
                 <use xlink:href="./img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg class="socials__icon socials__icon_vkontakte">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
                 <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Instagram">
-              <svg class="socials__icon socials__icon_instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
                 <use xlink:href="./img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -917,9 +1245,17 @@
         </ul>
 
         <section class="developed footer__developed">
-          <h2 class="developed__title">Разработано</h2>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="./img/svg/logo-htmlacademy.svg" alt="Логотип академии" />
+          <a
+            class="developed__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
+            <h2 class="developed__title">Разработано</h2>
+            <img
+              src="./img/svg/logo-htmlacademy.svg"
+              alt="Логотип академии"
+              width="27"
+              height="33"
+            />
           </a>
         </section>
       </div>

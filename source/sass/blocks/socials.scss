@@ -27,8 +27,31 @@
   }
 }
 
+.socials__link:hover,
+.socials__link:focus {
+  opacity: 0.6;
+}
+
+.socials__link:active {
+  opacity: 0.3;
+}
+
 .footer .socials__link {
   background-color: var(--basic-yellow);
+}
+
+.footer .socials__link:hover,
+.footer .socials__link:focus {
+  background-color: var(--basic-orange);
+  opacity: 1;
+}
+
+.footer .socials__link:active {
+  opacity: 1;
+
+  .socials__icon {
+    fill-opacity: 0.3;
+  }
 }
 
 .socials__icon {

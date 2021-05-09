@@ -4,12 +4,58 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-light.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-medium.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-bold.woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body class="page page_form">
     <header class="header header_nojs">
       <div class="header__wrapper">
-        <a class="logo header__logo" href="./index.html">
+        <a class="logo header__logo" href="./index.html" tabindex="1">
           <picture class="logo__pic logo__pic_dark">
             <source
               type="image/webp"
@@ -19,6 +65,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -27,6 +75,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -36,6 +86,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
               "
+              width="166"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -44,6 +96,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
               "
+              width="166"
+              height="42"
             />
             <source
               type="image/webp"
@@ -52,6 +106,8 @@
                 ./img/contents/logos/site-logo-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-dark@3x.webp 3x
               "
+              width="100"
+              height="15"
             />
             <img
               srcset="
@@ -60,6 +116,8 @@
               "
               src="./img/contents/logos/site-logo-dark.png"
               alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
             />
           </picture>
 
@@ -72,6 +130,8 @@
                 ./img/contents/logos/site-logo-desktop-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -80,6 +140,8 @@
                 ./img/contents/logos/site-logo-desktop-light@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -89,6 +151,8 @@
                 ./img/contents/logos/site-logo-tablet-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.webp 3x
               "
+              width="166"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -97,6 +161,8 @@
                 ./img/contents/logos/site-logo-tablet-light@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.png 3x
               "
+              width="166"
+              height="42"
             />
             <source
               type="image/webp"
@@ -105,6 +171,8 @@
                 ./img/contents/logos/site-logo-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-light@3x.webp 3x
               "
+              width="96"
+              height="15"
             />
             <img
               srcset="
@@ -113,6 +181,8 @@
               "
               src="./img/contents/logos/site-logo-light.png"
               alt="Логотип сервиса «Погнали?»"
+              width="96"
+              height="15"
             />
           </picture>
         </a>
@@ -122,11 +192,21 @@
           type="button"
           aria-label="Открыть"
         >
-          <svg class="header-toggle__icon_close">
+          <svg
+            class="header-toggle__icon_close"
+            aria-hidden="true"
+            width="18"
+            height="18"
+          >
             <use xlink:href="./img/sprite.svg#icon_close"></use>
           </svg>
 
-          <svg class="header-toggle__icon_burger">
+          <svg
+            class="header-toggle__icon_burger"
+            aria-hidden="true"
+            width="25"
+            height="11"
+          >
             <use xlink:href="./img/sprite.svg#icon_burger"></use>
           </svg>
         </button>
@@ -134,13 +214,25 @@
         <nav class="navigation header__navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="#">О сервисе</a>
+              <a class="navigation__link" href="#" tabindex="2">
+                <span class="navigation__text" data-hover="О сервисе">
+                  О сервисе
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link">Направления</a>
+              <a class="navigation__link" tabindex="3">
+                <span class="navigation__text" data-hover="Направления">
+                  Направления
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./catalog.html">Попутчики</a>
+              <a class="navigation__link" href="./catalog.html" tabindex="4">
+                <span class="navigation__text" data-hover="Попутчики">
+                  Попутчики
+                </span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -152,9 +244,15 @@
                 <a
                   class="contacts__link contacts__link_telephone"
                   href="tel:88005558628"
+                  aria-label="Позвонить"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_telephone">
+                    <svg
+                      class="contacts__icon contacts__icon_telephone"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_telephone"></use>
                     </svg>
                   </div>
@@ -162,9 +260,15 @@
                 <a
                   class="contacts__link contacts__link_call"
                   href="tel:88005558628"
+                  aria-label="Позвонить"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_call">
+                    <svg
+                      class="contacts__icon contacts__icon_call"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_call"></use>
                     </svg>
                   </div>
@@ -174,9 +278,15 @@
                 <a
                   class="contacts__link contacts__link_email"
                   href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_email">
+                    <svg
+                      class="contacts__icon contacts__icon_email"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_email"></use>
                     </svg>
                   </div>
@@ -184,9 +294,15 @@
                 <a
                   class="contacts__link contacts__link_mail"
                   href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
                 >
                   <div class="contacts__icon-wrapper">
-                    <svg class="contacts__icon contacts__icon_mail">
+                    <svg
+                      class="contacts__icon contacts__icon_mail"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_mail"></use>
                     </svg>
                   </div>
@@ -203,21 +319,36 @@
         <ul class="socials header__socials">
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Facebook">
-              <svg class="socials__icon socials__icon_facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
                 <use xlink:href="./img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg class="socials__icon socials__icon_vkontakte">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
                 <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Instagram">
-              <svg class="socials__icon socials__icon_instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
                 <use xlink:href="./img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -227,11 +358,11 @@
     </header>
 
     <main>
-      <h1 class="head-title head-title_special">
-        <div class="head-title__wrapper">
+      <div class="head-title head-title_special">
+        <h1 class="head-title__wrapper">
           <span class="head-title__text">Направления</span>
-        </div>
-      </h1>
+        </h1>
+      </div>
 
       <section class="profile-info">
         <h2 class="visually-hidden">Информация о профиле</h2>
@@ -244,27 +375,36 @@
           <source
             type="image/webp"
             srcset="
-              ./img/users/petr-demin-small.webp    1x,
-              ./img/users/petr-demin-small@2x.webp 2x,
-              ./img/users/petr-demin-small@3x.webp 3x
+              ./img/users/petr-demin.webp    1x,
+              ./img/users/petr-demin@2x.webp 2x,
+              ./img/users/petr-demin@3x.webp 3x
             "
           />
           <img
             class="profile-info__pic"
             srcset="
-              ./img/users/petr-demin-small.jpg    1x,
-              ./img/users/petr-demin-small@2x.jpg 2x,
-              ./img/users/petr-demin-small@3x.jpg 3x
+              ./img/users/petr-demin.jpg    1x,
+              ./img/users/petr-demin@2x.jpg 2x,
+              ./img/users/petr-demin@3x.jpg 3x
             "
             src="./img/users/petr-demin-small.jpg"
             alt="Фотография профиля"
+            width="100"
+            height="100"
           />
         </picture>
       </section>
 
       <form class="profile-form" action="#" method="get">
-        <label class="profile-form__load-photo" for="profile-form-photo">
-          <span>Сменить</span>&nbsp;фото
+        <label
+          class="profile-form__load-photo"
+          for="profile-form-photo"
+          tabindex="0"
+        >
+          <span class="profile-form__load-photo-text">
+            <span class="profile-form__load-photo-text_change">Сменить</span
+            >&nbsp;фото
+          </span>
         </label>
         <input
           class="visually-hidden"
@@ -280,8 +420,7 @@
             class="profile-form__tags"
             name="profile-form-tags"
             id="profile-form-tags"
-            cols="30"
-            rows="10"
+            placeholder="Коротко о себе в виде 5-8 хештэгов"
           ></textarea>
         </fieldset>
 
@@ -295,13 +434,19 @@
             type="checkbox"
             name="profile-form-transport-airplane"
             id="profile-form-transport-airplane"
+            checked
           />
           <label
             class="profile-form__transport"
             for="profile-form-transport-airplane"
             aria-label="Самолетом"
           >
-            <svg class="profile-form__icon">
+            <svg
+              class="profile-form__icon"
+              aria-hidden="true"
+              width="17"
+              height="16"
+            >
               <use xlink:href="./img/sprite.svg#icon_airplane"></use>
             </svg>
           </label>
@@ -311,13 +456,19 @@
             type="checkbox"
             name="profile-form-transport-bus"
             id="profile-form-transport-bus"
+            checked
           />
           <label
             class="profile-form__transport"
             for="profile-form-transport-bus"
             aria-label="На автобусе"
           >
-            <svg class="profile-form__icon">
+            <svg
+              class="profile-form__icon"
+              aria-hidden="true"
+              width="17"
+              height="16"
+            >
               <use xlink:href="./img/sprite.svg#icon_bus"></use>
             </svg>
           </label>
@@ -331,9 +482,14 @@
           <label
             class="profile-form__transport"
             for="profile-form-transport-bicycle"
-            aria-albel="На велосипеде"
+            aria-label="На велосипеде"
           >
-            <svg class="profile-form__icon">
+            <svg
+              class="profile-form__icon"
+              aria-hidden="true"
+              width="17"
+              height="16"
+            >
               <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
             </svg>
           </label>
@@ -343,13 +499,19 @@
             type="checkbox"
             name="profile-form-transport-walk"
             id="profile-form-transport-walk"
+            checked
           />
           <label
             class="profile-form__transport"
             for="profile-form-transport-walk"
             aria-label="Пешком"
           >
-            <svg class="profile-form__icon">
+            <svg
+              class="profile-form__icon"
+              aria-hidden="true"
+              width="17"
+              height="16"
+            >
               <use xlink:href="./img/sprite.svg#icon_walk"></use>
             </svg>
           </label>
@@ -432,11 +594,12 @@
 
               <h3 class="trip-form__heading">
                 Шаг 1.<br />
-                Даты пребывания
+                &nbsp;Даты пребывания
               </h3>
               <p class="trip-form__text">
-                Укажите предпочтительное количество попутчиков, которых вы
-                хотели бы позвать в поездку, и ее предполагаемую длительность.
+                Укажите предпочтительное количество попутчиков, которых
+                вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую
+                длительность.
               </p>
 
               <section class="trip-form__base-info">
@@ -455,7 +618,12 @@
                       type="button"
                       aria-label="Кнопка минус"
                     >
-                      <svg class="numeric-field__icon">
+                      <svg
+                        class="numeric-field__icon"
+                        aria-hidden="true"
+                        width="14"
+                        height="2"
+                      >
                         <use xlink:href="./img/sprite.svg#minus"></use>
                       </svg>
                     </button>
@@ -465,6 +633,7 @@
                       type="number"
                       name="trip-form-companions"
                       id="trip-form-companions"
+                      value="2"
                     />
 
                     <button
@@ -472,7 +641,12 @@
                       type="button"
                       aria-label="Кнопка плюс"
                     >
-                      <svg class="numeric-field__icon">
+                      <svg
+                        class="numeric-field__icon"
+                        aria-hidden="true"
+                        width="14"
+                        height="14"
+                      >
                         <use xlink:href="./img/sprite.svg#plus"></use>
                       </svg>
                     </button>
@@ -484,6 +658,7 @@
                   type="checkbox"
                   name="trip-form-children"
                   id="trip-form-children"
+                  checked
                 />
                 <label
                   class="checkbox trip-form__checkbox"
@@ -496,13 +671,14 @@
                     viewBox="0 0 36 36"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
                     <rect
                       class="checkbox__bg"
                       width="36"
                       height="36"
                       rx="4"
-                      fill="#E2E5F1"
+                      fill="transparent"
                     />
                     <rect
                       class="checkbox__border"
@@ -534,7 +710,12 @@
                       type="button"
                       aria-label="Кнопка минус"
                     >
-                      <svg class="numeric-field__icon">
+                      <svg
+                        class="numeric-field__icon"
+                        aria-hidden="true"
+                        width="14"
+                        height="2"
+                      >
                         <use xlink:href="./img/sprite.svg#minus"></use>
                       </svg>
                     </button>
@@ -544,6 +725,7 @@
                       type="number"
                       name="trip-form-duration"
                       id="trip-form-duration"
+                      value="3"
                     />
 
                     <button
@@ -551,7 +733,12 @@
                       type="button"
                       aria-label="Кнопка плюс"
                     >
-                      <svg class="numeric-field__icon">
+                      <svg
+                        class="numeric-field__icon"
+                        aria-hidden="true"
+                        width="14"
+                        height="14"
+                      >
                         <use xlink:href="./img/sprite.svg#plus"></use>
                       </svg>
                     </button>
@@ -568,7 +755,12 @@
                     type="button"
                     aria-label="Назад"
                   >
-                    <svg class="date-info__icon">
+                    <svg
+                      class="date-info__icon"
+                      aria-hidden="true"
+                      width="9"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_arrow-back"></use>
                     </svg>
                   </button>
@@ -580,7 +772,12 @@
                     type="button"
                     aria-label="Вперед"
                   >
-                    <svg class="date-info__icon">
+                    <svg
+                      class="date-info__icon"
+                      aria-hidden="true"
+                      width="9"
+                      height="18"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_arrow-next"></use>
                     </svg>
                   </button>
@@ -757,7 +954,7 @@
               </section>
 
               <a class="button trip-form__button" href="#trip-form-step-two">
-                Следующий шаг
+                <span class="button__text">Следующий шаг</span>
               </a>
             </section>
 
@@ -776,7 +973,7 @@
 
               <h3 class="trip-form__heading">
                 Шаг 2.<br />
-                Маршрут
+                &nbsp;Маршрут
               </h3>
               <p class="trip-form__text">
                 Укажите страны, которые вы хотели бы посетить.
@@ -798,7 +995,12 @@
                       type="button"
                       aria-label="Выбрать страну"
                     >
-                      <svg class="country__icon-choose">
+                      <svg
+                        class="country__icon-choose"
+                        aria-hidden="true"
+                        width="16"
+                        height="12"
+                      >
                         <use
                           xlink:href="./img/sprite.svg#icon_arrow-down"
                         ></use>
@@ -817,7 +1019,12 @@
                     type="button"
                     aria-label="Удалить страну"
                   >
-                    <svg class="country__icon-delete">
+                    <svg
+                      class="country__icon-delete"
+                      aria-hidden="true"
+                      width="9"
+                      height="9"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_close"></use>
                     </svg>
                   </button>
@@ -831,7 +1038,12 @@
                       type="button"
                       aria-label="Выбрать страну"
                     >
-                      <svg class="country__icon-choose">
+                      <svg
+                        class="country__icon-choose"
+                        aria-hidden="true"
+                        width="16"
+                        height="12"
+                      >
                         <use
                           xlink:href="./img/sprite.svg#icon_arrow-down"
                         ></use>
@@ -850,7 +1062,12 @@
                     type="button"
                     aria-label="Удалить страну"
                   >
-                    <svg class="country__icon-delete">
+                    <svg
+                      class="country__icon-delete"
+                      aria-hidden="true"
+                      width="9"
+                      height="9"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_close"></use>
                     </svg>
                   </button>
@@ -864,7 +1081,12 @@
                       type="button"
                       aria-label="Выбрать страну"
                     >
-                      <svg class="country__icon-choose">
+                      <svg
+                        class="country__icon-choose"
+                        aria-hidden="true"
+                        width="16"
+                        height="12"
+                      >
                         <use
                           xlink:href="./img/sprite.svg#icon_arrow-down"
                         ></use>
@@ -877,7 +1099,12 @@
                     type="button"
                     aria-label="Удалить страну"
                   >
-                    <svg class="country__icon-delete">
+                    <svg
+                      class="country__icon-delete"
+                      aria-hidden="true"
+                      width="9"
+                      height="9"
+                    >
                       <use xlink:href="./img/sprite.svg#icon_close"></use>
                     </svg>
                   </button>
@@ -942,7 +1169,12 @@
                     </ul>
 
                     <button class="choose-country__close">
-                      <svg class="choose-country__icon-close">
+                      <svg
+                        class="choose-country__icon-close"
+                        aria-hidden="true"
+                        width="8"
+                        height="9"
+                      >
                         <use xlink:href="./img/sprite.svg#icon_close"></use>
                       </svg>
                     </button>
@@ -953,7 +1185,7 @@
               <div class="trip-form__button-add-wrapper">
                 <button class="trip-form__button-add" type="button">
                   <span>Добавить страну</span>
-                  <svg>
+                  <svg aria-hidden="true" width="14" height="14">
                     <use xlink:href="./img/sprite.svg#plus"></use>
                   </svg>
                 </button>
@@ -964,7 +1196,7 @@
                   class="button trip-form__button"
                   href="#trip-form-step-three"
                 >
-                  Следующий шаг
+                  <span class="button__text">Следующий шаг</span>
                 </a>
                 <a
                   class="button trip-form__button-back"
@@ -990,11 +1222,11 @@
 
               <h3 class="trip-form__heading">
                 Шаг 3.<br />
-                Развлечения
+                &nbsp;Развлечения
               </h3>
               <p class="trip-form__text">
-                Наконец, расскажите о своих планах времяпровождения. Можно
-                писать в свободной форме и ставить тэги.
+                Наконец, расскажите о своих планах времяпровождения.
+                Можно&nbsp;писать в свободной форме и ставить тэги.
               </p>
 
               <ul class="action-plan trip-form__action-plan">
@@ -1012,13 +1244,14 @@
                     ></div>
                   </div>
 
-                  <textarea
-                    class="action-plan__input"
-                    type="text"
-                    name="trip-form-plan-bosnia"
-                    id="trip-form-plan-bosnia"
-                    placeholder="План действий"
-                  ></textarea>
+                  <div class="action-plan__input-field">
+                    <textarea
+                      class="action-plan__input"
+                      name="trip-form-plan-bosnia"
+                      id="trip-form-plan-bosnia"
+                      placeholder="План действий"
+                    ></textarea>
+                  </div>
                 </li>
 
                 <li class="action-plan__item">
@@ -1031,23 +1264,26 @@
                     </label>
                     <div
                       class="flag flag_czech action-plan__flag"
-                      arir-label="Чехия"
+                      aria-label="Чехия"
                     ></div>
                   </div>
 
-                  <textarea
-                    class="action-plan__input"
-                    type="text"
-                    name="trip-form-plan-czech"
-                    id="trip-form-plan-czech"
-                    placeholder="План действий"
-                  ></textarea>
+                  <div
+                    class="action-plan__input-field action-plan__input-field_invalid"
+                  >
+                    <textarea
+                      class="action-plan__input"
+                      name="trip-form-plan-czech"
+                      id="trip-form-plan-czech"
+                      placeholder="План действий"
+                    ></textarea>
+                  </div>
                 </li>
               </ul>
 
               <div class="trip-form__buttons">
                 <button class="button trip-form__button" type="submit">
-                  Отправить
+                  <span class="button__text">Отправить</span>
                 </button>
                 <a
                   class="button trip-form__button-back"
@@ -1064,7 +1300,7 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <a class="logo footer__logo">
+        <a class="logo footer__logo" href="./index.html">
           <picture class="logo__pic logo__pic_dark">
             <source
               type="image/webp"
@@ -1074,6 +1310,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
               "
+              width="200"
+              height="52"
             />
             <source
               media="(min-width: 1440px)"
@@ -1082,6 +1320,8 @@
                 ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
               "
+              width="200"
+              height="52"
             />
             <source
               type="image/webp"
@@ -1091,6 +1331,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
               "
+              width="164"
+              height="42"
             />
             <source
               media="(min-width: 768px)"
@@ -1099,6 +1341,8 @@
                 ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
               "
+              width="164"
+              height="42"
             />
             <source
               type="image/webp"
@@ -1107,6 +1351,8 @@
                 ./img/contents/logos/site-logo-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-dark@3x.webp 3x
               "
+              width="100"
+              height="15"
             />
             <img
               srcset="
@@ -1115,6 +1361,8 @@
               "
               src="./img/contents/logos/site-logo-dark.png"
               alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
             />
           </picture>
         </a>
@@ -1122,21 +1370,36 @@
         <ul class="socials footer__socials">
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Facebook">
-              <svg class="socials__icon socials__icon_facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
                 <use xlink:href="./img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg class="socials__icon socials__icon_vkontakte">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
                 <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link" href="#" aria-label="Instagram">
-              <svg class="socials__icon socials__icon_instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
                 <use xlink:href="./img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
@@ -1144,14 +1407,21 @@
         </ul>
 
         <section class="developed footer__developed">
-          <h2 class="developed__title">Разработано</h2>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="./img/svg/logo-htmlacademy.svg" alt="Логотип академии" />
+          <a
+            class="developed__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
+            <h2 class="developed__title">Разработано</h2>
+            <img
+              src="./img/svg/logo-htmlacademy.svg"
+              alt="Логотип академии"
+              width="27"
+              height="33"
+            />
           </a>
         </section>
       </div>
     </footer>
-
     <script src="./js/header.min.js"></script>
     <script src="./js/dropdown.min.js"></script>
   </body>

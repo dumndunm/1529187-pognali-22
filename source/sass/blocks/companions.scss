@@ -1,8 +1,12 @@
 .companions {
-  margin-bottom: 46px;
+  margin-bottom: 76px;
 
   padding-left: var(--page-padding-size);
   padding-right: var(--page-padding-size);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 116px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
@@ -30,6 +34,10 @@
 
     margin-bottom: 39px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .companions__companion:not(:last-child) {
@@ -37,6 +45,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
   }
 }
 
@@ -63,9 +75,15 @@
 
   @media (min-width: $tablet-width) {
     width: 190px;
-    margin-bottom: 39px;
+    margin-bottom: 45px;
 
     font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+    position: relative;
+    left: -33px;
   }
 }
 
@@ -81,6 +99,15 @@
     width: 26px;
     height: 26px;
   }
+}
+
+.companions__button:hover .companions__button-icon,
+.companions__button:focus .companions__button-icon {
+  opacity: 0.6;
+}
+
+.companions__button:active .companions__button-icon {
+  opacity: 0.3;
 }
 
 .companions__button-text {
@@ -143,9 +170,31 @@
   }
 }
 
+.companions__previous,
+.companions__next {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: -5px;
+    left: -5px;
+  }
+}
+
+.companions__previous:hover,
+.companions__previous:focus,
+.companions__next:hover,
+.companions__next:focus {
+  opacity: 0.6;
+}
+
+.companions__previous:active,
+.companions__next:active {
+  opacity: 0.3;
+}
+
 .companions__pagination-icon {
   width: 20px;
   height: 13px;
+  margin-top: 10px;
 
   fill: var(--basic-blue);
 }
@@ -170,8 +219,6 @@
 
 .companions__page {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50px;
   height: 50px;
 
@@ -183,8 +230,25 @@
 }
 
 .companions__page-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   font-size: 20px;
   color: var(--basic-blue);
   text-decoration: none;
+}
+
+.companions__page-link:hover {
+  opacity: 0.6;
+}
+
+.companions__page:active .companions__page-link {
+  opacity: 1;
+}
+
+.companions__page:active {
+  background-color: var(--basic-yellow);
 }

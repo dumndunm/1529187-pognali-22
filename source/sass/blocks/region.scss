@@ -44,6 +44,8 @@
   background-color: var(--basic-blue-light);
 
   img {
+    width: 100%;
+    height: 100%;
     border-top-left-radius: var(--corner-radius-small);
     border-top-right-radius: var(--corner-radius-small);
   }

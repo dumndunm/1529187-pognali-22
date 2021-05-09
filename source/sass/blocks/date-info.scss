@@ -20,6 +20,7 @@
 
   @media (min-width: $tablet-width) {
     height: 86px;
+    margin-bottom: 27px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,6 +55,15 @@
     width: 25px;
     height: 40px;
   }
+}
+
+.date-info__button:hover .date-info__icon,
+.date-info__button:focus .date-info__icon {
+  opacity: 0.5;
+}
+
+.date-info__button:active .date-info__icon {
+  opacity: 0.1;
 }
 
 .date-info__table {

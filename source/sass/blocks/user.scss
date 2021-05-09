@@ -11,6 +11,10 @@
   }
 }
 
+.user:hover {
+  filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+}
+
 .user:not(:last-child) {
   margin-bottom: 9px;
 
@@ -22,6 +26,9 @@
 .user__pic-wrapper {
   width: 270px;
   height: 270px;
+  border-top-left-radius: var(--corner-radius-small);
+  border-top-right-radius: var(--corner-radius-small);
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     width: 285px;
@@ -32,8 +39,11 @@
 .user__pic {
   width: 100%;
   height: 100%;
-  border-top-left-radius: var(--corner-radius-small);
-  border-top-right-radius: var(--corner-radius-small);
+}
+
+.user:hover .user__pic {
+  transform-origin: center;
+  transform: scale(1.2);
 }
 
 .user__rating {
@@ -103,6 +113,20 @@
   background-color: var(--user-online-color);
 }
 
+.user__name:hover,
+.user__name:focus-within {
+  opacity: 0.7;
+}
+
+.user__name:active {
+  opacity: 0.3;
+}
+
+.user__name-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .user__favs,
 .user__hashtags,
 .user__icons {
@@ -117,8 +141,75 @@
 }
 
 .user__flag {
+  position: relative;
   width: 35px;
   height: 25px;
+}
+
+.user__flag:hover::before,
+.user__flag:hover::after {
+  display: flex;
+}
+
+.user__flag::before {
+  box-sizing: content-box;
+  content: "";
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 56px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -67px;
+
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--basic-white);
+
+  border-radius: 4px;
+  background-color: #101d41;
+}
+
+.user__flag::after {
+  content: "";
+  display: none;
+  width: 14px;
+  height: 10px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -14px;
+
+  background-image: url("../../img/svg/tooltip-pin.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.user__flag.flag_sri::before {
+  content: "Шри-ланка";
+}
+
+.user__flag.flag_tai::before {
+  content: "Тайланд";
+}
+
+.user__flag.flag_sei::before {
+  content: "Сейшелы";
+}
+
+.user__flag.flag_belg::before {
+  content: "Бельгия";
+}
+
+.user__flag.flag_czech::before {
+  content: "Чехия";
 }
 
 .user__flag:not(:last-child) {
@@ -164,53 +255,125 @@
 }
 
 .user__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25px;
   height: 25px;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.15;
 }
 
 .user__icon:not(:last-child) {
   margin-right: 8px;
 }
 
-.user__icon_prefer {
-  opacity: 1;
+.user__icon_prefer .user__icon-svg {
+  fill-opacity: 1;
 }
 
-.user__icon_airplane {
-  background-image: url("../img/icons/icon_airplane.svg");
-  background-size: 20px 21px;
+.user__icon::before {
+  content: "";
+  display: none;
 
-  @media (min-width: $tablet-width) {
-    background-size: 23px 22px;
-  }
+  height: 56px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -67px;
+
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--basic-white);
+
+  border-radius: 4px;
+  background-color: #101d41;
 }
 
-.user__icon_bus {
-  background-image: url("../img/icons/icon_bus.svg");
-  background-size: 17px 19px;
+.user__icon::after {
+  content: "";
+  display: none;
 
-  @media (min-width: $tablet-width) {
-    background-size: 18px 20px;
-  }
+  height: 10px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -14px;
+
+  background-image: url("../../img/svg/tooltip-pin.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.user__icon_bicycle {
-  background-image: url("../img/icons/icon_bicycle.svg");
-  background-size: 24px 24px;
-
-  @media (min-width: $tablet-width) {
-    background-size: 25px 25px;
-  }
+.user__icon:hover::before,
+.user__icon:hover::after {
+  display: block;
 }
 
-.user__icon_walk {
-  background-image: url("../img/icons/icon_walk.svg");
-  background-size: 21px 23px;
+.user__icon_airplane::before {
+  content: "Авиаперелет";
+  width: 146px;
+  padding: 18px 20px;
+}
 
-  @media (min-width: $tablet-width) {
-    background-size: 22px 24px;
-  }
+.user__icon_airplane::after {
+  width: 14px;
+}
+
+.user__icon_bus::before {
+  content: "Автотранспорт";
+  width: 170px;
+  padding: 18px 25px;
+}
+
+.user__icon_bus::after {
+  width: 16px;
+}
+
+.user__icon_bicycle::before {
+  content: "Велосипед";
+  width: 130px;
+  padding: 18px 20px;
+}
+
+.user__icon_bicycle::after {
+  width: 12px;
+}
+
+.user__icon_walk::before {
+  content: "Пешком";
+  width: 110px;
+  padding: 18px 22px;
+}
+
+.user__icon_walk::after {
+  width: 10px;
+}
+
+.user__icon-svg {
+  fill: var(--basic-blue);
+  fill-opacity: 0.15;
+}
+
+.user__icon_airplane .user__icon-svg {
+  width: 23px;
+  height: 22px;
+}
+
+.user__icon_bus .user__icon-svg {
+  width: 18px;
+  height: 20px;
+}
+
+.user__icon_bicycle .user__icon-svg {
+  width: 25px;
+  height: 25px;
+}
+
+.user__icon_walk .user__icon-svg {
+  width: 22px;
+  height: 24px;
 }

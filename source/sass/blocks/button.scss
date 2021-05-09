@@ -25,6 +25,15 @@
   color: var(--special-blue);
 }
 
+.button:hover,
+.button:focus {
+  background-color: var(--basic-orange);
+}
+
+.button:active::after {
+  opacity: 0.3;
+}
+
 .button_special {
   justify-content: space-between;
   height: 62px;
@@ -45,14 +54,10 @@
   }
 }
 
-.button_special::after {
-  content: "";
-  display: block;
+.button__icon {
   width: 13px;
   height: 13px;
-
-  background-image: url("../img/svg/blue-arrow.svg");
-  background-repeat: no-repeat;
+  fill: var(--basic-blue);
 }
 
 .feedback-form__button .button__text {
@@ -61,4 +66,12 @@
   @media (min-width: $desktop-width) {
     display: block;
   }
+}
+
+.button:active .button__text {
+  opacity: 0.3;
+}
+
+.button:active .button__icon {
+  fill-opacity: 0.3;
 }

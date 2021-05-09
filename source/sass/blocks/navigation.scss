@@ -55,8 +55,11 @@
 }
 
 .navigation__link {
+  display: flex;
+  width: 100%;
   color: var(--basic-blue-dark);
   text-decoration: none;
+  overflow-y: hidden;
 
   @media (min-width: $desktop-width) {
     margin-right: 34px;
@@ -68,4 +71,36 @@
   @media (min-width: $desktop-width) {
     color: var(--basic-blue-dark);
   }
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: var(--basic-yellow);
+}
+
+.navigation__link:active {
+  opacity: 0.3;
+}
+
+.navigation__text {
+  display: flex;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.navigation__text::before {
+  content: attr(data-hover);
+  width: calc(100% + 1ch);
+
+  position: absolute;
+  top: 100%;
+
+  font-weight: 700;
+  text-align: left;
+  transform: translate3d(0, 0, 0);
+}
+
+.navigation__link:hover .navigation__text,
+.navigation__link:focus .navigation__text {
+  transform: translateY(-100%);
 }
