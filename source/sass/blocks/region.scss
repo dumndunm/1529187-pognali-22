@@ -44,6 +44,8 @@
   background-color: var(--basic-blue-light);
 
   img {
+    width: 100%;
+    height: 100%;
     border-top-left-radius: var(--corner-radius-small);
     border-top-right-radius: var(--corner-radius-small);
   }
@@ -154,13 +156,13 @@
   top: 28px;
   left: 186px;
   display: flex;
-  align-items: center;
 
   font-weight: 500;
   color: var(--special-blue);
   opacity: 0.3;
 
   @media (min-width: $tablet-width) {
+    align-items: center;
     top: 94px;
     left: calc(var(--content-padding-size) - 4px);
     font-size: 20px;
@@ -175,7 +177,7 @@
   height: 14px;
   margin-right: 5px;
 
-  background-image: url("../img/icons/icon-user.svg");
+  background-image: url("../img/svg/user.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -184,6 +186,5 @@
     width: 24px;
     height: 24px;
     margin-right: 8px;
-    margin-bottom: 3px;
   }
 }

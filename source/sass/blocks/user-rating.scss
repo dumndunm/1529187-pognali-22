@@ -1,0 +1,80 @@
+.user-rating {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  padding-top: 15px;
+  padding-bottom: 9px;
+
+  border-radius: 50%;
+
+  color: var(--basic-white);
+}
+
+.user-rating::before {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+
+  position: absolute;
+  top: 0;
+
+  border-radius: 50%;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.user-rating::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+
+  position: absolute;
+  top: 0;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.user-rating_lvl99::after {
+  background-image: url("../img/svg/progress-level-99.svg");
+}
+
+.user-rating_lvl80::after {
+  background-image: url("../img/svg/progress-level-80.svg");
+}
+
+.user-rating__count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 19px;
+}
+
+.user-rating__count::after {
+  content: "";
+
+  width: 30px;
+  height: 1px;
+
+  background-image: url("../img/svg/level_line.svg");
+  z-index: 1;
+}
+
+.user-rating__text {
+  margin-top: 1px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+}

@@ -8,7 +8,7 @@
   line-height: 22px;
   color: var(--basic-white);
 
-  @media (min-width: 688px) {
+  @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 25px;
   }

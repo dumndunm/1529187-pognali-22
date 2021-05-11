@@ -13,16 +13,6 @@
   }
 }
 
-// .client-menu__contacts {
-//   @media (min-width: $tablet-width) {
-//     margin-bottom: 115px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     margin-bottom: 0;
-//   }
-// }
-
 .header .client-menu__item_auth {
   order: -1;
   position: static;
@@ -75,4 +65,9 @@
 .promo .client-menu__item_auth {
   min-width: 188px;
   font-weight: 700;
+}
+
+.client-menu__item_auth:hover .button,
+.client-menu__item_auth:focus .button {
+  background-color: var(--basic-orange);
 }

@@ -16,13 +16,39 @@
   }
 }
 
+.numeric-field:hover {
+  border-color: #959bb2;
+}
+
+.numeric-field:focus-within {
+  border-color: var(--special-blue);
+}
+
 .numeric-field__input {
+  padding-top: 4px;
+
+  text-align: center;
   border: none;
   background: transparent;
+
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--basic-blue);
 
   @media (min-width: $desktop-width) {
     width: 57px;
   }
+}
+
+.numeric-field__input::-webkit-outer-spin-button,
+.numeric-field__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.numeric-field__input:focus {
+  outline: none;
 }
 
 .numeric-field__button {
@@ -42,10 +68,25 @@
 }
 
 .numeric-field__icon {
+  width: 14px;
+  height: 14px;
   stroke: var(--special-grey);
 
   @media (min-width: $tablet-width) {
     width: 20px;
     height: 20px;
   }
+}
+
+.numeric-field:hover .numeric-field__icon {
+  stroke: #959bb2;
+}
+
+.numeric-field__button:hover .numeric-field__icon,
+.numeric-field__button:focus .numeric-field__icon {
+  stroke: #999999;
+}
+
+.numeric-field__button:active .numeric-field__icon {
+  stroke: #e5e5e5;
 }

@@ -1,0 +1,254 @@
+.companions {
+  margin-bottom: 76px;
+
+  padding-left: var(--page-padding-size);
+  padding-right: var(--page-padding-size);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 116px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.companions__list {
+  width: 100%;
+  max-width: 480px;
+
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 14px;
+
+  padding-left: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    max-width: 1024px;
+
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+}
+
+.companions__companion:not(:last-child) {
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.companions__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 175px;
+  height: 40px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 14px;
+
+  border: none;
+  background-color: transparent;
+
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--basic-blue-dark);
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    width: 190px;
+    margin-bottom: 45px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+    position: relative;
+    left: -33px;
+  }
+}
+
+.companions__button-icon {
+  width: 18px;
+  height: 18px;
+
+  margin-right: 15px;
+
+  fill: var(--basic-blue-dark);
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.companions__button:hover .companions__button-icon,
+.companions__button:focus .companions__button-icon {
+  opacity: 0.6;
+}
+
+.companions__button:active .companions__button-icon {
+  opacity: 0.3;
+}
+
+.companions__button-text {
+  margin-top: 4px;
+}
+
+.companions__pagination {
+  display: flex;
+  width: 100%;
+  height: 51px;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    height: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 28px;
+    padding-right: 21px;
+
+    border-radius: 20px;
+    background-color: var(--basic-white);
+  }
+}
+
+.companions__previous {
+  width: 50%;
+  height: 51px;
+
+  border: none;
+  border-right: 0.5px solid var(--basic-blue-light);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    margin-left: auto;
+    border-right: none;
+  }
+}
+
+.companions__next {
+  width: 50%;
+  height: 51px;
+
+  border: none;
+  border-left: 0.5px solid var(--basic-blue-light);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  background-color: var(--basic-white);
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    border-left: none;
+  }
+}
+
+.companions__previous,
+.companions__next {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: -5px;
+    left: -5px;
+  }
+}
+
+.companions__previous:hover,
+.companions__previous:focus,
+.companions__next:hover,
+.companions__next:focus {
+  opacity: 0.6;
+}
+
+.companions__previous:active,
+.companions__next:active {
+  opacity: 0.3;
+}
+
+.companions__pagination-icon {
+  width: 20px;
+  height: 13px;
+  margin-top: 10px;
+
+  fill: var(--basic-blue);
+}
+
+.companions__previous .companions__pagination-icon {
+  transform: rotate(90deg);
+}
+
+.companions__next .companions__pagination-icon {
+  transform: rotate(-90deg);
+}
+
+.companions__pages {
+  display: none;
+  padding-left: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 550px;
+  }
+}
+
+.companions__page {
+  display: flex;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+}
+
+.companions__page_active {
+  background-color: var(--basic-yellow);
+}
+
+.companions__page-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--basic-blue);
+  text-decoration: none;
+}
+
+.companions__page-link:hover {
+  opacity: 0.6;
+}
+
+.companions__page:active .companions__page-link {
+  opacity: 1;
+}
+
+.companions__page:active {
+  background-color: var(--basic-yellow);
+}

@@ -16,16 +16,11 @@
   }
 }
 
-.checkbox__bg {
-  fill: transparent;
-}
-
 .checkbox__border {
   stroke: #cbced9;
 }
 
 .checkbox__marker {
-  // fill: #161c35;
   fill: transparent;
 }
 
@@ -36,9 +31,27 @@
   color: var(--basic-blue);
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+}
+
+input:checked + .checkbox .checkbox__marker {
+  fill: #161c35;
+}
+
+.checkbox:active .checkbox__bg {
+  fill: #e2e5f1;
+}
+
+.checkbox:active .checkbox__marker {
+  fill-opacity: 0.3;
+}
+
+.checkbox:hover .checkbox__border,
+.checkbox:focus .checkbox__border {
+  stroke: #959bb2;
 }

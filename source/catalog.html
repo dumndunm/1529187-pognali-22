@@ -4,38 +4,235 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-light.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-medium.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/bloggersans-bold.woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.min.css" />
   </head>
-  <body>
-    <div class="container">
-      <header class="header header_collapse">
-        <a class="logo header__logo" href="./index.html">
-          <img
-            class="logo__pic logo__pic_dark"
-            src="./img/site-logo-dark.png"
-            alt="Логотип сервиса «Погнали?»"
-          />
-          <img
-            class="logo__pic logo__pic_light"
-            src="./img/site-logo-light.png"
-            alt="Логотип сервиса «Погнали?»"
-          />
+  <body class="page page_catalog">
+    <header class="header header_nojs">
+      <div class="header__wrapper">
+        <a class="logo header__logo" href="./index.html" tabindex="1">
+          <picture class="logo__pic logo__pic_dark">
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/contents/logos/site-logo-desktop-dark.webp    1x,
+                ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
+              "
+              width="200"
+              height="52"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/contents/logos/site-logo-desktop-dark.png    1x,
+                ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
+              "
+              width="200"
+              height="52"
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                ./img/contents/logos/site-logo-tablet-dark.webp    1x,
+                ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
+              "
+              width="166"
+              height="42"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/contents/logos/site-logo-tablet-dark.png    1x,
+                ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
+              "
+              width="166"
+              height="42"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./img/contents/logos/site-logo-dark.webp    1x,
+                ./img/contents/logos/site-logo-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-dark@3x.webp 3x
+              "
+              width="100"
+              height="15"
+            />
+            <img
+              srcset="
+                ./img/contents/logos/site-logo-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-dark@3x.png 3x
+              "
+              src="./img/contents/logos/site-logo-dark.png"
+              alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
+            />
+          </picture>
+
+          <picture class="logo__pic logo__pic_light">
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/contents/logos/site-logo-desktop-light.webp    1x,
+                ./img/contents/logos/site-logo-desktop-light@2x.webp 2x,
+                ./img/contents/logos/site-logo-desktop-light@3x.webp 3x
+              "
+              width="200"
+              height="52"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/contents/logos/site-logo-desktop-light.png    1x,
+                ./img/contents/logos/site-logo-desktop-light@2x.png 2x,
+                ./img/contents/logos/site-logo-desktop-light@3x.png 3x
+              "
+              width="200"
+              height="52"
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                ./img/contents/logos/site-logo-tablet-light.webp    1x,
+                ./img/contents/logos/site-logo-tablet-light@2x.webp 2x,
+                ./img/contents/logos/site-logo-tablet-light@3x.webp 3x
+              "
+              width="166"
+              height="42"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/contents/logos/site-logo-tablet-light.png    1x,
+                ./img/contents/logos/site-logo-tablet-light@2x.png 2x,
+                ./img/contents/logos/site-logo-tablet-light@3x.png 3x
+              "
+              width="166"
+              height="42"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./img/contents/logos/site-logo-light.webp    1x,
+                ./img/contents/logos/site-logo-light@2x.webp 2x,
+                ./img/contents/logos/site-logo-light@3x.webp 3x
+              "
+              width="96"
+              height="15"
+            />
+            <img
+              srcset="
+                ./img/contents/logos/site-logo-light@2x.png 2x,
+                ./img/contents/logos/site-logo-light@3x.png 3x
+              "
+              src="./img/contents/logos/site-logo-light.png"
+              alt="Логотип сервиса «Погнали?»"
+              width="96"
+              height="15"
+            />
+          </picture>
         </a>
 
-        <button class="header__toggle header__toggle_open" type="button">
-          <span class="visually-hidden">Открыть</span>
+        <button
+          class="header-toggle header__toggle"
+          type="button"
+          aria-label="Открыть"
+        >
+          <svg
+            class="header-toggle__icon_close"
+            aria-hidden="true"
+            width="18"
+            height="18"
+          >
+            <use xlink:href="./img/sprite.svg#icon_close"></use>
+          </svg>
+
+          <svg
+            class="header-toggle__icon_burger"
+            aria-hidden="true"
+            width="25"
+            height="11"
+          >
+            <use xlink:href="./img/sprite.svg#icon_burger"></use>
+          </svg>
         </button>
 
         <nav class="navigation header__navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="#">О сервисе</a>
+              <a class="navigation__link" href="#" tabindex="2">
+                <span class="navigation__text" data-hover="О сервисе">
+                  О сервисе
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="./form.html">Направления</a>
+              <a class="navigation__link" href="./form.html" tabindex="3">
+                <span class="navigation__text" data-hover="Направления">
+                  Направления
+                </span>
+              </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link">Попутчики</a>
+              <a class="navigation__link" tabindex="4">
+                <span class="navigation__text" data-hover="Попутчики">
+                  Попутчики
+                </span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -43,14 +240,72 @@
         <ul class="client-menu header__client-menu">
           <li class="client-menu__item">
             <ul class="contacts client-menu__contacts">
-              <li class="contacts__item contacts__item_phone">
-                <a class="contacts__link" href="tel:88005558628">
-                  <span class="contacts__link-text">8 800 555-86-28</span>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link_telephone"
+                  href="tel:88005558628"
+                  aria-label="Позвонить"
+                >
+                  <div class="contacts__icon-wrapper">
+                    <svg
+                      class="contacts__icon contacts__icon_telephone"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_telephone"></use>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  class="contacts__link contacts__link_call"
+                  href="tel:88005558628"
+                  aria-label="Позвонить"
+                >
+                  <div class="contacts__icon-wrapper">
+                    <svg
+                      class="contacts__icon contacts__icon_call"
+                      aria-hidden="true"
+                      width="18"
+                      height="18"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_call"></use>
+                    </svg>
+                  </div>
                 </a>
               </li>
-              <li class="contacts__item contacts__item_mail">
-                <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
-                  <span class="contacts__link-text">mail@htmlacademy.ru</span>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link_email"
+                  href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
+                >
+                  <div class="contacts__icon-wrapper">
+                    <svg
+                      class="contacts__icon contacts__icon_email"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_email"></use>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  class="contacts__link contacts__link_mail"
+                  href="mailto:mail@htmlacademy.ru"
+                  aria-label="Написать на почту"
+                >
+                  <div class="contacts__icon-wrapper">
+                    <svg
+                      class="contacts__icon contacts__icon_mail"
+                      aria-hidden="true"
+                      width="18"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_mail"></use>
+                    </svg>
+                  </div>
                 </a>
               </li>
             </ul>
@@ -63,42 +318,96 @@
 
         <ul class="socials header__socials">
           <li class="socials__item">
-            <a class="socials__link socials__link_facebook" href="#">
-              <span class="visually-hidden">Facebook</span>
+            <a class="socials__link" href="#" aria-label="Facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
+                <use xlink:href="./img/sprite.svg#icon_facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link_vk" href="#">
-              <span class="visually-hidden">VK</span>
+            <a class="socials__link" href="#" aria-label="Вконтакте">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
+                <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link_instagram" href="#">
-              <span class="visually-hidden">Instagram</span>
+            <a class="socials__link" href="#" aria-label="Instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
+                <use xlink:href="./img/sprite.svg#icon_instagram"></use>
+              </svg>
             </a>
           </li>
         </ul>
-      </header>
+      </div>
+    </header>
 
-      <main>
-        <h1 class="head-title head-title_special">Попутчики</h1>
+    <main>
+      <div class="head-title head-title_special">
+        <h1 class="head-title__wrapper">
+          <span class="head-title__text">Попутчики</span>
+        </h1>
+      </div>
 
-        <section class="region-filter region-filter_collapse">
-          <h2 class="region-filter__title">Фильтрация по странам:</h2>
-          <button
-            class="region-filter__button region-filter__button_open"
-            type="button"
-          >
-            <span class="region-filter__button-text">Показать все</span>
-          </button>
+      <div class="main-link">
+        <a class="main-link__text" href="./index.html">На главную</a>
+      </div>
 
-          <form class="region-filter__form" action="#" method="get">
+      <section class="region-filter">
+        <div class="region-filter__header">
+          <div class="region-filter__header-wrapper">
+            <h2 class="region-filter__title">Фильтрация по странам:</h2>
+            <button
+              class="region-filter__button region-filter__button_open"
+              type="button"
+              aria-label="Показать/свернуть"
+            >
+              <span class="region-filter__button-text-open">Показать все</span>
+              <span class="region-filter__button-text-close">Свернуть</span>
+              <svg
+                class="region-filter__button-icon-open"
+                aria-hidden="true"
+                width="17"
+                height="3"
+              >
+                <use xlink:href="./img/sprite.svg#icon_more"></use>
+              </svg>
+              <svg
+                class="region-filter__button-icon-close"
+                aria-hidden="true"
+                width="16"
+                height="16"
+              >
+                <use xlink:href="./img/sprite.svg#icon_close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <form class="region-filter__form" action="#" method="get">
+          <div class="region-filter__form-wrapper">
             <ul class="region-filter__continents">
-              <li>
+              <li class="region-filter__continent">
                 <input
                   class="visually-hidden"
                   type="radio"
-                  name="region-filter-continent-europe"
+                  name="region-filter-continent"
+                  value="europe"
                   id="region-filter-continent-europe"
                   checked
                 />
@@ -110,11 +419,12 @@
                 </label>
               </li>
 
-              <li>
+              <li class="region-filter__continent">
                 <input
                   class="visually-hidden"
                   type="radio"
-                  name="region-filter-continent-asia"
+                  name="region-filter-continent"
+                  value="asia"
                   id="region-filter-continent-asia"
                 />
                 <label
@@ -125,11 +435,12 @@
                 </label>
               </li>
 
-              <li>
+              <li class="region-filter__continent">
                 <input
                   class="visually-hidden"
                   type="radio"
-                  name="region-filter-continent-america"
+                  name="region-filter-continent"
+                  value="america"
                   id="region-filter-continent-america"
                 />
                 <label
@@ -140,18 +451,19 @@
                 </label>
               </li>
 
-              <li>
+              <li class="region-filter__continent">
                 <input
                   class="visually-hidden"
                   type="radio"
-                  name="region-filter-continent-islands"
+                  name="region-filter-continent"
+                  value="islands"
                   id="region-filter-continent-islands"
                 />
                 <label
                   class="region-filter__label"
                   for="region-filter-continent-islands"
                 >
-                  Острова
+                  Оcтрова
                 </label>
               </li>
             </ul>
@@ -166,327 +478,1982 @@
               <tbody class="region-table__body">
                 <tr class="region-table__row">
                   <td class="region-table__cell region-table__cell_active">
-                    А
+                    <button class="region-table__cell-symbol" type="button">
+                      А
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Австралия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Австрия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Азербайджан
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Албания
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Алжир
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Ангола
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Андорра
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Антигуа и Барбуда
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Аргентина
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Армения
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Афганистан
+                        </a>
+                      </li>
+                    </ul>
                   </td>
-                  <td class="region-table__cell">Б</td>
-                  <td class="region-table__cell">В</td>
-                  <td class="region-table__cell">Г</td>
-                  <td class="region-table__cell">Д</td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Б
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Багамские Острова
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бангладеш
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Барбадос
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бахрейн
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Белоруссия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Белиз
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бельгия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бенин
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Болгария
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Боливия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Босния и Герцеговина
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Ботсвана
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бразилия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бруней
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Буркина-Фасо
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бурунди
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Бутан
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      В
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Вануату
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Великобритания
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Венгрия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Венесуэла
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Восточный Тимор
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Вьетнам
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Г
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Габон
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гаити
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гайана
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гамбия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гана
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гватемала
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гвинея
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гвинея-Бисау
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Германия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гондурас
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Гренада
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Греция
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Грузия
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Д
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Дания
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Джибути
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Доминика
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Доминикана
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
                 </tr>
-                region-
                 <tr class="region-table__row">
-                  <td class="region-table__cell">Е</td>
-                  <td class="region-table__cell">З</td>
-                  <td class="region-table__cell">И</td>
-                  <td class="region-table__cell">К</td>
-                  <td class="region-table__cell">Л</td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Е
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Египет
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      З
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Замбия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Зимбабве
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      И
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Израиль
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Индия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Индонезия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Иордания
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Ирак
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Иран
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Ирландия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Исландия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Испания
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Италия
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      К
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Кабо-Верде
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Казахстан
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Камбоджа
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Камерун
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Канада
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Катар
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Кения
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Кипр
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Киргизия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Китай
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Колумбия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Кирибати
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Л
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Лаос
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Латвия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Лесото
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Либерия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Ливан
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Ливия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Литва
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Лихтенштейн
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Люксембург
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
                 </tr>
                 <tr class="region-table__row">
-                  <td class="region-table__cell">М</td>
-                  <td class="region-table__cell">Н</td>
-                  <td class="region-table__cell">О</td>
-                  <td class="region-table__cell">П</td>
-                  <td class="region-table__cell">Р</td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      М
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Маврикий
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Мавритания
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Мадагаскар
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Малави
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Малайзия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Мали
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Мальдивы
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Мальта
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Марокко
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Н
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Намибия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Науру
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Непал
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Нигер
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Нигерия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Нидерланды
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Никарагуа
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Новая Зеландия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Норвегия
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      О
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          ОАЭ
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Оман
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      П
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Пакистан
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Палау
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Панама
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Папуа - Новая Гвинея
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Парагвай
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Перу
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Польша
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Португалия
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Р
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Руанда
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Румыния
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Россия
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
                 </tr>
                 <tr class="region-table__row">
-                  <td class="region-table__cell">С</td>
-                  <td class="region-table__cell">Т</td>
-                  <td class="region-table__cell">У</td>
-                  <td class="region-table__cell">Ф</td>
-                  <td class="region-table__cell">Х</td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      С
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Сальвадор
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Самоа
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Сан-Марино
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Саудовская Аравия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Сейшелы
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Сенегал
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Сербия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Сингапур
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Сирия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Словакия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Словения
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          США
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Т
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Таджикистан
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Таиланд
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Танзания
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Того
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Тонга
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Тринидад и Тобаго
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Тувалу
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Тунис
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Туркмения
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Турция
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      У
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Уганда
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Узбекистан
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Украина
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Уругвай
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Ф
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Фиджи
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Филиппины
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Финляндия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Франция
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Х
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Хорватия
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
                 </tr>
                 <tr class="region-table__row">
-                  <td class="region-table__cell">Ч</td>
-                  <td class="region-table__cell">Ш</td>
-                  <td class="region-table__cell">Щ</td>
-                  <td class="region-table__cell">Э</td>
-                  <td class="region-table__cell">Ю</td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Ч
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Чад
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Черногория
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Чехия
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Чили
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Ш
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Швейцария
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Швеция
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Шри-Ланка
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Э
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Эквадор
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Эритрея
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Эсватини
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Эстония
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Эфиопия
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Ю
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          ЮАР
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Южный Судан
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="region-table__cell">
+                    <button class="region-table__cell-symbol" type="button">
+                      Я
+                    </button>
+                    <ul class="region-filter__countries">
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Ямайка
+                        </a>
+                      </li>
+                      <li class="region-filter__country">
+                        <a
+                          class="region-filter__country-name"
+                          href="europe/country"
+                        >
+                          Япония
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
                 </tr>
               </tbody>
             </table>
+          </div>
 
-            <ul class="region-filter__countries">
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Австралия
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Австрия
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Азербайджан
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Албания
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Алжир
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Ангола
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Андорра
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Антигуа и Барбуда
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Аргентина
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Армения
-                </a>
-              </li>
-              <li class="region-filter__country">
-                <a class="region-filter__country-name" href="europe/country">
-                  Афганистан
-                </a>
-              </li>
-            </ul>
+          <button class="region-filter__button-folded" type="button">
+            <svg
+              class="region-filter__button-folded-icon"
+              aria-hidden="true"
+              width="14"
+              height="14"
+            >
+              <use xlink:href="./img/sprite.svg#icon_close"></use>
+            </svg>
+            <span class="region-filter__button-folded-text">Свернуть</span>
+          </button>
+        </form>
+      </section>
 
-            <button class="region-filter__button-folded" type="button">
-              Свернуть
-            </button>
-          </form>
-        </section>
-
+      <div class="catalog-wrapper">
         <section class="companions-filter">
-          <h2 class="companions-filter__title">
-            Подберите идеального попутчика
-          </h2>
+          <div class="companions-filter__wrapper">
+            <h2 class="companions-filter__title">
+              Подберите идеального попутчика
+            </h2>
 
-          <form action="#" method="get">
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legened">Хобби</legend>
-
-              <input
-                type="checkbox"
-                name="companions-filter-sport"
-                id="companions-filter-sport"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-sport"
+            <form action="#" method="get">
+              <fieldset
+                class="companions-filter__fieldset companions-filter__fieldset_collapse"
               >
-                <span class="checkbox__text">Спортзал</span>
-              </label>
-
-              <input
-                type="checkbox"
-                name="companions-filter-smoke"
-                id="companions-filter-smoke"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-smoke"
-              >
-                <span class="checkbox__text">Кальян</span>
-              </label>
-
-              <input
-                type="checkbox"
-                name="companions-filter-sofa"
-                id="companions-filter-sofa"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-sofa"
-              >
-                <span class="checkbox__text">Диван</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legened">Музыка</legend>
-
-              <input
-                type="checkbox"
-                name="companions-filter-hardrock"
-                id="companions-filter-hardrock"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-hardrock"
-              >
-                <span class="checkbox__text">Тяжелый рок</span>
-              </label>
-
-              <input
-                type="checkbox"
-                name="companions-filter-russian-rap"
-                id="companions-filter-russian-rap"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-russian-rap"
-              >
-                <span class="checkbox__text">Русский рэп</span>
-              </label>
-
-              <input
-                type="checkbox"
-                name="companions-filter-eurodance"
-                id="companions-filter-eurodance"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-eurodance"
-              >
-                <span class="checkbox__text">Евродэнс</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legened">Еда</legend>
-
-              <input
-                type="checkbox"
-                name="companions-filter-meat"
-                id="companions-filter-meat"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-meat"
-              >
-                <span class="checkbox__text">Мясоед</span>
-              </label>
-
-              <input
-                type="checkbox"
-                name="companions-filter-healthy"
-                id="companions-filter-healthy"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-healthy"
-              >
-                <span class="checkbox__text">Сидит на ПП</span>
-              </label>
-
-              <input
-                type="checkbox"
-                name="companions-filter-vegan"
-                id="companions-filter-vegan"
-              />
-              <label
-                class="checkbox companions-filter__checkbox"
-                for="companions-filter-vegan"
-              >
-                <span class="checkbox__text">Веган-сыроед</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legend">Транспорт</legend>
-
-              <input
-                class="visually-hidden"
-                type="checkbox"
-                name="companions-filter-transport-airplane"
-                id="companions-filter-transport-airplane"
-              />
-              <label
-                class="companions-filter__transport companions-filter__transport_airplane"
-                for="companions-filter-transport-airplane"
-              >
-                <span class="visually-hidden">Самолетом</span>
-              </label>
-
-              <input
-                class="visually-hidden"
-                type="checkbox"
-                name="companions-filter-transport-bus"
-                id="companions-filter-transport-bus"
-              />
-              <label
-                class="companions-filter__transport companions-filter__transport_bus"
-                for="companions-filter-transport-bus"
-              >
-                <span class="visually-hidden">На автобусе</span>
-              </label>
-
-              <input
-                class="visually-hidden"
-                type="checkbox"
-                name="companions-filter-transport-bicycle"
-                id="companions-filter-transport-bicycle"
-              />
-              <label
-                class="companions-filter__transport companions-filter__transport_bicycle"
-                for="companions-filter-transport-bicycle"
-              >
-                <span class="visually-hidden">На велосипеде</span>
-              </label>
-
-              <input
-                class="visually-hidden"
-                type="checkbox"
-                name="companions-filter-transport-walk"
-                id="companions-filter-transport-walk"
-              />
-              <label
-                class="companions-filter__transport companions-filter__transport_walk"
-                for="companions-filter-transport-walk"
-              >
-                <span class="visually-hidden">Пешком</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="companions-filter__fieldset">
-              <legend class="companions-filter__legend">Левел</legend>
-
-              <div class="companions-filter__rating">
-                <input
-                  class="companions-filter__numeric-field"
-                  type="number"
-                  name="companions-filter-rating-min"
-                  id="companions-filter-rating-min"
-                />
-                <input
-                  class="companions-filter__numeric-field"
-                  type="number"
-                  name="companions-filter-rating-max"
-                  id="companions-filter-rating-max"
-                />
-              </div>
-
-              <div class="rating-slider companions-filter__rating-slider">
-                <div class="rating-slider__line"></div>
-                <div class="rating-slider__line-filled"></div>
+                <legend class="visually-hidden">Хобби</legend>
                 <button
-                  class="rating-slider__pin rating-slider__pin_min"
+                  class="companions-filter__fieldset-toggle"
                   type="button"
-                ></button>
-                <button
-                  class="rating-slider__pin rating-slider__pin_max"
-                  type="button"
-                ></button>
-              </div>
-            </fieldset>
+                  aria-label="Открыть поле"
+                >
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
+                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+                  </svg>
+                </button>
+                <p class="companions-filter__legend">Хобби</p>
 
-            <button class="companions-filter__button" type="sumbit">
-              Показать
-            </button>
-          </form>
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter"
+                  id="companions-filter-sport"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-sport"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">Спортзал</span>
+                </label>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter"
+                  id="companions-filter-smoke"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-smoke"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">Кальян</span>
+                </label>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter"
+                  id="companions-filter-sofa"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-sofa"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">Диван</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="companions-filter__fieldset">
+                <legend class="visually-hidden">Музыка</legend>
+                <button
+                  class="companions-filter__fieldset-toggle"
+                  type="button"
+                  aria-label="Открыть поле"
+                >
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
+                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+                  </svg>
+                </button>
+                <p class="companions-filter__legend">Музыка</p>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter-hardrock"
+                  id="companions-filter-hardrock"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-hardrock"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">
+                    Тяжелый рок
+                  </span>
+                </label>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter-russian-rap"
+                  id="companions-filter-russian-rap"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-russian-rap"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">
+                    Русский рэп
+                  </span>
+                </label>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter-eurodance"
+                  id="companions-filter-eurodance"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-eurodance"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">Евродэнс</span>
+                </label>
+              </fieldset>
+
+              <fieldset
+                class="companions-filter__fieldset companions-filter__fieldset_collapse"
+              >
+                <legend class="visually-hidden">Еда</legend>
+                <button
+                  class="companions-filter__fieldset-toggle"
+                  type="button"
+                  aria-label="Открыть поле"
+                >
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
+                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+                  </svg>
+                </button>
+                <p class="companions-filter__legend">Еда</p>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter-meat"
+                  id="companions-filter-meat"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-meat"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">Мясоед</span>
+                </label>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter-healthy"
+                  id="companions-filter-healthy"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-healthy"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">
+                    Сидит на ПП
+                  </span>
+                </label>
+
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  name="companions-filter-vegan"
+                  id="companions-filter-vegan"
+                />
+                <label
+                  class="companions-filter__checkbox"
+                  for="companions-filter-vegan"
+                >
+                  <svg
+                    class="companions-filter__checkbox-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <rect width="24" height="24" rx="4" />
+                    <path
+                      d="M10.3867 17.1809L6.99994 13.5V13V12C6.99994 12.0409 6.99994 11.9591 6.99994 12C6.99994 11.7852 7.00001 11.5 7.00001 11.5V10.5L10.3773 13.7561C10.4931 13.8776 10.6815 13.8761 10.7973 13.7547L18 6V8.07271V9C18 9.5 18 9.5 18 9.5L11.8083 16.1208L11.8097 16.1222L10.8067 17.1795C10.691 17.3009 10.5025 17.3009 10.3867 17.1809Z"
+                    />
+                  </svg>
+                  <span class="companions-filter__checkbox-text">
+                    Веган-сыроед
+                  </span>
+                </label>
+              </fieldset>
+
+              <fieldset
+                class="companions-filter__fieldset companions-filter__fieldset_transport"
+              >
+                <legend class="visually-hidden">Транспорт</legend>
+                <button
+                  class="companions-filter__fieldset-toggle"
+                  type="button"
+                  aria-label="Открыть поле"
+                >
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
+                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+                  </svg>
+                </button>
+                <p class="companions-filter__legend">Транспорт</p>
+
+                <div class="companions-filter__fieldset-wrapper">
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="companions-filter-transport-airplane"
+                    id="companions-filter-transport-airplane"
+                    checked
+                  />
+                  <label
+                    class="companions-filter__transport companions-filter__transport_airplane"
+                    for="companions-filter-transport-airplane"
+                  >
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_airplane"></use>
+                    </svg>
+                    <span class="visually-hidden">Самолетом</span>
+                  </label>
+
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="companions-filter-transport-bus"
+                    id="companions-filter-transport-bus"
+                    checked
+                  />
+                  <label
+                    class="companions-filter__transport companions-filter__transport_bus"
+                    for="companions-filter-transport-bus"
+                  >
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                    </svg>
+                    <span class="visually-hidden">На автобусе</span>
+                  </label>
+
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="companions-filter-transport-bicycle"
+                    id="companions-filter-transport-bicycle"
+                  />
+                  <label
+                    class="companions-filter__transport companions-filter__transport_bicycle"
+                    for="companions-filter-transport-bicycle"
+                  >
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                    </svg>
+                    <span class="visually-hidden">На велосипеде</span>
+                  </label>
+
+                  <input
+                    class="visually-hidden"
+                    type="checkbox"
+                    name="companions-filter-transport-walk"
+                    id="companions-filter-transport-walk"
+                    checked
+                  />
+                  <label
+                    class="companions-filter__transport companions-filter__transport_walk"
+                    for="companions-filter-transport-walk"
+                  >
+                    <svg
+                      class="companions-filter__transport-icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_walk"></use>
+                    </svg>
+                    <span class="visually-hidden">Пешком</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="companions-filter__fieldset">
+                <legend class="visually-hidden">Левел</legend>
+                <button
+                  class="companions-filter__fieldset-toggle"
+                  type="button"
+                  aria-label="Открыть поле"
+                >
+                  <svg
+                    class="companions-filter__toggle-icon"
+                    aria-hidden="true"
+                    width="10"
+                    height="6"
+                  >
+                    <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+                  </svg>
+                </button>
+                <p class="companions-filter__legend">Левел</p>
+
+                <div class="companions-filter__rating">
+                  <input
+                    class="companions-filter__numeric-field"
+                    type="text"
+                    name="companions-filter-rating-min"
+                    id="companions-filter-rating-min"
+                    aria-label="Минимальный рейтинг"
+                    value="30"
+                  />
+                  <input
+                    class="companions-filter__numeric-field"
+                    type="text"
+                    name="companions-filter-rating-max"
+                    id="companions-filter-rating-max"
+                    aria-label="Максимальный рейтинг"
+                    value="100"
+                  />
+                </div>
+
+                <div class="rating-slider companions-filter__rating-slider">
+                  <div class="rating-slider__line"></div>
+                  <div class="rating-slider__line-filled"></div>
+                  <div class="rating-slider__pin rating-slider__pin_min"></div>
+                  <div class="rating-slider__pin rating-slider__pin_max"></div>
+                </div>
+              </fieldset>
+
+              <button class="companions-filter__button" type="submit">
+                <span class="companions-filter__button-text">Показать</span>
+              </button>
+            </form>
+          </div>
         </section>
 
         <section class="companions">
@@ -494,8 +2461,34 @@
 
           <ul class="companions__list">
             <li class="companion companions__companion">
-              <img class="companion__pic" src="#" alt="" />
-              <h3 class="companion__name">Таня Фирсова</h3>
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/tat-firsova-small.webp    1x,
+                      ./img/users/tat-firsova-small@2x.webp 2x,
+                      ./img/users/tat-firsova-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/tat-firsova-small.jpg    1x,
+                      ./img/users/tat-firsova-small@2x.jpg 2x,
+                      ./img/users/tat-firsova-small@3x.jpg 3x
+                    "
+                    src="./img/users/tat-firsova-small.jpg"
+                    alt="Татьяна Фирсова"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
+
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Таня Фирсова</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#ЗОЖ</li>
@@ -507,9 +2500,11 @@
               </ul>
 
               <section class="companion__favs">
-                <h3 class="companion__title">Хочет посетить:</h3>
+                <h3 class="companion__title companion__title_favs">
+                  Хочет посетить:
+                </h3>
 
-                <ul class="companion__favs">
+                <ul class="companion__favs-list">
                   <li class="flag flag_sri">
                     <span class="flag__name">Шри-ланка</span>
                   </li>
@@ -523,42 +2518,130 @@
               </section>
 
               <section class="companion__transport">
-                <h3 class="companion__title">Транспорт:</h3>
+                <h3 class="companion__title companion__title_transport">
+                  Транспорт:
+                </h3>
 
                 <ul class="companion__transport-icons">
-                  <li class="transport-icon transport-icon_prefer">
-                    <span class="visually-hidden">Самолетом</span>
+                  <li
+                    class="companion__icon-wrapper companion__icon-wrapper_prefer"
+                    aria-label="Самолетом"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_airplane"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">На автобусе</span>
+                  <li class="companion__icon-wrapper" aria-label="На автобусе">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">На велосипеде</span>
+                  <li
+                    class="companion__icon-wrapper"
+                    aria-label="На велосипеде"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">Пешком</span>
+                  <li class="companion__icon-wrapper" aria-label="Пешком">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_walk"></use>
+                    </svg>
                   </li>
                 </ul>
               </section>
 
               <section class="companion__rating">
-                <h3 class="companion__title">Левел:</h3>
+                <h3 class="companion__title companion__title_rating">Левел:</h3>
 
-                <div class="companion-rating">
+                <div class="companion-rating companion-rating_99">
                   <span class="companion-rating__count">99</span>
                   <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
-              <button class="companion__button" type="button">Позвать</button>
-              <button class="companion__button-like" type="button">
-                <span class="visually-hidden">Поставить лайк!</span>
-              </button>
+              <div class="companion__buttons">
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
+                <div class="companion__like-wrapper">
+                  <button
+                    class="companion__button-like companion__button-like_active"
+                    type="button"
+                    aria-label="Поставить лайк"
+                  >
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
+                    </svg>
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart"></use>
+                    </svg>
+                  </button>
+                  <span>1.5 M</span>
+                </div>
+              </div>
             </li>
 
             <li class="companion companions__companion">
-              <img class="companion__pic" src="#" alt="" />
-              <h3 class="companion__name">Петя Демин</h3>
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/petr-demin-small.webp    1x,
+                      ./img/users/petr-demin-small@2x.webp 2x,
+                      ./img/users/petr-demin-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/petr-demin-small.jpg    1x,
+                      ./img/users/petr-demin-small@2x.jpg 2x,
+                      ./img/users/petr-demin-small@3x.jpg 3x
+                    "
+                    src="./img/users/petr-demin-small.jpg"
+                    alt="Петр Демин"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
+
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Петя Демин</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#бургер</li>
@@ -569,10 +2652,12 @@
               </ul>
 
               <section class="companion__favs">
-                <h3 class="companion__title">Хочет посетить:</h3>
+                <h3 class="companion__title companion__title_favs">
+                  Хочет посетить:
+                </h3>
 
-                <ul class="companion__favs">
-                  <li class="flag flag_belgium">
+                <ul class="companion__favs-list">
+                  <li class="flag flag_belg">
                     <span class="flag__name">Бельгия</span>
                   </li>
                   <li class="flag flag_czech">
@@ -582,42 +2667,130 @@
               </section>
 
               <section class="companion__transport">
-                <h3 class="companion__title">Транспорт:</h3>
+                <h3 class="companion__title companion__title_transport">
+                  Транспорт:
+                </h3>
 
                 <ul class="companion__transport-icons">
-                  <li class="transport-icon transport-icon_prefer">
-                    <span class="visually-hidden">Самолетом</span>
+                  <li
+                    class="companion__icon-wrapper companion__icon-wrapper_prefer"
+                    aria-label="Самолетом"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_airplane"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon transport-icon_prefer">
-                    <span class="visually-hidden">На автобусе</span>
+                  <li class="companion__icon-wrapper" aria-label="На автобусе">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">На велосипеде</span>
+                  <li
+                    class="companion__icon-wrapper"
+                    aria-label="На велосипеде"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon transport-icon_prefer">
-                    <span class="visually-hidden">Пешком</span>
+                  <li class="companion__icon-wrapper" aria-label="Пешком">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_walk"></use>
+                    </svg>
                   </li>
                 </ul>
               </section>
 
               <section class="companion__rating">
-                <h3 class="companion__title">Левел:</h3>
+                <h3 class="companion__title companion__title_rating">Левел:</h3>
 
-                <div class="companion-rating">
+                <div class="companion-rating companion-rating_80">
                   <span class="companion-rating__count">80</span>
                   <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
-              <button class="companion__button" type="button">Позвать</button>
-              <button class="companion__button-like" type="button">
-                <span class="visually-hidden">Поставить лайк!</span>
-              </button>
+              <div class="companion__buttons">
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
+                <div class="companion__like-wrapper">
+                  <button
+                    class="companion__button-like"
+                    type="button"
+                    aria-label="Поставить лайк"
+                  >
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
+                    </svg>
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart"></use>
+                    </svg>
+                  </button>
+                  <span>1500</span>
+                </div>
+              </div>
             </li>
 
             <li class="companion companions__companion">
-              <img class="companion__pic" src="#" alt="" />
-              <h3 class="companion__name">Марк Смолов</h3>
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/mark-smolov-small.webp    1x,
+                      ./img/users/mark-smolov-small@2x.webp 2x,
+                      ./img/users/mark-smolov-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/mark-smolov-small.jpg    1x,
+                      ./img/users/mark-smolov-small@2x.jpg 2x,
+                      ./img/users/mark-smolov-small@3x.jpg 3x
+                    "
+                    src="./img/users/mark-smolov-small.jpg"
+                    alt="Марк Смолов"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
+
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Марк Смолов</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#рэп</li>
@@ -628,58 +2801,148 @@
               </ul>
 
               <section class="companion__favs">
-                <h3 class="companion__title">Хочет посетить:</h3>
+                <h3 class="companion__title companion__title_favs">
+                  Хочет посетить:
+                </h3>
 
-                <ul class="companion__favs">
-                  <li class="flag flag_belgium">
+                <ul class="companion__favs-list">
+                  <li class="flag flag_usa">
                     <span class="flag__name">США</span>
                   </li>
-                  <li class="flag flag_czech">
+                  <li class="flag flag_australia">
                     <span class="flag__name">Австралия</span>
                   </li>
-                  <li class="flag flag_czech">
+                  <li class="flag flag_dominica">
                     <span class="flag__name">Доминика</span>
                   </li>
                 </ul>
               </section>
 
               <section class="companion__transport">
-                <h3 class="companion__title">Транспорт:</h3>
+                <h3 class="companion__title companion__title_transport">
+                  Транспорт:
+                </h3>
 
                 <ul class="companion__transport-icons">
-                  <li class="transport-icon transport-icon_prefer">
-                    <span class="visually-hidden">Самолетом</span>
+                  <li
+                    class="companion__icon-wrapper companion__icon-wrapper_prefer"
+                    aria-label="Самолетом"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_airplane"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">На автобусе</span>
+                  <li class="companion__icon-wrapper" aria-label="На автобусе">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">На велосипеде</span>
+                  <li
+                    class="companion__icon-wrapper"
+                    aria-label="На велосипеде"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">Пешком</span>
+                  <li class="companion__icon-wrapper" aria-label="Пешком">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_walk"></use>
+                    </svg>
                   </li>
                 </ul>
               </section>
 
               <section class="companion__rating">
-                <h3 class="companion__title">Левел:</h3>
+                <h3 class="companion__title companion__title_rating">Левел:</h3>
 
-                <div class="companion-rating">
+                <div class="companion-rating companion-rating_25">
                   <span class="companion-rating__count">25</span>
                   <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
-              <button class="companion__button" type="button">Позвать</button>
-              <button class="companion__button-like" type="button">
-                <span class="visually-hidden">Поставить лайк!</span>
-              </button>
+              <div class="companion__buttons">
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
+                <div class="companion__like-wrapper">
+                  <button
+                    class="companion__button-like"
+                    type="button"
+                    aria-label="Поставить лайк"
+                  >
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
+                    </svg>
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart"></use>
+                    </svg>
+                  </button>
+                  <span>170</span>
+                </div>
+              </div>
             </li>
 
-            <li class="companion companions__companion">
-              <img class="companion__pic" src="#" alt="" />
-              <h3 class="companion__name">Лариса Роговая</h3>
+            <li class="companion companion_online companions__companion">
+              <a class="companion__photo" href="#">
+                <picture class="companion__pic-wrapper">
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/users/lar-rogovaya-small.webp    1x,
+                      ./img/users/lar-rogovaya-small@2x.webp 2x,
+                      ./img/users/lar-rogovaya-small@3x.webp 3x
+                    "
+                  />
+                  <img
+                    class="companion__pic"
+                    srcset="
+                      ./img/users/lar-rogovaya-small.jpg    1x,
+                      ./img/users/lar-rogovaya-small@2x.jpg 2x,
+                      ./img/users/lar-rogovaya-small@3x.jpg 3x
+                    "
+                    src="./img/users/lar-rogovaya-small.jpg"
+                    alt="Лариса Роговая"
+                    width="70"
+                    height="70"
+                  />
+                </picture>
+              </a>
+
+              <h3 class="companion__name">
+                <a href="#" class="companion__name-link">Лариса Роговая</a>
+              </h3>
 
               <ul class="companion__hashtags">
                 <li class="companion__hashtag">#образование</li>
@@ -689,101 +2952,303 @@
               </ul>
 
               <section class="companion__favs">
-                <h3 class="companion__title">Хочет посетить:</h3>
+                <h3 class="companion__title companion__title_favs">
+                  Хочет посетить:
+                </h3>
 
-                <ul class="companion__favs">
-                  <li class="flag flag_czech">
+                <ul class="companion__favs-list">
+                  <li class="flag flag_uk">
                     <span class="flag__name">Великобритания</span>
                   </li>
-                  <li class="flag flag_belgium">
+                  <li class="flag flag_germany">
                     <span class="flag__name">Германия</span>
                   </li>
                 </ul>
               </section>
 
               <section class="companion__transport">
-                <h3 class="companion__title">Транспорт:</h3>
+                <h3 class="companion__title companion__title_transport">
+                  Транспорт:
+                </h3>
 
                 <ul class="companion__transport-icons">
-                  <li class="transport-icon transport-icon_prefer">
-                    <span class="visually-hidden">Самолетом</span>
+                  <li
+                    class="companion__icon-wrapper companion__icon-wrapper_prefer"
+                    aria-label="Самолетом"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_airplane"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon transport-icon_prefer">
-                    <span class="visually-hidden">На автобусе</span>
+                  <li class="companion__icon-wrapper" aria-label="На автобусе">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bus"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">На велосипеде</span>
+                  <li
+                    class="companion__icon-wrapper"
+                    aria-label="На велосипеде"
+                  >
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
+                    </svg>
                   </li>
-                  <li class="transport-icon">
-                    <span class="visually-hidden">Пешком</span>
+                  <li class="companion__icon-wrapper" aria-label="Пешком">
+                    <svg
+                      class="companion__icon"
+                      aria-hidden="true"
+                      width="17"
+                      height="16"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_walk"></use>
+                    </svg>
                   </li>
                 </ul>
               </section>
 
               <section class="companion__rating">
-                <h3 class="companion__title">Левел:</h3>
+                <h3 class="companion__title companion__title_rating">Левел:</h3>
 
-                <div class="companion-rating">
+                <div class="companion-rating companion-rating_50">
                   <span class="companion-rating__count">50</span>
                   <span class="companion-rating__text">level</span>
                 </div>
               </section>
 
-              <button class="companion__button" type="button">Позвать</button>
-              <button class="companion__button-like" type="button">
-                <span class="visually-hidden">Поставить лайк!</span>
-              </button>
+              <div class="companion__buttons">
+                <button class="companion__button" type="button">
+                  <span class="companion__button-text">Позвать!</span>
+                </button>
+                <div class="companion__like-wrapper">
+                  <button
+                    class="companion__button-like"
+                    type="button"
+                    aria-label="Поставить лайк"
+                  >
+                    <svg
+                      class="companion__like-icon-fill"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart-fill"></use>
+                    </svg>
+                    <svg
+                      class="companion__like-icon"
+                      aria-hidden="true"
+                      width="12"
+                      height="10"
+                    >
+                      <use xlink:href="./img/sprite.svg#icon_heart"></use>
+                    </svg>
+                  </button>
+                  <span>23</span>
+                </div>
+              </div>
             </li>
           </ul>
 
-          <button class="companions__button" type="button">Показать еще</button>
+          <button class="companions__button" type="button">
+            <svg
+              class="companions__button-icon"
+              aria-hidden="true"
+              width="18"
+              height="18"
+            >
+              <use xlink:href="./img/sprite.svg#icon_plus-more"></use>
+            </svg>
+            <span class="companions__button-text">Показать еще</span>
+          </button>
 
           <div class="companions__pagination">
-            <button class="companions__previous" type="button">
-              <span class="visually-hidden">Предыдущая страница</span>
+            <ul class="companions__pages">
+              <li class="companions__page companions__page_active">
+                <a class="companions__page-link">1</a>
+              </li>
+              <li class="companions__page">
+                <a class="companions__page-link" href="#">2</a>
+              </li>
+              <li class="companions__page">
+                <a class="companions__page-link" href="#">3</a>
+              </li>
+              <li class="companions__page">
+                <a class="companions__page-link" href="#">4</a>
+              </li>
+            </ul>
+
+            <button
+              class="companions__previous"
+              type="button"
+              aria-label="Предыдущая страница"
+            >
+              <svg
+                class="companions__pagination-icon"
+                aria-hidden="true"
+                width="13"
+                height="20"
+              >
+                <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+              </svg>
             </button>
-            <button class="companions__next" type="button">
-              <span class="visually-hidden">Следующая страница</span>
+            <button
+              class="companions__next"
+              type="button"
+              aria-label="Следующая страница"
+            >
+              <svg
+                class="companions__pagination-icon"
+                aria-hidden="true"
+                width="13"
+                height="20"
+              >
+                <use xlink:href="./img/sprite.svg#icon_toggle"></use>
+              </svg>
             </button>
           </div>
         </section>
-      </main>
+      </div>
+    </main>
 
-      <footer class="footer">
-        <a class="logo footer__logo">
-          <img
-            class="logo__pic"
-            src="./img/site-logo-dark.png"
-            alt="Логотип сервиса «Погнали?»"
-          />
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a class="logo footer__logo" href="./index.html">
+          <picture class="logo__pic logo__pic_dark">
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/contents/logos/site-logo-desktop-dark.webp    1x,
+                ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
+              "
+              width="200"
+              height="52"
+            />
+            <source
+              media="(min-width: 1440px)"
+              srcset="
+                ./img/contents/logos/site-logo-desktop-dark.png    1x,
+                ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
+              "
+              width="200"
+              height="52"
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                ./img/contents/logos/site-logo-tablet-dark.webp    1x,
+                ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
+              "
+              width="166"
+              height="42"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/contents/logos/site-logo-tablet-dark.png    1x,
+                ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
+              "
+              width="166"
+              height="42"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./img/contents/logos/site-logo-dark.webp    1x,
+                ./img/contents/logos/site-logo-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-dark@3x.webp 3x
+              "
+              width="100"
+              height="15"
+            />
+            <img
+              srcset="
+                ./img/contents/logos/site-logo-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-dark@3x.png 3x
+              "
+              src="./img/contents/logos/site-logo-dark.png"
+              alt="Логотип сервиса «Погнали?»"
+              width="100"
+              height="15"
+            />
+          </picture>
         </a>
 
         <ul class="socials footer__socials">
           <li class="socials__item">
-            <a class="socials__link socials__link_facebook" href="#">
-              <span class="visually-hidden">Facebook</span>
+            <a class="socials__link" href="#" aria-label="Facebook">
+              <svg
+                class="socials__icon socials__icon_facebook"
+                aria-hidden="true"
+                width="11"
+                height="21"
+              >
+                <use xlink:href="./img/sprite.svg#icon_facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link_vk" href="#">
-              <span class="visually-hidden">VK</span>
+            <a class="socials__link" href="#" aria-label="Вконтакте">
+              <svg
+                class="socials__icon socials__icon_vkontakte"
+                aria-hidden="true"
+                width="23"
+                height="12"
+              >
+                <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
+              </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link_instagram" href="#">
-              <span class="visually-hidden">Instagram</span>
+            <a class="socials__link" href="#" aria-label="Instagram">
+              <svg
+                class="socials__icon socials__icon_instagram"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
+                <use xlink:href="./img/sprite.svg#icon_instagram"></use>
+              </svg>
             </a>
           </li>
-        </ul>
         </ul>
 
-        <section class="developed">
-          <h2 class="developed__title">Разработано</h2>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="./img/icons/logo-htmlacademy.svg" alt="Логотип академии" />
+        <section class="developed footer__developed">
+          <a
+            class="developed__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+          >
+            <h2 class="developed__title">Разработано</h2>
+            <img
+              src="./img/svg/logo-htmlacademy.svg"
+              alt="Логотип академии"
+              width="27"
+              height="33"
+            />
           </a>
         </section>
-      </footer>
-    </div>
+      </div>
+    </footer>
+    <script src="./js/header.min.js"></script>
+    <script src="./js/region-filter.min.js"></script>
   </body>
 </html>

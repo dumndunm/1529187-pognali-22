@@ -80,6 +80,8 @@
   font-size: 14px;
   color: var(--basic-blue);
 
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     min-width: 52px;
     min-height: 70px;
@@ -90,6 +92,10 @@
     min-height: 68px;
     border: 1px solid #cbced9;
     border-radius: 4px;
+
+    &:hover {
+      border-color: #959bb2;
+    }
   }
 }
 
@@ -98,9 +104,19 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 16px;
+
+    &:hover {
+      border-color: #959bb2;
+    }
   }
 }
 
 .table-symbols__cell_active {
-  background-color: #edeff6;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.table-symbols__cell:active {
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
 }

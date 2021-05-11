@@ -38,6 +38,26 @@
   }
 }
 
+.feedback__contacts .contacts__link:hover {
+  &::after {
+    color: var(--basic-orange);
+  }
+
+  .contacts__icon {
+    fill: var(--basic-orange);
+  }
+}
+
+.feedback__contacts .contacts__link:active {
+  &::after {
+    opacity: 0.3;
+  }
+
+  .contacts__icon {
+    opacity: 0.3;
+  }
+}
+
 .contacts__link::after {
   display: block;
   margin-left: 16px;
@@ -158,6 +178,16 @@
   background-color: var(--special-yellow);
 }
 
+.contacts__link_call:hover .contacts__icon-wrapper,
+.contacts__link_call:focus .contacts__icon-wrapper {
+  background-color: #f26926;
+}
+
+.contacts__link_mail:hover .contacts__icon-wrapper,
+.contacts__link_mail:focus .contacts__icon-wrapper {
+  background-color: var(--basic-orange);
+}
+
 .header .contacts__icon {
   fill: var(--basic-yellow);
 
@@ -172,6 +202,11 @@
 
 .feedback .contacts__icon {
   fill: var(--basic-yellow);
+}
+
+.contacts__link_call:active .contacts__icon,
+.contacts__link_mail:active .contacts__icon {
+  opacity: 0.3;
 }
 
 .contacts__icon_telephone {

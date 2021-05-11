@@ -1,6 +1,6 @@
 .trip-form {
   position: relative;
-  padding-bottom: 73px;
+  padding-bottom: 67px;
 
   background-color: var(--extra-blue-light);
 
@@ -12,7 +12,7 @@
     padding-left: var(--page-padding-size);
     padding-right: var(--page-padding-size);
 
-    padding-bottom: 105px;
+    padding-bottom: 82px;
   }
 }
 
@@ -60,12 +60,14 @@
 
   @media (min-width: $tablet-width) {
     max-width: 1024px;
+    padding-top: 15px;
     padding-left: 35px;
     padding-right: 35px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1320px;
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
   }
@@ -82,7 +84,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 64px;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
     font-size: 36px;
   }
 }
@@ -92,55 +94,14 @@
   top: 0;
   right: calc(var(--page-padding-size) + 19px);
 
-  display: flex;
-  align-items: center;
-  height: 24px;
-  margin-bottom: 0;
-  margin-top: 0;
-  list-style: none;
-
   @media (min-width: $tablet-width) {
+    top: 21px;
     right: var(--content-padding-size);
-    height: 36px;
   }
-}
 
-.trip-form__marker {
-  display: flex;
-}
-
-.trip-form__marker:not(:last-child) {
-  margin-right: 16px;
-
-  @media (min-width: $tablet-width) {
-    margin-right: 29px;
+  @media (min-width: $desktop-width) {
+    display: none;
   }
-}
-
-.trip-form__marker::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: var(--basic-blue);
-  opacity: 0.3;
-
-  @media (min-width: $tablet-width) {
-    width: 6px;
-    height: 6px;
-  }
-}
-
-.trip-form__marker_active::before {
-  opacity: 1;
-}
-
-.trip-form__marker-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
 }
 
 .trip-form__step {
@@ -149,7 +110,9 @@
   flex-direction: column;
   align-items: center;
 
-  padding-top: 24px;
+  margin-bottom: 10px;
+
+  padding-top: 26px;
   padding-left: var(--content-padding-size);
   padding-right: var(--content-padding-size);
   padding-bottom: 0;
@@ -161,9 +124,9 @@
   @media (min-width: $tablet-width) {
     min-width: 618px;
     padding-top: 48px;
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-bottom: 56px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 82px;
 
     border-radius: 30px;
   }
@@ -185,13 +148,47 @@
     margin-bottom: 39px;
     padding-bottom: 56px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
+    padding-bottom: 106px;
+  }
 }
 
-.trip-form__step:not(:last-child) {
+.trip-form__step:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 51px;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 43px;
+    padding-bottom: 85px;
+  }
+}
+
+.trip-form__step:last-child {
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 38px;
+    padding-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+    padding-bottom: 83px;
+  }
+}
+
+.trip-form__step-markers {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    top: 107px;
+    left: calc(100% - 388px);
   }
 }
 
@@ -310,6 +307,7 @@
 }
 
 .trip-form__numeric-label {
+  position: relative;
   align-self: start;
   display: flex;
   justify-content: space-between;
@@ -325,7 +323,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 24px;
-    padding-top: 26px;
+    padding-top: 23px;
 
     font-size: 20px;
     letter-spacing: 0.1em;
@@ -333,7 +331,8 @@
 
   @media (min-width: $desktop-width) {
     width: 200px;
-    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 0;
     border-top: none;
 
     letter-spacing: 0;
@@ -345,7 +344,9 @@
   opacity: 0.3;
 
   @media (min-width: $desktop-width) {
-    display: none;
+    position: absolute;
+    left: 440px;
+    opacity: 1;
   }
 }
 
@@ -354,30 +355,11 @@
   opacity: 0.3;
 
   @media (min-width: $desktop-width) {
-    display: none;
+    position: absolute;
+    left: 440px;
+    opacity: 1;
   }
 }
-
-// .trip-form__numeric-field {
-//   margin-bottom: 20px;
-
-//   @media (min-width: $tablet-width) {
-//     margin-bottom: 25px;
-
-//     &:last-of-type {
-//       margin-bottom: 60px;
-//     }
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     margin: 0;
-
-//     &:last-of-type {
-//       margin-bottom: 0;
-//       margin-left: 100px;
-//     }
-//   }
-// }
 
 .trip-form__checkbox {
   order: 1;
@@ -416,6 +398,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
 }
 
@@ -441,7 +424,7 @@
       width: 14px;
       height: 14px;
 
-      background-image: url("../img/icons/arrow-blue.svg");
+      background-image: url("../img/svg/blue-arrow.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -458,6 +441,10 @@
     width: 223px;
     height: 80px;
 
+    position: relative;
+    left: 18px;
+
+    margin-top: 0;
     padding-left: 0;
     padding-right: 0;
 
@@ -473,7 +460,7 @@
       margin-right: 20px;
       margin-bottom: 5px;
 
-      background-image: url("../img/icons/arrow-blue-revert.svg");
+      background-image: url("../img/svg/blue-arrow-revert.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -485,93 +472,41 @@
   }
 }
 
+.trip-form__button-back:hover,
+.trip-form__button-back:focus {
+  opacity: 0.7;
+  background-color: transparent;
+}
+
+.trip-form__button-back:active {
+  opacity: 0.3;
+}
+
 .trip-form__route {
   margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 13px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+  }
 }
 
-.trip-form__button-add {
+.trip-form__button-add-wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   width: 100%;
-  height: 42px;
 
   margin-bottom: 25px;
 
-  padding-left: 10px;
-  padding-right: 15px;
-
-  border: none;
-  border-radius: 4px;
-
-  font-family: "Blogger Sans", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-
-  background-color: var(--basic-blue-light);
-
-  @media (min-width: $tablet-width) {
-    align-self: start;
-    width: calc(100% - 162px - 13px);
-    height: 70px;
-
-    padding-left: 25px;
-    padding-right: 25px;
-
-    font-size: 20px;
-    letter-spacing: 0.1em;
-  }
-
   @media (min-width: $desktop-width) {
-    width: 730px;
     margin-bottom: 58px;
   }
 }
 
-.trip-form__button-add svg {
-  opacity: 0.2;
-  stroke: #000000;
-
-  @media (min-width: $tablet-width) {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-.trip-form__button-add::after {
-  @media (min-width: $tablet-width) {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 70px;
-
-    position: absolute;
-    top: 50%;
-    right: -35px;
-
-    background-image: url("../../img/icons/shadow-line.png");
-    background-repeat: no-repeat;
-    background-size: 1px 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    right: -53px;
-
-    height: 190px;
-    background-color: #e1e3e9;
-    background-image: none;
-  }
-}
-
-.trip-form__button-add::before {
+.trip-form__button-add-wrapper::before {
   content: "";
   display: block;
   width: 8px;
@@ -590,14 +525,106 @@
   @media (min-width: $tablet-width) {
     width: 14px;
     height: 14px;
-    right: -42px;
+    right: 133px;
 
     background-color: var(--basic-blue-light);
   }
 
   @media (min-width: $desktop-width) {
-    right: -60px;
+    right: 212px;
   }
+}
+
+.trip-form__button-add-wrapper::after {
+  @media (min-width: $tablet-width) {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 70px;
+
+    position: absolute;
+    top: 50%;
+    right: 140px;
+
+    background-image: url("../img/graphics/shadow-line.png");
+    background-repeat: no-repeat;
+    background-size: 1px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 219px;
+
+    height: 190px;
+    background-color: #e1e3e9;
+    background-image: none;
+  }
+}
+
+.trip-form__button-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 42px;
+
+  padding-left: 10px;
+  padding-right: 15px;
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Blogger Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.09em;
+  color: var(--basic-blue);
+  text-transform: uppercase;
+
+  background-color: var(--basic-blue-light);
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+    min-width: 369px;
+    width: calc(100% - 162px - 13px);
+    height: 70px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
+}
+
+.trip-form__button-add:hover,
+.trip-form__button-add:focus {
+  background-color: var(--special-blue-light);
+}
+
+.trip-form__button-add svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.2;
+  stroke: #000000;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.trip-form__button-add:hover svg,
+.trip-form__button-add:focus svg {
+  opacity: 0.3;
+}
+
+.trip-form__button-add:active svg {
+  opacity: 0.1;
 }
 
 .trip-form__action-plan {
@@ -608,6 +635,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 57px;
+    margin-bottom: 62px;
   }
 }

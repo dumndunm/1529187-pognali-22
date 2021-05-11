@@ -5,10 +5,6 @@
   align-items: center;
 
   border-radius: 4px;
-
-  @media (min-width: $tablet-width) {
-    min-width: 532px;
-  }
 }
 
 .country::before {
@@ -66,7 +62,7 @@
 }
 
 .country::after {
-  content: url("../img/icons/arrow-down.svg");
+  content: url("../img/svg/arrow-down.svg");
   position: absolute;
   right: 49px;
   bottom: -22px;
@@ -107,6 +103,10 @@
     min-width: 730px;
     width: auto;
   }
+}
+
+.country__name:hover {
+  border-color: #959bb2;
 }
 
 .country_null .country__name {
@@ -178,14 +178,12 @@
   border: none;
 
   background-color: transparent;
-  background-image: url("../img/icons/fade_button-choose.png");
+  background-image: url("../img/graphics/fade.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 
-  svg {
-    opacity: 0.3;
-  }
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 70px;
@@ -194,16 +192,21 @@
     padding-right: 21px;
 
     background-image: none;
-
-    svg {
-      width: 26px;
-      height: 22px;
-    }
   }
 }
 
 .country_dropdown .country__button-choose {
   display: none;
+}
+
+.country__icon-choose {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 22px;
+  }
 }
 
 .country__flag {
@@ -223,7 +226,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 162px;
+    width: 166px;
     height: 70px;
 
     border: none;

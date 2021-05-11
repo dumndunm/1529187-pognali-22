@@ -14,15 +14,12 @@
     width: 575px;
     max-width: 575px;
     border: none;
-    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18); // tablet
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
   }
 
   @media (min-width: $desktop-width) {
     width: 730px;
     max-width: 730px;
-
-    border: none;
-    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18); // tablet
   }
 }
 
@@ -59,6 +56,7 @@
   font-size: 16px;
   line-height: 22px;
   color: var(--basic-grey);
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -68,6 +66,14 @@
       margin-bottom: 10px;
     }
   }
+}
+
+.choose-country__text:hover {
+  color: var(--basic-blue);
+}
+
+.choose-country__text:active {
+  opacity: 0.3;
 }
 
 .choose-country__text:not(:last-child) {
@@ -95,6 +101,7 @@
   border: none;
 
   background-color: transparent;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     top: -70px;
@@ -104,13 +111,16 @@
     height: 70px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     right: 23px;
   }
 }
 
 .choose-country__icon-close {
+  width: 9px;
+  height: 9px;
   stroke: var(--basic-white);
+  stroke-width: 3px;
 
   @media (min-width: $tablet-width) {
     width: 17px;
@@ -118,4 +128,13 @@
 
     opacity: 0.3;
   }
+}
+
+.choose-country__close:hover .choose-country__icon-close,
+.choose-country__close:focus .choose-country__icon-close {
+  opacity: 1;
+}
+
+.choose-country__close:active .choose-country__icon-close {
+  opacity: 0.1;
 }
