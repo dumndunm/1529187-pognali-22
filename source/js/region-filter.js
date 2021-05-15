@@ -16,4 +16,5 @@ const onFoldedButtonClick = (evt) => {
   regionFilterButtonFolded.removeEventListener("click", onFoldedButtonClick);
 };
 
+regionFilter.classList.add("region-filter_collapse");
 regionFilterButton.addEventListener("click", onFilterButtonClick);

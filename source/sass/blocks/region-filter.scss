@@ -220,13 +220,14 @@
 }
 
 .region-filter__form {
-  position: relative;
-  display: block;
+  position: absolute;
+  width: 100%;
   padding-bottom: 28px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 
   background-color: #e2e5f2;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 79px;
@@ -235,6 +236,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: static;
     padding-top: 12px;
     background-color: transparent;
   }
@@ -289,7 +291,6 @@
     width: 768px;
     padding-top: 0;
     padding-left: calc(var(--page-padding-size) + var(--content-padding-size));
-    // padding-right: calc(var(--page-padding-size) + var(--content-padding-size));
   }
 
   @media (min-width: $desktop-width) {
@@ -322,6 +323,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    top: 60px;
     max-width: 1440px;
     padding-left: 403px;
   }
@@ -341,6 +343,10 @@
   @media (min-width: $tablet-width) {
     margin-right: 28px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 33px;
   }
 }
 

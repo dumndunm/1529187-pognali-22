@@ -36,6 +36,10 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 4px;
+  }
 }
 
 .date-info__button {
@@ -44,6 +48,30 @@
   align-items: center;
   border: none;
   background: transparent;
+}
+
+.date-info__button_back {
+  padding-left: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.date-info__button_forward {
+  padding-right: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
 }
 
 .date-info__icon {

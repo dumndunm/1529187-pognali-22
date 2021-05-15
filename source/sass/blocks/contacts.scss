@@ -1,5 +1,6 @@
 .contacts {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
 
   list-style: none;
@@ -14,6 +15,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
+    flex-direction: row;
   }
 }
 
@@ -38,7 +40,8 @@
   }
 }
 
-.feedback__contacts .contacts__link:hover {
+.feedback__contacts .contacts__link:hover,
+.feedback__contacts .contacts__link:focus {
   &::after {
     color: var(--basic-orange);
   }

@@ -14,7 +14,7 @@
   }
 }
 
-.header .header-toggle__icon_close {
+.header .header-toggle__icon-close {
   display: block;
   width: 18px;
   height: 18px;
@@ -30,15 +30,15 @@
   }
 }
 
-.header_collapse .header-toggle__icon_close {
+.header_collapse .header-toggle__icon-close {
   display: none;
 }
 
-.header .header-toggle__icon_burger {
+.header .header-toggle__icon-burger {
   display: none;
 }
 
-.header_collapse .header-toggle__icon_burger {
+.header_collapse .header-toggle__icon-burger {
   display: block;
   width: 25px;
   height: 11px;
@@ -46,6 +46,6 @@
   fill: var(--basic-white);
 }
 
-.header_scroll .header-toggle__icon_burger {
+.header_scroll .header-toggle__icon-burger {
   fill: var(--special-grey);
 }

@@ -31,7 +31,7 @@
   align-items: center;
 
   width: 32px;
-  height: 29px;
+  height: 30px;
 
   font-weight: 500;
   color: var(--basic-blue);
@@ -151,7 +151,7 @@
   }
 }
 
-.table-date__day_mobile {
+.table-date__day-mobile {
   display: block;
 
   @media (min-width: $tablet-width) {
@@ -159,7 +159,7 @@
   }
 }
 
-.table-date__day_tablet {
+.table-date__day-tablet {
   display: none;
 
   @media (min-width: $tablet-width) {

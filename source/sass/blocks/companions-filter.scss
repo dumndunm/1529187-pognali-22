@@ -134,12 +134,17 @@
 }
 
 .companions-filter__fieldset:last-of-type {
+  margin-bottom: 21px;
   padding-bottom: 5px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 36px;
     padding-bottom: 37px;
     border-bottom: 1px solid #f3c72b;
+
+    .companions-filter__legend {
+      top: calc(50% - 15px);
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -149,7 +154,41 @@
   }
 }
 
+.companions-filter__fieldset_transport {
+  padding-bottom: 20px;
+
+  .companions-filter__legend {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    .companions-filter__legend {
+      top: calc(50% - 3px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .companions-filter__legend {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.companions-filter__fieldset_transport.companions-filter__fieldset_collapse {
+  padding-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    .companions-filter__legend {
+      top: calc(50% - 3px);
+    }
+  }
+}
+
 .companions-filter__fieldset_collapse {
+  input {
+    display: none;
+  }
+
   .companions-filter__legend {
     margin-bottom: 0;
   }
@@ -162,7 +201,23 @@
     display: none;
   }
 
+  .companions-filter__fieldset-wrapper {
+    display: none;
+  }
+
+  .companions-filter__rating {
+    display: none;
+  }
+
+  .companions-filter__rating-slider {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
+    input {
+      display: block;
+    }
+
     .companions-filter__legend {
       margin-bottom: auto;
     }
@@ -174,10 +229,26 @@
     .companions-filter__checkbox {
       display: flex;
     }
+
+    .companions-filter__fieldset-wrapper {
+      display: flex;
+    }
+
+    .companions-filter__rating {
+      display: flex;
+    }
+
+    .companions-filter__rating-slider {
+      display: flex;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 8px;
+
+    input {
+      display: none;
+    }
 
     .companions-filter__legend {
       margin-bottom: 0;
@@ -189,6 +260,18 @@
     }
 
     .companions-filter__checkbox {
+      display: none;
+    }
+
+    .companions-filter__fieldset-wrapper {
+      display: none;
+    }
+
+    .companions-filter__rating {
+      display: none;
+    }
+
+    .companions-filter__rating-slider {
       display: none;
     }
   }
@@ -239,6 +322,10 @@
   }
 }
 
+input:focus + .companions-filter__checkbox {
+  outline: auto;
+}
+
 .companions-filter__checkbox-icon {
   width: 18px;
   height: 18px;
@@ -275,11 +362,13 @@ input:checked + .companions-filter__checkbox path {
   fill: var(--special-blue);
 }
 
-.companions-filter__checkbox:hover rect {
+.companions-filter__checkbox:hover rect,
+input:focus + .companions-filter__checkbox rect {
   fill-opacity: 0.6;
 }
 
-.companions-filter__checkbox:hover .companions-filter__checkbox-text {
+.companions-filter__checkbox:hover .companions-filter__checkbox-text,
+input:focus + .companions-filter__checkbox .companions-filter__checkbox-text {
   opacity: 0.6;
 }
 
@@ -342,41 +431,17 @@ input:checked + .companions-filter__checkbox path {
   height: 6px;
 }
 
-.companions-filter__fieldset_transport {
-  padding-bottom: 20px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 10px;
-    padding-bottom: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 17px;
-    padding-bottom: 34px;
-  }
-}
-
-.companions-filter__fieldset_transport .companions-filter__legend {
-  margin-bottom: 19px;
-
-  @media (min-width: $tablet-width) {
-    top: calc(50% - 2px);
-    margin-bottom: 0;
-  }
-}
-
 .companions-filter__fieldset-wrapper {
   display: flex;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    top: -10px;
     left: -6px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 0;
     left: 0;
+    margin-bottom: 14px;
   }
 }
 
@@ -413,9 +478,41 @@ input:checked + .companions-filter__checkbox path {
 }
 
 input:checked + .companions-filter__transport {
+  fill: var(--basic-blue);
+
   .companions-filter__transport-icon {
     fill-opacity: 1;
   }
+}
+
+input:checked + .companions-filter__transport:hover,
+input:checked:focus + .companions-filter__transport {
+  fill-opacity: 0.7;
+  filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+}
+
+input:checked:focus + .companions-filter__transport {
+  outline: auto;
+}
+
+input:not(:checked) + .companions-filter__transport:hover,
+input:not(:checked):focus + .companions-filter__transport {
+  fill: #b2b2b2;
+  filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+}
+
+input:not(:checked):focus + .companions-filter__transport {
+  outline: auto;
+}
+
+input:checked:active + .companions-filter__transport {
+  fill-opacity: 0.3;
+  background-color: #e2e5f1;
+}
+
+input:not(:checked):active + .companions-filter__transport {
+  fill: #ced3e2;
+  background-color: #e2e5f1;
 }
 
 .companions-filter__rating {
@@ -425,7 +522,7 @@ input:checked + .companions-filter__transport {
   width: 220px;
   height: 35px;
 
-  margin-bottom: 21px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     order: 1;
@@ -437,7 +534,7 @@ input:checked + .companions-filter__transport {
   @media (min-width: $desktop-width) {
     order: 0;
     width: 192px;
-    margin-bottom: 38px;
+    margin-bottom: 34px;
   }
 }
 
@@ -453,7 +550,7 @@ input:checked + .companions-filter__transport {
   transform: translate(-50%, -50%);
 
   background-color: #ffffff;
-  z-index: 10;
+  z-index: 1;
 }
 
 .companions-filter__rating::after {
@@ -468,23 +565,28 @@ input:checked + .companions-filter__transport {
   transform: translate(-50%, -50%);
 
   background-color: #cbced9;
-  z-index: 11;
+  z-index: 1;
 }
 
 .companions-filter__numeric-field {
   position: relative;
   width: 50%;
   margin: 0;
-  padding: 0;
+  padding: 6px 0 0;
   border: 1px solid #cbced9;
   border-radius: 4px;
 
   font-family: "Blogger Sans", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--basic-blue);
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    font-size: 20px;
+  }
 }
 
 .companions-filter__numeric-field:hover {
@@ -511,8 +613,6 @@ input:checked + .companions-filter__transport {
 }
 
 .companions-filter__rating-slider {
-  margin-bottom: 21px;
-
   @media (min-width: $tablet-width) {
     margin-right: 69px;
     margin-bottom: 0;
@@ -528,7 +628,7 @@ input:checked + .companions-filter__transport {
   justify-content: center;
   align-items: center;
 
-  width: 230px;
+  width: 100%;
   height: 41px;
 
   margin-left: auto;

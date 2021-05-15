@@ -52,6 +52,10 @@ input:checked + .checkbox .checkbox__marker {
 }
 
 .checkbox:hover .checkbox__border,
-.checkbox:focus .checkbox__border {
+input:focus + .checkbox .checkbox__border {
   stroke: #959bb2;
+}
+
+input:focus + .checkbox {
+  outline: auto;
 }

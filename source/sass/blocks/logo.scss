@@ -26,6 +26,24 @@
 
 .logo__pic_light {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.logo__pic_dark {
+  display: block;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.footer .logo__pic_dark {
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .header_collapse .logo__pic_dark {

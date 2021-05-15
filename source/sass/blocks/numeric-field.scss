@@ -33,8 +33,12 @@
 
   font-family: "Blogger Sans", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 15px;
   color: var(--basic-blue);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 57px;

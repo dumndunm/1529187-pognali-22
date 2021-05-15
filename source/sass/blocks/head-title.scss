@@ -18,7 +18,10 @@
   min-width: 320px;
   width: 100%;
   height: 143px;
-  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   position: absolute;
   bottom: 2px;
   left: 0;
@@ -26,8 +29,9 @@
   z-index: -1;
 
   @media (min-width: $tablet-width) {
-    height: 350px;
-    border-radius: 60px;
+    height: 354px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 }
 

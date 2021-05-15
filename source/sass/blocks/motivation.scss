@@ -190,9 +190,33 @@
   }
 }
 
-.motivation__point:nth-child(4) {
+.motivation__point:nth-child(n + 4):nth-child(odd) {
+  background-color: var(--special-yellow);
+  z-index: 20;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 0;
+    border-bottom-left-radius: var(--corner-radius-small);
+  }
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: var(--corner-radius-small);
+  }
+}
+
+.motivation__point:nth-child(n + 4):nth-child(odd)::after {
+  background-color: var(--special-yellow);
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 80px;
+    right: -80px;
+  }
+}
+
+.motivation__point:nth-child(n + 4):nth-child(even) {
   background-color: var(--basic-yellow);
-  z-index: 30;
+  z-index: 20;
 
   @media (min-width: $tablet-width) {
     border-radius: 0;
@@ -210,7 +234,15 @@
   }
 }
 
-.motivation__point:nth-child(4)::after {
+.motivation__point:nth-child(n + 4):nth-child(even)::after {
+  background-color: var(--basic-yellow);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.motivation__point:last-child::after {
   display: none;
 }
 

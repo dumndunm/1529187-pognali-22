@@ -50,6 +50,8 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
     padding-left: 0;
   }
 }
@@ -63,6 +65,7 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 34px;
+    margin-bottom: 15px;
     color: var(--basic-white);
   }
 }

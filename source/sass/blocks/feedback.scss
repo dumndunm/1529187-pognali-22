@@ -24,7 +24,7 @@
 
   @media (min-width: $desktop-width) {
     height: 106px;
-    bottom: -102px;
+    bottom: -105px;
   }
 }
 
@@ -118,7 +118,11 @@
 
 .feedback__link {
   color: var(--basic-yellow);
-  text-underline-offset: 4px;
+  text-underline-offset: 2px;
+
+  @media (min-width: $tablet-width) {
+    text-underline-offset: 4px;
+  }
 }
 
 .feedback__link:hover,
