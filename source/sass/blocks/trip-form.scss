@@ -142,6 +142,7 @@
 }
 
 .trip-form__step:first-child {
+  margin-bottom: 6px;
   padding-bottom: 23px;
 
   @media (min-width: $tablet-width) {
@@ -169,14 +170,17 @@
 
 .trip-form__step:last-child {
   margin-bottom: 10px;
+  padding-top: 29px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 38px;
+    padding-top: 48px;
     padding-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 54px;
+    padding-top: 101px;
     padding-bottom: 83px;
   }
 }
@@ -313,7 +317,7 @@
   justify-content: space-between;
   width: 100%;
 
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 
   font-weight: 500;
   font-size: 16px;
@@ -531,7 +535,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    right: 212px;
+    right: 219px;
   }
 }
 
@@ -552,7 +556,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    right: 219px;
+    right: 226px;
 
     height: 190px;
     background-color: #e1e3e9;

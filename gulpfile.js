@@ -14,13 +14,9 @@ const rename = require("gulp-rename");
 const terser = require("gulp-terser");
 const sync = require("browser-sync").create();
 
-// Clean
-
 const clean = () => {
   return del("build");
 };
-
-// HTML
 
 const html = () => {
   return gulp
@@ -35,16 +31,16 @@ const html = () => {
     .pipe(sync.stream());
 };
 
-// Styles
-
 const styles = () => {
   return gulp
     .src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([autoprefixer(), csso()]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(sourcemap.write())
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([csso()]))
     .pipe(
       rename({
         suffix: ".min",
@@ -53,8 +49,6 @@ const styles = () => {
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
-
-// Scripts
 
 const scripts = () => {
   return gulp
@@ -69,8 +63,6 @@ const scripts = () => {
     .pipe(sync.stream());
 };
 
-// SVG sprite
-
 const sprite = () => {
   return gulp
     .src("source/img/icons/*.svg")
@@ -78,8 +70,6 @@ const sprite = () => {
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 };
-
-// Copy
 
 const copy = (done) => {
   gulp
@@ -96,8 +86,6 @@ const copy = (done) => {
     .pipe(gulp.dest("build"));
   done();
 };
-
-// Images
 
 const images = () => {
   return gulp
@@ -119,8 +107,6 @@ const createWebp = () => {
     .pipe(gulp.dest("build/img"));
 };
 
-// Server
-
 const server = (done) => {
   sync.init({
     server: {
@@ -133,14 +119,10 @@ const server = (done) => {
   done();
 };
 
-// reload
-
 const reload = (done) => {
   sync.reload();
   done();
 };
-
-// Watcher
 
 const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));

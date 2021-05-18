@@ -1,8 +1,8 @@
 const header = document.querySelector(".header");
 const headerToggle = document.querySelector(".header__toggle");
 
+const DESKTOP_BREAKPOINT = 1440;
 const HEADER_COLLAPSE_HEIGHT = 53;
-const HEADER_SCROLL_HEIGHT = 76;
 
 const onPageLoad = (evt) => {
   evt.preventDefault();
@@ -66,7 +66,7 @@ window.addEventListener("resize", (evt) => {
   evt.preventDefault();
   if (
     !header.classList.contains("header_collapse") &&
-    window.innerWidth > 1320
+    window.innerWidth > DESKTOP_BREAKPOINT
   ) {
     header.classList.add("header_collapse");
   }

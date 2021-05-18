@@ -31,16 +31,16 @@
 
 .rating-slider__line-filled {
   position: absolute;
-  left: 84px;
+  left: 67px;
 
-  width: calc(100% - 84px);
+  width: calc(100% - 67px);
   height: 2px;
 
   background-color: var(--basic-blue);
 
   @media (min-width: $tablet-width) {
-    left: 107px;
-    width: calc(100% - 107px);
+    left: 100px;
+    width: calc(100% - 100px);
     height: 3px;
   }
 
@@ -80,10 +80,10 @@
 
 .rating-slider__pin_min {
   position: absolute;
-  left: 84px;
+  left: 67px;
 
   @media (min-width: $tablet-width) {
-    left: 107px;
+    left: 100px;
   }
 
   @media (min-width: $desktop-width) {

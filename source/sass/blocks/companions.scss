@@ -32,10 +32,10 @@
   @media (min-width: $tablet-width) {
     max-width: 1024px;
 
-    margin-bottom: 39px;
+    margin-bottom: 37px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 54px;
   }
 }
@@ -72,6 +72,7 @@
   font-size: 17px;
   color: var(--basic-blue-dark);
   text-transform: uppercase;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     width: 190px;
@@ -98,6 +99,7 @@
   @media (min-width: $tablet-width) {
     width: 26px;
     height: 26px;
+    margin-right: 24px;
   }
 }
 
@@ -133,49 +135,56 @@
     border-radius: 20px;
     background-color: var(--basic-white);
   }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 29px;
+  }
 }
 
 .companions__previous {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  height: 51px;
+  height: auto;
 
   border: none;
   border-right: 0.5px solid var(--basic-blue-light);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 
+  text-decoration: none;
+
   background-color: var(--basic-white);
 
   @media (min-width: $tablet-width) {
     width: 40px;
+    height: 40px;
     margin-left: auto;
     border-right: none;
   }
 }
 
 .companions__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  height: 51px;
+  height: auto;
 
   border: none;
   border-left: 0.5px solid var(--basic-blue-light);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 
+  text-decoration: none;
+
   background-color: var(--basic-white);
 
   @media (min-width: $tablet-width) {
     width: 40px;
+    height: 40px;
     border-left: none;
-  }
-}
-
-.companions__previous,
-.companions__next {
-  @media (min-width: $desktop-width) {
-    position: relative;
-    top: -5px;
-    left: -5px;
   }
 }
 
@@ -194,7 +203,6 @@
 .companions__pagination-icon {
   width: 20px;
   height: 13px;
-  margin-top: 10px;
 
   fill: var(--basic-blue);
 }

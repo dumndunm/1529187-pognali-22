@@ -1,1428 +1,879 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>HTML Academy: Погнали</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./img/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./img/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./img/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="./fonts/bloggersans-light.woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="./fonts/bloggersans.woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="./fonts/bloggersans-medium.woff2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      as="font"
-      type="font/woff2"
-      href="./fonts/bloggersans-bold.woff2"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/style.min.css" />
-  </head>
-  <body class="page page_form">
-    <header class="header header_nojs">
-      <div class="header__wrapper">
-        <a class="logo header__logo" href="./index.html" tabindex="1">
-          <picture class="logo__pic logo__pic_dark">
-            <source
-              type="image/webp"
-              media="(min-width: 1440px)"
-              srcset="
+
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Academy: Погнали</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/bloggersans-light.woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/bloggersans.woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/bloggersans-medium.woff2" crossorigin="anonymous" />
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/bloggersans-bold.woff2" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+</head>
+
+<body class="page page_form">
+  <header class="header header_nojs">
+    <div class="header__wrapper">
+      <a class="logo header__logo" href="./index.html" tabindex="1">
+        <picture class="logo__pic logo__pic_dark">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="
                 ./img/contents/logos/site-logo-desktop-dark.webp    1x,
                 ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
-              "
-              width="200"
-              height="52"
-            />
-            <source
-              media="(min-width: 1440px)"
-              srcset="
+              " />
+          <source media="(min-width: 1440px)" srcset="
                 ./img/contents/logos/site-logo-desktop-dark.png    1x,
                 ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
-              "
-              width="200"
-              height="52"
-            />
-            <source
-              type="image/webp"
-              media="(min-width: 768px)"
-              srcset="
+              " />
+          <source type="image/webp" media="(min-width: 768px)" srcset="
                 ./img/contents/logos/site-logo-tablet-dark.webp    1x,
                 ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
-              "
-              width="166"
-              height="42"
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="
+              " />
+          <source media="(min-width: 768px)" srcset="
                 ./img/contents/logos/site-logo-tablet-dark.png    1x,
                 ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
-              "
-              width="166"
-              height="42"
-            />
-            <source
-              type="image/webp"
-              srcset="
+              " />
+          <source type="image/webp" srcset="
                 ./img/contents/logos/site-logo-dark.webp    1x,
                 ./img/contents/logos/site-logo-dark@2x.webp 2x,
                 ./img/contents/logos/site-logo-dark@3x.webp 3x
-              "
-              width="100"
-              height="15"
-            />
-            <img
-              srcset="
+              " />
+          <img srcset="
                 ./img/contents/logos/site-logo-dark@2x.png 2x,
                 ./img/contents/logos/site-logo-dark@3x.png 3x
-              "
-              src="./img/contents/logos/site-logo-dark.png"
-              alt="Логотип сервиса «Погнали?»"
-              width="100"
-              height="15"
-            />
-          </picture>
+              " src="./img/contents/logos/site-logo-dark.png" alt="Логотип сервиса «Погнали?»" width="100"
+            height="15" />
+        </picture>
 
-          <picture class="logo__pic logo__pic_light">
-            <source
-              type="image/webp"
-              media="(min-width: 1440px)"
-              srcset="
+        <picture class="logo__pic logo__pic_light">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="
                 ./img/contents/logos/site-logo-desktop-light.webp    1x,
                 ./img/contents/logos/site-logo-desktop-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.webp 3x
-              "
-              width="200"
-              height="52"
-            />
-            <source
-              media="(min-width: 1440px)"
-              srcset="
+              " />
+          <source media="(min-width: 1440px)" srcset="
                 ./img/contents/logos/site-logo-desktop-light.png    1x,
                 ./img/contents/logos/site-logo-desktop-light@2x.png 2x,
                 ./img/contents/logos/site-logo-desktop-light@3x.png 3x
-              "
-              width="200"
-              height="52"
-            />
-            <source
-              type="image/webp"
-              media="(min-width: 768px)"
-              srcset="
+              " />
+          <source type="image/webp" media="(min-width: 768px)" srcset="
                 ./img/contents/logos/site-logo-tablet-light.webp    1x,
                 ./img/contents/logos/site-logo-tablet-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.webp 3x
-              "
-              width="166"
-              height="42"
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="
+              " />
+          <source media="(min-width: 768px)" srcset="
                 ./img/contents/logos/site-logo-tablet-light.png    1x,
                 ./img/contents/logos/site-logo-tablet-light@2x.png 2x,
                 ./img/contents/logos/site-logo-tablet-light@3x.png 3x
-              "
-              width="166"
-              height="42"
-            />
-            <source
-              type="image/webp"
-              srcset="
+              " />
+          <source type="image/webp" srcset="
                 ./img/contents/logos/site-logo-light.webp    1x,
                 ./img/contents/logos/site-logo-light@2x.webp 2x,
                 ./img/contents/logos/site-logo-light@3x.webp 3x
-              "
-              width="96"
-              height="15"
-            />
-            <img
-              srcset="
+              " />
+          <img srcset="
                 ./img/contents/logos/site-logo-light@2x.png 2x,
                 ./img/contents/logos/site-logo-light@3x.png 3x
-              "
-              src="./img/contents/logos/site-logo-light.png"
-              alt="Логотип сервиса «Погнали?»"
-              width="96"
-              height="15"
-            />
-          </picture>
-        </a>
+              " src="./img/contents/logos/site-logo-light.png" alt="Логотип сервиса «Погнали?»" width="96"
+            height="15" />
+        </picture>
+      </a>
 
-        <button
-          class="header-toggle header__toggle"
-          type="button"
-          aria-label="Открыть"
-        >
-          <svg
-            class="header-toggle__icon_close"
-            aria-hidden="true"
-            width="18"
-            height="18"
-          >
-            <use xlink:href="./img/sprite.svg#icon_close"></use>
-          </svg>
+      <button class="header-toggle header__toggle" type="button" aria-label="Открыть">
+        <svg class="header-toggle__icon-close" aria-hidden="true" width="18" height="18">
+          <use xlink:href="./img/sprite.svg#icon_close"></use>
+        </svg>
 
-          <svg
-            class="header-toggle__icon_burger"
-            aria-hidden="true"
-            width="25"
-            height="11"
-          >
-            <use xlink:href="./img/sprite.svg#icon_burger"></use>
-          </svg>
-        </button>
+        <svg class="header-toggle__icon-burger" aria-hidden="true" width="25" height="11">
+          <use xlink:href="./img/sprite.svg#icon_burger"></use>
+        </svg>
+      </button>
 
-        <nav class="navigation header__navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="#" tabindex="2">
-                <span class="navigation__text" data-hover="О сервисе">
-                  О сервисе
-                </span>
+      <nav class="navigation header__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#" tabindex="2">
+              <span class="navigation__text" data-hover="О сервисе">
+                О сервисе
+              </span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" tabindex="3">
+              <span class="navigation__text" data-hover="Направления">
+                Направления
+              </span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="./catalog.html" tabindex="4">
+              <span class="navigation__text" data-hover="Попутчики">
+                Попутчики
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="client-menu header__client-menu">
+        <li class="client-menu__item">
+          <ul class="contacts client-menu__contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link_telephone" href="tel:88005558628" aria-label="Позвонить">
+                <div class="contacts__icon-wrapper">
+                  <svg class="contacts__icon contacts__icon_telephone" aria-hidden="true" width="18" height="18">
+                    <use xlink:href="./img/sprite.svg#icon_telephone"></use>
+                  </svg>
+                </div>
+              </a>
+              <a class="contacts__link contacts__link_call" href="tel:88005558628" aria-label="Позвонить">
+                <div class="contacts__icon-wrapper">
+                  <svg class="contacts__icon contacts__icon_call" aria-hidden="true" width="18" height="18">
+                    <use xlink:href="./img/sprite.svg#icon_call"></use>
+                  </svg>
+                </div>
               </a>
             </li>
-            <li class="navigation__item">
-              <a class="navigation__link" tabindex="3">
-                <span class="navigation__text" data-hover="Направления">
-                  Направления
-                </span>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link_email" href="mailto:mail@htmlacademy.ru"
+                aria-label="Написать на почту">
+                <div class="contacts__icon-wrapper">
+                  <svg class="contacts__icon contacts__icon_email" aria-hidden="true" width="18" height="16">
+                    <use xlink:href="./img/sprite.svg#icon_email"></use>
+                  </svg>
+                </div>
               </a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="./catalog.html" tabindex="4">
-                <span class="navigation__text" data-hover="Попутчики">
-                  Попутчики
-                </span>
+              <a class="contacts__link contacts__link_mail" href="mailto:mail@htmlacademy.ru"
+                aria-label="Написать на почту">
+                <div class="contacts__icon-wrapper">
+                  <svg class="contacts__icon contacts__icon_mail" aria-hidden="true" width="18" height="16">
+                    <use xlink:href="./img/sprite.svg#icon_mail"></use>
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
-        </nav>
+        </li>
 
-        <ul class="client-menu header__client-menu">
-          <li class="client-menu__item">
-            <ul class="contacts client-menu__contacts">
-              <li class="contacts__item">
-                <a
-                  class="contacts__link contacts__link_telephone"
-                  href="tel:88005558628"
-                  aria-label="Позвонить"
-                >
-                  <div class="contacts__icon-wrapper">
-                    <svg
-                      class="contacts__icon contacts__icon_telephone"
-                      aria-hidden="true"
-                      width="18"
-                      height="18"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_telephone"></use>
-                    </svg>
-                  </div>
-                </a>
-                <a
-                  class="contacts__link contacts__link_call"
-                  href="tel:88005558628"
-                  aria-label="Позвонить"
-                >
-                  <div class="contacts__icon-wrapper">
-                    <svg
-                      class="contacts__icon contacts__icon_call"
-                      aria-hidden="true"
-                      width="18"
-                      height="18"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_call"></use>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li class="contacts__item">
-                <a
-                  class="contacts__link contacts__link_email"
-                  href="mailto:mail@htmlacademy.ru"
-                  aria-label="Написать на почту"
-                >
-                  <div class="contacts__icon-wrapper">
-                    <svg
-                      class="contacts__icon contacts__icon_email"
-                      aria-hidden="true"
-                      width="18"
-                      height="16"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_email"></use>
-                    </svg>
-                  </div>
-                </a>
-                <a
-                  class="contacts__link contacts__link_mail"
-                  href="mailto:mail@htmlacademy.ru"
-                  aria-label="Написать на почту"
-                >
-                  <div class="contacts__icon-wrapper">
-                    <svg
-                      class="contacts__icon contacts__icon_mail"
-                      aria-hidden="true"
-                      width="18"
-                      height="16"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_mail"></use>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </li>
+        <li class="client-menu__item client-menu__item_auth">
+          <a class="button" href="#">Авторизация</a>
+        </li>
+      </ul>
 
-          <li class="client-menu__item client-menu__item_auth">
-            <a class="button" href="#">Авторизация</a>
-          </li>
-        </ul>
+      <ul class="socials header__socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Facebook">
+            <svg class="socials__icon socials__icon_facebook" aria-hidden="true" width="11" height="21">
+              <use xlink:href="./img/sprite.svg#icon_facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Вконтакте">
+            <svg class="socials__icon socials__icon_vkontakte" aria-hidden="true" width="23" height="12">
+              <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Instagram">
+            <svg class="socials__icon socials__icon_instagram" aria-hidden="true" width="18" height="18">
+              <use xlink:href="./img/sprite.svg#icon_instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
 
-        <ul class="socials header__socials">
-          <li class="socials__item">
-            <a class="socials__link" href="#" aria-label="Facebook">
-              <svg
-                class="socials__icon socials__icon_facebook"
-                aria-hidden="true"
-                width="11"
-                height="21"
-              >
-                <use xlink:href="./img/sprite.svg#icon_facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg
-                class="socials__icon socials__icon_vkontakte"
-                aria-hidden="true"
-                width="23"
-                height="12"
-              >
-                <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#" aria-label="Instagram">
-              <svg
-                class="socials__icon socials__icon_instagram"
-                aria-hidden="true"
-                width="18"
-                height="18"
-              >
-                <use xlink:href="./img/sprite.svg#icon_instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </header>
+  <main class="main">
+    <div class="head-title head-title_special">
+      <h1 class="head-title__wrapper">
+        <span class="head-title__text">Направления</span>
+      </h1>
+    </div>
 
-    <main>
-      <div class="head-title head-title_special">
-        <h1 class="head-title__wrapper">
-          <span class="head-title__text">Направления</span>
-        </h1>
+    <section class="profile-info">
+      <h2 class="visually-hidden">Информация о профиле</h2>
+      <div class="profile-rating profile-info__rating">
+        <span class="profile-rating__count">80</span>
+        <span class="profile-rating__text">level</span>
       </div>
 
-      <section class="profile-info">
-        <h2 class="visually-hidden">Информация о профиле</h2>
-        <div class="profile-rating profile-info__rating">
-          <span class="profile-rating__count">80</span>
-          <span class="profile-rating__text">level</span>
-        </div>
-
-        <picture>
-          <source
-            type="image/webp"
-            srcset="
+      <picture>
+        <source type="image/webp" srcset="
               ./img/users/petr-demin.webp    1x,
               ./img/users/petr-demin@2x.webp 2x,
               ./img/users/petr-demin@3x.webp 3x
-            "
-          />
-          <img
-            class="profile-info__pic"
-            srcset="
+            " />
+        <img class="profile-info__pic" srcset="
               ./img/users/petr-demin.jpg    1x,
               ./img/users/petr-demin@2x.jpg 2x,
               ./img/users/petr-demin@3x.jpg 3x
-            "
-            src="./img/users/petr-demin-small.jpg"
-            alt="Фотография профиля"
-            width="100"
-            height="100"
-          />
-        </picture>
-      </section>
+            " src="./img/users/petr-demin-small.jpg" alt="Фотография профиля" width="100" height="100" />
+      </picture>
+    </section>
 
-      <form class="profile-form" action="#" method="get">
-        <label
-          class="profile-form__load-photo"
-          for="profile-form-photo"
-          tabindex="0"
-        >
-          <span class="profile-form__load-photo-text">
-            <span class="profile-form__load-photo-text_change">Сменить</span
-            >&nbsp;фото
-          </span>
-        </label>
-        <input
-          class="visually-hidden"
-          type="file"
-          name="profile-form-photo"
-          id="profile-form-photo"
-        />
+    <form class="profile-form" action="#" method="get">
+      <input class="visually-hidden" type="file" name="profile-form-photo" id="profile-form-photo" />
+      <label class="profile-form__load-photo" for="profile-form-photo">
+        <span class="profile-form__load-photo-text">
+          <span class="profile-form__load-photo-change">Сменить</span>&nbsp;фото
+        </span>
+      </label>
 
-        <fieldset class="profile-form__fieldset profile-form__fieldset_tags">
-          <legend class="profile-form__legend">Тэги</legend>
+      <fieldset class="profile-form__fieldset profile-form__fieldset_tags">
+        <div class="profile-form__fieldset-wrapper">
+          <p class="profile-form__legend">Тэги</p>
 
-          <textarea
-            class="profile-form__tags"
-            name="profile-form-tags"
-            id="profile-form-tags"
-            placeholder="Коротко о себе в виде 5-8 хештэгов"
-          ></textarea>
-        </fieldset>
+          <textarea class="profile-form__tags" name="profile-form-tags" id="profile-form-tags"
+            placeholder="Коротко о себе в виде 5-8 хештэгов"></textarea>
+        </div>
+      </fieldset>
 
-        <fieldset
-          class="profile-form__fieldset profile-form__fieldset_transport"
-        >
-          <legend class="profile-form__legend">Транспорт</legend>
+      <fieldset class="profile-form__fieldset profile-form__fieldset_transport">
+        <div class="profile-form__fieldset-wrapper">
 
-          <input
-            class="visually-hidden"
-            type="checkbox"
-            name="profile-form-transport-airplane"
-            id="profile-form-transport-airplane"
-            checked
-          />
-          <label
-            class="profile-form__transport"
-            for="profile-form-transport-airplane"
-            aria-label="Самолетом"
-          >
-            <svg
-              class="profile-form__icon"
-              aria-hidden="true"
-              width="17"
-              height="16"
-            >
+          <p class="profile-form__legend">Транспорт</p>
+
+          <input class="visually-hidden" type="checkbox" name="profile-form-transport-airplane"
+            id="profile-form-transport-airplane" checked />
+          <label class="profile-form__transport" for="profile-form-transport-airplane" aria-label="Самолетом">
+            <svg class="profile-form__icon" aria-hidden="true" width="17" height="16">
               <use xlink:href="./img/sprite.svg#icon_airplane"></use>
             </svg>
           </label>
 
-          <input
-            class="visually-hidden"
-            type="checkbox"
-            name="profile-form-transport-bus"
-            id="profile-form-transport-bus"
-            checked
-          />
-          <label
-            class="profile-form__transport"
-            for="profile-form-transport-bus"
-            aria-label="На автобусе"
-          >
-            <svg
-              class="profile-form__icon"
-              aria-hidden="true"
-              width="17"
-              height="16"
-            >
+          <input class="visually-hidden" type="checkbox" name="profile-form-transport-bus"
+            id="profile-form-transport-bus" checked />
+          <label class="profile-form__transport" for="profile-form-transport-bus" aria-label="На автобусе">
+            <svg class="profile-form__icon" aria-hidden="true" width="17" height="16">
               <use xlink:href="./img/sprite.svg#icon_bus"></use>
             </svg>
           </label>
 
-          <input
-            class="visually-hidden"
-            type="checkbox"
-            name="profile-form-transport-bicycle"
-            id="profile-form-transport-bicycle"
-          />
-          <label
-            class="profile-form__transport"
-            for="profile-form-transport-bicycle"
-            aria-label="На велосипеде"
-          >
-            <svg
-              class="profile-form__icon"
-              aria-hidden="true"
-              width="17"
-              height="16"
-            >
+          <input class="visually-hidden" type="checkbox" name="profile-form-transport-bicycle"
+            id="profile-form-transport-bicycle" />
+          <label class="profile-form__transport" for="profile-form-transport-bicycle" aria-label="На велосипеде">
+            <svg class="profile-form__icon" aria-hidden="true" width="17" height="16">
               <use xlink:href="./img/sprite.svg#icon_bicycle"></use>
             </svg>
           </label>
 
-          <input
-            class="visually-hidden"
-            type="checkbox"
-            name="profile-form-transport-walk"
-            id="profile-form-transport-walk"
-            checked
-          />
-          <label
-            class="profile-form__transport"
-            for="profile-form-transport-walk"
-            aria-label="Пешком"
-          >
-            <svg
-              class="profile-form__icon"
-              aria-hidden="true"
-              width="17"
-              height="16"
-            >
+          <input class="visually-hidden" type="checkbox" name="profile-form-transport-walk"
+            id="profile-form-transport-walk" checked />
+          <label class="profile-form__transport" for="profile-form-transport-walk" aria-label="Пешком">
+            <svg class="profile-form__icon" aria-hidden="true" width="17" height="16">
               <use xlink:href="./img/sprite.svg#icon_walk"></use>
             </svg>
           </label>
-        </fieldset>
-      </form>
-
-      <section class="trips">
-        <div class="trips__wrapper">
-          <h2 class="title trips__title">Мои планы:</h2>
-
-          <ul class="trips__list">
-            <li class="trip trips__trip">
-              <h3 class="trip__title">
-                <span class="trip__number">1.</span>
-                Франция, Италия
-              </h3>
-              <div class="trip__wrapper">
-                <p class="trip__companions">3 попутчика</p>
-
-                <p class="trip__dates">
-                  <time datetime="2021-03-26">26 мар</time>
-                  —
-                  <time datetime="2021-03-29">29 мар</time>
-                </p>
-
-                <button class="trip__button" type="button">Изменить</button>
-              </div>
-            </li>
-
-            <li class="trip trips__trip">
-              <h3 class="trip__title">
-                <span class="trip__number">2.</span>
-                Таиланд, Индонезия
-              </h3>
-              <div class="trip__wrapper">
-                <p class="trip__companions">1 попутчик</p>
-
-                <p class="trip__dates">
-                  <time datetime="2021-07-01">1 июл</time>
-                  —
-                  <time datetime="2021-07-15">15 июл</time>
-                </p>
-
-                <button class="trip__button" type="button">Изменить</button>
-              </div>
-            </li>
-          </ul>
         </div>
-      </section>
+      </fieldset>
+    </form>
 
-      <section class="trip-form">
-        <div class="trip-form__wrapper">
-          <h2 class="title trip-form__title">Добавить план:</h2>
+    <section class="trips">
+      <div class="trips__wrapper">
+        <h2 class="title trips__title">Мои планы:</h2>
 
-          <ul class="form-markers trip-form__markers">
-            <li class="form-markers__marker form-markers__marker_active">
-              <span class="form-markers__marker-text">Даты</span>
-            </li>
-            <li class="form-markers__marker">
-              <span class="form-markers__marker-text">Маршрут</span>
-            </li>
-            <li class="form-markers__marker">
-              <span class="form-markers__marker-text">Рзвлечения</span>
-            </li>
-          </ul>
+        <ul class="trips__list">
+          <li class="trip trips__trip">
+            <h3 class="trip__title">
+              <span class="trip__number">1.</span>
+              Франция, Италия
+            </h3>
+            <div class="trip__wrapper">
+              <p class="trip__companions">3 попутчика</p>
 
-          <form action="#" method="get">
-            <section class="trip-form__step" id="trip-form-step-one">
-              <ul class="form-markers trip-form__step-markers">
-                <li class="form-markers__marker form-markers__marker_active">
-                  <span class="form-markers__marker-text">Даты</span>
-                </li>
-                <li class="form-markers__marker">
-                  <span class="form-markers__marker-text">Маршрут</span>
-                </li>
-                <li class="form-markers__marker">
-                  <span class="form-markers__marker-text">Развлечения</span>
-                </li>
-              </ul>
-
-              <h3 class="trip-form__heading">
-                Шаг 1.<br />
-                &nbsp;Даты пребывания
-              </h3>
-              <p class="trip-form__text">
-                Укажите предпочтительное количество попутчиков, которых
-                вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую
-                длительность.
+              <p class="trip__dates">
+                <time datetime="2021-03-26">26 мар</time>
+                ⏤
+                <time datetime="2021-03-29">29 мар</time>
               </p>
 
-              <section class="trip-form__base-info">
-                <h4 class="visually-hidden">Базовая информация о поездке</h4>
-
-                <div class="trip-form__companions-info">
-                  <label
-                    class="trip-form__numeric-label"
-                    for="trip-form-companions"
-                  >
-                    Ищу попутчиков:
-                  </label>
-                  <div class="numeric-field trip-form__numeric-field">
-                    <button
-                      class="numeric-field__button numeric-field__button_inc"
-                      type="button"
-                      aria-label="Кнопка минус"
-                    >
-                      <svg
-                        class="numeric-field__icon"
-                        aria-hidden="true"
-                        width="14"
-                        height="2"
-                      >
-                        <use xlink:href="./img/sprite.svg#minus"></use>
-                      </svg>
-                    </button>
-
-                    <input
-                      class="numeric-field__input"
-                      type="number"
-                      name="trip-form-companions"
-                      id="trip-form-companions"
-                      value="2"
-                    />
-
-                    <button
-                      class="numeric-field__button numeric-field__button_dec"
-                      type="button"
-                      aria-label="Кнопка плюс"
-                    >
-                      <svg
-                        class="numeric-field__icon"
-                        aria-hidden="true"
-                        width="14"
-                        height="14"
-                      >
-                        <use xlink:href="./img/sprite.svg#plus"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-
-                <input
-                  class="visually-hidden"
-                  type="checkbox"
-                  name="trip-form-children"
-                  id="trip-form-children"
-                  checked
-                />
-                <label
-                  class="checkbox trip-form__checkbox"
-                  for="trip-form-children"
-                >
-                  <svg
-                    class="checkbox__icon"
-                    width="36"
-                    height="36"
-                    viewBox="0 0 36 36"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <rect
-                      class="checkbox__bg"
-                      width="36"
-                      height="36"
-                      rx="4"
-                      fill="transparent"
-                    />
-                    <rect
-                      class="checkbox__border"
-                      x="0.5"
-                      y="0.5"
-                      width="35"
-                      height="35"
-                      rx="3.5"
-                      stroke="#CBCED9"
-                    />
-                    <path
-                      class="checkbox__marker"
-                      d="M16.3868 24.1809L13 20.5V20V19C13 19.0409 13 18.9591 13 19C13 18.7852 13.0001 18.5 13.0001 18.5V17.5L16.3774 20.7561C16.4931 20.8776 16.6816 20.8761 16.7974 20.7547L24.0001 13V15.0727V16C24.0001 16.5 24.0001 16.5 24.0001 16.5L17.8084 23.1208L17.8097 23.1222L16.8068 24.1795C16.691 24.3009 16.5026 24.3009 16.3868 24.1809Z"
-                    />
-                  </svg>
-                  <span class="checkbox__text">Можно с детьми</span>
-                </label>
-
-                <div class="trip-form__duration-info">
-                  <label
-                    class="trip-form__numeric-label"
-                    for="trip-form-duration"
-                  >
-                    Длительность:
-                  </label>
-                  <div class="numeric-field trip-form__numeric-field">
-                    <button
-                      class="numeric-field__button numeric-field__button_inc"
-                      type="button"
-                      aria-label="Кнопка минус"
-                    >
-                      <svg
-                        class="numeric-field__icon"
-                        aria-hidden="true"
-                        width="14"
-                        height="2"
-                      >
-                        <use xlink:href="./img/sprite.svg#minus"></use>
-                      </svg>
-                    </button>
-
-                    <input
-                      class="numeric-field__input"
-                      type="number"
-                      name="trip-form-duration"
-                      id="trip-form-duration"
-                      value="3"
-                    />
-
-                    <button
-                      class="numeric-field__button numeric-field__button_dec"
-                      type="button"
-                      aria-label="Кнопка плюс"
-                    >
-                      <svg
-                        class="numeric-field__icon"
-                        aria-hidden="true"
-                        width="14"
-                        height="14"
-                      >
-                        <use xlink:href="./img/sprite.svg#plus"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </section>
-
-              <section class="date-info trip-form__date-info">
-                <h4 class="visually-hidden">Даты выезда/прибытия</h4>
-
-                <div class="date-info__header">
-                  <button
-                    class="date-info__button date-info__button_back"
-                    type="button"
-                    aria-label="Назад"
-                  >
-                    <svg
-                      class="date-info__icon"
-                      aria-hidden="true"
-                      width="9"
-                      height="18"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_arrow-back"></use>
-                    </svg>
-                  </button>
-
-                  <span class="date-info__date">Март 2019</span>
-
-                  <button
-                    class="date-info__button date-info__button_forward"
-                    type="button"
-                    aria-label="Вперед"
-                  >
-                    <svg
-                      class="date-info__icon"
-                      aria-hidden="true"
-                      width="9"
-                      height="18"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_arrow-next"></use>
-                    </svg>
-                  </button>
-                </div>
-
-                <table class="table-date date-info__table">
-                  <thead class="table-date__header">
-                    <tr class="table-date__row">
-                      <th class="table-date__header-cell">
-                        <span class="table-date__day_mobile">П</span>
-                        <span class="table-date__day_tablet">Пн</span>
-                      </th>
-                      <th class="table-date__header-cell">
-                        <span class="table-date__day_mobile">В</span>
-                        <span class="table-date__day_tablet">Вт</span>
-                      </th>
-                      <th class="table-date__header-cell">
-                        <span class="table-date__day_mobile">С</span>
-                        <span class="table-date__day_tablet">Ср</span>
-                      </th>
-                      <th class="table-date__header-cell">
-                        <span class="table-date__day_mobile">Ч</span>
-                        <span class="table-date__day_tablet">Чт</span>
-                      </th>
-                      <th class="table-date__header-cell">
-                        <span class="table-date__day_mobile">П</span>
-                        <span class="table-date__day_tablet">Пт</span>
-                      </th>
-                      <th class="table-date__header-cell">
-                        <span class="table-date__day_mobile">С</span>
-                        <span class="table-date__day_tablet">Сб</span>
-                      </th>
-                      <th class="table-date__header-cell">
-                        <span class="table-date__day_mobile">В</span>
-                        <span class="table-date__day_tablet">Вс</span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-date__body">
-                    <tr class="table-date__row">
-                      <td class="table-date__cell table-date__cell_disabled">
-                        23
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        24
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        25
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        26
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        27
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        28
-                      </td>
-                      <td
-                        class="table-date__cell table-date__cell_disabled table-date__cell_first-day"
-                      >
-                        1
-                        <span>мар</span>
-                      </td>
-                    </tr>
-                    <tr class="table-date__row">
-                      <td class="table-date__cell table-date__cell_disabled">
-                        2
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        3
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        4
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        5
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        6
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        7
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        8
-                      </td>
-                    </tr>
-                    <tr class="table-date__row">
-                      <td class="table-date__cell table-date__cell_disabled">
-                        9
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        10
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        11
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        12
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        13
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        14
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        15
-                      </td>
-                    </tr>
-                    <tr class="table-date__row">
-                      <td class="table-date__cell table-date__cell_disabled">
-                        16
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        17
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        18
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        19
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        20
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        21
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        22
-                      </td>
-                    </tr>
-                    <tr class="table-date__row">
-                      <td class="table-date__cell table-date__cell_disabled">
-                        23
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        24
-                      </td>
-                      <td class="table-date__cell table-date__cell_disabled">
-                        25
-                      </td>
-                      <td
-                        class="table-date__cell table-date__cell_choosen table-date__cell_choosen-first"
-                      >
-                        26
-                      </td>
-                      <td class="table-date__cell table-date__cell_choosen">
-                        27
-                      </td>
-                      <td
-                        class="table-date__cell table-date__cell_choosen table-date__cell_choosen-last"
-                      >
-                        28
-                      </td>
-                      <td class="table-date__cell">29</td>
-                    </tr>
-                    <tr class="table-date__row">
-                      <td class="table-date__cell">30</td>
-                      <td class="table-date__cell">31</td>
-                      <td class="table-date__cell table-date__cell_first-day">
-                        1
-                        <span>апр</span>
-                      </td>
-                      <td class="table-date__cell">2</td>
-                      <td class="table-date__cell">3</td>
-                      <td class="table-date__cell">4</td>
-                      <td class="table-date__cell">5</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-
-              <a class="button trip-form__button" href="#trip-form-step-two">
-                <span class="button__text">Следующий шаг</span>
-              </a>
-            </section>
-
-            <section class="trip-form__step" id="trip-form-step-two">
-              <ul class="form-markers trip-form__step-markers">
-                <li class="form-markers__marker">
-                  <span class="form-markers__marker-text">Даты</span>
-                </li>
-                <li class="form-markers__marker form-markers__marker_active">
-                  <span class="form-markers__marker-text">Маршрут</span>
-                </li>
-                <li class="form-markers__marker">
-                  <span class="form-markers__marker-text">Развлечения</span>
-                </li>
-              </ul>
-
-              <h3 class="trip-form__heading">
-                Шаг 2.<br />
-                &nbsp;Маршрут
-              </h3>
-              <p class="trip-form__text">
-                Укажите страны, которые вы хотели бы посетить.
-                <br />
-                Это может быть одна или сразу несколько.
-              </p>
-
-              <input
-                type="hidden"
-                name="trip-form-countries"
-                value="['Bosnia and Herzegovina', 'Czech']"
-              />
-              <ul class="route trip-form__route">
-                <li class="country route__country">
-                  <div class="country__name">
-                    <span class="country__name-text">Босния и герцеговина</span>
-                    <button
-                      class="country__button-choose"
-                      type="button"
-                      aria-label="Выбрать страну"
-                    >
-                      <svg
-                        class="country__icon-choose"
-                        aria-hidden="true"
-                        width="16"
-                        height="12"
-                      >
-                        <use
-                          xlink:href="./img/sprite.svg#icon_arrow-down"
-                        ></use>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="country__flag">
-                    <div class="flag flag_bosnia">
-                      <span class="visually-hidden">Босния и герцеговина</span>
-                    </div>
-                  </div>
-
-                  <button
-                    class="country__button-delete"
-                    type="button"
-                    aria-label="Удалить страну"
-                  >
-                    <svg
-                      class="country__icon-delete"
-                      aria-hidden="true"
-                      width="9"
-                      height="9"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_close"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="country route__country">
-                  <div class="country__name">
-                    <span class="country__name-text">Чехия</span>
-                    <button
-                      class="country__button-choose"
-                      type="button"
-                      aria-label="Выбрать страну"
-                    >
-                      <svg
-                        class="country__icon-choose"
-                        aria-hidden="true"
-                        width="16"
-                        height="12"
-                      >
-                        <use
-                          xlink:href="./img/sprite.svg#icon_arrow-down"
-                        ></use>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div class="country__flag">
-                    <div class="flag flag_czech">
-                      <span class="visually-hidden">Чехия</span>
-                    </div>
-                  </div>
-
-                  <button
-                    class="country__button-delete"
-                    type="button"
-                    aria-label="Удалить страну"
-                  >
-                    <svg
-                      class="country__icon-delete"
-                      aria-hidden="true"
-                      width="9"
-                      height="9"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_close"></use>
-                    </svg>
-                  </button>
-                </li>
-
-                <li class="country route__country country_null">
-                  <div class="country__name">
-                    <span class="country__name-text">Выберите страну</span>
-                    <button
-                      class="country__button-choose"
-                      type="button"
-                      aria-label="Выбрать страну"
-                    >
-                      <svg
-                        class="country__icon-choose"
-                        aria-hidden="true"
-                        width="16"
-                        height="12"
-                      >
-                        <use
-                          xlink:href="./img/sprite.svg#icon_arrow-down"
-                        ></use>
-                      </svg>
-                    </button>
-                  </div>
-
-                  <button
-                    class="country__button-delete"
-                    type="button"
-                    aria-label="Удалить страну"
-                  >
-                    <svg
-                      class="country__icon-delete"
-                      aria-hidden="true"
-                      width="9"
-                      height="9"
-                    >
-                      <use xlink:href="./img/sprite.svg#icon_close"></use>
-                    </svg>
-                  </button>
-
-                  <div class="choose-country country__choose-country">
-                    <table class="table-symbols choose-country__table">
-                      <tbody class="table-symbols__body">
-                        <tr class="table-symbols__row">
-                          <td
-                            class="table-symbols__cell table-symbols__cell_active"
-                          >
-                            А
-                          </td>
-                          <td class="table-symbols__cell">Б</td>
-                          <td class="table-symbols__cell">В</td>
-                          <td class="table-symbols__cell">Г</td>
-                          <td class="table-symbols__cell">Д</td>
-                        </tr>
-                        <tr class="table-symbols__row">
-                          <td class="table-symbols__cell">Е</td>
-                          <td class="table-symbols__cell">З</td>
-                          <td class="table-symbols__cell">И</td>
-                          <td class="table-symbols__cell">К</td>
-                          <td class="table-symbols__cell">Л</td>
-                        </tr>
-                        <tr class="table-symbols__row">
-                          <td class="table-symbols__cell">М</td>
-                          <td class="table-symbols__cell">Н</td>
-                          <td class="table-symbols__cell">О</td>
-                          <td class="table-symbols__cell">П</td>
-                          <td class="table-symbols__cell">Р</td>
-                        </tr>
-                        <tr class="table-symbols__row">
-                          <td class="table-symbols__cell">С</td>
-                          <td class="table-symbols__cell">Т</td>
-                          <td class="table-symbols__cell">У</td>
-                          <td class="table-symbols__cell">Ф</td>
-                          <td class="table-symbols__cell">Х</td>
-                        </tr>
-                        <tr class="table-symbols__row">
-                          <td class="table-symbols__cell">Ч</td>
-                          <td class="table-symbols__cell">Ш</td>
-                          <td class="table-symbols__cell">Э</td>
-                          <td class="table-symbols__cell">Ю</td>
-                          <td class="table-symbols__cell">Я</td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                    <ul class="choose-country__list">
-                      <li class="choose-country__text">Австралия</li>
-                      <li class="choose-country__text">Австрия</li>
-                      <li class="choose-country__text">Азербайджан</li>
-                      <li class="choose-country__text">Албания</li>
-                      <li class="choose-country__text">Алжир</li>
-                      <li class="choose-country__text">Ангола</li>
-                      <li class="choose-country__text">Андорра</li>
-                      <li class="choose-country__text">Антигуа и Барбуда</li>
-                      <li class="choose-country__text">Аргентина</li>
-                      <li class="choose-country__text">Армения</li>
-                      <li class="choose-country__text">Афганистан</li>
-                    </ul>
-
-                    <button class="choose-country__close">
-                      <svg
-                        class="choose-country__icon-close"
-                        aria-hidden="true"
-                        width="8"
-                        height="9"
-                      >
-                        <use xlink:href="./img/sprite.svg#icon_close"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="trip-form__button-add-wrapper">
-                <button class="trip-form__button-add" type="button">
-                  <span>Добавить страну</span>
-                  <svg aria-hidden="true" width="14" height="14">
-                    <use xlink:href="./img/sprite.svg#plus"></use>
-                  </svg>
-                </button>
-              </div>
-
-              <div class="trip-form__buttons">
-                <a
-                  class="button trip-form__button"
-                  href="#trip-form-step-three"
-                >
-                  <span class="button__text">Следующий шаг</span>
-                </a>
-                <a
-                  class="button trip-form__button-back"
-                  href="#trip-form-step-one"
-                >
-                  На шаг назад
-                </a>
-              </div>
-            </section>
-
-            <section class="trip-form__step" id="trip-form-step-three">
-              <ul class="form-markers trip-form__step-markers">
-                <li class="form-markers__marker">
-                  <span class="form-markers__marker-text">Даты</span>
-                </li>
-                <li class="form-markers__marker">
-                  <span class="form-markers__marker-text">Маршрут</span>
-                </li>
-                <li class="form-markers__marker form-markers__marker_active">
-                  <span class="form-markers__marker-text">Развлечения</span>
-                </li>
-              </ul>
-
-              <h3 class="trip-form__heading">
-                Шаг 3.<br />
-                &nbsp;Развлечения
-              </h3>
-              <p class="trip-form__text">
-                Наконец, расскажите о своих планах времяпровождения.
-                Можно&nbsp;писать в свободной форме и ставить тэги.
-              </p>
-
-              <ul class="action-plan trip-form__action-plan">
-                <li class="action-plan__item">
-                  <div class="action-plan__country">
-                    <label
-                      class="action-plan__country-name"
-                      for="trip-form-plan-bosnia"
-                    >
-                      Босния и Герцеговина
-                    </label>
-                    <div
-                      class="flag flag_bosnia action-plan__flag"
-                      aria-label="Босния и Герцеговина"
-                    ></div>
-                  </div>
-
-                  <div class="action-plan__input-field">
-                    <textarea
-                      class="action-plan__input"
-                      name="trip-form-plan-bosnia"
-                      id="trip-form-plan-bosnia"
-                      placeholder="План действий"
-                    ></textarea>
-                  </div>
-                </li>
-
-                <li class="action-plan__item">
-                  <div class="action-plan__country">
-                    <label
-                      class="action-plan__country-name"
-                      for="trip-form-plan-czech"
-                    >
-                      Чехия
-                    </label>
-                    <div
-                      class="flag flag_czech action-plan__flag"
-                      aria-label="Чехия"
-                    ></div>
-                  </div>
-
-                  <div
-                    class="action-plan__input-field action-plan__input-field_invalid"
-                  >
-                    <textarea
-                      class="action-plan__input"
-                      name="trip-form-plan-czech"
-                      id="trip-form-plan-czech"
-                      placeholder="План действий"
-                    ></textarea>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="trip-form__buttons">
-                <button class="button trip-form__button" type="submit">
-                  <span class="button__text">Отправить</span>
-                </button>
-                <a
-                  class="button trip-form__button-back"
-                  href="trip-form-step-two"
-                >
-                  На шаг назад
-                </a>
-              </div>
-            </section>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer__wrapper">
-        <a class="logo footer__logo" href="./index.html">
-          <picture class="logo__pic logo__pic_dark">
-            <source
-              type="image/webp"
-              media="(min-width: 1440px)"
-              srcset="
-                ./img/contents/logos/site-logo-desktop-dark.webp    1x,
-                ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
-                ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
-              "
-              width="200"
-              height="52"
-            />
-            <source
-              media="(min-width: 1440px)"
-              srcset="
-                ./img/contents/logos/site-logo-desktop-dark.png    1x,
-                ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
-                ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
-              "
-              width="200"
-              height="52"
-            />
-            <source
-              type="image/webp"
-              media="(min-width: 768px)"
-              srcset="
-                ./img/contents/logos/site-logo-tablet-dark.webp    1x,
-                ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
-                ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
-              "
-              width="164"
-              height="42"
-            />
-            <source
-              media="(min-width: 768px)"
-              srcset="
-                ./img/contents/logos/site-logo-tablet-dark.png    1x,
-                ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
-                ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
-              "
-              width="164"
-              height="42"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                ./img/contents/logos/site-logo-dark.webp    1x,
-                ./img/contents/logos/site-logo-dark@2x.webp 2x,
-                ./img/contents/logos/site-logo-dark@3x.webp 3x
-              "
-              width="100"
-              height="15"
-            />
-            <img
-              srcset="
-                ./img/contents/logos/site-logo-dark@2x.png 2x,
-                ./img/contents/logos/site-logo-dark@3x.png 3x
-              "
-              src="./img/contents/logos/site-logo-dark.png"
-              alt="Логотип сервиса «Погнали?»"
-              width="100"
-              height="15"
-            />
-          </picture>
-        </a>
-
-        <ul class="socials footer__socials">
-          <li class="socials__item">
-            <a class="socials__link" href="#" aria-label="Facebook">
-              <svg
-                class="socials__icon socials__icon_facebook"
-                aria-hidden="true"
-                width="11"
-                height="21"
-              >
-                <use xlink:href="./img/sprite.svg#icon_facebook"></use>
-              </svg>
-            </a>
+              <a class="trip__button" href="#">Изменить</a>
+            </div>
           </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#" aria-label="Вконтакте">
-              <svg
-                class="socials__icon socials__icon_vkontakte"
-                aria-hidden="true"
-                width="23"
-                height="12"
-              >
-                <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
-              </svg>
-            </a>
+
+          <li class="trip trips__trip">
+            <h3 class="trip__title">
+              <span class="trip__number">2.</span>
+              Таиланд, Индонезия
+            </h3>
+            <div class="trip__wrapper">
+              <p class="trip__companions">1 попутчик</p>
+
+              <p class="trip__dates">
+                <time datetime="2021-07-01">1 июл</time>
+                ⏤
+                <time datetime="2021-07-15">15 июл</time>
+              </p>
+
+              <a class="trip__button" href="#">Изменить</a>
+            </div>
           </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#" aria-label="Instagram">
-              <svg
-                class="socials__icon socials__icon_instagram"
-                aria-hidden="true"
-                width="18"
-                height="18"
-              >
-                <use xlink:href="./img/sprite.svg#icon_instagram"></use>
-              </svg>
-            </a>
+        </ul>
+      </div>
+    </section>
+
+    <section class="trip-form">
+      <div class="trip-form__wrapper">
+        <h2 class="title trip-form__title">Добавить план:</h2>
+
+        <ul class="form-markers trip-form__markers">
+          <li class="form-markers__marker form-markers__marker_active">
+            <span class="form-markers__marker-text">Даты</span>
+          </li>
+          <li class="form-markers__marker">
+            <span class="form-markers__marker-text">Маршрут</span>
+          </li>
+          <li class="form-markers__marker">
+            <span class="form-markers__marker-text">Рзвлечения</span>
           </li>
         </ul>
 
-        <section class="developed footer__developed">
-          <a
-            class="developed__link"
-            href="https://htmlacademy.ru/intensive/adaptive"
-          >
-            <h2 class="developed__title">Разработано</h2>
-            <img
-              src="./img/svg/logo-htmlacademy.svg"
-              alt="Логотип академии"
-              width="27"
-              height="33"
-            />
-          </a>
-        </section>
+        <form action="#" method="get">
+          <section class="trip-form__step" id="trip-form-step-one">
+            <ul class="form-markers trip-form__step-markers">
+              <li class="form-markers__marker form-markers__marker_active">
+                <span class="form-markers__marker-text">Даты</span>
+              </li>
+              <li class="form-markers__marker">
+                <span class="form-markers__marker-text">Маршрут</span>
+              </li>
+              <li class="form-markers__marker">
+                <span class="form-markers__marker-text">Развлечения</span>
+              </li>
+            </ul>
+
+            <h3 class="trip-form__heading">
+              Шаг 1.&nbsp;<br />
+              Даты пребывания
+            </h3>
+            <p class="trip-form__text">
+              Укажите предпочтительное количество попутчиков, которых
+              вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую
+              длительность.
+            </p>
+
+            <section class="trip-form__base-info">
+              <h4 class="visually-hidden">Базовая информация о поездке</h4>
+
+              <div class="trip-form__companions-info">
+                <label class="trip-form__numeric-label" for="trip-form-companions">
+                  Ищу попутчиков:
+                </label>
+                <div class="numeric-field trip-form__numeric-field">
+                  <button class="numeric-field__button numeric-field__button_inc" type="button"
+                    aria-label="Кнопка минус">
+                    <svg class="numeric-field__icon" aria-hidden="true" width="14" height="2">
+                      <use xlink:href="./img/sprite.svg#minus"></use>
+                    </svg>
+                  </button>
+
+                  <input class="numeric-field__input" type="number" name="trip-form-companions"
+                    id="trip-form-companions" value="2" />
+
+                  <button class="numeric-field__button numeric-field__button_dec" type="button"
+                    aria-label="Кнопка плюс">
+                    <svg class="numeric-field__icon" aria-hidden="true" width="14" height="14">
+                      <use xlink:href="./img/sprite.svg#plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <input class="visually-hidden" type="checkbox" name="trip-form-children" id="trip-form-children"
+                checked />
+              <label class="checkbox trip-form__checkbox" for="trip-form-children">
+                <svg class="checkbox__icon" width="36" height="36" viewBox="0 0 36 36" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect class="checkbox__bg" width="36" height="36" rx="4" fill="transparent" />
+                  <rect class="checkbox__border" x="0.5" y="0.5" width="35" height="35" rx="3.5" stroke="#CBCED9" />
+                  <path class="checkbox__marker"
+                    d="M16.3868 24.1809L13 20.5V20V19C13 19.0409 13 18.9591 13 19C13 18.7852 13.0001 18.5 13.0001 18.5V17.5L16.3774 20.7561C16.4931 20.8776 16.6816 20.8761 16.7974 20.7547L24.0001 13V15.0727V16C24.0001 16.5 24.0001 16.5 24.0001 16.5L17.8084 23.1208L17.8097 23.1222L16.8068 24.1795C16.691 24.3009 16.5026 24.3009 16.3868 24.1809Z" />
+                </svg>
+                <span class="checkbox__text">Можно с детьми</span>
+              </label>
+
+              <div class="trip-form__duration-info">
+                <label class="trip-form__numeric-label" for="trip-form-duration">
+                  Длительность:
+                </label>
+                <div class="numeric-field trip-form__numeric-field">
+                  <button class="numeric-field__button numeric-field__button_inc" type="button"
+                    aria-label="Кнопка минус">
+                    <svg class="numeric-field__icon" aria-hidden="true" width="14" height="2">
+                      <use xlink:href="./img/sprite.svg#minus"></use>
+                    </svg>
+                  </button>
+
+                  <input class="numeric-field__input" type="number" name="trip-form-duration" id="trip-form-duration"
+                    value="3" />
+
+                  <button class="numeric-field__button numeric-field__button_dec" type="button"
+                    aria-label="Кнопка плюс">
+                    <svg class="numeric-field__icon" aria-hidden="true" width="14" height="14">
+                      <use xlink:href="./img/sprite.svg#plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="date-info trip-form__date-info">
+              <h4 class="visually-hidden">Даты выезда/прибытия</h4>
+
+              <div class="date-info__header">
+                <button class="date-info__button date-info__button_back" type="button" aria-label="Назад">
+                  <svg class="date-info__icon" aria-hidden="true" width="9" height="18">
+                    <use xlink:href="./img/sprite.svg#icon_arrow-back"></use>
+                  </svg>
+                </button>
+
+                <span class="date-info__date">Март 2019</span>
+
+                <button class="date-info__button date-info__button_forward" type="button" aria-label="Вперед">
+                  <svg class="date-info__icon" aria-hidden="true" width="9" height="18">
+                    <use xlink:href="./img/sprite.svg#icon_arrow-next"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <table class="table-date date-info__table">
+                <thead class="table-date__header">
+                  <tr class="table-date__row">
+                    <th class="table-date__header-cell">
+                      <span class="table-date__day-mobile">П</span>
+                      <span class="table-date__day-tablet">Пн</span>
+                    </th>
+                    <th class="table-date__header-cell">
+                      <span class="table-date__day-mobile">В</span>
+                      <span class="table-date__day-tablet">Вт</span>
+                    </th>
+                    <th class="table-date__header-cell">
+                      <span class="table-date__day-mobile">С</span>
+                      <span class="table-date__day-tablet">Ср</span>
+                    </th>
+                    <th class="table-date__header-cell">
+                      <span class="table-date__day-mobile">Ч</span>
+                      <span class="table-date__day-tablet">Чт</span>
+                    </th>
+                    <th class="table-date__header-cell">
+                      <span class="table-date__day-mobile">П</span>
+                      <span class="table-date__day-tablet">Пт</span>
+                    </th>
+                    <th class="table-date__header-cell">
+                      <span class="table-date__day-mobile">С</span>
+                      <span class="table-date__day-tablet">Сб</span>
+                    </th>
+                    <th class="table-date__header-cell">
+                      <span class="table-date__day-mobile">В</span>
+                      <span class="table-date__day-tablet">Вс</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="table-date__body">
+                  <tr class="table-date__row">
+                    <td class="table-date__cell table-date__cell_disabled">23</td>
+                    <td class="table-date__cell table-date__cell_disabled">24</td>
+                    <td class="table-date__cell table-date__cell_disabled">25</td>
+                    <td class="table-date__cell table-date__cell_disabled">26</td>
+                    <td class="table-date__cell table-date__cell_disabled">27</td>
+                    <td class="table-date__cell table-date__cell_disabled">28</td>
+                    <td class="
+                          table-date__cell
+                          table-date__cell_disabled
+                          table-date__cell_first-day
+                        ">
+                      1
+                      <span>мар</span>
+                    </td>
+                  </tr>
+                  <tr class="table-date__row">
+                    <td class="table-date__cell table-date__cell_disabled">2</td>
+                    <td class="table-date__cell table-date__cell_disabled">3</td>
+                    <td class="table-date__cell table-date__cell_disabled">4</td>
+                    <td class="table-date__cell table-date__cell_disabled">5</td>
+                    <td class="table-date__cell table-date__cell_disabled">6</td>
+                    <td class="table-date__cell table-date__cell_disabled">7</td>
+                    <td class="table-date__cell table-date__cell_disabled">8</td>
+                  </tr>
+                  <tr class="table-date__row">
+                    <td class="table-date__cell table-date__cell_disabled">9</td>
+                    <td class="table-date__cell table-date__cell_disabled">10</td>
+                    <td class="table-date__cell table-date__cell_disabled">11</td>
+                    <td class="table-date__cell table-date__cell_disabled">12</td>
+                    <td class="table-date__cell table-date__cell_disabled">13</td>
+                    <td class="table-date__cell table-date__cell_disabled">14</td>
+                    <td class="table-date__cell table-date__cell_disabled">15</td>
+                  </tr>
+                  <tr class="table-date__row">
+                    <td class="table-date__cell table-date__cell_disabled">16</td>
+                    <td class="table-date__cell table-date__cell_disabled">17</td>
+                    <td class="table-date__cell table-date__cell_disabled">18</td>
+                    <td class="table-date__cell table-date__cell_disabled">19</td>
+                    <td class="table-date__cell table-date__cell_disabled">20</td>
+                    <td class="table-date__cell table-date__cell_disabled">21</td>
+                    <td class="table-date__cell table-date__cell_disabled">22</td>
+                  </tr>
+                  <tr class="table-date__row">
+                    <td class="table-date__cell table-date__cell_disabled">23</td>
+                    <td class="table-date__cell table-date__cell_disabled">24</td>
+                    <td class="table-date__cell table-date__cell_disabled">25</td>
+                    <td class="
+                          table-date__cell
+                          table-date__cell_choosen
+                          table-date__cell_choosen-first
+                        ">
+                      26
+                    </td>
+                    <td class="table-date__cell table-date__cell_choosen">27</td>
+                    <td class="
+                          table-date__cell
+                          table-date__cell_choosen
+                          table-date__cell_choosen-last
+                        ">
+                      28
+                    </td>
+                    <td class="table-date__cell">29</td>
+                  </tr>
+                  <tr class="table-date__row">
+                    <td class="table-date__cell">30</td>
+                    <td class="table-date__cell">31</td>
+                    <td class="table-date__cell table-date__cell_first-day">
+                      1
+                      <span>апр</span>
+                    </td>
+                    <td class="table-date__cell">2</td>
+                    <td class="table-date__cell">3</td>
+                    <td class="table-date__cell">4</td>
+                    <td class="table-date__cell">5</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <a class="button trip-form__button" href="#trip-form-step-two">
+              <span class="button__text">Следующий шаг</span>
+            </a>
+          </section>
+
+          <section class="trip-form__step" id="trip-form-step-two">
+            <ul class="form-markers trip-form__step-markers">
+              <li class="form-markers__marker">
+                <span class="form-markers__marker-text">Даты</span>
+              </li>
+              <li class="form-markers__marker form-markers__marker_active">
+                <span class="form-markers__marker-text">Маршрут</span>
+              </li>
+              <li class="form-markers__marker">
+                <span class="form-markers__marker-text">Развлечения</span>
+              </li>
+            </ul>
+
+            <h3 class="trip-form__heading">
+              Шаг 2.&nbsp;<br />
+              Маршрут
+            </h3>
+            <p class="trip-form__text">
+              Укажите страны, которые вы хотели бы посетить.&nbsp;<br />
+              Это может быть одна или сразу несколько.
+            </p>
+
+            <input type="hidden" name="trip-form-countries" value="['Bosnia and Herzegovina', 'Czech']" />
+            <ul class="route trip-form__route">
+              <li class="country route__country">
+                <div class="country__name">
+                  <span class="country__name-text">Босния и герцеговина</span>
+                  <button class="country__button-choose" type="button" aria-label="Выбрать страну">
+                    <svg class="country__icon-choose" aria-hidden="true" width="16" height="12">
+                      <use xlink:href="./img/sprite.svg#icon_arrow-down"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="country__flag">
+                  <div class="flag flag_bosnia"></div>
+                </div>
+
+                <button class="country__button-delete" type="button" aria-label="Удалить страну">
+                  <svg class="country__icon-delete" aria-hidden="true" width="9" height="9">
+                    <use xlink:href="./img/sprite.svg#icon_close"></use>
+                  </svg>
+                </button>
+              </li>
+
+              <li class="country route__country">
+                <div class="country__name">
+                  <span class="country__name-text">Чехия</span>
+                  <button class="country__button-choose" type="button" aria-label="Выбрать страну">
+                    <svg class="country__icon-choose" aria-hidden="true" width="16" height="12">
+                      <use xlink:href="./img/sprite.svg#icon_arrow-down"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="country__flag">
+                  <div class="flag flag_czech"></div>
+                </div>
+
+                <button class="country__button-delete" type="button" aria-label="Удалить страну">
+                  <svg class="country__icon-delete" aria-hidden="true" width="9" height="9">
+                    <use xlink:href="./img/sprite.svg#icon_close"></use>
+                  </svg>
+                </button>
+              </li>
+
+              <li class="country route__country country_null">
+                <div class="country__name">
+                  <span class="country__name-text">Выберите страну</span>
+                  <button class="country__button-choose" type="button" aria-label="Выбрать страну">
+                    <svg class="country__icon-choose" aria-hidden="true" width="16" height="12">
+                      <use xlink:href="./img/sprite.svg#icon_arrow-down"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <button class="country__button-delete" type="button" aria-label="Удалить страну">
+                  <svg class="country__icon-delete" aria-hidden="true" width="9" height="9">
+                    <use xlink:href="./img/sprite.svg#icon_close"></use>
+                  </svg>
+                </button>
+
+                <div class="choose-country country__choose-country">
+                  <table class="table-symbols choose-country__table">
+                    <tbody class="table-symbols__body">
+                      <tr class="table-symbols__row">
+                        <td class="
+                              table-symbols__cell table-symbols__cell_active
+                            ">
+                          А
+                        </td>
+                        <td class="table-symbols__cell">Б</td>
+                        <td class="table-symbols__cell">В</td>
+                        <td class="table-symbols__cell">Г</td>
+                        <td class="table-symbols__cell">Д</td>
+                      </tr>
+                      <tr class="table-symbols__row">
+                        <td class="table-symbols__cell">Е</td>
+                        <td class="table-symbols__cell">З</td>
+                        <td class="table-symbols__cell">И</td>
+                        <td class="table-symbols__cell">К</td>
+                        <td class="table-symbols__cell">Л</td>
+                      </tr>
+                      <tr class="table-symbols__row">
+                        <td class="table-symbols__cell">М</td>
+                        <td class="table-symbols__cell">Н</td>
+                        <td class="table-symbols__cell">О</td>
+                        <td class="table-symbols__cell">П</td>
+                        <td class="table-symbols__cell">Р</td>
+                      </tr>
+                      <tr class="table-symbols__row">
+                        <td class="table-symbols__cell">С</td>
+                        <td class="table-symbols__cell">Т</td>
+                        <td class="table-symbols__cell">У</td>
+                        <td class="table-symbols__cell">Ф</td>
+                        <td class="table-symbols__cell">Х</td>
+                      </tr>
+                      <tr class="table-symbols__row">
+                        <td class="table-symbols__cell">Ч</td>
+                        <td class="table-symbols__cell">Ш</td>
+                        <td class="table-symbols__cell">Э</td>
+                        <td class="table-symbols__cell">Ю</td>
+                        <td class="table-symbols__cell">Я</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <ul class="choose-country__list">
+                    <li class="choose-country__text">Австралия</li>
+                    <li class="choose-country__text">Австрия</li>
+                    <li class="choose-country__text">Азербайджан</li>
+                    <li class="choose-country__text">Албания</li>
+                    <li class="choose-country__text">Алжир</li>
+                    <li class="choose-country__text">Ангола</li>
+                    <li class="choose-country__text">Андорра</li>
+                    <li class="choose-country__text">Антигуа и Барбуда</li>
+                    <li class="choose-country__text">Аргентина</li>
+                    <li class="choose-country__text">Армения</li>
+                    <li class="choose-country__text">Афганистан</li>
+                  </ul>
+
+                  <button class="choose-country__close">
+                    <svg class="choose-country__icon-close" aria-hidden="true" width="8" height="9">
+                      <use xlink:href="./img/sprite.svg#icon_close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+
+            <div class="trip-form__button-add-wrapper">
+              <button class="trip-form__button-add" type="button">
+                <span>Добавить страну</span>
+                <svg aria-hidden="true" width="14" height="14">
+                  <use xlink:href="./img/sprite.svg#plus"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="trip-form__buttons">
+              <a class="button trip-form__button" href="#trip-form-step-three">
+                <span class="button__text">Следующий шаг</span>
+              </a>
+              <a class="button trip-form__button-back" href="#trip-form-step-one">
+                На шаг назад
+              </a>
+            </div>
+          </section>
+
+          <section class="trip-form__step" id="trip-form-step-three">
+            <ul class="form-markers trip-form__step-markers">
+              <li class="form-markers__marker">
+                <span class="form-markers__marker-text">Даты</span>
+              </li>
+              <li class="form-markers__marker">
+                <span class="form-markers__marker-text">Маршрут</span>
+              </li>
+              <li class="form-markers__marker form-markers__marker_active">
+                <span class="form-markers__marker-text">Развлечения</span>
+              </li>
+            </ul>
+
+            <h3 class="trip-form__heading">
+              Шаг 3.&nbsp;<br />
+              Развлечения
+            </h3>
+            <p class="trip-form__text">
+              Наконец, расскажите о своих планах времяпровождения.
+              Можно&nbsp;писать в свободной форме и ставить тэги.
+            </p>
+
+            <ul class="action-plan trip-form__action-plan">
+              <li class="action-plan__item">
+                <div class="action-plan__country">
+                  <label class="action-plan__country-name" for="trip-form-plan-bosnia">
+                    Босния и Герцеговина
+                  </label>
+                  <div class="flag flag_bosnia action-plan__flag"></div>
+                </div>
+
+                <div class="action-plan__input-field">
+                  <textarea class="action-plan__input" name="trip-form-plan-bosnia" id="trip-form-plan-bosnia"
+                    placeholder="План действий"></textarea>
+                </div>
+              </li>
+
+              <li class="action-plan__item">
+                <div class="action-plan__country">
+                  <label class="action-plan__country-name" for="trip-form-plan-czech">
+                    Чехия
+                  </label>
+                  <div class="flag flag_czech action-plan__flag"></div>
+                </div>
+
+                <div class="
+                      action-plan__input-field action-plan__input-field_invalid
+                    ">
+                  <textarea class="action-plan__input" name="trip-form-plan-czech" id="trip-form-plan-czech"
+                    placeholder="План действий"></textarea>
+                </div>
+              </li>
+            </ul>
+
+            <div class="trip-form__buttons">
+              <button class="button trip-form__button" type="submit">
+                <span class="button__text">Отправить</span>
+              </button>
+              <a class="button trip-form__button-back" href="trip-form-step-two">
+                На шаг назад
+              </a>
+            </div>
+          </section>
+        </form>
       </div>
-    </footer>
-    <script src="./js/header.min.js"></script>
-    <script src="./js/dropdown.min.js"></script>
-  </body>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="logo footer__logo" href="./index.html">
+        <picture class="logo__pic logo__pic_dark">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="
+                ./img/contents/logos/site-logo-desktop-dark.webp    1x,
+                ./img/contents/logos/site-logo-desktop-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-desktop-dark@3x.webp 3x
+              " />
+          <source media="(min-width: 1440px)" srcset="
+                ./img/contents/logos/site-logo-desktop-dark.png    1x,
+                ./img/contents/logos/site-logo-desktop-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-desktop-dark@3x.png 3x
+              " />
+          <source type="image/webp" media="(min-width: 768px)" srcset="
+                ./img/contents/logos/site-logo-tablet-dark.webp    1x,
+                ./img/contents/logos/site-logo-tablet-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-tablet-dark@3x.webp 3x
+              " />
+          <source media="(min-width: 768px)" srcset="
+                ./img/contents/logos/site-logo-tablet-dark.png    1x,
+                ./img/contents/logos/site-logo-tablet-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-tablet-dark@3x.png 3x
+              " />
+          <source type="image/webp" srcset="
+                ./img/contents/logos/site-logo-dark.webp    1x,
+                ./img/contents/logos/site-logo-dark@2x.webp 2x,
+                ./img/contents/logos/site-logo-dark@3x.webp 3x
+              " />
+          <img srcset="
+                ./img/contents/logos/site-logo-dark@2x.png 2x,
+                ./img/contents/logos/site-logo-dark@3x.png 3x
+              " src="./img/contents/logos/site-logo-dark.png" alt="Логотип сервиса «Погнали?»" width="100"
+            height="15" />
+        </picture>
+      </a>
+
+      <ul class="socials footer__socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Facebook">
+            <svg class="socials__icon socials__icon_facebook" aria-hidden="true" width="11" height="21">
+              <use xlink:href="./img/sprite.svg#icon_facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Вконтакте">
+            <svg class="socials__icon socials__icon_vkontakte" aria-hidden="true" width="23" height="12">
+              <use xlink:href="./img/sprite.svg#icon_vkontakte"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#" aria-label="Instagram">
+            <svg class="socials__icon socials__icon_instagram" aria-hidden="true" width="18" height="18">
+              <use xlink:href="./img/sprite.svg#icon_instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <section class="developed footer__developed">
+        <a class="developed__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <h2 class="developed__title">Разработано</h2>
+          <img src="./img/svg/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="33" />
+        </a>
+      </section>
+    </div>
+  </footer>
+  <script src="./js/header.min.js"></script>
+  <script src="./js/dropdown.min.js"></script>
+</body>
+
 </html>

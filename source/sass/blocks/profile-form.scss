@@ -75,7 +75,7 @@
 
     letter-spacing: 0;
 
-    .profile-form__load-photo-text_change {
+    .profile-form__load-photo-change {
       display: none;
     }
   }
@@ -85,8 +85,9 @@
   background-color: #d1d7e9;
 }
 
-.profile-form__load-photo:focus {
+input:focus + .profile-form__load-photo {
   background-color: #d1d7e9;
+  outline: auto;
 }
 
 .profile-form__load-photo:active {
@@ -98,8 +99,16 @@
 }
 
 .profile-form__fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.profile-form__fieldset-wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 
@@ -110,7 +119,7 @@
   border-radius: 10px;
 }
 
-.profile-form__fieldset_tags {
+.profile-form__fieldset_tags .profile-form__fieldset-wrapper {
   height: 89px;
   margin-bottom: 25px;
   padding: 0;
@@ -125,34 +134,40 @@
   }
 }
 
-.profile-form__fieldset_tags:hover {
+.profile-form__fieldset:hover .profile-form__fieldset-wrapper {
   border: 1px solid #aeb4cb;
 }
 
-.profile-form__fieldset_tags:focus-within {
+.profile-form__fieldset_tags:focus-within .profile-form__fieldset-wrapper {
   border: 1px solid #161c35;
 }
 
 .profile-form__fieldset_transport {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 63px;
-  padding-top: calc((63px - 32px) / 2);
-
   @media (min-width: $tablet-width) {
-    order: -1;
     width: 308px;
-    height: 95px;
-    margin-bottom: 50px;
-    padding-top: calc((95px - 43px) / 2);
+    order: -1;
   }
 
   @media (min-width: $desktop-width) {
     order: 1;
+  }
+}
+
+.profile-form__fieldset_transport .profile-form__fieldset-wrapper {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 63px;
+
+  @media (min-width: $tablet-width) {
+    width: 308px;
+    min-height: 95px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
     min-width: 384px;
     margin-bottom: 0;
-    padding-top: calc((95px - 72px) / 2);
   }
 }
 
@@ -164,6 +179,8 @@
 
   display: flex;
   justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 17px;
   padding-right: 17px;
 
@@ -175,7 +192,7 @@
   background-color: var(--basic-blue-light);
 
   @media (min-width: $tablet-width) {
-    top: 100%;
+    top: calc(100% - 12px);
 
     font-weight: 500;
     font-size: 20px;
@@ -188,10 +205,6 @@
 }
 
 .profile-form__fieldset_transport .profile-form__legend {
-  @media (min-width: $tablet-width) {
-    top: calc(100% + 4px);
-  }
-
   @media (min-width: $desktop-width) {
     top: calc(100% - 12px);
   }
@@ -270,13 +283,21 @@ input:checked + .profile-form__transport {
 }
 
 input:checked + .profile-form__transport:hover,
-input:checked + .profile-form__transport:focus {
+input:checked:focus + .profile-form__transport {
   fill-opacity: 0.7;
 }
 
+input:checked:focus + .profile-form__transport {
+  outline: auto;
+}
+
 input:not(:checked) + .profile-form__transport:hover,
-input:not(:checked) + .profile-form__transport:focus {
+input:not(:checked):focus + .profile-form__transport {
   fill: #b2b2b2;
+}
+
+input:not(:checked):focus + .profile-form__transport {
+  outline: auto;
 }
 
 input:checked:active + .profile-form__transport {

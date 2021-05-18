@@ -2,7 +2,7 @@
   position: absolute;
   top: 20px;
   width: calc(100% - var(--content-padding-size) * 2);
-  height: 443px;
+  min-height: 443px;
   padding-top: 34px;
   border-radius: 20px;
   background-color: var(--basic-white);
@@ -12,14 +12,14 @@
   @media (min-width: $tablet-width) {
     top: 60px;
     max-width: 688px;
-    height: 526px;
+    min-height: 526px;
     padding-top: 53px;
   }
 
   @media (min-width: $desktop-width) {
     top: 60px;
     max-width: 750px;
-    height: 526px;
+    min-height: 526px;
     padding-top: 53px;
   }
 }
