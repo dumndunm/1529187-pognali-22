@@ -302,6 +302,7 @@
 
 .region-filter__continents {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   margin-top: 0;
@@ -324,8 +325,8 @@
 
   @media (min-width: $desktop-width) {
     top: 60px;
-    max-width: 1440px;
-    padding-left: 403px;
+    max-width: 630px;
+    padding-left: 0;
   }
 }
 
@@ -367,6 +368,10 @@
 
 .region-filter__label:hover {
   opacity: 0.6;
+}
+
+.region-filter__label:active {
+  opacity: 1;
 }
 
 input:checked + .region-filter__label {

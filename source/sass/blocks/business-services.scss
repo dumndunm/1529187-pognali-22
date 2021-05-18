@@ -16,6 +16,12 @@
 
     font-size: 22px;
   }
+
+  @media (min-width: $desktop-width) {
+    min-width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .business-services__wrapper {

@@ -43,11 +43,11 @@
 .feedback__contacts .contacts__link:hover,
 .feedback__contacts .contacts__link:focus {
   &::after {
-    color: var(--basic-orange);
+    color: var(--special-yellow);
   }
 
   .contacts__icon {
-    fill: var(--basic-orange);
+    fill: var(--special-yellow);
   }
 }
 

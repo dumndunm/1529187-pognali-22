@@ -141,6 +141,11 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin-bottom: -5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .user__flag {
@@ -178,6 +183,7 @@
 
   border-radius: 4px;
   background-color: #101d41;
+  z-index: 1;
 }
 
 .user__flag::after {
@@ -194,6 +200,7 @@
   background-image: url("../../img/svg/tooltip-pin.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  z-index: 1;
 }
 
 .user__flag.flag_sri::before {
