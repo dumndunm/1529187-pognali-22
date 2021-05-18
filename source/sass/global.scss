@@ -3,26 +3,3 @@
 *::after {
   box-sizing: border-box;
 }
-
-.page {
-  min-width: 320px;
-  width: 100%;
-  margin: 0;
-
-  font-family: "Blogger Sans", sans-serif;
-
-  background-color: var(--basic-blue-light);
-}
-
-.main {
-  position: relative;
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  margin: -1px;
-  font-size: 0;
-}
