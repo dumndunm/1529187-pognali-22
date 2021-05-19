@@ -61,7 +61,7 @@
   @media (min-width: $desktop-width) {
     justify-content: start;
 
-    width: 584px;
+    min-width: 584px;
 
     padding-left: 0;
     padding-right: 0;

@@ -44,7 +44,7 @@
     padding-top: 49px;
     padding-left: 64px;
     padding-right: 0;
-    padding-bottom: 104px;
+    padding-bottom: 93px;
   }
 }
 
@@ -74,9 +74,13 @@
   padding-left: 0;
 
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
-.trips__trip {
+.trips__trip:not(:last-child) {
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
@@ -84,6 +88,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }

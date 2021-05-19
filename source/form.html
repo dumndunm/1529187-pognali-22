@@ -343,27 +343,31 @@
 
         <form action="#" method="get">
           <section class="trip-form__step" id="trip-form-step-one">
-            <ul class="form-markers trip-form__step-markers">
-              <li class="form-markers__marker form-markers__marker_active">
-                <span class="form-markers__marker-text">Даты</span>
-              </li>
-              <li class="form-markers__marker">
-                <span class="form-markers__marker-text">Маршрут</span>
-              </li>
-              <li class="form-markers__marker">
-                <span class="form-markers__marker-text">Развлечения</span>
-              </li>
-            </ul>
+            <div class="trip-form__step-header">
+              <div class="trip-form__step-header-wrapper">
+                <h3 class="trip-form__heading">
+                  Шаг 1.&nbsp;<br />
+                  Даты пребывания
+                </h3>
 
-            <h3 class="trip-form__heading">
-              Шаг 1.&nbsp;<br />
-              Даты пребывания
-            </h3>
-            <p class="trip-form__text">
-              Укажите предпочтительное количество попутчиков, которых
-              вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую
-              длительность.
-            </p>
+                <p class="trip-form__text">
+                  Укажите предпочтительное количество попутчиков, которых
+                  вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую
+                  длительность.
+                </p>
+              </div>
+              <ul class="form-markers trip-form__step-markers">
+                <li class="form-markers__marker form-markers__marker_active">
+                  <span class="form-markers__marker-text">Даты</span>
+                </li>
+                <li class="form-markers__marker">
+                  <span class="form-markers__marker-text">Маршрут</span>
+                </li>
+                <li class="form-markers__marker">
+                  <span class="form-markers__marker-text">Развлечения</span>
+                </li>
+              </ul>
+            </div>
 
             <section class="trip-form__base-info">
               <h4 class="visually-hidden">Базовая информация о поездке</h4>
@@ -569,26 +573,30 @@
           </section>
 
           <section class="trip-form__step" id="trip-form-step-two">
-            <ul class="form-markers trip-form__step-markers">
-              <li class="form-markers__marker">
-                <span class="form-markers__marker-text">Даты</span>
-              </li>
-              <li class="form-markers__marker form-markers__marker_active">
-                <span class="form-markers__marker-text">Маршрут</span>
-              </li>
-              <li class="form-markers__marker">
-                <span class="form-markers__marker-text">Развлечения</span>
-              </li>
-            </ul>
+            <div class="trip-form__step-header">
+              <div class="trip-form__step-header-wrapper">
+                <h3 class="trip-form__heading">
+                  Шаг 2.&nbsp;<br />
+                  Маршрут
+                </h3>
 
-            <h3 class="trip-form__heading">
-              Шаг 2.&nbsp;<br />
-              Маршрут
-            </h3>
-            <p class="trip-form__text">
-              Укажите страны, которые вы хотели бы посетить.&nbsp;<br />
-              Это может быть одна или сразу несколько.
-            </p>
+                <p class="trip-form__text">
+                  Укажите страны, которые вы хотели бы посетить.&nbsp;<br />
+                  Это может быть одна или сразу несколько.
+                </p>
+              </div>
+              <ul class="form-markers trip-form__step-markers">
+                <li class="form-markers__marker">
+                  <span class="form-markers__marker-text">Даты</span>
+                </li>
+                <li class="form-markers__marker form-markers__marker_active">
+                  <span class="form-markers__marker-text">Маршрут</span>
+                </li>
+                <li class="form-markers__marker">
+                  <span class="form-markers__marker-text">Развлечения</span>
+                </li>
+              </ul>
+            </div>
 
             <input type="hidden" name="trip-form-countries" value="['Bosnia and Herzegovina', 'Czech']" />
             <ul class="route trip-form__route">
@@ -657,40 +665,88 @@
                         <td class="
                               table-symbols__cell table-symbols__cell_active
                             ">
-                          А
+                          <button class="table-symbols__cell-button" type="button">А</button>
                         </td>
-                        <td class="table-symbols__cell">Б</td>
-                        <td class="table-symbols__cell">В</td>
-                        <td class="table-symbols__cell">Г</td>
-                        <td class="table-symbols__cell">Д</td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Б</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">В</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Г</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Д</button>
+                        </td>
                       </tr>
                       <tr class="table-symbols__row">
-                        <td class="table-symbols__cell">Е</td>
-                        <td class="table-symbols__cell">З</td>
-                        <td class="table-symbols__cell">И</td>
-                        <td class="table-symbols__cell">К</td>
-                        <td class="table-symbols__cell">Л</td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Е</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">З</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">И</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">К</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Л</button>
+                        </td>
                       </tr>
                       <tr class="table-symbols__row">
-                        <td class="table-symbols__cell">М</td>
-                        <td class="table-symbols__cell">Н</td>
-                        <td class="table-symbols__cell">О</td>
-                        <td class="table-symbols__cell">П</td>
-                        <td class="table-symbols__cell">Р</td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">М</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Н</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">О</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">П</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Р</button>
+                        </td>
                       </tr>
                       <tr class="table-symbols__row">
-                        <td class="table-symbols__cell">С</td>
-                        <td class="table-symbols__cell">Т</td>
-                        <td class="table-symbols__cell">У</td>
-                        <td class="table-symbols__cell">Ф</td>
-                        <td class="table-symbols__cell">Х</td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">С</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Т</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">У</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Ф</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Х</button>
+                        </td>
                       </tr>
                       <tr class="table-symbols__row">
-                        <td class="table-symbols__cell">Ч</td>
-                        <td class="table-symbols__cell">Ш</td>
-                        <td class="table-symbols__cell">Э</td>
-                        <td class="table-symbols__cell">Ю</td>
-                        <td class="table-symbols__cell">Я</td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Ч</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Ш</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Э</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Ю</button>
+                        </td>
+                        <td class="table-symbols__cell">
+                          <button class="table-symbols__cell-button" type="button">Я</button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -738,26 +794,30 @@
           </section>
 
           <section class="trip-form__step" id="trip-form-step-three">
-            <ul class="form-markers trip-form__step-markers">
-              <li class="form-markers__marker">
-                <span class="form-markers__marker-text">Даты</span>
-              </li>
-              <li class="form-markers__marker">
-                <span class="form-markers__marker-text">Маршрут</span>
-              </li>
-              <li class="form-markers__marker form-markers__marker_active">
-                <span class="form-markers__marker-text">Развлечения</span>
-              </li>
-            </ul>
+            <div class="trip-form__step-header">
+              <div class="trip-form__step-header-wrapper">
+                <h3 class="trip-form__heading">
+                  Шаг 3.&nbsp;<br />
+                  Развлечения
+                </h3>
 
-            <h3 class="trip-form__heading">
-              Шаг 3.&nbsp;<br />
-              Развлечения
-            </h3>
-            <p class="trip-form__text">
-              Наконец, расскажите о своих планах времяпровождения.
-              Можно&nbsp;писать в свободной форме и ставить тэги.
-            </p>
+                <p class="trip-form__text">
+                  Наконец, расскажите о своих планах времяпровождения.
+                  Можно&nbsp;писать в свободной форме и ставить тэги.
+                </p>
+              </div>
+              <ul class="form-markers trip-form__step-markers">
+                <li class="form-markers__marker">
+                  <span class="form-markers__marker-text">Даты</span>
+                </li>
+                <li class="form-markers__marker">
+                  <span class="form-markers__marker-text">Маршрут</span>
+                </li>
+                <li class="form-markers__marker form-markers__marker_active">
+                  <span class="form-markers__marker-text">Развлечения</span>
+                </li>
+              </ul>
+            </div>
 
             <ul class="action-plan trip-form__action-plan">
               <li class="action-plan__item">

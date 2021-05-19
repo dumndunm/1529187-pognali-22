@@ -60,7 +60,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 1024px;
-    padding-top: 15px;
+    padding-top: 23px;
     padding-left: 35px;
     padding-right: 35px;
   }
@@ -152,6 +152,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 46px;
+    padding-top: 108px;
     padding-bottom: 106px;
   }
 }
@@ -185,14 +186,25 @@
   }
 }
 
+.trip-form__step-header {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 40px;
+    padding-bottom: 10px;
+  }
+}
+
 .trip-form__step-markers {
   display: none;
 
   @media (min-width: $desktop-width) {
     display: flex;
-    position: absolute;
-    top: 107px;
-    left: calc(100% - 388px);
+    height: auto;
+    margin-top: 3px;
+    margin-left: auto;
   }
 }
 
@@ -207,14 +219,12 @@
   color: var(--basic-blue);
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 36px;
+    margin-bottom: 33px;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 33px;
-
     br {
       display: none;
     }
@@ -250,7 +260,7 @@
 
   @media (min-width: $desktop-width) {
     width: 581px;
-    margin-bottom: 55px;
+    margin-bottom: 42px;
   }
 }
 
@@ -414,7 +424,7 @@
     align-self: start;
     justify-content: space-between;
     width: 284px;
-    height: 80px;
+    min-height: 80px;
     padding-left: 32px;
     padding-right: 32px;
     border-radius: var(--corner-radius-small);
@@ -424,6 +434,7 @@
 
     &::after {
       content: "";
+      flex-shrink: 0;
       display: block;
       width: 14px;
       height: 14px;

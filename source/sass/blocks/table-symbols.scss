@@ -105,11 +105,12 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 16px;
-
-    &:hover {
-      border-color: #959bb2;
-    }
   }
+}
+
+.table-symbols__cell:hover,
+.table-symbols__cell:focus-within {
+  border-color: #959bb2;
 }
 
 .table-symbols__cell_active {
@@ -120,4 +121,19 @@
 .table-symbols__cell:active {
   color: var(--basic-white);
   background-color: var(--basic-blue);
+}
+
+.table-symbols__cell-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
 }

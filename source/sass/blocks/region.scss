@@ -146,6 +146,7 @@
   opacity: 0.3;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -162,9 +163,9 @@
   opacity: 0.3;
 
   @media (min-width: $tablet-width) {
+    position: static;
     align-items: center;
-    top: 94px;
-    left: calc(var(--content-padding-size) - 4px);
+
     font-size: 20px;
     line-height: 20px;
   }
